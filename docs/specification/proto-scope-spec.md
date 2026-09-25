@@ -45,6 +45,18 @@ derivation continues
 only genuine implementation freedom remains
 ```
 
+protoSCOPE performs this work over Ring's canonical governed-software knowledge
+substrate.
+
+Accepted premises, maintained derived consequences, unresolved obligations,
+verification obligations, and verification evidence that protoSCOPE maintains
+MUST be materialized through that shared substrate rather than through a
+competing protoSCOPE-owned authoritative representation.
+
+protoSCOPE may reason over those objects and may establish new semantic
+relations through valid derivation, but it does not redefine Ring's canonical
+representation or mechanical integrity semantics.
+
 protoSCOPE MUST NOT silently replace derivation with preference, convention, implementation convenience, model behavior, tool output, or agent judgment.
 
 ## 0.2 Product Intent is the root product-level authority
@@ -145,9 +157,30 @@ Accepted choices and derived consequences must remain distinguishable.
 
 A downstream representation, implementation, formal model, verification result, agent memory, or undocumented assumption must not become the hidden source of normative meaning.
 
-## 0.9 Verification challenges closure; it does not create authority
+## 0.9 Coherence must be mechanically established; verification does not create authority
 
-protoSCOPE may use formal reasoning, executable models, counterexamples, reviews, tests, or other assurance mechanisms to challenge or support its reasoning.
+protoSCOPE MUST NOT treat model judgment, reviewer agreement, plausibility,
+convention, or failure to discover a contradiction as proof that the maintained
+normative closure is coherent.
+
+Whenever protoSCOPE claims that the currently maintained materially relevant
+closure is coherent, that claim MUST be supported by mechanically checkable
+verification evidence over the applicable accepted premises and maintained
+derived consequences.
+
+That evidence MUST be represented and evaluated through Ring's canonical
+verification substrate.
+
+The verification establishes only what its actual formalized scope,
+assumptions, model, and evidence support.
+
+If the coherence required for a maintained closure claim cannot be mechanically
+established within that actual scope, protoSCOPE MUST preserve the condition as
+unresolved rather than claim that closure has been established.
+
+protoSCOPE may use formal reasoning, executable models, counterexamples,
+reviews, tests, or other assurance mechanisms to challenge or support its
+reasoning.
 
 Such mechanisms may expose:
 
@@ -161,9 +194,13 @@ incorrect representations
 new unresolved questions
 ```
 
-They MUST NOT independently establish new normative meaning that is not derivable from accepted premises or accepted by the appropriate authority.
+They MUST NOT independently establish new normative meaning that is not
+derivable from accepted premises or accepted by the appropriate authority.
 
-Verification evidence establishes only what its actual scope and assumptions support.
+Mechanical verification may reject, invalidate, or leave unresolved a proposed
+or maintained consequence.
+
+It does not acquire authority to invent the consequence that should replace it.
 
 ## 0.10 Completion boundary
 
@@ -194,28 +231,48 @@ implementation freedom
 protoSCOPE does not, merely by virtue of this Product Intent:
 
 * choose Product Intent for its authority;
-* resolve genuine product or architectural choices without the required authority;
-* require a particular formal method;
+* resolve genuine product or architectural choices without the required
+  authority;
+* define or own the canonical representation, identity, normalization,
+  traceability, projection, verification-obligation, or verification-evidence
+  substrate of governed software knowledge — those are Ring responsibilities;
+* maintain a competing authoritative representation of accepted premises or
+  derived consequences outside the Ring substrate;
+* prescribe Ring's concrete DSL syntax, canonical IR serialization, schema
+  language, graph representation, database, file layout, or repository
+  structure;
 * require TLA+, SAT, SMT, theorem proving, or any particular verifier;
-* require ADRs or any particular decision-record format;
-* require hostile LLM review;
-* require a particular graph, schema, database, file layout, or repository structure;
-* require the mechanisms currently used by Turnlock, Ring, proto-ring, or `dotagents`;
+* independently require ADRs or another particular decision-record syntax beyond
+  whatever requirements are established by Ring or by valid product-specific
+  derivation;
+* treat every mechanism currently present in Turnlock, Ruu, proto-ring, or
+  `dotagents` as normative Ring behavior merely because that mechanism already
+  exists;
 * define the implementation of a future SCOPE.
 
-Those systems and mechanisms may provide experience, candidate realizations, counterexamples, or reusable components.
+Those systems and mechanisms may provide experience, candidate realizations,
+counterexamples, reusable components, or implementations of already established
+responsibilities.
 
-They are not normative protoSCOPE premises merely because they already exist.
+Their existence does not independently establish protoSCOPE semantic
+consequences.
 
 ## 0.12 Concise statement
 
 ```text
+Ring provides the canonical,
+machine-operable and mechanically verifiable
+substrate for governed software knowledge.
+
 The authority maintains accepted intent and decisions.
 
 protoSCOPE maintains their complete,
-materially relevant normative closure.
+materially relevant normative closure
+over that shared substrate.
 
 It derives what must follow,
+requires mechanically established coherence
+for the closure it claims,
 returns genuine choices to the authority that owns them,
 preserves what remains unresolved,
 and re-establishes closure whenever its premises change,
