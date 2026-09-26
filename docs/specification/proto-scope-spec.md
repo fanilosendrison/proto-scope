@@ -45,18 +45,6 @@ derivation continues
 only genuine implementation freedom remains
 ```
 
-protoSCOPE performs this work over Ring's canonical governed-software knowledge
-substrate.
-
-Accepted premises, maintained derived consequences, unresolved obligations,
-verification obligations, and verification evidence that protoSCOPE maintains
-MUST be materialized through that shared substrate rather than through a
-competing protoSCOPE-owned authoritative representation.
-
-protoSCOPE may reason over those objects and may establish new semantic
-relations through valid derivation, but it does not redefine Ring's canonical
-representation or mechanical integrity semantics.
-
 protoSCOPE MUST NOT silently replace derivation with preference, convention, implementation convenience, model behavior, tool output, or agent judgment.
 
 ## 0.2 Product Intent is the root product-level authority
@@ -168,9 +156,6 @@ closure is coherent, that claim MUST be supported by mechanically checkable
 verification evidence over the applicable accepted premises and maintained
 derived consequences.
 
-That evidence MUST be represented and evaluated through Ring's canonical
-verification substrate.
-
 The verification establishes only what its actual formalized scope,
 assumptions, model, and evidence support.
 
@@ -233,26 +218,22 @@ protoSCOPE does not, merely by virtue of this Product Intent:
 * choose Product Intent for its authority;
 * resolve genuine product or architectural choices without the required
   authority;
-* define or own the canonical representation, identity, normalization,
-  traceability, projection, verification-obligation, or verification-evidence
-  substrate of governed software knowledge — those are Ring responsibilities;
-* maintain a competing authoritative representation of accepted premises or
-  derived consequences outside the Ring substrate;
-* prescribe Ring's concrete DSL syntax, canonical IR serialization, schema
-  language, graph representation, database, file layout, or repository
-  structure;
+* prescribe a particular canonical representation, identity scheme,
+  verification-obligation representation, or verification-evidence
+  representation;
+* prescribe normalization, traceability, projection architecture, or
+  evidence-storage architecture;
+* prescribe a particular graph, schema, database, serialization, file layout,
+  or repository structure;
 * require TLA+, SAT, SMT, theorem proving, or any particular verifier;
-* independently require ADRs or another particular decision-record syntax beyond
-  whatever requirements are established by Ring or by valid product-specific
-  derivation;
-* treat every mechanism currently present in Turnlock, Ruu, proto-ring, or
-  `dotagents` as normative Ring behavior merely because that mechanism already
-  exists;
+* require ADRs or any particular decision-record format;
+* require hostile LLM review;
+* require the mechanisms currently used by Turnlock, Ruu, proto-ring, or
+  `dotagents`;
 * define the implementation of a future SCOPE.
 
-Those systems and mechanisms may provide experience, candidate realizations,
-counterexamples, reusable components, or implementations of already established
-responsibilities.
+Existing systems and mechanisms may provide experience, candidate realizations,
+counterexamples, or reusable components.
 
 Their existence does not independently establish protoSCOPE semantic
 consequences.
@@ -260,15 +241,10 @@ consequences.
 ## 0.12 Concise statement
 
 ```text
-Ring provides the canonical,
-machine-operable and mechanically verifiable
-substrate for governed software knowledge.
-
 The authority maintains accepted intent and decisions.
 
 protoSCOPE maintains their complete,
-materially relevant normative closure
-over that shared substrate.
+materially relevant normative closure.
 
 It derives what must follow,
 requires mechanically established coherence
