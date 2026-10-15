@@ -13,3 +13,9 @@ derived yet.
 
 The Product Intent is not duplicated here; the specification above is its
 single source of truth.
+
+## Research (non-normative)
+
+[The research index](docs/research/README.md) provides access to historical
+specification-methodology investigations and experiments. These materials
+do not establish new product requirements or alter the Product Intent.
