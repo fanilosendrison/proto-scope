@@ -1,0 +1,28 @@
+{
+  "markdown_count": 19,
+  "markdown_word_count": 23148,
+  "broken_relative_links": [],
+  "conversation_tag_gaps": [],
+  "reexecutions": {
+    "turnlock_inv008_countermodels.py": {
+      "returncode": 0,
+      "stdout_equals_archived_evidence": true,
+      "tail": "All eight expected SAT/UNSAT verdicts confirmed. Bounded propositional analysis only.",
+      "stderr": ""
+    },
+    "turnlock_claim011_semantic_correspondence.py": {
+      "returncode": 0,
+      "stdout_equals_archived_evidence": true,
+      "tail": "PASS: 9 SAT checks + 1 conditional-liveness sanity check + 1 truth-table check",
+      "stderr": ""
+    }
+  },
+  "staging_mock": {
+    "returncode": 0,
+    "output": [
+      "PROTO MOCK STAGING: PASS",
+      "SCOPE MOCK STAGING: PASS"
+    ]
+  },
+  "remote_publication": "none; deliberately not attempted due to repository workflow requirements and unreachable Git remote in container"
+}

@@ -1,0 +1,25 @@
+{
+  "status": "staged_only_not_published",
+  "date": "2026-10-15",
+  "target_repositories": [
+    {
+      "repository": "fanilosendrison/proto-scope",
+      "baseline_commit": "ba42377c0020703532c77533fa7450a22284be1d",
+      "baseline_product_intent_blob_sha": "bdac9db2991ee856983778abb408ee3b3cc56cf4",
+      "proposed_targets": ["docs/specification/proto-scope-spec.md"],
+      "staging_script": "integration/proto-scope/apply_proto_scope.py",
+      "publication_proven": false
+    },
+    {
+      "repository": "fanilosendrison/scope",
+      "baseline_commit": "09274864f6ec799e8ae7bb1f8f0a631930b2d465",
+      "baseline_product_intent_blob_sha": "f1f0a2c823c7e9ba461d2d0304c339df62dba2f9",
+      "proposed_targets": ["docs/specification/scope-spec.md", "docs/design/specification-closure-investigation.md", "docs/README.md", "docs/adr/ (decision record subject to admission)"],
+      "staging_script": "integration/scope/apply_scope.py",
+      "publication_proven": false,
+      "blocking_publication_preconditions": ["detached task worktree in authorized developer environment", "canonical git-commits-push targeted entrypoint", "metadata-valid ADR and generated index", "independent review and full repository integrity", "exact SHA published-state checks"]
+    }
+  ],
+  "turnlock_repository_modified": false,
+  "integration_not_claimed_as_complete": true
+}

@@ -1,0 +1,12 @@
+T1 declared: all applicable claim interpretations + countermodel: SAT
+T2 declared: same + positive normative eligibility consequence: UNSAT
+T3 declared: same + hypothetical authorization=>eligibility bridge: UNSAT
+T4 declared: remove counterexample, normative completion is satisfiable: SAT
+T5 agent-selected: its caller resumes, outer workflow not enabled: SAT
+T6 agent-selected: erroneous universal outer-workflow eligibility: UNSAT
+T7 IA-selected: its caller resumes, outer workflow not enabled: SAT
+T8 declared: no sibling starvation invented by global-only correction: SAT
+T9 declared: bad global exclusivity incorrectly stops sibling: UNSAT
+T10 C083 on infinite ineligible stutter: HOLDS VACUOUSLY (logical evaluation, not SAT solver)
+T11 independent 4-variable truth table: 2 C011 models; eligibility true in one, false in one
+PASS: 9 SAT checks + 1 conditional-liveness sanity check + 1 truth-table check

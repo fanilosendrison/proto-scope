@@ -1,0 +1,34 @@
+{
+  "fanilosendrison/proto-scope": {
+    "commit": "ba42377c0020703532c77533fa7450a22284be1d",
+    "visibility": "public",
+    "files": {
+      "README.md": "see pinned git commit",
+      "docs/specification/proto-scope-spec.md": "see pinned git commit"
+    }
+  },
+  "fanilosendrison/scope": {
+    "commit": "09274864f6ec799e8ae7bb1f8f0a631930b2d465",
+    "visibility": "private",
+    "files": {
+      "docs/specification/scope-spec.md": "f1f0a2c823c7e9ba461d2d0304c339df62dba2f9",
+      "docs/README.md": "see pinned commit",
+      "docs/design/problem-model-requirements.md": "see pinned commit",
+      "docs/design/responsibility-allocation.md": "see pinned commit",
+      "docs/adr/adr-001-establish-general-problem-resolution-intent.md": "see pinned commit",
+      "docs/adr/adr-003-strengthen-model-guided-resolution-and-capability-extension.md": "see pinned commit",
+      "AGENTS.md": "see pinned commit",
+      "docs/repository-governance/scope-engineering.md": "see pinned commit"
+    }
+  },
+  "fanilosendrison/turnlock-rust": {
+    "commit": "44c2a55009e17ba3500bfef6a1ae310f6d0fcbb9",
+    "visibility": "public",
+    "files": {
+      "docs/specification/turnlock-spec.md": "6af726a5effa2d461dc8c2bdc86b11fa295d458d",
+      "formal/verification.yaml": "0984a504f9b3de05a38fe7aa9de04f4512fad985",
+      "docs/adr/adr-023-clarify-caller-context-and-continuation-semantics-across-nested-workflow-invocations.md": "16839365ebe538cadd46a8969497459d2e46a89f",
+      "formal/README.md": "bb5abacc8f70034e429031011fd9075d6585a320"
+    }
+  }
+}

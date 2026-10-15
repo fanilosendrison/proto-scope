@@ -1,0 +1,13 @@
+CE1 under acceptance-only reading of C010: SAT
+  witness: accepted=1, declared=1, agent_selected=0, normal_completion=0, path_on_acceptance=1, path_during_execution=0, correct_return=1, appropriate_authorized=1, wrong_authorized=0, workflow_postcall_eligible=0
+CE1 under continuous reading of C010: UNSAT
+CE1 under normative continuity: UNSAT
+CE2 under literal C011, even with continuous C010: SAT
+  witness: accepted=1, declared=1, agent_selected=0, normal_completion=1, path_on_acceptance=1, path_during_execution=1, correct_return=1, appropriate_authorized=1, wrong_authorized=0, workflow_postcall_eligible=0
+CE2 with normative workflow-declared return readiness: UNSAT
+CE2 if C011 is expressly interpreted to imply eligibility: UNSAT
+CONTROL agent-selected return without outer workflow readiness: SAT
+  witness: accepted=1, declared=0, agent_selected=1, normal_completion=1, path_on_acceptance=1, path_during_execution=1, correct_return=1, appropriate_authorized=1, wrong_authorized=0, workflow_postcall_eligible=0, agent_region_resumed=1
+CONTROL under erroneous universal post-call readiness: UNSAT
+
+All eight expected SAT/UNSAT verdicts confirmed. Bounded propositional analysis only.
