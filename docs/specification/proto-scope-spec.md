@@ -85,6 +85,8 @@ what remains a genuine choice among multiple compatible possibilities
 
 A choice MUST NOT be presented as a derived consequence merely because one alternative is simpler, conventional, easier to implement, easier to verify, already used elsewhere, or preferred by a reasoning agent.
 
+The absence of an accepted prohibition or ordering constraint MUST NOT by itself be treated as positive authority to select any materially different normative behavior. An admissible choice must be justified either as a necessary consequence of accepted premises or as an exercise of applicable, positively established choice authority. Compatible alternatives remain distinct from authorized alternatives. The derivation of an applicable permission is itself subject to premise and authority traceability.
+
 ## 0.5 Underdetermined decisions belong to authority
 
 When accepted premises do not uniquely determine a materially relevant choice, protoSCOPE MUST keep the choice unresolved rather than deciding implicitly.
@@ -102,6 +104,8 @@ which authority is required to accept the choice
 The required authority may concern product meaning, architecture, assurance, or another design responsibility.
 
 This Product Intent does not prescribe a fixed authority hierarchy.
+
+For an unresolved decision about desired software-product behavior, a human product authority is consulted only to establish or revise the governing Product Intent, not to approve intermediate derivations, formal models, assurance claims, implementation architectures, or verifier outputs. protoSCOPE must first distinguish genuine product underdetermination from an unresolved inference, evidence gap, modeling defect, or technical choice under already accepted authority. This statement does not remove other applicable non-human or delegated design authorities where product meaning is not being changed.
 
 Once an authorized decision is accepted, that decision may become an explicit premise for further derivation.
 
@@ -159,6 +163,8 @@ derived consequences.
 The verification establishes only what its actual formalized scope,
 assumptions, model, and evidence support.
 
+A mechanically coherent or internally complete formal model does not by itself establish that all materially relevant normative consequences of the accepted natural-language premises have been discovered or faithfully represented. Claims of normative closure must keep the establishment of semantic fidelity and applicable coverage distinct from internal model consistency, and must not turn an omission, unsupported abstraction, or unresolved assumption into a proven exclusion merely because verification passed.
+
 If the coherence required for a maintained closure claim cannot be mechanically
 established within that actual scope, protoSCOPE MUST preserve the condition as
 unresolved rather than claim that closure has been established.
@@ -192,6 +198,8 @@ It does not acquire authority to invent the consequence that should replace it.
 protoSCOPE continues derivation while materially relevant necessary consequences remain to be established.
 
 It stops deriving a particular dimension when the remaining alternatives differ only by genuine implementation freedom not constrained by the accepted normative premises.
+
+Such freedom must be positively justifiable from accepted premises and applicable delegation, including the preservation of all materially relevant required guarantees and explicitly permitted variations. The mere failure to derive a constraint does not establish implementation freedom. An unresolved choice affecting what the product must guarantee remains unresolved even when several proposed implementations could satisfy the currently formalized subset of the Product Intent.
 
 Therefore the intended direction is:
 
