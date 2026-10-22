@@ -7,6 +7,13 @@ decisions, or implementation authorization.
 The current normative Product Intent remains in
 [the Proto-Scope specification](../specification/proto-scope-spec.md).
 
+## DerivTrace
+
+[DerivTrace — Experimental Derivation Observability](derivtrace/README.md) is a
+non-normative research area for machine-observable explicit derivation
+artifacts. It does not establish Proto-Scope requirements, invariants, or
+implementation mechanisms.
+
 ## Historical specification-methodology dossier
 
 [Research dossier — 2026-10-15](specification-methodology/2026-10-15/README.md)
