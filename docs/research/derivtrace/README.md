@@ -73,6 +73,8 @@ Their scope and handling rules are described in the
 ## Research documents
 
 - [Candidate observability questions](observability-questions.md)
+- [DT-01.A — Observable dependencies and justification propagation](dt-01-a-observable-dependencies.md)
+  (analytical research candidate; independent review pending).
 - [Experimental research plan and roadmap](research-plan.md)
 - [Falsification corpora](falsification/README.md)
 - [State-of-the-art review index](state-of-art/README.md)
