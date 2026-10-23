@@ -131,13 +131,13 @@ Construct histories ending with the **same final D and the same qualified suppor
 - **History A:** D is proposed, its justification qualifies, and D is then admitted as established.
 - **History B:** D is first admitted as established without satisfying the applicable admission condition; afterward, a valid justification is obtained and attached.
 
-Both may have identical final artifacts. Yet, for the historical question
+Both may have identical final artifacts. Let $h$ denote one of these histories and $T_h$ its relevant time points. $\mathrm{Admit}_h(D,t)$ means that D was admitted as established at time $t$ in history $h$; $\mathrm{QualifiedApplicable}_h(D,t)$ means that the applicable conditions for qualifying that admission were satisfied **at that time in the same history**. Consider the historical property:
 
 $$
-Q(H)=\forall t,\; \mathrm{Admit}(D,t)\Rightarrow \mathrm{QualifiedApplicable}(D,t),
+Q(h)=\forall t\in T_h,\quad \mathrm{Admit}_h(D,t)\Rightarrow \mathrm{QualifiedApplicable}_h(D,t).
 $$
 
-the histories differ by construction.
+By construction, $Q(h)$ holds for History A and fails for History B, even though their final artifacts may be identical.
 
 **Observation to examine:** admissibility conditions and the actual admission/qualification history, or a separately justified system guarantee enforcing those conditions for the relevant executions.
 
