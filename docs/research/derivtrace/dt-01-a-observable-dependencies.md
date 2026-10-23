@@ -9,7 +9,7 @@ name: "DT-01.A — Observable dependencies and justification propagation"
 
 # DT-01.A — Observable dependencies and justification propagation
 
-**Status:** RESEARCH_CANDIDATE — INDEPENDENT_REVIEW_PENDING  
+**Status:** RESEARCH_CANDIDATE — REVIEW_CORRECTIONS_PENDING_RECHECK  
 **Date of analytical consolidation:** 2026-10-23  
 **Work item:** [DT-01.A / issue #14](https://github.com/fanilosendrison/proto-scope/issues/14)  
 **Parent:** [DT-01 / issue #4](https://github.com/fanilosendrison/proto-scope/issues/4)
@@ -59,27 +59,32 @@ No claim is made that these four labels form a complete or mandatory ontology. T
 
 ## 3. Method: sufficiency for a *specific* question
 
-Let W be a **declared** set of possible situations, O a function returning the information available to an observer, and Q a precisely defined proposition about those situations.
+Let W be a **declared** set of possible situations, O: W → Y a **total** observation function, and Q: W → {0,1} a **total** Boolean target predicate. We provisionally stipulate deterministic, faithful observations for this abstract mathematical claim; an actual observation interface requires its own justification.
 
-For a deterministic, faithful observation model, an exact answer to Q can be determined solely from O over W **if and only if**:
+**Set-theoretic factorization (not a decision procedure):** There exists a function f: O(W) → {0,1} such that Q = f ∘ O **if and only if**:
 
 $$
 \forall w_1,w_2\in W,\quad O(w_1)=O(w_2)\Rightarrow Q(w_1)=Q(w_2).
 $$
 
-**Argument:** If two worlds have the same observable output but opposite Q values, any decision procedure using only that output receives identical input for both and cannot answer both correctly. Conversely, if Q is constant on every set of worlds sharing the same observation, its value defines a function of O on the image of O.
+**Argument:** Necessity follows because equal observations supplied to f yield equal outputs. For sufficiency, constancy of Q on each fiber of O makes f(o) = Q(w), for any w such that O(w) = o, well-defined. Thus Q factors through O. **This is a set-theoretic existence result, not a claim of computability, effective constructibility, decidability, termination, or operational availability.**
 
-This criterion is relative to the declared W, Q, and observation semantics. It does not:
+**Counterexample to the stronger computational reading:** Let W = ℕ, O(n) = n, and Q(n) be the halting predicate for the nth Turing machine on blank input. Every fiber of O is a singleton; hence the factorization condition holds and a mathematical function f exists. Yet there is no total computable procedure that decides Q. Identifying an input is not the same as computing the requested answer.
 
-- establish that the real process belongs to W;
-- establish that the instrument faithfully captured O;
-- establish that the proposed interpretation of Q matches the governing intent;
-- establish the authenticity, completeness, or current applicability of observations;
-- imply that an unobserved event did not occur;
-- identify the hidden cognition of an LLM; or
-- establish a general algorithm for discovering every missing observation.
+To claim **effective determination**, one must independently establish suitable effective encodings, access to the observations, a computable and available factor function or another correct algorithm, and its relevant termination and resource guarantees. In a completely specified finite domain, an actually supplied truth table may yield a lookup method; factorization alone neither provides such a table nor proves that its entries can be computed.
 
-The question-specific sufficiency test is a **method of examining candidate observational questions**, not a new DerivTrace verifier.
+This criterion is relative to declared W, O, Q and their semantics. It does not:
+
+- establish that the real process belongs to W or that W includes every materially relevant situation;
+- establish that an instrument can effectively or faithfully capture O;
+- establish that Q corresponds to the governing meaning or authority;
+- establish authenticity, completeness, or current applicability of observations;
+- prove effective decidability or an operationally available computation;
+- imply the absence of unobserved events or undiscovered consequences;
+- identify hidden LLM cognition; or
+- yield a universal algorithm for finding missing observations.
+
+Partial, nondeterministic, noisy, probabilistic, or history-dependent observations require a suitably changed model and sufficiency question. The set-theoretic condition is a **research tool for checking a precisely stated observation question**, not an implemented DerivTrace verification or discovery capability.
 
 ## 4. Contrasting analytical cases
 
@@ -153,7 +158,7 @@ If only the report is visible, actual execution is not identifiable.
 
 **Observation to examine:** what the reporting entity directly observed; whether an execution attestation is attributable to a suitably qualified boundary; its input/output association; and the assumptions under which it reliably represents a real execution.
 
-**Boundary:** a hash attests to an identity of content, not the truth of the content; an authentic report is not automatically an execution proof. Even proven execution and a genuine PASS do not, alone, establish D's semantic validity.
+**Boundary:** a bare digest attests neither content identity nor provenance by itself. Matching cryptographic digests can support byte-identity claims only under explicit collision-resistance, trustworthy acquisition, and binding-to-the-exact-subject-and-revision assumptions. Even a correctly bound, authentic report does not automatically prove its factual accuracy or an actual execution. Proven execution and a genuine PASS do not, alone, establish D's semantic validity.
 
 A further construction reverses the situation: a producer falsely reports that V ran, but supplies an independently checkable certificate sufficient to establish D. Then "V ran" can be false while "D is justified" is true.
 
@@ -185,7 +190,7 @@ Two internal computations could generate the same external exchange while differ
 
 **Observation to examine:** the fact that C was included at an exposed interface; separately, the justificative role C plays in a supplied proof of D.
 
-**Boundary:** interventions on C may provide evidence about its influence within an experimental protocol, but they can also change the process being studied. No general promise to reveal unexposed chain-of-thought follows from such interventions.
+**Boundary:** the word *influence* here is a question for research, not a formally defined universal causal predicate. Any determinate causal claim requires an explicitly chosen causal or counterfactual meaning, relevant background conditions, and a qualified method of inquiry. Interventions on C might provide evidence within such a protocol, but can alter the process studied; stochastic or hidden variables limit attribution. This example does not prove that every causal investigation is impossible, and it makes no claim to recover unexposed chain-of-thought.
 
 ## 5. Question-relative observational capabilities, without a data-model choice
 
@@ -238,13 +243,35 @@ The present study leaves open:
 6. How to test for omitted, materially relevant consequences when the candidate universe itself is incomplete.
 7. How to handle inference languages beyond the positive, finite examples, including non-monotonic, concurrent, and temporally rich reasoning.
 8. How proposed instrumentation affects the process and what can legitimately be inferred about the uninstrumented counterfactual.
-9. How far evidence of an observed dependency can support a causal claim about a black-box LLM, if at all.
+9. How far evidence of an observed dependency can support a causally defined claim about a black-box LLM under a justified experimental protocol.
+10. Under which additional effectiveness, decidability, capture, and resource assumptions could a mathematically factoring observation support an executable answering procedure?
 
 A critical review should attempt to construct two situations that this analysis treats as equivalent although Proto-Scope would require different conclusions, questions, or actions. It should also attempt to find an alleged distinction for which the same admissible conclusion can already be established without any additional capture.
 
 Do **not** treat absence of discovered counterexamples as proof of completeness. Do **not** assume that every required observation can be acquired.
 
-## 9. DT-01.A acceptance-criteria assessment
+## 9. Implications for DT-01 questions Q01–Q12
+
+This is a **research crosswalk** for eventual DT-01.C consolidation, not a revision of [the original Q01–Q12 list](observability-questions.md), a claim that the questions are complete, or an established DerivTrace ontology. "EXAMINED" identifies a distinction treated by a constructed case; "CLARIFICATION CANDIDATE" identifies potential ambiguity or missing scope; "NOT SETTLED" explicitly withholds a general conclusion.
+
+| Question | Classification | Case-specific finding and limit |
+| --- | --- | --- |
+| **Q01** — exact proposition/version identity | NOT SETTLED | EX-03/EX-05 depend on matching versions; identity and semantic equivalence are not generally examined. |
+| **Q02** — accepted/candidate/ungrounded premises | CLARIFICATION CANDIDATE | EX-01/EX-03: preserving an open condition and the time of admission matters; a final status cannot settle earlier promotions. |
+| **Q03** — source/declared authority | CLARIFICATION CANDIDATE | EX-05: claimed trust or competence is not independently justified authority. |
+| **Q04** — premise/conclusion relationships | CLARIFICATION CANDIDATE | EX-01/EX-02/EX-07: distinguish declared support, observed use, dependency in a specific proof, and inaccessible cognitive causation. |
+| **Q05** — declared versus valid justification | EXAMINED | EX-01/EX-04/EX-05: declarations of derivation, execution, or verification do not automatically qualify their subjects. |
+| **Q06** — conjunctive versus alternative support | CLARIFICATION CANDIDATE | EX-02: loss of one proof path need not remove a conclusion with another admissible support; complete enumeration is unproved. |
+| **Q07** — observed production versus reconstruction | CLARIFICATION CANDIDATE | EX-03/EX-04: final artifacts and retrospective reports need not establish historical admissions or operations. |
+| **Q08** — ambiguity/conflict/unknown obligations | NOT SETTLED | EX-01 addresses an unestablished assumption; general conflict and obligation observability are not established. |
+| **Q09** — verification result/input/method/scope/evidence | CLARIFICATION CANDIDATE | EX-04/EX-05: linking fields to a PASS does not establish that the operation occurred, was faithfully observed, or legitimately supports the claim. |
+| **Q10** — affected consequences after source change | NOT SETTLED | EX-02/EX-05 show alternative support and revision sensitivity, but not a method to identify every affected consequence. |
+| **Q11** — declared versus demonstrated coverage | CLARIFICATION CANDIDATE | EX-06: complete capture of disclosed results differs from coverage of events or materially relevant consequences. |
+| **Q12** — no automatic normative promotion | EXAMINED | EX-01/EX-03/EX-05 show candidate promotion failures; no universal enforcement property is proven. |
+
+**Possible clarifications to test later, not adopted changes:** Q09 could distinguish claimed tool execution from an independently supportable execution event; Q07 could address historical admission conditions; Q04/Q06 could disambiguate a proof-specific dependency from necessity across available supports; Q11 could distinguish coverage of disclosures, events, and normative consequences. None of these questions is declared solved or complete.
+
+## 10. DT-01.A acceptance-criteria assessment
 
 | Issue #14 criterion | Research-stage assessment |
 | --- | --- |
@@ -255,11 +282,12 @@ Do **not** treat absence of discovered counterexamples as proof of completeness.
 | Limits of available observations are examined | Addressed by the sufficiency criterion and each case boundary |
 | No universal representation or implementation is selected | Preserved |
 | Unknowns and limitations are explicit | Section 8 |
-| Independent critical examination | **NOT YET PERFORMED** |
+| Implications for Q01–Q12 | Section 9 supplies a bounded mapping; it does not establish questionnaire completeness |
+| Independent critical examination | Independent review of head `b4241f5c77de86b6924868437795a06b212bc8db` found one MAJOR and two MINOR issues. Candidate corrections are included in this revision, **pending independent re-review**. |
 
-**Assessment:** candidate for independent critical review, **not** a qualified PASS or a closure decision. The reviewer must not treat these analytical constructions as executed experiments or require an architecture before the observability questions have been examined.
+**Assessment:** candidate for independent **re-review**, not yet publication-approved or a qualified PASS or closure decision. The reviewer must examine the changed SHA and not treat these analytical constructions as executed experiments or require an architecture before the observability questions have been examined.
 
-## 10. Public references
+## 11. Public references
 
 - [Proto-Scope Product Intent, Section 0](../../specification/proto-scope-spec.md)
 - [DerivTrace candidate observability questions](observability-questions.md)
