@@ -93,10 +93,10 @@ $$
 \Gamma=\{P,\ (P\land H)\Rightarrow D\}.
 $$
 
-H is not established. Then \(\Gamma,H\models D\), but \(\Gamma\not\models D\). A concrete countervaluation sets P=true, H=false, D=false.
+H is not established. Then $\Gamma,H\models D$, but $\Gamma\not\models D$. A concrete countervaluation sets P=true, H=false, D=false.
 
 - **History A:** a producer proposes D **conditional on H** and retains H as an open condition.
-- **History B:** a producer presents D as established from \(\Gamma\) alone, although no alternative support has been given.
+- **History B:** a producer presents D as established from $\Gamma$ alone, although no alternative support has been given.
 
 Both may emit the same text "D follows from P and H". Their different claims about the conditions of establishment matter. A final string that omits the qualification context cannot distinguish them.
 
@@ -106,9 +106,9 @@ Both may emit the same text "D follows from P and H". Their different claims abo
 
 ### EX-02 — Mentioned support versus necessary support
 
-Assume \(\Gamma'=\{P,\ P\Rightarrow D,\ H\Rightarrow D\}\), with P established and H not established.
+Assume $\Gamma'=\{P,\ P\Rightarrow D,\ H\Rightarrow D\}$, with P established and H not established.
 
-A producer may cite H when proposing D. Nevertheless, \(\Gamma'\models D\) from P and \(P\Rightarrow D\), without H.
+A producer may cite H when proposing D. Nevertheless, $\Gamma'\models D$ from P and $P\Rightarrow D$, without H.
 
 - **History A:** a particular candidate justification uses H and is conditional.
 - **History B:** an independently qualified justification uses P and is sufficient.
@@ -169,7 +169,7 @@ Compare a PASS qualified by admissible premises and independently supported rule
 
 ### EX-06 — Complete records of discovered consequences versus complete derivation
 
-Assume, within a fully specified illustrative domain, that \(\Gamma\) has three materially relevant consequences C1, C2, C3. A producer discovers only C1 and C2 and records both perfectly, including their proofs.
+Assume, within a fully specified illustrative domain, that $\Gamma$ has three materially relevant consequences C1, C2, C3. A producer discovers only C1 and C2 and records both perfectly, including their proofs.
 
 A complete log **of its disclosed outputs** does not demonstrate that C3 was discovered or that the set of materially relevant consequences is complete.
 
