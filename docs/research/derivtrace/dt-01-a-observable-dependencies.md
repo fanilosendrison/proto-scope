@@ -9,7 +9,7 @@ name: "DT-01.A — Observable dependencies and justification propagation"
 
 # DT-01.A — Observable dependencies and justification propagation
 
-**Status:** RESEARCH_CANDIDATE — REVIEW_CORRECTIONS_PENDING_RECHECK  
+**Status:** RESEARCH_CANDIDATE — PUBLISHED_NON_NORMATIVE — MODEL_NOT_VALIDATED  
 **Date of analytical consolidation:** 2026-10-23  
 **Work item:** [DT-01.A / issue #14](https://github.com/fanilosendrison/proto-scope/issues/14)  
 **Parent:** [DT-01 / issue #4](https://github.com/fanilosendrison/proto-scope/issues/4)
@@ -38,7 +38,7 @@ These are source commitments of Proto-Scope, **not requirements newly establishe
 | Public historical study | The bounded Turnlock interpretation/assurance example linked below | No original Turnlock execution is newly observed or canonically adjudicated |
 | Analytical construction | Contrasting synthetic histories EX-01 through EX-07 and elementary logical counterexamples | No experiment on live agents, verifier infrastructure, or production code was executed |
 | General mathematical argument | Question-relative observation sufficiency for a defined set of situations | No proof of completeness of a real-world hypothesis space or faithful capture |
-| Pending examination | Independent critical review of this consolidated account | This issue is not qualified for closure by publication alone |
+| Publication and review history | Two independent Codex review reports examined successive revisions of this research candidate; PR #17 was published after a favorable re-review, and PR #18 subsequently corrected the nonblocking EX-03 notation finding | Review conclusions are bound to their exact examined revisions. Research publication does not establish global observability, normative authority, model validity, or automatic completion of issue #14 |
 
 No numerical experiment counts from conversation-level discussion are treated as reproducible evidence here. In particular, this report does not claim an executed 128-state experiment or independently checked enumeration. If such an experiment is used later, it requires its own inspectable definitions, code or proof, actual results, and provenance.
 
@@ -283,9 +283,26 @@ This is a **research crosswalk** for eventual DT-01.C consolidation, not a revis
 | No universal representation or implementation is selected | Preserved |
 | Unknowns and limitations are explicit | Section 8 |
 | Implications for Q01–Q12 | Section 9 supplies a bounded mapping; it does not establish questionnaire completeness |
-| Independent critical examination | Independent review of head `b4241f5c77de86b6924868437795a06b212bc8db` found one MAJOR and two MINOR issues. Candidate corrections are included in this revision, **pending independent re-review**. |
+| Independent critical examination | Initial independent Codex review of `b4241f5c77de86b6924868437795a06b212bc8db` reported `STOP_CORRECTIONS_REQUIRED` with one MAJOR and two MINOR findings. Independent re-review of `f2d34b8530e93e26ab444a0c824ae18b57e9dcc2` reported `GO_FOR_RESEARCH_PUBLICATION`, zero BLOCKER, zero MAJOR, and one MINOR notation finding N-01. PR #18 subsequently corrected N-01 without changing the other research cases. Earlier review results do not automatically qualify later revisions or decide issue #14's completion. |
 
-**Assessment:** candidate for independent **re-review**, not yet publication-approved or a qualified PASS or closure decision. The reviewer must examine the changed SHA and not treat these analytical constructions as executed experiments or require an architecture before the observability questions have been examined.
+**Assessment boundary:** The analytical work addresses the bounded research criteria listed above. The independent publication review of PR #17 supported publication as a non-normative research candidate; the subsequent PR #18 made only the history-indexed EX-03 notation correction. Neither the publication review nor this document constitutes an automatic issue-closure decision. A separate independent exact-SHA acceptance assessment must justify the disposition of issue #14. Its completion does not qualify parent DT-01, establish a conceptual model, or authorize DT-02. The residual research uncertainties in Section 8 remain explicit and available for subsequent investigation.
+
+### Independent review and publication provenance
+
+This section records historical research evidence. It does not independently certify the revision containing this section.
+
+| Step | Exact revision | Reported outcome or publication fact |
+| --- | --- | --- |
+| First independent Codex review | `b4241f5c77de86b6924868437795a06b212bc8db` | `STOP_CORRECTIONS_REQUIRED`; one MAJOR and two MINOR findings |
+| Independent corrective review | `f2d34b8530e93e26ab444a0c824ae18b57e9dcc2` | `GO_FOR_RESEARCH_PUBLICATION`; prior findings F-01/F-02/F-03 resolved; EX-07 qualified; one remaining nonblocking MINOR finding N-01 |
+| Research publication | [PR #17](https://github.com/fanilosendrison/proto-scope/pull/17), merge `f6fe0b1a5d2583d675eab2f2e2ee6abc116030a0` | Published the independently reviewed non-normative research candidate |
+| EX-03 notation correction | [PR #18](https://github.com/fanilosendrison/proto-scope/pull/18), head `2ac730d1edd70f462eb75d9db500796325ed664e`, merge `fd3ac2add286e31e08c3f4e4ae2eedf894cd2da3` | Applied the reviewer's history-indexing correction to EX-03; no new general mathematical claim was introduced |
+
+The independent review was performed through a separate Codex CLI agent. Its results were supplied as review reports and are not represented as native GitHub review submissions or mechanically checked universal proofs. A public [summary of the favorable review](https://github.com/fanilosendrison/proto-scope/pull/17#issuecomment-6375217163) was recorded on PR #17.
+
+The EX-03 follow-up corrected the notation to refer explicitly to the examined history and relevant times. The previously reported favorable review was attached to the earlier exact head; any conclusion about later revisions requires its own applicable examination.
+
+These reviews concern the adequacy of a bounded analytical research document. They do not prove complete observation of derivation processes, all materially relevant normative consequences, the factual accuracy of every observation, or the validity of a future DerivTrace conceptual model.
 
 ## 11. Public references
 
