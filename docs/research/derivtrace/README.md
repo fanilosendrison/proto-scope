@@ -33,8 +33,9 @@ norms automatically.
 
 ## Model and implementation boundary
 
-DerivTrace Model v0 is a future conceptual candidate to be proposed during the
-second research phase. No conceptual model is established by this index.
+DT-M0 is a proposed, unselected, and unvalidated conceptual-model candidate
+documented during the second research phase. No conceptual model is established
+by this index or by publication of that candidate.
 
 Any eventual implementation is a later and separate concern. It may implement
 only a model that has passed the preceding research and selection stages, and
@@ -89,6 +90,8 @@ Their scope and handling rules are described in the
   (non-normative synthesis for later DT-01.C consumption; Q01–Q12 remain unvalidated).
 - [DT-01.C — Consolidated observability questions](dt-01-c-consolidated-observability-questions.md)
   (non-normative proposed questionnaire with a bounded negative sufficiency result; no model is selected).
+- [DT-02 — Conceptual model v0 candidate](dt-02-conceptual-model-v0-candidate.md)
+  (unvalidated non-normative DT-M0 proposal; publication does not select the candidate).
 - [Experimental research plan and roadmap](research-plan.md)
 - [Falsification corpora](falsification/README.md)
 - [State-of-the-art review index](state-of-art/README.md)
