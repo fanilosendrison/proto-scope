@@ -87,6 +87,8 @@ Their scope and handling rules are described in the
   (independent negative bounded-adequacy finding with preserved narrow source results).
 - [DT-01.B.6 — Consolidated bounded case analysis](dt-01-b-consolidated-case-analysis.md)
   (non-normative synthesis for later DT-01.C consumption; Q01–Q12 remain unvalidated).
+- [DT-01.C — Consolidated observability questions](dt-01-c-consolidated-observability-questions.md)
+  (non-normative proposed questionnaire with a bounded negative sufficiency result; no model is selected).
 - [Experimental research plan and roadmap](research-plan.md)
 - [Falsification corpora](falsification/README.md)
 - [State-of-the-art review index](state-of-art/README.md)
