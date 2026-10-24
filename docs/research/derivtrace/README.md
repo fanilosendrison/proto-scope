@@ -77,6 +77,16 @@ Their scope and handling rules are described in the
   (non-normative analytical research candidate; review history and residual limits are documented in the report).
 - [DT-01.B.1 — Bounded case-challenge methodology](dt-01-b-methodology.md)
   (non-normative research-method candidate for bounded DT-01.B examinations).
+- [DT-01.B.2 — Premise and authority STOP cases](dt-01-b-premise-authority-stop-cases.md)
+  (bounded non-normative case analysis; historical occurrence and authority remain qualified).
+- [DT-01.B.3 — Justification and assurance STOP cases](dt-01-b-justification-assurance-stop-cases.md)
+  (bounded non-normative analysis of conditionality, assurance, correspondence, and coverage).
+- [DT-01.B.4 — Continuation controls and counterexamples](dt-01-b-continuation-controls-counterexamples.md)
+  (constructed bounded controls; no historical outcome or universal continuation rule is established).
+- [DT-01.B.5 — Independent case-selection challenge](dt-01-b-case-selection-independent-challenge.md)
+  (independent negative bounded-adequacy finding with preserved narrow source results).
+- [DT-01.B.6 — Consolidated bounded case analysis](dt-01-b-consolidated-case-analysis.md)
+  (non-normative synthesis for later DT-01.C consumption; Q01–Q12 remain unvalidated).
 - [Experimental research plan and roadmap](research-plan.md)
 - [Falsification corpora](falsification/README.md)
 - [State-of-the-art review index](state-of-art/README.md)
