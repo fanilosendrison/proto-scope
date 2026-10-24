@@ -75,6 +75,8 @@ Their scope and handling rules are described in the
 - [Candidate observability questions](observability-questions.md)
 - [DT-01.A — Observable dependencies and justification propagation](dt-01-a-observable-dependencies.md)
   (non-normative analytical research candidate; review history and residual limits are documented in the report).
+- [DT-01.B.1 — Bounded case-challenge methodology](dt-01-b-methodology.md)
+  (non-normative research-method candidate for bounded DT-01.B examinations).
 - [Experimental research plan and roadmap](research-plan.md)
 - [Falsification corpora](falsification/README.md)
 - [State-of-the-art review index](state-of-art/README.md)
