@@ -92,6 +92,10 @@ Their scope and handling rules are described in the
   (non-normative proposed questionnaire with a bounded negative sufficiency result; no model is selected).
 - [DT-02 — Conceptual model v0 candidate](dt-02-conceptual-model-v0-candidate.md)
   (unvalidated non-normative DT-M0 proposal; publication does not select the candidate).
+- [DT-03 — Frozen DT-M0 bounded falsification](dt-03-model-falsification-report.md)
+  (non-normative STOP and Turnlock campaign; no model is selected or universally validated).
+- [DT-03 bounded case corpus](falsification/dt-03-bounded-case-corpus.md)
+  (reproducible analytical constructions and qualified public records; historical execution remains unverified).
 - [Experimental research plan and roadmap](research-plan.md)
 - [Falsification corpora](falsification/README.md)
 - [State-of-the-art review index](state-of-art/README.md)
