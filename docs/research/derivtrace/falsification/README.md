@@ -13,6 +13,12 @@ The following corpora are candidates for bounded experiments. Their inclusion
 does not validate a conceptual model, establish coverage, or grant normative
 authority to an observation or reconstruction.
 
+The completed DT-03 bounded campaign is documented in the
+[model falsification report](../dt-03-model-falsification-report.md) and its
+[bounded case corpus](dt-03-bounded-case-corpus.md). Publication preserves
+indeterminate targets and revision candidates without selecting or validating
+DT-M0, authenticating historical execution, or executing DT-04.
+
 ## Corpus A — STOP of coding agents
 
 This corpus is intended to examine execution-contract defects, missing
