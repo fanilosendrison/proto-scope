@@ -1,0 +1,74 @@
+name: "DT-03.E.2 - Inert containment probes"
+
+on:
+  workflow_dispatch:
+    inputs:
+      expected_sha:
+        description: "Exact reviewed default-branch commit SHA"
+        required: true
+        type: string
+
+permissions:
+  contents: read
+
+concurrency:
+  group: dt03e2-inert-containment
+  cancel-in-progress: false
+
+jobs:
+  containment:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout reviewed commit
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+          fetch-depth: 1
+
+      - name: Verify exact execution revision
+        shell: bash
+        env:
+          EXPECTED_SHA: ${{ inputs.expected_sha }}
+          EXPECTED_SCRIPT_BLOB: e6fb73c2058058866730fcef13065f326ab94f32
+          EXPECTED_SCRIPT_SHA256: f4d18c503043bf8729a0b605883ed2bb3c4486960ab60061dd1f60b96423cedf
+        run: |
+          set -euo pipefail
+
+          [[ "$EXPECTED_SHA" =~ ^[0-9a-f]{40}$ ]]
+          test "$GITHUB_SHA" = "$EXPECTED_SHA"
+          test "$(git rev-parse HEAD)" = "$EXPECTED_SHA"
+          script="docs/research/derivtrace/falsification/fixtures/dt-03-e-actions-inert-probes.sh"
+          test "$(git rev-parse "$EXPECTED_SHA:$script")" = "$EXPECTED_SCRIPT_BLOB"
+          test "$(sha256sum "$script" | awk '{print $1}')" = "$EXPECTED_SCRIPT_SHA256"
+
+      - name: Execute inert confinement probes
+        timeout-minutes: 12
+        shell: bash
+        run: |
+          timeout --signal=TERM --kill-after=30s 10m \
+            bash docs/research/derivtrace/falsification/fixtures/dt-03-e-actions-inert-probes.sh
+
+      - name: Validate evidence completeness
+        if: always()
+        timeout-minutes: 1
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          evidence="${RUNNER_TEMP}/dt03e2-inert-evidence"
+          test -f "$evidence/artifact-complete.txt"
+          grep -Fx 'ARTIFACT_COMPLETE=YES' "$evidence/artifact-complete.txt"
+          grep -Fx 'DOCKER_CLEANUP_VERIFIED=PASS' "$evidence/artifact-complete.txt"
+          (cd "$evidence" && sha256sum --check sha256-manifest.txt)
+
+      - name: Preserve bounded evidence
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: dt03e2-inert-${{ github.run_id }}-${{ github.run_attempt }}
+          path: ${{ runner.temp }}/dt03e2-inert-evidence/
+          if-no-files-found: error
+          retention-days: 14
