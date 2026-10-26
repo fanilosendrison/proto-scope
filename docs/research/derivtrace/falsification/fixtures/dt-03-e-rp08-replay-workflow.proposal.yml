@@ -1,0 +1,375 @@
+name: DT-03-E2 RP08 bounded replay proposal
+
+on:
+  workflow_dispatch:
+    inputs:
+      expected_sha:
+        description: Exact 40-hex Proto-Scope commit authorized for this new dispatch
+        required: true
+        type: string
+      expected_workflow_blob:
+        description: Externally reviewed 40-hex Git blob of this exact proposal and active copy
+        required: true
+        type: string
+      expected_workflow_sha256:
+        description: Externally reviewed SHA-256 of this exact proposal and active copy
+        required: true
+        type: string
+
+permissions:
+  contents: read
+
+concurrency:
+  group: dt03e2-rp08-replay-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  bounded-replay:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    env:
+      PROPOSAL_WORKFLOW_REL: docs/research/derivtrace/falsification/fixtures/dt-03-e-rp08-replay-workflow.proposal.yml
+      ACTIVE_WORKFLOW_REL: .github/workflows/dt03e2-rp08-replay.yml
+      DRIVER_REL: docs/research/derivtrace/falsification/fixtures/dt-03-e-rp08-replay-driver.sh
+      EXPECTED_DRIVER_BLOB: efdc04ac611956c24be1886561b333e91b7b2156
+      EXPECTED_DRIVER_SHA256: 288611c0e142b27335c3685190c9399259e42fbccc5c839af6e86c53848ee5d5
+      EXPECTED_SHA: ${{ inputs.expected_sha }}
+      EXPECTED_WORKFLOW_BLOB: ${{ inputs.expected_workflow_blob }}
+      EXPECTED_WORKFLOW_SHA256: ${{ inputs.expected_workflow_sha256 }}
+      EVIDENCE_DIR: ${{ runner.temp }}/dt03e2-rp08-${{ github.run_id }}-${{ github.run_attempt }}/evidence
+      PUBLICATION_DIR: ${{ runner.temp }}/dt03e2-rp08-${{ github.run_id }}-${{ github.run_attempt }}/publication
+
+    steps:
+      - name: Reject reruns and validate dispatch authorization fields
+        shell: bash
+        run: |
+          set -euo pipefail
+          export LC_ALL=C
+          [[ "$GITHUB_RUN_ATTEMPT" == "1" ]]
+          [[ "$EXPECTED_SHA" =~ ^[0-9a-f]{40}$ ]]
+          [[ "$EXPECTED_WORKFLOW_BLOB" =~ ^[0-9a-f]{40}$ ]]
+          [[ "$EXPECTED_WORKFLOW_SHA256" =~ ^[0-9a-f]{64}$ ]]
+
+      - name: Checkout exact Proto-Scope revision
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803
+        with:
+          ref: ${{ inputs.expected_sha }}
+          fetch-depth: 1
+          persist-credentials: false
+
+      - name: Verify Proto-Scope revision and externally bound executable inputs
+        shell: bash
+        run: |
+          set -euo pipefail
+          export LC_ALL=C
+          [[ "$GITHUB_RUN_ATTEMPT" == "1" ]]
+          [[ "$GITHUB_REF" == "refs/heads/main" ]]
+          [[ "$EXPECTED_SHA" =~ ^[0-9a-f]{40}$ ]]
+          [[ "$EXPECTED_WORKFLOW_BLOB" =~ ^[0-9a-f]{40}$ ]]
+          [[ "$EXPECTED_WORKFLOW_SHA256" =~ ^[0-9a-f]{64}$ ]]
+          [[ "$GITHUB_SHA" == "$EXPECTED_SHA" ]]
+          [[ "$(git rev-parse HEAD)" == "$EXPECTED_SHA" ]]
+          [[ -z "$(git symbolic-ref --short HEAD 2>/dev/null || true)" ]]
+          root=$(realpath -e -- "$GITHUB_WORKSPACE")
+
+          verify_worktree_blob() {
+            local rel=$1 path="$GITHUB_WORKSPACE/$1"
+            [[ -f "$path" && ! -L "$path" ]]
+            [[ "$(realpath -e -- "$path")" == "$root/$rel" ]]
+            [[ "$(git cat-file -t "HEAD:$rel")" == "blob" ]]
+            git cat-file blob "HEAD:$rel" | cmp -s - "$path"
+          }
+
+          verify_worktree_blob "$PROPOSAL_WORKFLOW_REL"
+          verify_worktree_blob "$ACTIVE_WORKFLOW_REL"
+          verify_worktree_blob "$DRIVER_REL"
+          cmp -s -- "$PROPOSAL_WORKFLOW_REL" "$ACTIVE_WORKFLOW_REL"
+
+          workflow_blob=$(git rev-parse "HEAD:$ACTIVE_WORKFLOW_REL")
+          proposal_blob=$(git rev-parse "HEAD:$PROPOSAL_WORKFLOW_REL")
+          workflow_sha=$(sha256sum -- "$ACTIVE_WORKFLOW_REL" | awk '{print $1}')
+          proposal_sha=$(sha256sum -- "$PROPOSAL_WORKFLOW_REL" | awk '{print $1}')
+          [[ "$workflow_blob" == "$proposal_blob" ]]
+          [[ "$workflow_sha" == "$proposal_sha" ]]
+          [[ "$workflow_blob" == "$EXPECTED_WORKFLOW_BLOB" ]]
+          [[ "$workflow_sha" == "$EXPECTED_WORKFLOW_SHA256" ]]
+
+          driver_blob=$(git rev-parse "HEAD:$DRIVER_REL")
+          driver_sha=$(sha256sum -- "$DRIVER_REL" | awk '{print $1}')
+          [[ "$EXPECTED_DRIVER_BLOB" =~ ^[0-9a-f]{40}$ ]]
+          [[ "$EXPECTED_DRIVER_SHA256" =~ ^[0-9a-f]{64}$ ]]
+          [[ "$driver_blob" == "$EXPECTED_DRIVER_BLOB" ]]
+          [[ "$driver_sha" == "$EXPECTED_DRIVER_SHA256" ]]
+
+      - name: Checkout exact Ruu revision
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803
+        with:
+          repository: fanilosendrison/ruu
+          ref: 5d04c58170b2ce3f0e47aa0554a97906d2256492
+          fetch-depth: 1
+          persist-credentials: false
+          path: _rp08_source
+
+      - name: Verify Ruu repository, revision, and source objects
+        shell: bash
+        run: |
+          set -euo pipefail
+          export LC_ALL=C
+          [[ "$GITHUB_RUN_ATTEMPT" == "1" ]]
+          root="$GITHUB_WORKSPACE/_rp08_source"
+          script_rel="qualification/state-space/v045/state-space-audit-v45.py"
+          archive_rel="qualification/state-space/v045/state-space-audit-v45.txt"
+          [[ -d "$root" && ! -L "$root" ]]
+          [[ "$(realpath -e -- "$root")" == "$(realpath -e -- "$GITHUB_WORKSPACE")/_rp08_source" ]]
+          [[ "$(git -C "$root" rev-parse HEAD)" == "5d04c58170b2ce3f0e47aa0554a97906d2256492" ]]
+          origin=$(git -C "$root" remote get-url origin)
+          [[ "$origin" == "https://github.com/fanilosendrison/ruu" ||
+             "$origin" == "https://github.com/fanilosendrison/ruu.git" ]]
+
+          verify_ruu_file() {
+            local rel=$1 expected_blob=$2 expected_sha=$3 allowed_modes=$4
+            local path="$root/$rel" blob mode actual_sha
+            [[ -f "$path" && ! -L "$path" ]]
+            [[ "$(realpath -e -- "$path")" == "$(realpath -e -- "$root")/$rel" ]]
+            blob=$(git -C "$root" rev-parse "HEAD:$rel")
+            mode=$(git -C "$root" ls-tree HEAD -- "$rel" | awk '{print $1}')
+            actual_sha=$(sha256sum -- "$path" | awk '{print $1}')
+            [[ "$(git -C "$root" cat-file -t "$blob")" == "blob" ]]
+            [[ "$blob" == "$expected_blob" ]]
+            [[ ":$allowed_modes:" == *":$mode:"* ]]
+            [[ "$actual_sha" == "$expected_sha" ]]
+            git -C "$root" cat-file blob "$blob" | cmp -s - "$path"
+          }
+
+          verify_ruu_file "$script_rel" \
+            515f1067167d3ae331d4562c4dc8d879f2c74967 \
+            84b9016765a5a8713db40df11888b657f63d309335d4e6890410d423057738ea \
+            "100644:100755"
+          verify_ruu_file "$archive_rel" \
+            1e8d950b67f1d25707142ff62d003f741481fde7 \
+            76bc0a73f54bbcbe167a4bf985d6aff5bf6d60b0a03fe51e78bdaff9ca4765ae \
+            "100644"
+
+      - name: Execute one fail-closed driver invocation
+        shell: bash
+        env:
+          RUU_ROOT: ${{ github.workspace }}/_rp08_source
+        run: |
+          set -euo pipefail
+          export LC_ALL=C
+          [[ "$GITHUB_RUN_ATTEMPT" == "1" ]]
+          root=$(realpath -e -- "$GITHUB_WORKSPACE")
+
+          at_use_blob() {
+            local rel=$1 path="$GITHUB_WORKSPACE/$1"
+            [[ -f "$path" && ! -L "$path" ]]
+            [[ "$(realpath -e -- "$path")" == "$root/$rel" ]]
+            [[ "$(git cat-file -t "HEAD:$rel")" == "blob" ]]
+            git cat-file blob "HEAD:$rel" | cmp -s - "$path"
+          }
+
+          [[ "$GITHUB_REF" == "refs/heads/main" ]]
+          [[ "$GITHUB_SHA" == "$EXPECTED_SHA" ]]
+          [[ "$(git rev-parse HEAD)" == "$EXPECTED_SHA" ]]
+          [[ -z "$(git symbolic-ref --short HEAD 2>/dev/null || true)" ]]
+          at_use_blob "$PROPOSAL_WORKFLOW_REL"
+          at_use_blob "$ACTIVE_WORKFLOW_REL"
+          at_use_blob "$DRIVER_REL"
+          cmp -s -- "$PROPOSAL_WORKFLOW_REL" "$ACTIVE_WORKFLOW_REL"
+          [[ "$(git rev-parse "HEAD:$ACTIVE_WORKFLOW_REL")" == "$EXPECTED_WORKFLOW_BLOB" ]]
+          [[ "$(sha256sum -- "$ACTIVE_WORKFLOW_REL" | awk '{print $1}')" == "$EXPECTED_WORKFLOW_SHA256" ]]
+          [[ "$(git rev-parse "HEAD:$DRIVER_REL")" == "$EXPECTED_DRIVER_BLOB" ]]
+          [[ "$(sha256sum -- "$DRIVER_REL" | awk '{print $1}')" == "$EXPECTED_DRIVER_SHA256" ]]
+          [[ "$(git -C "$RUU_ROOT" rev-parse HEAD)" == "5d04c58170b2ce3f0e47aa0554a97906d2256492" ]]
+
+          set +e
+          /usr/bin/bash "$DRIVER_REL"
+          driver_status=$?
+          set -e
+          exit "$driver_status"
+
+      - name: Sanitize and stage retained evidence
+        if: always()
+        shell: bash
+        run: |
+          set -euo pipefail
+          export LC_ALL=C
+          /usr/bin/python3 - "$EVIDENCE_DIR" "$PUBLICATION_DIR" "$GITHUB_RUN_ID" "$GITHUB_RUN_ATTEMPT" "$GITHUB_SHA" "$GITHUB_WORKSPACE" "$RUNNER_TEMP" <<'PY'
+          import hashlib
+          import os
+          import pathlib
+          import re
+          import shutil
+          import stat
+          import sys
+          import unicodedata
+
+          raw = pathlib.Path(sys.argv[1])
+          stage = pathlib.Path(sys.argv[2])
+          run_id, attempt, workflow_sha = sys.argv[3:6]
+          forbidden = [value.encode() for value in sys.argv[6:] if value]
+          forbidden.append(b"/home/runner")
+
+          def fresh_stage():
+              if stage.is_symlink() or stage.is_file():
+                  stage.unlink()
+              elif stage.exists():
+                  shutil.rmtree(stage)
+              stage.mkdir(parents=True, mode=0o700)
+
+          def withhold(reason):
+              fresh_stage()
+              marker = stage / "PUBLICATION_FAILURE.txt"
+              marker.write_text(
+                  f"RUN_ID={run_id}\nRUN_ATTEMPT={attempt}\n"
+                  f"WORKFLOW_SHA={workflow_sha}\n"
+                  "EVIDENCE_PUBLICATION=WITHHELD_UNSAFE_OR_INCOMPLETE\n",
+                  encoding="utf-8",
+              )
+              os.chmod(marker, 0o600)
+              print(f"EVIDENCE_PUBLICATION=WITHHELD_UNSAFE_OR_INCOMPLETE:{reason}", file=sys.stderr)
+              raise SystemExit(1)
+
+          def parse_kv(path):
+              values = {}
+              for line in path.read_text(encoding="utf-8").splitlines():
+                  if "=" not in line:
+                      raise ValueError(f"invalid key-value row in {path.name}")
+                  key, value = line.split("=", 1)
+                  if not key or key in values:
+                      raise ValueError(f"duplicate or empty key in {path.name}")
+                  values[key] = value
+              return values
+
+          try:
+              fresh_stage()
+              if raw.is_symlink() or not raw.is_dir():
+                  raise ValueError("missing regular evidence directory")
+              entries = list(raw.iterdir())
+              for path in entries:
+                  mode = path.stat(follow_symlinks=False).st_mode
+                  if path.is_symlink() or not stat.S_ISREG(mode):
+                      raise ValueError("evidence is not flat regular-file data")
+                  if pathlib.PurePath(path.name).name != path.name:
+                      raise ValueError("non-normalized evidence name")
+                  if unicodedata.normalize("NFC", path.name) != path.name:
+                      raise ValueError("non-NFC evidence name")
+                  if not re.fullmatch(r"[A-Za-z0-9][A-Za-z0-9._-]*", path.name):
+                      raise ValueError("unsafe evidence name")
+              names = {path.name for path in entries}
+              if len(names) != len(entries) or len({name.casefold() for name in names}) != len(names):
+                  raise ValueError("duplicate or case-colliding evidence name")
+              manifest = raw / "MANIFEST.sha256"
+              if manifest.name not in names:
+                  raise ValueError("missing manifest")
+              rows = {}
+              pattern = re.compile(r"^([0-9a-f]{64})  \./([^/\n]+)$")
+              for line in manifest.read_text(encoding="utf-8").splitlines():
+                  match = pattern.fullmatch(line)
+                  if not match or match.group(2) in rows or match.group(2) == manifest.name:
+                      raise ValueError("invalid manifest row")
+                  rows[match.group(2)] = match.group(1)
+              if set(rows) != names - {manifest.name}:
+                  raise ValueError("manifest coverage mismatch")
+              for name, expected in rows.items():
+                  data = (raw / name).read_bytes()
+                  if hashlib.sha256(data).hexdigest() != expected:
+                      raise ValueError(f"hash mismatch for {name}")
+                  if any(value and value in data for value in forbidden):
+                      raise ValueError(f"unnormalized host path in {name}")
+              summary = parse_kv(raw / "summary.txt")
+              if summary.get("RUN_ATTEMPT") != "1" or attempt != "1":
+                  raise ValueError("rerun attempt is not publishable")
+              result = summary.get("RP08_EXECUTION")
+              if result == "PASS":
+                  expected_names = {
+                      "MANIFEST.sha256", "cleanup.txt", "command.txt", "comparators.txt",
+                      "effects.txt", "evidence-shape.txt", "expected-archive.txt",
+                      "image-identity.txt", "image-pull.stderr", "image-pull.stdout",
+                      "image-pull.status", "n1-cmp.stderr", "n1-cmp.stdout",
+                      "n1-cmp.status", "n1-modified-expected.txt", "n1-mutation.stderr",
+                      "n1-mutation.status", "n1-mutation.txt", "operations.txt",
+                      "p1-archive-cmp.stderr", "p1-archive-cmp.stdout",
+                      "p1-archive-cmp.status", "p1.create.stderr", "p1.create.stdout",
+                      "p1.identity.txt", "p1.inspect.stderr", "p1.policy.txt",
+                      "p1.status", "p1.stderr", "p1.stdout", "p1-p2-cmp.stderr",
+                      "p1-p2-cmp.stdout", "p1-p2-cmp.status", "p2-archive-cmp.stderr",
+                      "p2-archive-cmp.stdout", "p2-archive-cmp.status",
+                      "p2.create.stderr", "p2.create.stdout", "p2.identity.txt",
+                      "p2.inspect.stderr", "p2.policy.txt", "p2.status", "p2.stderr",
+                      "p2.stdout", "path-normalization.txt", "preflight-mounts.txt",
+                      "preflight-probe.py", "preflight.create.stderr",
+                      "preflight.create.stdout", "preflight.identity.txt",
+                      "preflight.inspect.stderr", "preflight.policy.txt",
+                      "preflight.status", "preflight.stderr", "preflight.stdout",
+                      "run-identity.txt", "runner-identity.txt", "runtime-drift.txt",
+                      "source-identity.txt", "summary.txt",
+                  }
+                  if names != expected_names:
+                      raise ValueError("PASS artifact does not match exact success schema")
+                  required = {
+                      "DRIVER_EXIT_STATUS": "0", "CLEANUP_GATE": "PASS",
+                      "PREFLIGHT": "PASS", "P1": "PASS", "N1": "PASS", "P2": "PASS",
+                      "RETRIES": "0", "RUN_ATTEMPT": "1",
+                  }
+                  for key, value in required.items():
+                      if summary.get(key) != value:
+                          raise ValueError(f"PASS summary mismatch for {key}")
+                  for name, expected_status in (
+                      ("preflight.status", "23"), ("p1.status", "0"), ("p2.status", "0")
+                  ):
+                      status_values = parse_kv(raw / name)
+                      status_required = {
+                          "POSTRUN_INSPECT_STATUS": "0",
+                          "POSTRUN_RUNNING": "false",
+                          "HOST_ATTACH_STATUS": expected_status,
+                          "CONTAINER_EXIT_STATUS": expected_status,
+                          "POLICY_STATUS": "PASS",
+                          "CLEANUP_GATE_AFTER": "PASS",
+                      }
+                      for key, value in status_required.items():
+                          if status_values.get(key) != value:
+                              raise ValueError(f"{name} contradiction for {key}")
+                  for path in entries:
+                      shutil.copyfile(path, stage / path.name)
+                      os.chmod(stage / path.name, 0o600)
+                  print("EVIDENCE_PUBLICATION=COMPLETE_PASS")
+              elif result == "STOP":
+                  if summary.get("DRIVER_EXIT_STATUS") in (None, "0"):
+                      raise ValueError("STOP evidence lacks nonzero driver status")
+                  if "PUBLICATION_DISPOSITION.txt" in names:
+                      raise ValueError("raw evidence reserved-name collision")
+                  for path in entries:
+                      if path.name != "MANIFEST.sha256":
+                          shutil.copyfile(path, stage / path.name)
+                          os.chmod(stage / path.name, 0o600)
+                  disposition = stage / "PUBLICATION_DISPOSITION.txt"
+                  disposition.write_text(
+                      "EVIDENCE_PUBLICATION=VALIDATED_STOP_OR_INCOMPLETE\n"
+                      "RP08_EXECUTION=STOP\n",
+                      encoding="utf-8",
+                  )
+                  os.chmod(disposition, 0o600)
+                  staged = sorted(path for path in stage.iterdir() if path.name != "MANIFEST.sha256")
+                  lines = [
+                      f"{hashlib.sha256(path.read_bytes()).hexdigest()}  ./{path.name}\n"
+                      for path in staged
+                  ]
+                  (stage / "MANIFEST.sha256").write_text("".join(lines), encoding="ascii")
+                  os.chmod(stage / "MANIFEST.sha256", 0o600)
+                  print("EVIDENCE_PUBLICATION=VALIDATED_STOP_OR_INCOMPLETE")
+              else:
+                  raise ValueError("terminal disposition is neither PASS nor STOP")
+          except Exception as exc:
+              withhold(str(exc))
+          PY
+
+      - name: Upload sanitized bounded replay evidence
+        if: always()
+        uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f
+        with:
+          name: dt03e2-rp08-${{ github.run_id }}-${{ github.run_attempt }}
+          path: ${{ env.PUBLICATION_DIR }}
+          if-no-files-found: error
+          retention-days: 30
+          include-hidden-files: true
