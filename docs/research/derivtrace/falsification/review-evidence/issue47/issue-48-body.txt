@@ -1,0 +1,40 @@
+## Objective
+
+Reconcile the **eight empirical families E01–E08** and the independent holdout against available historical observations, safely acquired immutable source evidence and any newly qualified individual replay results. Do not mechanically rerun all sources or treat the 19 RP proposals as admitted.
+
+## Shared evidence and authority boundary
+
+Parent: [DT-03.E.2 #37](https://github.com/fanilosendrison/proto-scope/issues/37). Research campaign: [DT-03.E #35](https://github.com/fanilosendrison/proto-scope/issues/35).
+Prerequisites: [#36 qualified evidence inventory](https://github.com/fanilosendrison/proto-scope/issues/36) and [#41 bounded methodological findings](https://github.com/fanilosendrison/proto-scope/issues/41).
+
+The historical #36 inventory remains **0/19 replay admissions**. These child issues do not change that result. Only a new, individual, explicitly reviewed and accepted admission on an exact proposed command/environment/effect boundary can permit one replay. Review GO does not prove evidence truth. A narrower scientific claim never waives safety controls.
+
+All work is non-normative. No modification of Product Intent, DT-M0, original DT-03 partition 0/23/34/0, historic #36 inventory, Proto-Ring, Ruu, Turnlock, live GitHub protections or external source repositories. Private E05 remains private; Ruu v46's postdated provenance remains uncertain. Proto-Ring adoption #42 is not a dependency.
+
+## Stop/unknown discipline
+
+Preserve STOP, rejected, unexecutable, unavailable and unknown results exactly. Do not relabel an unperformed action as an execution. No inferred universal model adequacy.
+
+## Scope
+
+Read [the frozen #36 inventory](https://github.com/fanilosendrison/proto-scope/blob/0ebbe30ab0122f826e55307379b12cc58e091328/docs/research/derivtrace/falsification/dt-03-e-evidence-inventory.md), then examine source-bound historical/candidate observations:
+
+- E01 Proto-Ring #83/#111: retained source-level torn-capture case, qualification of RP02 as a **separate** experimental track.
+- E02 Proto-Ring #97/#115/#117: distinct protected-lifecycle and post-lock evidence provenance, no invented present execution.
+- E03 Proto-Ring #71: review and baseline succession, STOP/requalification chronology; issue comments are records, not authenticated historic cognition.
+- E04 Ruu ADR-080 / v45 / Git-smoke v5: separate program/model, archived output, native Git fixture and current pilot RP08. Cumulative 16,380 is not newly executed combinations.
+- E05 private Turnlock source: **private hold**; no public identifiable metadata or source content without separately justified disclosure.
+- E06 Turnlock-Rust #70/#74/#92: correspondence, corrected assurance, later retired lineage and explicit workspace-preservation unknown.
+- E07 Proto-Ring #121/#122/#126: consumer-parity gaps, platform-specific sources, historical CI/issue declarations separate from live replays.
+- E08 Proto-Lithify #14/PR #17: recorded provider negative/positive enforcement, no new live GitHub/provider replay or protected-ref mutation.
+- Independent holdout Ruu #47 as **candidate** only while controlling ADRs/executable evidence remain missing; Ruu #55 correlated with postdated-v46 evidence, not a ninth independent execution.
+
+## Required analytical controls
+
+Maintain exact source classes (historic document, mutable acquired record, source fixture, present executed witness), independent source/case units, acquisition date and retained claims. Preserve #36's 122 source-record partition and 19 replay-unit dispositions **for its historical packet**; if more recent external data is encountered, record a new acquisition boundary instead of rewriting #36.
+
+For each family explicitly classify: sources acquired, current replay status, target observation question, controls actually performed, what can be established, invalidators, unknowns, privacy, dependence/correlation, and any justified **new** proposed RP admission work. Do not open new executable scope or execute it without a distinct per-unit gate.
+
+## Deliverable
+
+An independently challenged, bounded all-family disposition/evidence packet for #37's empirical corpus. It is not the DT-M0 falsification phase #38 and must not claim adequacy/generalization based on missing execution or correlated records. If a family cannot be executed, preserve why and what historical evidence still supports.

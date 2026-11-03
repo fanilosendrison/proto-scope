@@ -1,0 +1,47 @@
+## DT-03.E.2.3 — qualified publication receipt
+
+Issue #46 has completed its admission-only scope with two separate `HOLD` dispositions.
+
+### Published identities
+
+- PR: https://github.com/fanilosendrison/proto-scope/pull/54
+- candidate commit: `b4432eff807accf54839600810dbdfedeacd4f5e`
+- published `main` merge commit: `a1a9dbdf40c3b1d674d93f4b3eebbc28fa139af6`
+- exact remote `main` readback: `a1a9dbdf40c3b1d674d93f4b3eebbc28fa139af6`
+- changed paths: exactly 3
+- applicable CI checks: none
+
+RP01:
+
+- decision: `HOLD`
+- path: `docs/research/derivtrace/falsification/dt-03-e-rp01-admission.md`
+- published blob: `a875778901050d335614b0a8c4f544fc9a9193aa`
+- published/readback SHA-256: `06d5334d2bf255b85915ad507966d8471a0d323eb3ae80de0df7c2b20cfbee02`
+
+RP02:
+
+- decision: `HOLD`
+- path: `docs/research/derivtrace/falsification/dt-03-e-rp02-admission.md`
+- published blob: `a77cb1c72c5c2b0735e266c2cce5c6531307fc23`
+- published/readback SHA-256: `a6b44e6d726e3cb0619d025ae58fac89e406564f87dfdd066d95e7a1b8fbf170`
+
+Shared non-executed harness:
+
+- path: `docs/research/derivtrace/falsification/fixtures/dt-03-e-rp01-rp02-contrast.py`
+- published blob: `c075133948561f5d27d35976b06b3a8f12511cad`
+- published/readback SHA-256: `39c34b61ae1a7072e9df2c5167faeb78fbe819e55827b4960c229e5722c7d272`
+
+### Independent review
+
+Two predecessor exact-candidate STOP reviews are preserved in both published decision bodies. The final fresh read-only review examined the exact published bytes above and returned `GO_FOR_RESEARCH_PUBLICATION` with `0` publication blockers, `0` publication majors, and `0` publication minors. It preserved the unproved preparation, confinement, and hook-effect boundaries as the substantive reasons for each `HOLD`; it did not convert either decision to `ADMIT`.
+
+### Safety and non-execution
+
+- experimental replays executed: `0`
+- replay controls executed: `0`
+- containment probes executed: `0`
+- target imports/execution: `0`
+- source repositories modified: `0`
+- DT-M0/Product Intent/frozen DT-03 changed: `0`
+
+Neither RP01 nor RP02 is admitted. Because both are not `ADMIT`, issue #47 has no dual admission and must not execute either unit under these records. Closing #46 records completion of qualification and publication only; it grants no execution authority.

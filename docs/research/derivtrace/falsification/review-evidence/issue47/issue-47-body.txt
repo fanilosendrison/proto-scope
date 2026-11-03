@@ -1,0 +1,50 @@
+## Objective
+
+Execute and independently audit **one bounded comparative E01 experiment** comprising historically separate **RP01 (pre-fix torn capture)** and **RP02 (post-fix fail-closed)**, **only if both** have separately accepted, independently reviewed, exact-published, still-applicable `ADMIT` decisions under [#46](https://github.com/fanilosendrison/proto-scope/issues/46). Never reuse RP08's admission, execution or safety assumptions.
+
+## Authority and invariants
+
+Parent [#37](https://github.com/fanilosendrison/proto-scope/issues/37), campaign [#35](https://github.com/fanilosendrison/proto-scope/issues/35). Historical [#36](https://github.com/fanilosendrison/proto-scope/issues/36) remains **0/19 admitted, 0 executed** in its own frozen packet; [#41](https://github.com/fanilosendrison/proto-scope/issues/41) supplies the bounded claim-relative method. RP01 and RP02 remain two separate historic replay units, **not** an invented new RP unit and not one transferable admission.
+
+All work is non-normative. No source-repository mutation, Product Intent, DT-M0, original DT-03 `0/23/34/0`, private E05, live protected GitHub/provider operations, or Proto-Ring/Ruu/Turnlock alteration. Proto-Ring adoption #42 and RP08 containment #51 do not authorize this experiment.
+
+Preserve genuine STOP/HOLD/REJECT, missing evidence, unknown, non-execution and adverse results. Do not retry until a favorable witness or reinterpret an omitted control as executed.
+
+## Mandatory dual admission gate BEFORE any experimental operation
+
+- Read and verify both exact published documents `docs/research/derivtrace/falsification/dt-03-e-rp01-admission.md` and `docs/research/derivtrace/falsification/dt-03-e-rp02-admission.md`.
+- Confirm **individually**: `ADMISSION_DECISION=ADMIT` (or semantically exact approved decision), fresh independent review of exact bytes, accepted claim/evidence gate, *demonstrated and still valid* safety gate, exact executable/harness/fixture/environment/command/effect identities, and comparable bounded controls.
+- Revalidate pinned immutable Git objects, checked-out paths and no-hardlink isolation, actual host, OS, filesystem, Python/Git version and executable identities, exact physical cwd, `PATH`/Git/Python startup isolation, sandbox enforcement, evidence custody, and ownership/side-effect permissions **immediately before invocation**. A closed #46 or a generic review GO does not suffice.
+- The actual host must support the proposed fixture command. In particular, the historical `git init -q -b main` cannot simply be assumed valid with Git 2.17.2; only the separately admitted compatible command/toolchain or equivalent source-external preparation may be used.
+- If **either** unit is HOLD/REJECT/not published/not applicable, if comparability fails, or if a safety/evidence/command boundary changes, **execute neither** RP unit. Return `NOT_EXECUTED_NO_ADMISSION` or `STOPPED_UNSAFE_OR_UNSUPPORTED` as appropriate and identify the exact deficient gate. No unilateral partial experiment or new admission on this task.
+
+## Exact conditional experimental observations
+
+Use only the **already admitted** commands and (if admitted) exact external research harness, keeping two fresh distinct **owned disposable real Git fixtures**, one for each pinned revision. No arbitrary new scripts, source edits, changed expected outcome, extra attempts or broader execution.
+
+1. **Stable positive controls (each revision):** the real tracked `a.txt=A0` / `b.txt=B0` state, fixed HEAD/index/path membership, expected successful capture and evidence of its stable identity; later stable `A1,B1` only in the admitted sequence. An unexpected failure invalidates the corresponding observation.
+2. **RP01 pre-fix witness (commit `7ccde07f4d9801383d6a2410e3d12ce6ee716f34`):** force the precise causal placement **after A's local observation is complete and before B's first observation**; write A1 then B1, recording actual successive physical states `A0,B0 → A1,B0 → A1,B1`. Verify that `capture` **returns successfully** with an identity corresponding to `A0,B1` although that pair never physically coexisted **during this capture**. A stable `A0,B1` reference may be *constructed only after the capture interval* under controlled matching Git/scope state; do not misreport this later control state as having existed during the earlier observation. Verify physical readback, ordering and identity—not just a printed label.
+3. **RP02 post-fix witness (commit `0b140d0505878b5283ca271de60fbee79c1bc0a9`):** use the **same material schedule and instrumentation** on fresh equivalent inputs; identify the specific expected `StateCaptureError("governed path state changed during state capture")` from the added whole-path-record comparison. A generic test PASS or unrelated `StateCaptureError` is insufficient. Verify that earlier setup/import/Git/stat/path failures did not produce the rejection.
+4. **Negative/alternative controls:** preserve any required subject-substitution, stable-state, intervention, drift/error-cause and side-effect control exactly as accepted in each admission. The full published protocol, not this summary, determines operation ordering and admissible effects. Preserve every failure and attempt; do not rerun to select a favorable sample.
+5. **Comparability audit:** specifically examine differences in `_stat_guard`, extra record pass, mocked `lstat`, source/helper imports, filesystem metadata, path ordering, Git state and controlled-schedule timing. Report narrower independent findings if material equivalence cannot be established; never call an unmatched pair one controlled contrast.
+
+## Custody, safety and scientific limitations
+
+For **every actual attempt**, preserve exact frozen source/contract/test/harness blobs and digests, authenticated runtime/toolchain references and declared trust, argv, physical cwd, process identity, timestamps where material, stdout/stderr/exit code, Python exception **and precise causal call path**, A/B bytes and real state sequence, Git HEAD/index/path set before/after, all evidence digests, allowed/observed side effects, invalidators, comparator and controls, and independent reviewer inspection.
+
+Only separately owned, safely isolated, disposable Git/FS fixtures may be mutated. Real Proto-Ring, Proto-Scope, Ruu, private data, credentials, protected refs and provider/cloud state must remain untouched. Stop immediately upon unexpected effects, containment failure, source/cwd substitution, import ambiguity or unqualified environment drift; never "fix forward" the experiment without returning for admission.
+
+A qualified new result may support only **a present instrumented pre-fix torn-capture witness** and/or **a present instrumented post-fix detection witness** within the admitted assumptions. It does **not** authenticate historical execution of Proto-Ring #83, establish global linearizable coherence, prove arbitrary ABA absence, validate all callers/verdicts, or qualify DT-M0.
+
+## Evidence packet and stopping rule
+
+Publish one exact independently audited non-normative E01 result/disposition packet for [#49](https://github.com/fanilosendrison/proto-scope/issues/49) to consolidate, reporting **one of**:
+
+- `EXECUTED_AND_QUALIFIED` — fully witnessed, materially comparable, admitted and independently qualified controls.
+- `EXECUTED_BUT_NONQUALIFYING` — actual attempts occurred but one or more required observations/controls/conclusions do not qualify; preserve all attempts.
+- `NOT_EXECUTED_NO_ADMISSION` — at least one independently required admission was absent or non-ADMIT and **nothing ran**.
+- `STOPPED_UNSAFE_OR_UNSUPPORTED` — a genuine safety, runtime, environment or provenance stop; state whether *any* step had actually run.
+
+Explicitly keep **per-unit** observations and admission decisions separate from the **paired** inference. Independent read-only adversarial review must challenge execution occurrence, source/import binding, exact intervention timing, stable references, false exceptions, capture custody, effect containment and inference limits. Publish through the authorized PR process with exact changed-path and SHA readback.
+
+Do not run the next phase, write #49's final corpus, modify source repositories, change DT-M0, or close parent #37 merely because #47 closes. Do not turn unperformed operations into experimental successes.

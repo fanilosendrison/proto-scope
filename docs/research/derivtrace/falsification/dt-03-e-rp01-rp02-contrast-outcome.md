@@ -1,0 +1,421 @@
+---
+okf_version: "1.0"
+kind: "KnowledgeAsset"
+asset_type: "bounded-research-outcome"
+domain: "derivation-observability"
+severity: "non-normative"
+name: "DT-03.E.2.4 — RP01/RP02 comparative non-execution outcome"
+version: "0.1.0"
+status: "RESEARCH_PUBLICATION_CANDIDATE"
+baseline_sha: "cf631a6b86501ffd484954572263f07d1feb2cd0"
+baseline_tree: "c205f37e9592b07f8ef84af261198c97798ee2e4"
+predecessor_publication_sha: "a1a9dbdf40c3b1d674d93f4b3eebbc28fa139af6"
+previous_reviewed_head: "13118bf358d58f958da629b7e8841e1e578c5972"
+---
+
+# DT-03.E.2.4 — RP01/RP02 comparative non-execution outcome
+
+```text
+RESULT=NOT_EXECUTED_NO_ADMISSION
+RP01_ADMISSION=HOLD
+RP02_ADMISSION=HOLD
+DUAL_ADMISSION=NOT_SATISFIED
+RP01_EXECUTION=NOT_RUN
+RP02_EXECUTION=NOT_RUN
+RP01_STABLE_CONTROL=NOT_RUN
+RP02_STABLE_CONTROL=NOT_RUN
+RP01_FORCED_INTERVENTION=NOT_RUN
+RP02_FORCED_INTERVENTION=NOT_RUN
+PAIRED_COMPARISON=NOT_EXECUTED
+PAIRED_RESULT=NOT_ESTABLISHED
+CURRENT_TORN_CAPTURE_WITNESS=NONE
+CURRENT_FAIL_CLOSED_WITNESS=NONE
+SHARED_HARNESS_EXECUTED=NO
+NEW_CAUSAL_COMPARISON=NOT_ESTABLISHED
+HISTORICAL_EXECUTION_AUTHENTICATED=NO
+DT_M0_FALSIFIED_BY_THIS_OUTCOME=NO
+DT_M0_VALIDATED=NO
+PARENT_37_COMPLETE=NO
+```
+
+## 1. Purpose and non-normative boundary
+
+This is the documentary disposition proposed for Issue #47, not a replay
+record. The status fields report the examined campaign's admission documents
+and operator-declared non-execution, not independently authenticated complete
+process history. They do not assert absence of every possible execution
+elsewhere. No new experimental observation or admission is claimed.
+
+The owner authorizes evidence remediation, static qualification and one
+changed-head publication review, not RP01/RP02 imports, capture, harness,
+controls, interventions, reference construction or containment probes. The
+operator reports performing none of those operations in the original task or
+this remediation. Section 6 separates that declaration from the admission
+assessment and from unestablished independent process-history authentication.
+
+This is non-normative research. No Product Intent, DT-M0, source-domain
+contract, historical inventory or original admission decision is amended.
+An exact harness definition is not execution authority; publication GO for a
+HOLD is not ADMIT. Conditional empirical criteria remain NOT_RUN, never PASS.
+
+## 2. Exact RP01 and RP02 historical source bytes
+
+Complete inert snapshots are supplied, not just links or digest declarations:
+
+- [RP01 pre-fix source](review-evidence/issue47/rp01-source.py.txt).
+- [RP02 post-fix source](review-evidence/issue47/rp02-source.py.txt).
+
+```text
+RP01_REPOSITORY=fanilosendrison/proto-ring
+RP01_COMMIT=7ccde07f4d9801383d6a2410e3d12ce6ee716f34
+RP01_PATH=src/proto_ring/repository_state.py
+RP01_BLOB=a9a407d3227f5570bda7fbafac0b2eaf793d9719
+RP01_SHA256=11c6b8f0b1f608547c34171a23038b8c91a546d2b772a723661fa458d2a06bf4
+RP02_REPOSITORY=fanilosendrison/proto-ring
+RP02_COMMIT=0b140d0505878b5283ca271de60fbee79c1bc0a9
+RP02_PATH=src/proto_ring/repository_state.py
+RP02_BLOB=fdc6a4ea16fd0b90a32ab0d2f4bb11c3471244fe
+RP02_SHA256=9a3c929651ceae415bc86acb219142fac9d94145dc72c03ec2e537a889b009c4
+```
+
+Static inspection of these supplied bytes distinguishes a first path-record
+capture followed by Git-structure recapture in RP01 from RP02's additional
+whole-path-record observation and explicit inequality rejection. RP02 also
+extends `_stat_guard` with device/inode checks. This describes code, not a
+witnessed successful capture, exception or matched experimental schedule.
+
+RP01 could retain A0 and later B1 under the specified instrumented schedule;
+RP02's comparison could reject persistent corresponding drift. These remain
+hypotheses of the unexecuted comparison. Source inspection does not authenticate
+historical Proto-Ring #83 execution, effective capture, or material comparability
+of two actual runs. No initializer, full runtime/import closure, retained test
+execution or later contract is claimed independently qualified by these five
+supplied immutable files.
+
+## 3. Published individual decisions and receipt
+
+The complete individual admission snapshots are
+[RP01](review-evidence/issue47/rp01-admission.md.txt) and
+[RP02](review-evidence/issue47/rp02-admission.md.txt). Both contain
+`ADMISSION_DECISION=HOLD`, `SAFETY_GATE=UNDETERMINED`,
+`EVIDENCE_GATE=PROVISIONALLY_SATISFIABLE` and no safe runtime claim.
+
+```text
+PUBLICATION_REPOSITORY=fanilosendrison/proto-scope
+PUBLICATION_COMMIT=a1a9dbdf40c3b1d674d93f4b3eebbc28fa139af6
+PUBLICATION_PR=54
+RP01_PATH=docs/research/derivtrace/falsification/dt-03-e-rp01-admission.md
+RP01_BLOB=a875778901050d335614b0a8c4f544fc9a9193aa
+RP01_SHA256=06d5334d2bf255b85915ad507966d8471a0d323eb3ae80de0df7c2b20cfbee02
+RP02_PATH=docs/research/derivtrace/falsification/dt-03-e-rp02-admission.md
+RP02_BLOB=a77cb1c72c5c2b0735e266c2cce5c6531307fc23
+RP02_SHA256=a6b44e6d726e3cb0619d025ae58fac89e406564f87dfdd066d95e7a1b8fbf170
+```
+
+The separately supplied [#46 receipt](review-evidence/issue47/issue-46-publication-receipt.txt)
+is the acquired body of
+[comment 6400965002](https://github.com/fanilosendrison/proto-scope/issues/46#issuecomment-6400965002).
+It declares publication of two HOLDs and final `GO_FOR_RESEARCH_PUBLICATION`,
+with zero publication blockers/majors/minors. Both decisions retain their
+predecessor STOP histories. The receipt does not convert either HOLD to ADMIT.
+Its declarations of earlier review and zero experimental operations are not
+new independent authentication of every historical event.
+
+The substantive HOLD reasons are visible in each supplied decision: unproved
+exclusive preparation/read-only enforcement, no demonstrated applicable
+write/network/process/credential confinement, path/race/evidence-capture and
+cleanup controls, and future host/tool revalidation. Missing safety capability
+is not evidence that an unsafe effect occurred. No repair or new admission is
+part of this outcome.
+
+## 4. Shared harness identity and static-only semantics
+
+The complete [inert harness snapshot](review-evidence/issue47/shared-harness.py.txt)
+has these identities:
+
+```text
+REPOSITORY=fanilosendrison/proto-scope
+COMMIT=a1a9dbdf40c3b1d674d93f4b3eebbc28fa139af6
+PATH=docs/research/derivtrace/falsification/fixtures/dt-03-e-rp01-rp02-contrast.py
+BLOB=c075133948561f5d27d35976b06b3a8f12511cad
+SHA256=39c34b61ae1a7072e9df2c5167faeb78fbe819e55827b4960c229e5722c7d272
+```
+
+Its defined sequence creates a real Git fixture, imports the selected module,
+captures stable initial state, instruments `_capture_path_records` and
+`os.lstat`, performs the intervention, then captures stable later and reference
+states. Its hooks define sequential A1 then B1 writes and physical readbacks.
+Its assertions distinguish a returned RP01 identity from RP02's specific
+`StateCaptureError("governed path state changed during state capture")` and
+two complete record passes. Those are unexecuted definitions and expectations.
+
+The harness is deliberately non-confining. It is supplied as non-executable
+`.txt` evidence, not installed, imported or invoked. No source copy, matched
+hash, parsed definition, assertion or printed label is credited as a control,
+trace, state sequence, causal rejection or present torn-capture witness.
+The hypothetical later stable `A0,B1` reference would follow the capture
+interval, not retroactively exist in it. No such reference ran here according
+to the operator. Broker review runtime qualification cannot admit this harness.
+
+## 5. Mandatory two-admission gate and acquisition boundary
+
+The supplied [#47 body](review-evidence/issue47/issue-47-body.txt) requires
+separate, still-applicable ADMIT decisions for both units; its exact text says:
+
+```text
+A closed #46 or a generic review GO does not suffice.
+```
+
+Both supplied decision bodies instead state HOLD, and the supplied #46 receipt
+agrees. Proposition A is therefore: **no applicable dual ADMIT was established
+in the supplied records**, so this task has no execution permission. No unit
+can borrow the other's authority or RP08's environment/admission.
+
+The [manifest](review-evidence/issue47/evidence-manifest.json) fixes acquisition
+from `2026-11-03T08:32:56.455488+00:00` through
+`2026-11-03T08:33:11.951093+00:00`. Its scope is exactly five immutable files,
+five complete Issue bodies (#46/#47/#37/#49/#48), the #46 receipt and the
+original #47 operator/blocker handoff. The two admission paths and shared
+harness were also compared with observed `main`
+`cf631a6b86501ffd484954572263f07d1feb2cd0` and were byte-identical.
+
+No later applicable dual ADMIT was established in this explicit set. This is
+not an exhaustive GitHub, repository, comment, edit-history or process-history
+search. Other comments or separately stored decisions are not silently
+represented as acquired. An applicable decision outside this set, edits after
+acquisition, or contrary task evidence would invalidate or narrow the relevant
+conclusion and require reassessment. If both applicable ADMITs are established,
+this predetermined no-admission rationale no longer follows. This report
+neither excludes that possibility nor creates an admission.
+
+## 6. Separate admission, operator declaration and historical unknown
+
+Three propositions remain distinct:
+
+- **A — documentary gate:** the supplied HOLD/HOLD decisions and receipt do not
+  establish applicable dual ADMIT. This follows from the supplied text within
+  its acquisition/provenance limits, not from execution observation.
+- **B — operator declaration:** the task operator reports no RP01/RP02 target
+  import, harness invocation, stable/control/reference capture, forced
+  intervention, containment probe, experimental retry or discarded attempt in
+  the recorded #47 task or this remediation. B is not inferred solely from A.
+- **C — independent history:** no independently authenticated complete
+  process-history witness in this evidence set establishes universal
+  non-execution. Such authentication remains unestablished.
+
+The [original blocker handoff](review-evidence/issue47/issue-47-original-blocker-handoff.txt)
+retains B as a public operator declaration. The #46 receipt supplies a
+separate predecessor declaration, not an independent #47 process witness.
+No independently complete task/process/effect log is available in this
+supplied set. Broker request/result custody proves a documentary review
+operation, not the absence of experiments in the operator's entire history.
+Private session/credential/runtime logs are not copied as public evidence.
+
+Thus RP01 and RP02 are individually NOT_RUN **as operator-declared campaign
+states**; paired comparison is NOT_EXECUTED on the same basis. The empirical
+witnesses remain absent, not failed tests or passing controls. This is a
+bounded documentary non-execution disposition with explicit unknown history,
+not proof that no unauthorized or unrecorded execution could have occurred.
+No experiment is authorized to manufacture missing historical evidence.
+
+## 7. Source custody and side-effect limits
+
+The manifest records repository/commit/path, expected/observed Git blob,
+SHA-256, snapshot path, acquisition times/mechanism and provenance limits for
+each immutable file. The acquirer compared GitHub contents-at-commit, Git blob
+bytes, local Git object/path bytes and `git hash-object --stdin`. Snapshot
+bytes and their declared identity can now be independently hashed and
+statically inspected inside the reviewer packet.
+
+That does **not** independently authenticate the supplied snapshots' upstream
+GitHub origin, acquisition honesty, complete chain of custody, historical
+execution or scientific truth. Those upstream provenance claims remain
+acquirer assertions even when supplied hashes match. The review may challenge
+semantic consistency without treating origin or all history as authenticated.
+
+Mutable records have source URLs, numeric/node identities, author and
+created/updated metadata, exact acquired body SHA-256 and acquisition times.
+Body bytes mean REST JSON's decoded body encoded UTF-8 without newline
+insertion or normalization, not raw HTTP wire bytes. Their original body line
+endings are retained. These are acquisition snapshots, not proof of complete
+edit history, all records, declaration truth or independent origin. Revision
+binding of a committed snapshot does not freeze its upstream mutable record.
+
+This task did not authorize external scientific source-repository mutation.
+The operator reports no external scientific source-repository write. No
+independently complete side-effect or repository-history audit is claimed.
+Unchanged refs, where observed, establish only those particular ref values at
+those observations, not absence of all effects. Proto-Scope candidate writes
+and bounded broker review operations are separate expressly authorized effects.
+Original admission files and historical research files are not edited by this
+correction; the Git changed-path inventory can establish that scoped fact.
+
+## 8. Missing paired observation and scientific exclusions
+
+No newly witnessed `A0,B1` capture, drift-specific rejection, stable control,
+physical state sequence, materially equivalent replay or new causal comparison
+is claimed. The intended `A0,B0 -> A1,B0 -> A1,B1` schedule remains a hypothesis.
+The extra post-fix pass, `_stat_guard` changes, patched observation helpers,
+Git state, path order, fixture genesis, filesystem metadata and timing are
+conditions for a hypothetical admitted experiment, not measured equivalence.
+
+Source/manifest representability, effective capture, execution occurrence,
+producer custody, qualification, source-domain authority and scientific truth
+remain separate. Neither immutable bytes nor GO creates effective observations.
+Excluded conclusions include natural production concurrency, universal coherent
+snapshots/global linearizability, arbitrary ABA prevention, caller correctness,
+authentic historical Proto-Ring #83 execution, and DT-M0 support, falsification,
+validation or selection. No unsafe effect or impossibility of every future
+safe environment is inferred from missing safety evidence.
+
+The historical #36 packet remains 122 source records, 19 replay units,
+0 admissions, 16 provenance-rejected, 1 private hold, 2 postdated, 0 executions.
+No twentieth unit is created. Frozen DT-03 remains 0 falsified / 23 supported /
+34 undetermined / 0 not examined. These are preserved historical boundaries,
+not requalified empirical observations from this remediation.
+
+## 9. Original review preserved; F001–F005 remediation
+
+The original exact HEAD `13118bf358d58f958da629b7e8841e1e578c5972` received
+COMPLETED / VALID / UNDETERMINED / CURRENT at publication, request
+`request:sha256:341b801795a972ded788c21fcc531f6b100fa141971ee5a538041337e931b571`.
+Its [authenticated result](https://github.com/fanilosendrison/review-broker/issues/79#issuecomment-6598693627)
+and [public handoff snapshot](review-evidence/issue47/issue-47-original-blocker-handoff.txt)
+remain distinct history. This correction does not rewrite that commit, result,
+comments, journal, original findings or uncertainty. Later HEAD applicability
+may change; the original recorded verdict and reviewed bytes do not.
+
+Remediation proposed for independent reassessment, not self-certified closure:
+
+- **F001:** complete HOLD/HOLD admission bytes and exact #46 receipt are now
+  supplied; section 5 limits absent-ADMIT reasoning to the enumerated records.
+- **F002:** section 6 separates A/B/C, retains B as declaration, and leaves
+  independently complete process history unestablished. No inference A -> B.
+- **F003:** complete RP01/RP02/harness bytes are supplied for hashing/static
+  semantic inspection. Section 7 excludes independent upstream authentication.
+- **F004:** complete governing bodies and exact excerpts are supplied; section
+  11 maps the conditional/non-execution obligations without empirical PASS.
+- **F005:** section 7 replaces absolute no-mutation claims with authorization,
+  operator assertion, audit absence and scoped-ref observation distinctions.
+
+The original seven uncertainty statements are preserved verbatim below:
+
+```text
+1. Whether the cited RP01 and RP02 admission artifacts have the stated exact bytes, applicability, and HOLD decisions.
+2. Whether any later or separately stored applicable ADMIT existed within the claimed acquired campaign records.
+3. Whether the campaign actually had no target import, harness invocation, control, intervention, containment probe, retry, or discarded attempt.
+4. Whether the pinned source and harness bytes support the stated pre-fix and post-fix hypotheses; no source code or harness was supplied for examination.
+5. Whether Issue #47's governing acceptance text authorizes documentary completion on the stated basis and whether the #49 handoff captures every applicable parent criterion.
+6. Whether mutable issue, PR, comment, and publication records were edited or incompletely acquired, and whether external repository state remained unchanged.
+7. Execution or admission activity outside the explicitly bounded campaign remains unknown; this review cannot support universal absence.
+```
+
+Items 1/4/5 now have supplied text for a new bounded audit, not retroactive
+qualification. Items 2/3/6/7 retain their record-completeness, process-history,
+effect-history and outside-campaign unknowns. No prior finding is silently
+waived and no universal attestation requirement or product rule is adopted.
+
+## 10. Corrected independent-review and publication gate
+
+The manifest and all twelve inert `.txt` snapshots are actual PR changed files,
+so the v2 packet can include their full text. The manifest SHA-256 is:
+
+```text
+a6280d2d0e71dd7cdfc5d4ac77715cb75b43a1e3233f0c3a7bb0e5ca75b5f978
+```
+
+The correction requires one authorized `changed_head` request with the exact
+previous complete mission, policy, reviewer and logical subject. Its Review
+Intent remains
+`review-intent:sha256:da79f5b8574282befdfe31f99a79999ab3f88cb043df3197dea443e54b4924ce`.
+No same-head repeat, model substitution or indeterminate-inference retry is
+permitted. External material still absent from the packet remains unexamined.
+
+```text
+CORRECTED_INDEPENDENT_REVIEW=PENDING
+CONSUMER_ACCEPTANCE=PENDING
+PUBLICATION=PENDING
+PUBLISHED_EXACT_READBACK=PENDING
+ISSUE47_CLOSURE=PENDING
+```
+
+Completion requires authenticated COMPLETED / VALID / GO / CURRENT on the new
+exact HEAD, no unresolved material F001–F005 finding, explicit uncertainty
+classification, consumer-owned acceptance, restored broker configuration,
+verified Shutdown and published-byte/tree/blob readback. The original
+UNDETERMINED is not overridden. Review GO can qualify this documentary outcome,
+not all historical events, empirical success, execution permission or DT-M0.
+
+## 11. Governing excerpts and #47 completion assessment
+
+Exact excerpts are reproduced without treating mutable-source acquisition as
+independent origin authentication; complete bodies remain supplied.
+From [#47](review-evidence/issue47/issue-47-body.txt):
+
+```text
+- `NOT_EXECUTED_NO_ADMISSION` — at least one independently required admission was absent or non-ADMIT and **nothing ran**.
+```
+
+The “nothing ran” component is supported here only by the explicitly classified
+operator declaration B, not inferred from A or independently proven by C.
+This limitation is part of the proposed documentary disposition, not hidden.
+From [parent #37](review-evidence/issue47/issue-37-body.txt):
+
+```text
+Research work may finish with an explicitly justified HOLD/REJECT/STOP, but **issue completion never converts such a disposition into an ADMIT or a successful execution**.
+```
+
+From [corpus #49](review-evidence/issue47/issue-49-body.txt):
+
+```text
+A **failed or unadmitted replay does not need to become successful**.
+```
+
+Applicable #47 obligations are mapped as follows:
+
+1. **Dual-admission prerequisite:** NOT SATISFIED by supplied HOLD/HOLD;
+   neither operation is permitted. No new host/tool/containment qualification
+   is attempted to replace the missing admissions.
+2. **Stable positive initial/later controls for each revision:** NOT_RUN per B,
+   not PASS. No fixture, Git identity, command status or stable capture exists
+   as independent current evidence in this packet.
+3. **RP01 intervention, interval-local torn witness and later reference:**
+   NOT_RUN per B; no physical ordering, successful identity or reference result
+   is established by the newly supplied source definitions.
+4. **RP02 materially matched intervention and causal drift rejection:** NOT_RUN
+   per B; no exception, traceback, second-pass trace or causal discriminator
+   has been observed for this experiment in the supplied evidence.
+5. **Negative/alternative controls and all attempts:** NOT_RUN per B; no retry
+   or discarded attempt is reported, but complete historical absence remains
+   unestablished. No favorable sample is manufactured.
+6. **Comparability audit:** source-level differences and conditional protocol
+   are inspectable; materially comparable actual runs remain NOT_ESTABLISHED.
+7. **Attempt custody, safety and sources:** no invocation/stream/effect witness
+   is invented. Safety remains UNDETERMINED, not observed unsafe. Supplied-byte
+   verification is scoped; no external no-write guarantee is inferred.
+8. **Separate unit and paired outcome packet:** individual HOLD/NOT_RUN states,
+   paired NOT_EXECUTED/NOT_ESTABLISHED, missing evidence and invalidators are
+   explicit. The empirical prerequisites are not relabelled satisfied.
+9. **Independent audit, publication and final readback:** original audit
+   preserved; corrected review and consumer qualification remain pending.
+   Completion is conditional on section 10, not asserted at authorship.
+
+This maps #47's documentary alternative, not all six parent criteria.
+It leaves #37 and #49 incomplete and neither starts #48 nor writes the corpus.
+
+## 12. Exact #49 handoff
+
+Corpus #49 receives two individual HOLDs, operator-declared NOT_RUN states,
+the non-executed shared harness identity, a missing paired comparison, explicit
+A/B/C and custody limits, original adverse review history and any separately
+qualified corrected publication receipt. It must credit no torn-capture,
+fail-closed, control, two-sided replay or new causal-comparison observation
+from this packet. Source semantics and declarations keep their evidence class.
+
+The supplied [#48 body](review-evidence/issue47/issue-48-body.txt) is handoff
+scope, not completed reconciliation. Corpus #49 still requires its separately
+qualified outcome and must substantively assess all six #37 criteria, including
+replay when a supported admissible environment exists. No source presence,
+issue status or GO alone satisfies that conditional empirical obligation.
+Parent #37 and programme #35 remain open; no #48/#49 execution, #38/#39
+conclusion, new admission or normative/model change is authorized here.
