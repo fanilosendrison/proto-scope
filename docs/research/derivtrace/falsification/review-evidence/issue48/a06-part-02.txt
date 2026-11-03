@@ -1,0 +1,41 @@
+   as independent current evidence in this packet.
+3. **RP01 intervention, interval-local torn witness and later reference:**
+   NOT_RUN per B; no physical ordering, successful identity or reference result
+   is established by the newly supplied source definitions.
+4. **RP02 materially matched intervention and causal drift rejection:** NOT_RUN
+   per B; no exception, traceback, second-pass trace or causal discriminator
+   has been observed for this experiment in the supplied evidence.
+5. **Negative/alternative controls and all attempts:** NOT_RUN per B; no retry
+   or discarded attempt is reported, but complete historical absence remains
+   unestablished. No favorable sample is manufactured.
+6. **Comparability audit:** source-level differences and conditional protocol
+   are inspectable; materially comparable actual runs remain NOT_ESTABLISHED.
+7. **Attempt custody, safety and sources:** no invocation/stream/effect witness
+   is invented. Safety remains UNDETERMINED, not observed unsafe. Supplied-byte
+   verification is scoped; no external no-write guarantee is inferred.
+8. **Separate unit and paired outcome packet:** individual HOLD/NOT_RUN states,
+   paired NOT_EXECUTED/NOT_ESTABLISHED, missing evidence and invalidators are
+   explicit. The empirical prerequisites are not relabelled satisfied.
+9. **Independent audit, publication and final readback:** original audit
+   preserved; corrected review and consumer qualification remain pending.
+   Completion is conditional on section 10, not asserted at authorship.
+
+This maps #47's documentary alternative, not all six parent criteria.
+It leaves #37 and #49 incomplete and neither starts #48 nor writes the corpus.
+
+## 12. Exact #49 handoff
+
+Corpus #49 receives two individual HOLDs, operator-declared NOT_RUN states,
+the non-executed shared harness identity, a missing paired comparison, explicit
+A/B/C and custody limits, original adverse review history and any separately
+qualified corrected publication receipt. It must credit no torn-capture,
+fail-closed, control, two-sided replay or new causal-comparison observation
+from this packet. Source semantics and declarations keep their evidence class.
+
+The supplied [#48 body](review-evidence/issue47/issue-48-body.txt) is handoff
+scope, not completed reconciliation. Corpus #49 still requires its separately
+qualified outcome and must substantively assess all six #37 criteria, including
+replay when a supported admissible environment exists. No source presence,
+issue status or GO alone satisfies that conditional empirical obligation.
+Parent #37 and programme #35 remain open; no #48/#49 execution, #38/#39
+conclusion, new admission or normative/model change is authorized here.

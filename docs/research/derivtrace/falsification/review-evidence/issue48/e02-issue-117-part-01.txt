@@ -1,0 +1,166 @@
+## Outcome
+
+Remove cross-run ambiguity from the local accelerated Python runner's stateful
+evidence.
+
+Evidence produced for consumption outside one runner's protected
+`corpus-stateful` execution interval must be bound to that producing runner
+invocation and must not be replaceable by another independently concurrent
+runner under the same evidence identity.
+
+## Authority
+
+```text
+Finding: #115
+#97 remains authority for the existing protected corpus-stateful lifecycle.
+```
+
+This correction is limited to verification or qualification evidence and
+integration or conformance. It changes no product, corpus, or conformance
+semantics.
+
+## Required property
+
+```text
+runner invocation R
+→ produces evidence ER
+
+external use of ER as evidence for R
+→ must unambiguously identify ER as belonging to R
+
+another runner R2
+→ must not be able to cause R's evidence identity to silently resolve to R2's
+   evidence
+```
+
+## Selected correction class
+
+```text
+per-run evidence namespace
++
+explicit run-bound evidence handoff
+```
+
+The implementation must preserve the distinction:
+
+```text
+runner-internal scratch ownership
+vs
+post-run evidence exported for external consumption
+```
+
+## Required preservation
+
+```text
+#97 stateful execution safety
+08 → 09 → 10 ordering
+stateful task atomicity
+exact test inventory accounting
+current test semantics
+current corpus semantics
+current conformance semantics
+fail-closed missing-artifact behavior
+non-stateful task concurrency
+current vector parallelism from #114
+```
+
+## Required concurrency property
+
+Two independently concurrent full runners must be able to:
+
+```text
+both PASS
+both produce distinguishable run-bound evidence
+neither delete/replace the other's exported evidence identity
+```
+
+## Required evidence binding
+
+A consumer given the evidence handoff for runner R must not need to infer the
+producing run from:
+
+```text
+"whatever currently occupies one global /tmp filename"
+```
+
+## Repository surface boundary
+
+Only the local accelerated Python runner's evidence-ownership and handoff
+mechanism, plus focused tests needed to verify this correction, may change.
+Exact source paths follow from the bounded implementation derivation below.
+
+## Non-goals
+
+```text
+no product-semantic change
+no corpus/schema change
+no adapter change
+no RepositoryState change
+no Rust change
+no network service
+no database
+no permanent artifact-retention policy
+no CI topology change unless separately justified
+no whole-runner global serialization
+no removal of #97 lock without separate proof that it has no remaining owner
+```
+
+## Implementation derivation still required
+
+The implementation must resolve the following questions within this bounded
+scope:
+
+```text
+exact per-run namespace location
+how runner identity is generated
+how evidence paths/digests are handed to the parent/external consumer
+cleanup/lifetime boundary for internal scratch
+whether exported evidence must be copied/moved outside temporary scratch
+whether the #97 lock remains necessary after namespacing
+```
+
+These are not new product semantics. They must be selected by preserving the
+required property above.
+
+## Acceptance criteria
+
+- Single-run behavior is unchanged semantically.
+- Two independently concurrent full runners both pass.
+- Run A and run B evidence identities are distinct.
+- Run A evidence cannot be silently substituted by B.
+- Run B evidence cannot be silently substituted by A.
+- An external consumer can bind evidence to the exact producing run.
+- A missing or corrupt handoff fails closed.
+- The 08 → 09 → 10 order is unchanged.
+- #114 vector parallelism is unchanged.
+- The exact test inventory is unchanged except for focused tests added for this correction.
+- The full Python suite passes.
+- The runner passes with `--workers 3`.
+- The runner passes with `--workers 4`.
+- Independent review returns `GO`.
+- Exact-SHA CI passes.
+
+## Validation
+
+```text
+single-run semantic differential
+independently concurrent full-runner reproduction
+bidirectional substitution resistance
+exact producing-run evidence binding
+missing/corrupt handoff fail-closed tests
+08 → 09 → 10 ordering check
+#114 vector-parallelism preservation check
+exact inventory accounting
+full Python suite
+runner --workers 3
+runner --workers 4
+independent review
+published exact-SHA CI
+```
+
+## Authoritative references
+
+- Finding and adjudication evidence: #115.
+- Existing protected stateful lifecycle: #97.
+- Preserved vector scheduling: #114.
+- Repository workflow and authority boundary: `docs/repository-governance/proto-ring-engineering.md`.

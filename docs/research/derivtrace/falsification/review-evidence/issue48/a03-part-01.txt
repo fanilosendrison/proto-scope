@@ -1,0 +1,380 @@
+---
+okf_version: "1.0"
+kind: "KnowledgeAsset"
+asset_type: "replay-non-execution-outcome"
+domain: "derivation-observability"
+severity: "non-normative"
+name: "DT-03.E.2.2 — RP08 non-execution disposition"
+version: "0.1.0"
+status: "REVIEW_PENDING"
+result: "NOT_EXECUTED_NO_ADMISSION"
+baseline_sha: "8a8e5ea43b69928f986c6e219757694d88397a84"
+---
+
+# DT-03.E.2.2 — RP08 non-execution disposition
+
+## 1. Purpose and exact research boundary
+
+This is the bounded final research disposition proposed for
+[Issue #45](https://github.com/fanilosendrison/proto-scope/issues/45), under
+parent [#37](https://github.com/fanilosendrison/proto-scope/issues/37) and
+programme [#35](https://github.com/fanilosendrison/proto-scope/issues/35).
+Independent qualification and final publication remain pending. It is not a
+report of an observed RP08 replay or a replacement admission decision.
+
+No applicable RP08 `ADMIT` was identified in the inspected campaign. Issues #44
+and #51 published `HOLD`; issue #55 published `REJECT` for its exact Phase B
+proposal (Appendix A–D). Accordingly, no RP08 P1, N1 or P2 operation was
+performed within the recorded #45 campaign. This is not proof that RP08 was
+never executed elsewhere or historically. The scope is the examined campaign and
+exact proposals, not every possible environment.
+
+This non-normative record changes neither Product Intent nor DT-M0. It does not
+reopen #44, #51 or #55, repair their proposals, create a successor admission, or
+authorize future execution. Issue closure and publication-review GO are neither
+experimental authorization nor proof of scientific truth.
+
+## 2. Exact frozen RP08 source and archive
+
+The repository is `fanilosendrison/ruu`, revision
+`5d04c58170b2ce3f0e47aa0554a97906d2256492`.
+
+```text
+SCRIPT_PATH=qualification/state-space/v045/state-space-audit-v45.py
+SCRIPT_GIT_BLOB=515f1067167d3ae331d4562c4dc8d879f2c74967
+SCRIPT_SHA256=84b9016765a5a8713db40df11888b657f63d309335d4e6890410d423057738ea
+SCRIPT_BYTES=6795
+ARCHIVE_PATH=qualification/state-space/v045/state-space-audit-v45.txt
+ARCHIVE_GIT_BLOB=1e8d950b67f1d25707142ff62d003f741481fde7
+ARCHIVE_SHA256=76bc0a73f54bbcbe167a4bf985d6aff5bf6d60b0a03fe51e78bdaff9ca4765ae
+ARCHIVE_BYTES=456
+```
+
+The commit tree binds these paths to these blobs. Complete blob bytes were read
+without running the script; Git object hashes, SHA-256 and sizes were checked
+(Appendix E–F). These facts establish source-byte identity, not process
+occurrence, historical producer attribution or semantic fidelity.
+
+## 3. Published admission chronology
+
+1. **#44 / PR #50 — HOLD.** The exact proposed local operation lacked
+   demonstrated containment and other preparation/capture prerequisites. Section
+   11 records `ADMISSION_DECISION=HOLD`; section 1 records no RP08 command or
+   control run (Appendix A).
+2. **#51 / PR #53 — HOLD.** The newly bound local host had no qualified
+   confinement option. P-A–P-E were `NOT_RUN`; source preparation and capture
+   remained unqualified. No RP08 operation ran (Appendix B).
+3. **#55 Phase A / PR #58 — inert probes qualified.** Five inert probes ran on
+   GitHub Actions, but `RP08_ADMITTED=NO` and `RP08_EXECUTED=NO` (Appendix C).
+   This did not supersede either HOLD.
+4. **#55 Phase B / PR #59 — REJECT.** The exact inactive workflow/driver package
+   has a demonstrated durable single-use authorization defect, not merely an
+   unestablished prerequisite. Its safety and evidence gates fail (Appendix D).
+
+The additive
+[#44 terminology erratum](https://github.com/fanilosendrison/proto-scope/issues/44#issuecomment-6400367725),
+also preserved in Appendix B's immutable source, distinguishes:
+
+```text
+SAFETY_CAPABILITY_EVIDENCE=UNDETERMINED
+SAFETY_REQUIREMENT_SATISFIED=NO
+SAFETY_ADMISSION_GATE=FAIL
+EVIDENCE_GATE=UNDETERMINED
+ADMISSION_DECISION=HOLD
+UNSAFE_EFFECT_OBSERVED=NO
+REPLAY_EXECUTED=NO
+```
+
+Missing safety-capability evidence and a mandatory safety-admission gate that
+failed are different dimensions. Neither asserts that an unsafe effect was
+observed. The original #44 bytes and overloaded historical `SAFETY_GATE` fields
+remain unchanged.
+
+## 4. Qualified inert probes are not RP08 execution
+
+Run
+[40234216650](https://github.com/fanilosendrison/proto-scope/actions/runs/40234216650),
+attempt `1`, executed five inert probes on workflow commit
+`f9b53f07a27fb4489314786066951970bff50327`. The published qualification records
+P-A allowed write, P-B denied write, P-C network restriction, P-D
+final-component no-follow behavior and P-E stream/status capture as bounded
+`PASS` (Appendix C, sections 6–10 and 15).
+
+That was real probe execution, not RP08, not P1/N1/P2, and not a new RP08 replay
+witness. The qualification trusts the recorded GitHub/runner/Docker custody and
+exact finite controls. It does not establish universal network isolation,
+hardlink/race exclusion, arbitrary process safety, historical RP08 occurrence or
+model correctness.
+
+The report preserves five case-distinct status-name pairs that collide under
+ordinary case-insensitive extraction. Its direct ZIP-member validation is not
+equivalent to validating an extracted colliding tree. Artifact retention is
+finite; this outcome does not assert current availability or freshly re-audit
+the raw ZIP. It consumes the exact published qualification, not a newly repeated
+probe.
+
+## 5. Demonstrated Phase B defeating condition
+
+The frozen read-only proposal cannot atomically consume a durable single-use
+pre-dispatch authorization identity. Its three dispatch inputs can be reused
+across fresh `workflow_dispatch` events. Every fresh run starts at
+`GITHUB_RUN_ATTEMPT=1`; prohibiting reruns of one run therefore does not
+prohibit multiple fresh runs (Appendix D, sections 5–6 and 15).
+
+A post-dispatch run ID is not a consumed prior approval identity. Per-run
+`RETRIES=0` and concurrency serialization do not prevent cross-run reuse or
+favorable-artifact selection. This is the demonstrated design defect; it was not
+discovered by executing RP08.
+
+The exact package remains rejected and inactive. Its proposal and driver
+identities are:
+
+```text
+WORKFLOW_PROPOSAL_GIT_BLOB=4ff12d187b97f3246110e91b6594988616b427a2
+WORKFLOW_PROPOSAL_SHA256=53652fddb2eae6b1c4784253230566904fad1ea93c6c0023211dcf96d4ab8d22
+DRIVER_GIT_BLOB=efdc04ac611956c24be1886561b333e91b7b2156
+DRIVER_SHA256=288611c0e142b27335c3685190c9399259e42fbccc5c839af6e86c53848ee5d5
+```
+
+No Phase B workflow was activated or dispatched. The proposal cannot be executed
+under the established admission rules. This exact-proposal REJECT does not prove
+that no future compliant design or environment can exist. No repair, activation
+or new proposal is part of this outcome.
+
+## 6. Exact non-execution disposition
+
+```text
+ISSUE=45
+RESULT=NOT_EXECUTED_NO_ADMISSION
+RP08_ADMITTED=NO
+RP08_ADMISSION_AVAILABLE=NO
+RP08_P1=NOT_RUN
+RP08_N1=NOT_RUN
+RP08_P2=NOT_RUN
+RP08_REPLAY_EVIDENCE=NOT_PRODUCED
+RP08_REPLAY_WITNESS=NONE
+NEW_STDOUT_PARITY=NOT_ESTABLISHED
+NEW_RP08_COMPARATOR_RESULT=NOT_ESTABLISHED
+HISTORICAL_EXECUTION_AUTHENTICATED=NO
+INERT_PROBE_RUN=40234216650
+INERT_PROBES=QUALIFIED_BOUNDED
+HISTORICAL_44_DECISION=HOLD
+HISTORICAL_51_DECISION=HOLD
+PHASE_B_55_DECISION=REJECT
+DT_M0_VALIDATED=NO
+PARENT_37_COMPLETE=NO
+```
+
+These fields apply only within the recorded DT-03.E campaign. No P1 stdout, N1
+comparator status, P2 stdout, execution witness or new parity digest exists from
+this #45 operation. Absence is neither a successful negative control nor an
+observed mismatch. The absent replay supplies no new support or falsification of
+DT-M0.
+
+## 7. C1–C7 evidence and claim limits
+
+The C1–C7 meanings below retain #44 section 3; no new claim framework is
+introduced.
+
+- **C1 — immutable source/output custody: VERIFIED BY AUTHOR READBACK.** The
+  exact Ruu commit/path/blob identities, bytes, SHA-256 and sizes were checked.
+  This does not establish an admitted executable proposal. #55 section 14
+  separately labels its rejected proposal
+  `C1=NOT_ESTABLISHED_EXACT_PROPOSAL_REJECTED`; this report does not upgrade
+  that proposal-level status or silently equate it with source-byte custody.
+- **C2 — witnessed invocation in an accepted environment: NOT_ESTABLISHED.** No
+  admitted RP08 invocation occurred in this campaign.
+- **C3 — that invocation produced captured stdout Y: NOT_ESTABLISHED.** No new
+  RP08 Y was produced.
+- **C4 — Y equals archived Z byte-for-byte: NOT_ESTABLISHED.** No actual RP08
+  stdout comparison occurred. Hashing the archive is not such a comparison.
+- **C5 — historical v45 execution/production of Z: EXCLUDED.** Source and
+  archive existence, producer declarations, and even a hypothetical later byte
+  match cannot authenticate the historical producer.
+- **C6 — finite-model fidelity to material Ruu requirements: EXCLUDED.** Neither
+  the archive's PASS strings nor inert probes establish semantic correspondence
+  or product correctness.
+- **C7 — generalization across revisions/environments: EXCLUDED.** No
+  portability, determinism, completeness or universal adequacy follows.
+
+The script text sets `BASELINE = 16124`, checks `count == 256`, and prints
+`BASELINE + count`. The archive declares `new combinations: 256 PASS`,
+`retained v44 baseline: 16124` and `v45 total: 16380 PASS` (Appendix E–F). The
+16,380 cumulative total is not evidence of 16,380 newly performed experiments;
+even the 256 are program-defined combinations, not newly observed executions
+here.
+
+## 8. Source custody, provenance, unknowns and invalidators
+
+Author readback used immutable Git commit trees and complete blob bytes, not
+moving `ruu/main`, a script invocation or a substituted output. All four
+published reports and both Ruu artifacts matched their expected blob identities
+and SHA-256. The rejected proposal/driver blobs were also checked statically. No
+external repository was modified.
+
+Live issue bodies/comments, PR records and run metadata were acquired during
+this preparation on `2026-11-02` UTC. The duplicate/admission search inspected
+current `origin/main` at the baseline, the repository's open/closed RP08 issues
+and PRs, the complete #45/#37/#35/#44/#51/#55 discussions, and broker issue
+searches for the mission/subject. No later exact, independently qualified,
+published applicable ADMIT or equivalent #45 publication was identified. This is
+a bounded records search, not an exhaustive proof of universal absence. Mutable
+GitHub records have no immutable Git blob and may later change.
+
+The
+[published #45 handoff](https://github.com/fanilosendrison/proto-scope/issues/45#issuecomment-6414221878)
+states: “#45 remains open and unexecuted.” Its immutable decision basis is
+Appendix D; the comment is corroboration, not stronger execution authentication.
+
+Residual unknowns include historical Ruu producer custody, full semantic
+fidelity, possible future compliant environments, and completeness of records
+outside this campaign. Git/GitHub transport, object addressing and cryptographic
+primitives are trusted; hashes bind bytes, not truth. The current reviewer
+packet contains the extracts below, not complete external Ruu objects or the raw
+probe artifact. Author readback must not be presented as reviewer-independent
+external-source authentication.
+
+A newly published applicable ADMIT, contrary campaign execution evidence, wrong
+object/path/digest, an inaccurate extract, altered candidate HEAD, missing
+review custody or an unresolved material review objection invalidates the
+relevant disposition/publication claim and requires owner reconsideration. A
+future replay needs a new independently justified, separately authorized,
+published applicable ADMIT and fresh at-use checks. This outcome authorizes
+none.
+
+## 9. Issue #45 acceptance-criteria assessment
+
+The current issue's observations are expressly conditional on admission; its
+allowed dispositions include `NOT_EXECUTED_NO_ADMISSION`.
+
+- **Admission prerequisite:** NOT SATISFIED. HOLD/HOLD/REJECT are not ADMIT;
+  closed blockers and favorable publication reviews do not authorize execution.
+- **P1 invocation, streams/status/effects and archive comparison:** NOT_RUN, not
+  claimed satisfied as empirical observations.
+- **N1 disposable mismatch/control:** NOT_RUN; comparator rejection is not
+  established.
+- **P2 fresh invocation and comparison:** NOT_RUN; repeatability is not
+  established.
+- **Every attempt/failure retained without favorable retry:** no RP08 attempt
+  was made. Historical #55 STOP reviews and final REJECT remain preserved; inert
+  probes are separately identified.
+- **Execution/capture/effect audit:** no RP08 execution custody exists to audit.
+  Independent challenge of this documentary non-execution packet remains
+  PENDING.
+- **Exact-source safe outcome packet for the corpus:** authored here with
+  bounded extracts; qualification and final publication/readback remain PENDING.
+  External source trees were not changed.
+
+This candidate does not yet complete #45. After exact-head independent
+qualification and governed publication/readback, administrative completion may
+record the bounded non-execution disposition without asserting successful
+replay. Closing #45 would not close #37, #35, #38, #39 or #49, or alter their
+acceptance criteria.
+
+## 10. Bounded handoff to #49
+
+The intended
+[#49 corpus](https://github.com/fanilosendrison/proto-scope/issues/49) receives
+an E04/RP08 non-execution outcome, not an RP08 witness: no P1/N1/P2, no new
+stdout parity, no comparator result, no historical execution authentication and
+no DT-M0 support/falsification. It may separately cite the exact bounded
+inert-probe qualification without counting it as RP08.
+
+The historical #36 inventory remains 19 units: zero admitted, 16
+provenance-rejected, one private hold, two postdated, zero executions (Appendix
+G). The frozen DT-03 partition remains 0 falsified / 23 supported / 34
+undetermined / 0 not examined (Appendix H). Neither is recomputed by this
+outcome.
+
+The #49 corpus must assess all six #37 criteria against its complete inputs,
+including #47 and #48; this report does not qualify those tasks, the other E
+families, holdouts or parent completion. No #47/#48 work begins here. Private
+E05 and provenance-uncertain v46 are not promoted or reproduced.
+
+## 11. Independent review and publication status
+
+```text
+INDEPENDENT_REVIEW=PENDING
+CONSUMER_SCIENTIFIC_ADMISSION=PENDING
+FINAL_MAIN_PUBLICATION=PENDING
+EXACT_PUBLISHED_READBACK=PENDING
+ISSUE45_COMPLETION=PENDING
+```
+
+PR publication makes a review candidate available; it is not final scientific
+publication. No merge is permitted before exact-head independent review,
+consumer admission and applicable publication gates pass. The intended Review
+Broker v2 review uses `scientific/v1`, `codex-cli`, `gpt-5.6-sol`, `xhigh`, and
+mission `dt03e2-rp08-no-admission-audit`. Operational admission is separately
+required before any model-capable request; unavailable admission does not
+prevent this documentary PR.
+
+The review must challenge every changed line and the supplied extracts, absence
+of applicable ADMIT, HOLD/REJECT distinctions, inert/RP08 conflation, C1–C7,
+custody limitations and #45 completion. Admission requires
+`COMPLETED / VALID / GO / CURRENT`, exact reviewed HEAD, no unresolved
+blocker/major objection and no unqualified external-source authenticity claim.
+An indeterminate or adverse review is preserved without automatic inference
+retry. Review GO qualifies only the exact bounded publication claim, not
+scientific truth or execution permission.
+
+Candidate commit/tree/blob/SHA-256, changed paths, checks and eventual review
+receipts belong in the PR/evidence receipt rather than a self-referential hash
+inside these bytes. Final publication and closure require exact remote byte
+readback. This candidate claims neither completed review nor merged publication.
+
+## 12. Bounded evidence appendix
+
+The entries below are source extracts, not new experiments. Proto-Scope paths
+are under `docs/research/derivtrace/falsification/` unless otherwise stated.
+Each link pins a commit; the blob identity was verified against its tree and
+complete bytes. Source contents are not automatically true merely because
+immutable.
+
+### A. Initial #44 admission
+
+- Immutable source:
+  [dt-03-e-rp08-admission.md at 50e797eec046f730e94872659e613ae153ff6ca6](https://github.com/fanilosendrison/proto-scope/blob/50e797eec046f730e94872659e613ae153ff6ca6/docs/research/derivtrace/falsification/dt-03-e-rp08-admission.md).
+- Git blob: `dc84c2b1d76a1a25ed26978367c6e83cb12bc277`; SHA-256:
+  `9135036fbd8f70473c915dc996bf875a76db04ef9ee1fbc7c0c1d98ac4fb1b2a`.
+- Extracts: section 11, “`ADMISSION_DECISION=HOLD`”; section 1, “No RP08 command
+  or control was run during this authorship.” Section 3 defines C1–C7.
+- Establishes the exact initial HOLD and claim exclusions; cannot establish a
+  later ADMIT, execution or historical archive production. Its summary's
+  `SAFETY_GATE=UNDETERMINED` requires the preserved additive erratum, not byte
+  replacement. Author/review provenance is recorded evidence, not independently
+  re-authenticated inference here.
+
+### B. Local #51 containment/readmission
+
+- Immutable source:
+  [dt-03-e-rp08-containment-readmission.md at ff137f38ffcdddd6d6f0e9f93fde87380ed8badc](https://github.com/fanilosendrison/proto-scope/blob/ff137f38ffcdddd6d6f0e9f93fde87380ed8badc/docs/research/derivtrace/falsification/dt-03-e-rp08-containment-readmission.md).
+- Git blob: `395d1bba1b5602e6a930ed098f4e2339a1a1d410`; SHA-256:
+  `c578ad3fa9d31b3f5dad9ab563bb1adab288e63de91112524b18ff0b8cdf5239`.
+- Extracts: summary, `CONFINEMENT_OPTION=NONE`,
+  `SAFETY_CAPABILITY_EVIDENCE=UNDETERMINED`, `SAFETY_ADMISSION_GATE=FAIL`,
+  `ADMISSION_DECISION=HOLD`, `REPLAY_EXECUTED=NO`; section 6 lists P-A–P-E
+  `NOT_RUN`; section 2 preserves the #44 erratum.
+- Establishes the local proposal's unqualified confinement and
+  no-probe/no-replay disposition. It cannot establish that all local or future
+  confinement is impossible. Host/probe provenance is consumed as published
+  evidence, not freshly reproduced.
+
+### C. #55 Phase A inert-probe qualification
+
+- Immutable source:
+  [dt-03-e-actions-probe-qualification.md at 1651c7fe952c1e4e466dec788e14862176fd2924](https://github.com/fanilosendrison/proto-scope/blob/1651c7fe952c1e4e466dec788e14862176fd2924/docs/research/derivtrace/falsification/dt-03-e-actions-probe-qualification.md).
+- Git blob: `0bf3f5842dfab9b21372eb317b5c5ca416010754`; SHA-256:
+  `93464c22cd3ec39bc34bd6efadd111ad1b61eca43ffedda4da7aac6b5b5f4fcf`.
+- Extracts: section 15, `INERT_PROBES_EXECUTED=5`, `INERT_PROBES_QUALIFIED=YES`,
+  `RP08_ADMITTED=NO`, `RP08_EXECUTED=NO`; section 2 binds run `40234216650`,
+  attempt `1`; sections 12–14 preserve extraction/runtime limits and independent
+  result qualification.
+- Establishes the published bounded five-probe result, not RP08
+  execution/admission. Artifact `12614062299` ZIP SHA-256 is
+  `d4ff14638237601e8d43cbc72283d79f3f9d277ec1a329661ff27ec440e4a54f`; manifest
+  SHA-256 is `66b9472f84c24fc54ace7590b1b194faf0f477d564660c743030fe9744c4fb6b`.
+  These artifact digests are published assertions here, not fresh raw-artifact
+  verification. GitHub's current run record corroborated
+  event/head/attempt/success, not the truth of every probe claim.
+

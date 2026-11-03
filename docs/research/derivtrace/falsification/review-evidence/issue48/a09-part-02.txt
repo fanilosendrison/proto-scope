@@ -1,0 +1,61 @@
+## 15. Safety assessment and admission decision
+
+The frozen proposal satisfactorily corrects the preserved B-01, M-01, M-02, M-03, and m-01 findings:
+
+- explicit terminal predicates, independent host/container status checks, status-23 preflight, and publication revalidation address B-01;
+- proposal/active byte equality, external blob/SHA inputs, activation-commit binding requirements, and non-placeholder identities address M-01;
+- mountinfo inventory, exact writable allowlist, IPC isolation, absence of `/dev/shm`, and narrowed effects claims address M-02;
+- container networking is correctly scoped while host networking, Docker effects, and GitHub artifact mutation are disclosed for M-03; and
+- raw evidence is never uploaded directly, with validation, separate staging, and fail-closed withholding addressing m-01.
+
+B-02 remains a demonstrated material blocker. The workflow cannot atomically consume a durable single-use authorization identity. Its activation commit and three manual inputs can be reused across unlimited fresh dispatches. Each fresh run receives a new post-dispatch `GITHUB_RUN_ID`, begins with `GITHUB_RUN_ATTEMPT=1`, and can report per-run `RETRIES=0`. The workflow neither rejects reuse nor proves that prior failed or unfavorable dispatches were included when selecting evidence.
+
+This is not merely an unestablished prerequisite. It is a contradiction between the required single-use experimental authorization property and the capabilities of this exact frozen proposal. The mission rule therefore requires `REJECT`.
+
+No workflow, driver, Docker command, RP08 source, sanitizer, comparator, preflight, P1, N1, or P2 operation was executed while preparing this disposition.
+
+```text
+SAFETY_CAPABILITY_EVIDENCE=PHASE_A_LIMITED_PLUS_REJECTED_UNEXECUTED_PROPOSAL
+SAFETY_REQUIREMENT_SATISFIED=NO
+SAFETY_ADMISSION_GATE=FAIL
+EVIDENCE_GATE=FAIL
+ADMISSION_DECISION=REJECT
+```
+
+A reviewer’s `GO`, issue closure, proposal placement, byte-identical copying, activation-commit binding, or this author’s disposition cannot turn the rejected package into `ADMIT`. This disposition never authorizes #45.
+
+## 16. Explicitly excluded conclusions
+
+This report does not establish C2, C3, or C4 and does not describe future execution evidence as already passing.
+
+It does not establish C5 historical execution. Phase A and historical artifacts cannot be relabeled as the proposed invocation.
+
+It does not establish C6 semantic or requirements fidelity. Matching the frozen archive would prove only byte parity with that archive.
+
+It does not establish C7 generalization. Any evidence from a future admissible successor would apply only to the exact frozen sources, image, workflow, driver, host observations, confinement envelope, authorization gate, and operations recorded by that run.
+
+It does not change #44 or #51, claim 16,380 executions, claim universal filesystem write denial, claim absence of host networking, claim absence of GitHub-side mutation, claim that a retained artifact currently exists, or claim that attempt-1 enforcement is a durable single-use authorization mechanism.
+
+It does not authorize activation for diagnostic, provisional, reviewer-only, or evidence-gathering purposes. Evidence produced by activating this rejected proposal cannot cure the prior admission failure.
+
+## 17. Residual unknowns, trust boundary, and resumption condition
+
+The Docker daemon, hosted-runner kernel and provisioning, GitHub control plane, pinned action delivery, registry delivery, artifact service, and cryptographic primitives remain trusted computing-base components.
+
+A malicious or compromised host, daemon, kernel, action commit, registry, GitHub control plane, or artifact service is outside the mechanism’s proof. SHA-1 or SHA-256 collision attacks are also outside it.
+
+The pinned image, exact script, isolated Python flags, entrypoint and argv inspection, read-only independent inputs, archive comparisons, and P1/P2 equality strongly constrain an alternate in-container stdout emitter under that trust boundary. They do not provide durable single-use authorization or prove semantic correctness.
+
+A future Docker mount layout outside the encoded writable allowlist stops. Job-level infrastructure termination may prevent finalization, sanitation, or upload. Such absence or incompleteness cannot support C2–C4.
+
+There is no resumption or activation condition for this exact frozen proposal. It remains rejected and must not be modified or activated.
+
+The broader research may resume only with a separately identified successor proposal that establishes one of the following before any RP08 execution:
+
+1. an authorized durable repository or provider operation that atomically consumes a unique pre-dispatch authorization identity exactly once; or
+2. a separately established external single-use gate with equivalent durable, atomic, fail-closed semantics.
+
+The qualifying authorization identity must exist before dispatch; bind the intended activation commit, frozen workflow and driver identities, dispatch inputs, and experiment; reject an already consumed or ambiguous identity before RP08 execution; retain auditable consumption evidence; and prevent a later fresh dispatch from reusing that authorization. A failed dispatch consumes that authorization; any later experiment requires a new authorization whose audit record preserves the earlier failure.
+
+Such a successor would be a materially new proposal with new frozen identities. It would require explicit authority for any added mutation, fresh independent review, and publication before activation. No qualifying mutation or external gate is authorized or established here.
+

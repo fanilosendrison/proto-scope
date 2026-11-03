@@ -1,0 +1,108 @@
+## Issue #47 — corrected documentary non-execution outcome qualified and published
+
+RESULT=NOT_EXECUTED_NO_ADMISSION
+
+This completes #47's bounded documentary disposition, not an experiment or an admission. The supplied individual RP01/RP02 decisions remain HOLD/HOLD, dual admission NOT_SATISFIED. Operator-declared RP01_EXECUTION=NOT_RUN and RP02_EXECUTION=NOT_RUN; each stable control, forced intervention, later reference and shared harness remains NOT_RUN in that declaration. PAIRED_COMPARISON=NOT_EXECUTED; PAIRED_RESULT=NOT_ESTABLISHED; no new torn-capture, fail-closed or causal-comparison witness is established.
+
+This acceptance deliberately separates (A) no applicable dual ADMIT established in the supplied records, (B) operator-declared campaign non-execution, and (C) unestablished independently complete process-history authentication. B is not inferred from A. No universal non-execution proof or complete external side-effect/history audit is claimed. The task did not authorize external scientific source mutation; no such write is reported by the operator, without upgrading that declaration into an independently authenticated no-write guarantee.
+
+### Exact publication and readback
+
+- PR: https://github.com/fanilosendrison/proto-scope/pull/61, MERGED.
+- Original reviewed HEAD: 13118bf358d58f958da629b7e8841e1e578c5972.
+- Corrected reviewed HEAD: c5e65299c50a4cd9c674d6ee37292f440fe40bab.
+- Corrected tree: 9c458f50e82815c3b1199e3306cd4557edf0e819.
+- Published merge SHA: 374addc871ad21a2d0dc3fa2fe5a314acf8dd442.
+- Published tree: 9c458f50e82815c3b1199e3306cd4557edf0e819, equals exact reviewed tree.
+- Report: docs/research/derivtrace/falsification/dt-03-e-rp01-rp02-contrast-outcome.md.
+- Published report blob: fd5eb351c64a68b28e70fa8fff5084d3e1424394.
+- Report SHA-256: b6068421bb9a2d079c740046ef6ea1915723be0b32f1f91c432febaf482e76a5.
+- Manifest: docs/research/derivtrace/falsification/review-evidence/issue47/evidence-manifest.json.
+- Manifest SHA-256: a6280d2d0e71dd7cdfc5d4ac77715cb75b43a1e3233f0c3a7bb0e5ca75b5f978.
+- Exact merge-commit GitHub readback of report and every one of the 14 changed files: PASS. Each byte payload and Git blob equals the corrected reviewed candidate. The merge retains the exact reviewed HEAD as a parent.
+- Scope against main: 14 additions only — report, manifest, five immutable source/admission/harness .txt snapshots, seven acquired Issue/comment-body .txt snapshots. Existing admissions and all original historical research files remain outside the changed paths.
+- The governed publisher appended two file-grouped commits e0eff1f5e05c229ed6c549ba8a5af64334c3ca94 and c5e65299c50a4cd9c674d6ee37292f440fe40bab, without rewriting the original reviewed commit or creating another PR.
+
+### Two distinct preserved review events
+
+Original review:
+
+- Request: request:sha256:341b801795a972ded788c21fcc531f6b100fa141971ee5a538041337e931b571.
+- Reviewed HEAD: 13118bf358d58f958da629b7e8841e1e578c5972.
+- Recorded result: COMPLETED / VALID / UNDETERMINED / CURRENT at its publication.
+- Result: result:sha256:4b07ee759a82a2bd0e233ca18f9bbbe8f5f4fece484c63eba94cf3e73119930e.
+- Authenticated receipt: https://github.com/fanilosendrison/review-broker/issues/79#issuecomment-6598693627.
+- F001–F005 and all seven original uncertainty statements remain preserved. The original commit, result, journal and comments were not modified. The old verdict is not rewritten into GO or applied to the new HEAD.
+- Original public blocked handoff: https://github.com/fanilosendrison/proto-scope/issues/47#issuecomment-6598777611; its exact acquired body is retained as an inert snapshot, not a current completion assertion.
+
+Corrected review:
+
+- Operation: changed_head, explicitly linked to the original request above.
+- New request: request:sha256:2e46f1fe9fabf338d9b281186f239ef2b158633ec54ac0f51ac3d5d838cbc86c.
+- Request issue: https://github.com/fanilosendrison/review-broker/issues/80.
+- Unchanged Review Intent: review-intent:sha256:da79f5b8574282befdfe31f99a79999ab3f88cb043df3197dea443e54b4924ce.
+- Attempt: attempt:sha256:8d66c69a1c9f4b8a63ba3c5efcd24068a1d5c461843376a4bcc634ee2de8794e.
+- Packet: packet:sha256:66af546775093e82eb4e09ddda29dbe67be78656f17342bf382668cc694159bb.
+- Broker SHA: a3526c1a7620a8bc437e43511f354fdae2130ce5.
+- Workflow: https://github.com/fanilosendrison/review-broker/actions/runs/41605455011, attempt 1, success.
+- Authenticated receipt: https://github.com/fanilosendrison/review-broker/issues/80#issuecomment-6599283607.
+- Result: result:sha256:001756077af3023b74155f5d8c352cf3a5f2dfa36e12d76b8277d1a9c3ca19b6.
+- Publication: publication:sha256:894eb953eeb93be219f427bca41214e0055c3282d87676d078438d1f314aec28.
+- Dimensions: COMPLETED / VALID / GO / CURRENT at exact corrected HEAD. Findings empty; validation reasons empty; all S001–S014 examined.
+- Terminal journal: STOPPED, invocation_count=1; one authorized changed_head request. No same-head repeat, alternate reviewer/model or inference retry.
+- Terminal artifact: 13216302701; digest sha256:51f3e7f921d7dd1fc9647e7ab93f3ccb0c9005c65a43865b1adde290cfc60cf8; recorded expiry 2027-02-01T08:43:57Z. No indefinite availability is claimed.
+- Mission, policy, reviewer and logical subject were reused exactly. Requested reviewer codex-cli / gpt-5.6-sol / xhigh, scientific/v1; effective model/effort remain unverified, not provider-attested.
+
+### F001–F005 qualification matrix
+
+- F001 ADDRESSED: actual supplied HOLD/HOLD decision bytes and #46 receipt; absent-ADMIT conclusion expressly limited to the manifest's acquired records and observation boundary.
+- F002 ADDRESSED_BY_CLAIM_BOUND: A/B/C separated; operator declaration remains a declaration and independent complete process history remains unestablished. No experimental evidence manufactured.
+- F003 ADDRESSED: complete RP01/RP02/harness bytes supplied and statically examined; byte identity distinguished from unverified independent upstream-origin authentication and unexecuted behavior.
+- F004 ADDRESSED: governing Issue bodies and exact acceptance excerpts supplied, all applicable #47 documentary obligations mapped, conditional experimental observations NOT_RUN rather than PASS. Parent/corpus completion not claimed.
+- F005 ADDRESSED_BY_CLAIM_BOUND: unsupported absolute no-mutation assertions replaced by authorization, operator statement and explicit audit/ref-observation limits.
+
+These classifications apply to the corrected candidate with independent GO and consumer acceptance. They do not retrospectively erase or change the original findings. No unresolved material finding remains in the corrected review; no product/normative obligation or universal assurance rule is adopted.
+
+### Consumer assessment of all retained corrected-review uncertainty
+
+Consumer acceptance and merge-gate receipt: https://github.com/fanilosendrison/proto-scope/pull/61#issuecomment-6599357477.
+
+1. Operator-history limit: actual absence of imports, harness/controls/interventions/probes/retries/discarded attempts remains operator-declared; no independent complete process/effect log is asserted.
+2. Bounded-record limit: supplied HOLD/HOLD and absent dual ADMIT are confined to the acquisition scope; omitted/later/edited applicable decisions remain unknown. Fresh consumer readback found no governing-body drift and verified immutable bytes, not exhaustive history.
+3. Origin/custody limit: exact snapshot hashes do not authenticate upstream GitHub origin, acquisition honesty, all custody or edit history.
+4. Side-effect limit: no independent complete external repository/no-write/history audit exists here. Scoped changed-path evidence is not a universal effect proof.
+5. Scientific exclusion: source/harness behavior remains hypothesized, not newly executed. Effective capture, physical ordering, stable controls, drift-specific causal exception and materially comparable paired runs are unobserved.
+6. Unsupplied-source limit: full runtime/import closure, referenced pyproject/test/later-contract bytes, historical #83, frozen #36 and original broker result are not all independent packet sources. No stronger claim treats them as independently examined. Consumer separately authenticated the original result and verified the scoped unchanged historical files; it does not upgrade the reviewer packet or historical execution truth.
+7. Outside-scope/authority limit: activity elsewhere and post-acquisition changes remain unknown. GO qualifies this documentary outcome, not universal non-execution, execution safety, scientific validity, DT-M0 status, or completion of #37/#49/#35.
+
+These are explicit accepted limitations, not waived evidence silently represented as proven facts. The exact supplied text and source inspection support the bounded documentary disposition. The operator's campaign declaration is retained at its stated evidentiary level. Historical events outside that boundary remain unknown.
+
+### Actual #47 completion assessment
+
+The supplied current #47 text explicitly permits a non-execution disposition; parent #37 permits justified research HOLD/REJECT/STOP completion without turning it into ADMIT or success. Corrected report section 11 assesses each applicable obligation:
+
+- Dual admission: NOT_SATISFIED; neither unit authorized.
+- Initial/later stable controls: NOT_RUN per operator declaration; not PASS.
+- RP01 intervention/torn witness/later reference: NOT_RUN; no resulting observation established.
+- RP02 matched intervention/drift-specific rejection: NOT_RUN; no causal exception established.
+- Negative/alternative controls, retries and attempts: NOT_RUN/none reported, without complete independent history authentication.
+- Paired material comparability: NOT_ESTABLISHED; only source/protocol distinctions inspected.
+- Custody/safety: bytes supplied, trust limits retained, no witness fabrication; safety remains UNDETERMINED, not observed unsafe.
+- Distinct units and paired result: explicitly classified without crediting absent observations.
+- Independent exact-content audit, consumer acceptance, publication and exact readback: now qualified by the distinct corrected review and publication receipts above.
+
+The conditional empirical observations remain missing, not satisfied experiments. #47 completion records qualified documentary research and publication only. A new separately authorized admission would still be required for either replay and both individually applicable ADMITs for a comparison.
+
+### Operational and static closure
+
+Eight historical journal refs, including the original request, are unchanged. One authorized new claim/invocation; no unintended model-capable request/dispatch or extra inference observed in the audited activation window. Normal current credential-backed startup/transfer, wheel/profile/runtime/packet and bounded pre-arm gates passed. Comprehensive/private admission was not enabled and maximal isolation is not claimed.
+
+All four temporary admission variables were restored to their prior ABSENT states and read back; complete variable-set equality matched the pre-activation snapshot. Dedicated Codespace independently observed Shutdown. No unresolved operational/ambiguous-execution incident was observed. Original scientific uncertainty remains explicit.
+
+Snapshot Git/SHA-256/byte preservation, inert file modes, manifest/source-class checks, excerpts, relative references, privacy/credential screen, parsed KnowledgeAsset metadata, Markdownlint 0.41.1 and git diff --check passed. Snapshots are data, not new executable modules. No automatic Proto-Scope PR CI applies, and no nonexistent CI/replay execution is reported as passing. The manual inert workflow was not dispatched. Candidate PENDING fields remain authorship-stage history; these external receipts establish later qualification without changing reviewed bytes.
+
+### Bounded handoff
+
+#49 receives two separate HOLD/non-execution states and a missing paired observation, not an executed torn-capture/fail-closed comparison or experimental PASS. #48 reconciliation remains separate and unstarted by this task. #49 must still qualify the complete corpus and all six parent #37 criteria. The historical #36 inventory and DT-03 0/23/34/0 classification remain unchanged within their own packets. DT-M0 is neither validated nor falsified by this outcome.
+
+Parent #37 and programme #35 remain OPEN; #49 is not complete. No #48/#49 work, #38/#39 conclusion, new admission or normative/model change is authorized or begun by this receipt. Issue #47 may now be administratively completed for its qualified bounded documentary disposition.

@@ -1,0 +1,38 @@
+## Phase 2 publication lease — STOPPED on Turnlock baseline drift
+
+```text
+RESULT=STOPPED
+FAILED_GATE=ISSUE71_PHASE2_FINAL_LEASE_BASELINE_DRIFT
+AUTHORIZED_TURNLOCK_BASELINE=031941b501535c8041e191dad1ec57b5e1bb4462
+OBSERVED_TURNLOCK_ORIGIN_MAIN=ec52ebc62d4d9584e16c7e6bbb26ccb4f466135d
+BASELINE_RELATION=FAST_FORWARD
+UPSTREAM_COMMIT_COUNT=4
+UPSTREAM_CHANGED_PATH_COUNT=11
+LOCAL_TRACKED_CHANGED_PATH_COUNT=38
+OVERLAPPING_PATH_COUNT=2
+OVERLAPPING_PATHS=docs/adr/README.md,docs/adr/index.md
+ADR_ID_COLLISION=ADR-057
+AUTHORIZED_PROTO_RING_PROVIDER=814a884ccb759b0fdbde48673a74428d6443b847
+PHASE1_REQUALIFICATION_RECEIPT=6243583925
+PREPUBLICATION_PACKET_V6_SHA256=b64ccf5447069930a669d424058d765801c15d287cdeb944fe4dcae72bc473b0
+PREPUBLICATION_REVIEW_1=Mistral Large 2512 / GO / FINDINGS=NONE
+PREPUBLICATION_REVIEW_2=GLM-5.3 / GO / FINDINGS=NONE
+ROOT_VENV_REPOSITORY_INTEGRITY=PASS
+FRESH_CACHE_REPOSITORY_INTEGRITY=PASS
+REPOSITORY_INTEGRITY_VALIDATION_COUNT=29
+REPOSITORY_INTEGRITY_MEMBERSHIP_ORDER=EXACT
+PYTHON_PROTO_RING_AST_IMPORT_COUNT=0
+PUBLICATION_COMMIT_CREATED=NO
+PUBLICATION_PUSH_EXECUTED=NO
+ISSUE71_CLOSED=NO
+ISSUE72_EXECUTED=NO
+PRESERVED_WORKTREE_HEAD=031941b501535c8041e191dad1ec57b5e1bb4462
+PRESERVED_WORKTREE_STATUS_SHA256=14797cdcb26796ddc95b0bde1d6da9ed639573aa9a9de0c203d13006d9eb649d
+PRESERVED_WORKTREE_DIFF_SHA256=f0dd5bb09ba007d1e34de831be95697225278b2c47a636a96c2ba53808e58f59
+```
+
+The final publication lease required the immutable authorized Turnlock baseline, but live `origin/main` advanced by four commits. The new upstream state also allocates `ADR-057`, colliding with the unpublished cutover ADR, and modifies both ADR projections touched by this work.
+
+No commit, push, Project completion transition, Issue closure, or Issue #72 execution occurred. The detached Phase 2 worktree is preserved for inspection.
+
+A later resume requires explicit authority to rebase/reconcile against an exact current Turnlock baseline, allocate a non-conflicting ADR identity, regenerate affected projections, and repeat complete qualification plus fresh immutable prepublication reviews before publication.

@@ -1,0 +1,133 @@
+## 8. Bounded conclusions and counterarguments
+
+### H-01 — legitimate STOP versus automatic strengthening
+
+H-01 survives with qualification.
+
+The #36 reviews contain legitimate STOP grounds:
+
+- absent governing criteria blocked publication conformance;
+- directly executed but missing dependencies defeated source attribution and safety analysis;
+- commands that omitted claimed controls did not implement their described experiments;
+- unspecified descendants, unmanifested imports, repository-wide discovery, startup substitution, and unbound working directories exposed concrete subject or effect ambiguity.
+
+The review history also contains a demand whose universal necessity is not established: authenticating every interpreter, standard-library, loader, and dynamic-runtime byte for any conceivable RP08 conclusion. That closure may be warranted for a high-assurance provenance or equivalence claim. A bounded claim using an independently justified trusted runtime might not require it.
+
+**Independent counterargument—apparently optional environmental guarantee that is necessary:** Exact cwd binding is not optional when a relative command is claimed to execute a particular immutable script. Likewise, a coherence basis is necessary for RP02’s global-cut conclusion. H-01 therefore cannot be misread as a presumption against environmental requirements.
+
+### H-02 — safety and evidential admissibility
+
+H-02 survives, but “independent” must mean analytically non-substitutable rather than causally unrelated.
+
+A safe execution may provide weak evidence: an isolated alternate program could safely print Z without executing RP08. Conversely, an evidentially informative execution may be unsafe: the intended script could produce correct Y while writing outside its authorized workspace.
+
+The same missing fact can affect both dimensions. An ambient startup module may alter stdout and perform unsafe effects. The decisions must still be recorded separately:
+
+```text
+CLAIM_SUPPORTED?
+SAFETY_GATE_SATISFIED?
+```
+
+Neither answer substitutes for the other.
+
+**Independent counterargument—weaker conclusion does not cure safety:** Control C remains disallowed even if the conclusion is narrowed to “stdout equaled Z.” Correct output does not authorize an out-of-bound write.
+
+### H-03 — explicit and relevant trust assumptions
+
+H-03 survives.
+
+A finite investigation cannot authenticate an infinite regress of hardware, firmware, kernels, runtimes, and measurement instruments. Bounded experiments necessarily use trust assumptions. The proper question is whether the assumption is explicit, relevant to the exact claim, supported enough for its role, and constrained by enforceable safety controls.
+
+Trust declarations do not prove:
+
+- execution occurrence;
+- source selection;
+- capture fidelity;
+- result correctness;
+- absence of malicious effects;
+- historical provenance.
+
+A trusted runtime can therefore be a premise without becoming evidence of the experiment it hosts.
+
+### H-04 — limits of full executable-byte closure
+
+H-04 survives.
+
+Control B supplies the decisive analytical counterexample: fully authenticated source and runtime bytes can execute an incorrect scientific model perfectly and print `PASS`. Full closure does not establish correspondence between the code and Ruu requirements.
+
+It likewise does not establish that a historical v45 execution occurred, that archived Z was produced by it, that a product behaved accordingly, or that the result generalizes.
+
+**Independent counterargument—full byte closure does not establish a scientific claim:** Exact execution of a false or incomplete model remains exact execution of a false or incomplete model.
+
+### H-05 — termination with unresolved unknowns
+
+H-05 survives, but it does not justify indiscriminate agnosticism.
+
+The investigation reaches affirmative bounded results:
+
+- RP08 script and output identities are established within custody.
+- RP02’s pre-fix source permits the stated torn combination under explicit assumptions.
+- Several review objections defeat exact candidate claims or safety boundaries.
+- Full byte closure is insufficient for semantic or historical claims.
+
+Other questions remain unresolved because no execution occurred and the historical evidence does not authenticate them. Retaining those unknowns is a valid research outcome.
+
+### Additional objection to claim-relative admission
+
+A claim-relative approach can be abused through strategic narrowing. An applicant might state only “stdout Y was observed” while omitting that the execution touched credentials, mutated a repository, relied on a misleading model, or will be used downstream as stronger evidence.
+
+A bounded response requires more than inspecting the sentence labeled as the claim. It must also examine:
+
+- foreseeable downstream uses;
+- material side effects;
+- whether the narrow result will be represented as satisfying a stronger obligation;
+- whether trust assumptions merely restate the desired conclusion;
+- whether several individually modest claims combine into an unsupported system-level inference.
+
+This objection does not defeat claim-relative analysis. It prevents “claim-relative” from becoming “claim-isolated.” Safety, invalidators, downstream exclusions, and authority remain part of each admission decision.
+
+## 9. #37 prospective replay-admission handoff
+
+The following ten questions are a bounded handoff for issue #37. They are not a canonical protocol, global schema, new DerivTrace representation, or universal minimal/sufficient method. They apply separately to each future individual replay proposal.
+
+1. **What is the exact scientific claim?**
+   State one bounded conclusion. Separate present execution, output equality, historical occurrence, semantic fidelity, product behavior, and generalization.
+
+2. **Which identities are relevant?**
+   Identify the exact source, fixtures, expected outputs, dependency or contract revision, and any runtime identity material to that claim. Do not infer execution from artifact presence.
+
+3. **What exact command and location are proposed?**
+   Bind the command to an exact isolated checkout or capability-rooted location. Resolve cwd, relative paths, interpreter/tool selection, inputs, and output destinations.
+
+4. **What will actually be observed?**
+   Specify contemporaneous process invocation, stdout, stderr, exit status, timestamps where relevant, filesystem or provider effects, and the witness that captures them. Distinguish intended observation from reported historical execution.
+
+5. **Which environment assumptions are trusted?**
+   Name the runtime, operating-system, filesystem, Git, toolchain, isolation, and provider assumptions actually needed. Explain why each is relevant and what evidence supports its applicability.
+
+6. **What could invalidate the conclusion despite a matching result?**
+   Consider alternate emitters, source/import substitution, wrong cwd, stale fixtures, misleading comparisons, false model premises, observer intervention, omitted cases, historical misattribution, and semantic mismatch.
+
+7. **What safety hazards exist?**
+   Enumerate possible writes, network use, subprocesses, credentials, provider actions, protected refs, private data, symlink or path escape, production mounts, caches, build scripts, and cleanup failures. A weaker claim does not waive this gate.
+
+8. **Which controls are proportionate to the claim?**
+   Define positive, negative, substitution, effect-boundary, and capture controls where they materially discriminate the proposal. Do not take credit for a control the command does not execute.
+
+9. **Does any stronger assurance follow from an accepted obligation or demonstrated risk?**
+   Tie each additional demand to an issue contract, accepted method, concrete counterexample, or safety defect. Otherwise record it as a conditional strengthening or unresolved authority choice.
+
+10. **What is the exact new admission decision, and which conclusions remain excluded?**
+    Record `ADMIT`, `REJECT`, `HOLD`, or another locally justified disposition for that proposal only. State explicitly whether the decision excludes historical authentication, semantic fidelity, product correspondence, generalization, or other stronger conclusions.
+
+Applied to the present packet:
+
+- RP08 has decomposed claims and immutable fixture identities, but no newly reviewed command/location package, actual observation, accepted trusted-runtime boundary, completed safety case, or new admission decision.
+- RP02 has a source-level counterexample and post-fix fixture source, but no newly executed regression, complete import package, accepted coherence basis for a global-cut claim, or new admission decision.
+- RP01–RP19 retain their exact #36 dispositions.
+- No unit is added to an execution allowlist.
+
+```text
+ISSUE37_UNITS_AUTHORIZED_BY_THIS_HANDOFF=0
+```
+

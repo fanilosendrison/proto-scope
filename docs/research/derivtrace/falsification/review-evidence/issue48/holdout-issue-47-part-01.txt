@@ -1,0 +1,74 @@
+## Context
+
+The existing qualification corpus provides substantial retained state-space and Git-smoke evidence through ADR-080 plus post-baseline v46 for ADR-081. It correctly separates immutable retained evidence, post-baseline evidence, manifests, and exact-output replay.
+
+Current evidence covers many local properties—claims/CAS, crash ambiguity, managed binding witnesses, source-domain observations, provider realization, and authoring-dependency retention—but it does not prove the new cross-cutting obligations being adjudicated in:
+
+- #40 — causal replay and responsibility;
+- #41 — evidence integrity and independent proof;
+- #42 — requested recovery;
+- #43 — public machine contract;
+- #45 — supported-harness runtime continuation;
+- #46 — degraded native Git operation.
+
+This issue records the concrete formal/qualification obligation without treating unaccepted issue semantics as normative. Human usability validation remains with #44.
+
+## Problem
+
+No current state-space model, replay fixture, public-contract suite, or Git smoke proves end-to-end causal reconstruction, responsibility separation, tamper detection, requested recovery with descendants, external-tool verification, LLM authority isolation, replacement-runtime continuation, or native-Git operation after Ruu unavailability.
+
+The repository's current PASS artifacts must not be overclaimed as evidence for these properties. Creating qualification logic before the controlling ADRs are accepted would itself invent semantics.
+
+## Required outcome
+
+After #40–#43, #45, and #46 are accepted, create the minimum post-baseline qualification set that maps every new normative invariant through architecture to executable evidence.
+
+The work must:
+
+1. produce a coverage matrix from each accepted invariant to state-space, contract, replay, integration, fault, or native Git evidence;
+2. preserve retained ADR-080 artifacts and continue post-baseline versioning/metadata rules;
+3. use the next contiguous post-baseline qualification version or split only where accepted contracts establish independently executable suites;
+4. distinguish finite-model evidence, native Git/provider adapter evidence, public-interface conformance, and independent-verifier evidence;
+5. report explicit proof limits and non-replayable baselines rather than treating recorded PASS strings as universal proof.
+
+## Non-goals
+
+- Defining product semantics inside qualification code.
+- Editing or regenerating retained snapshot artifacts or outputs.
+- Treating a repository manifest as runtime causal-evidence tamper proof.
+- Treating state-space exploration as proof of arbitrary unbounded Git/provider graphs.
+- Reusing production domain logic as a tautological independent verifier.
+- Automatically replaying external side effects.
+- Assigning semantic authority to language models, test harnesses, timestamps, logs, or issue text.
+- Testing human usability owned by #44 as if it were a finite-state safety property.
+- Splitting speculative suites before accepted architecture establishes their boundaries.
+
+## Likely affected areas
+
+- `qualification/state-space/post-baseline/` and its metadata schema.
+- Native Git smoke, public-contract fixtures, independent-verifier fixtures, and fault injection.
+- Qualification lineage/current manifest generation and replay tooling only as required by the established post-baseline contract.
+- The accepted ADRs and normative sections produced by #40–#43, #45, and #46.
+
+## Acceptance criteria
+
+- Every accepted new invariant has at least one independent falsification path and one mapped executable artifact, or an explicit justified non-executable proof obligation.
+- The suite covers all five responsibility chains: agent-mediated progression, native Git bypass, semantic declaration realization, policy-authorized progression, and unknown external cause.
+- Causal DAG branch/join behavior is correct under misleading timestamp and delivery order.
+- Historical simulation is side-effect-free and cannot access mutation adapters or acquire claims.
+- Independent proof verification succeeds from public evidence and fails explicitly for missing, altered, deleted, truncated, rolled-back, substituted, or forked required evidence.
+- Requested recovery covers exact restoration, later independently authorized descendants, external movement, protocol-recovery separation, multi-effect operations, and irreversible/non-queryable effects.
+- Public schemas cover rejected, accepted, coalesced, running, blocked, partial, and terminal outcomes plus compatibility/migration behavior.
+- Candidate requests produced by an LLM or arbitrary tool cannot retarget, force, bypass review, mark resolved, compensate, or recover without exact current authority.
+- Supported-harness cases cover provider quota, voluntary closure, runtime/model/provider replacement, same-session new work, preserved/destroyed dirty worktree, binding change, stale writer, and ambiguous semantic identity.
+- Degraded native-Git cases prove both history usability and continued protection of correctness-critical managed bindings.
+- Qualification reports state bounded proof limits and do not claim current retained suites cover the new semantics.
+- All repository-mandated generation, layout, link, replay, smoke, test, and whitespace validation succeeds.
+
+## Verification obligation
+
+The qualification artifacts themselves must be replayable with byte-exact expected output under the post-baseline contract. Public-schema fixtures and independent proof verification must use closed versioned inputs. Fault injection must include process death between each durable/effect boundary, stale run generations, CAS loss, concurrent external movement, evidence corruption, and recovery-request duplication.
+
+If an accepted architecture deliberately rejects a proposed capability for V1, the corresponding qualification must prove the explicit unsupported/fail-closed result rather than inventing an implementation.
+
+This issue is a work-management record. Repository specifications and accepted ADRs remain authoritative for product semantics.

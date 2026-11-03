@@ -1,0 +1,85 @@
+## Problem
+
+A native Windows checkout changes the byte identity seen by Rust `include_bytes!` for the pinned Unicode 14.0.0 `CaseFolding.txt`. The Normative Terminology engine then panics on its first case-folding operation because the embedded data no longer matches the repository-pinned SHA-256.
+
+This blocks exact-SHA CI for #121 even though the #121 term-structure correction and regression tests pass on the qualified Unix environment. Ignoring or platform-gating the real parser regression would hide an existing engine portability defect.
+
+## Evidence and provenance
+
+Reproduced by CI at exact Proto-Ring revision:
+
+```text
+7d60b0467d30f4251aa4160b4878a05ce366c44a
+```
+
+Run and failing job:
+
+- <https://github.com/fanilosendrison/proto-ring/actions/runs/38963003513>
+- `rust-windows-repository-state / Test RepositoryState engine`
+
+The new public-API test reaches `parse_registry`, which reaches Unicode case folding while validating registry-expression uniqueness. On Windows, both valid registry cases panic at `unicode14.rs` with:
+
+```text
+pinned Unicode-14 CaseFolding data must remain valid:
+TerminologyError("Unicode-14 CaseFolding data hash mismatch")
+```
+
+The same three-test regression suite passes locally, and Linux exact-SHA CI passes its complete Rust workspace. The Windows engine unit tests also pass until the first integration test exercises real registry parsing.
+
+The repository currently has no `.gitattributes` policy protecting the vendored Unicode data's line endings. `unicode14.rs` embeds the checkout bytes directly and validates them against the canonical LF-byte digest.
+
+## Current authoritative boundary
+
+`docs/contracts/normative-terminology.md` fixes generic Unicode behavior to Unicode 14.0.0 and identifies the versioned Unicode Character Database as external authority. The engine's pinned data and digest implement that existing obligation.
+
+The correct resolution must preserve the canonical data bytes and digest across supported checkouts. It must not change the contract, update the pinned hash to platform-mutated bytes, normalize semantic input, weaken runtime verification, or suppress the public parser test.
+
+Semantic disposition: `no-normative-impact`.
+
+Affected layers:
+
+- `verification-or-qualification-evidence`
+- `architecture-or-implementation`
+- `integration-or-conformance`
+- `repository-governance-or-documentation`
+
+No product-semantic decision is required.
+
+## Scope
+
+Included:
+
+- Make the exact vendored Unicode 14.0.0 data bytes line-ending-stable in native Windows checkouts.
+- Preserve the existing canonical LF-byte SHA-256 and runtime integrity check.
+- Add or retain independent regression evidence that real Rust registry parsing works on native Windows.
+- Requalify #121 from its already-published exact correction commit without weakening that correction's test.
+
+Excluded:
+
+- Normative Terminology contract changes.
+- Unicode version or data-content changes.
+- Runtime normalization of the Unicode authority file.
+- Disabling or platform-gating #121 regression cases.
+- Compatibility transport, conformance corpus, Python production, consumer, or workflow changes unless a separately authorized scope proves one necessary.
+
+## Acceptance criteria
+
+- [ ] A fresh native Windows checkout embeds the exact canonical Unicode 14.0.0 `CaseFolding.txt` bytes.
+- [ ] `casefold_data_sha256()` equals `a566cd48687b2cd897e02501118b2413c14ae86d318f9abbbba97feb84189f0f` on Windows and Unix.
+- [ ] `cargo test -p proto-ring-engine --test issue121_term_structure --locked` passes all three cases on native Windows without ignore or platform gating.
+- [ ] Existing Unicode 14.0.0 source-boundary tests remain passing.
+- [ ] The complete Linux and native Windows CI matrix succeeds at one exact published SHA.
+- [ ] No contract, Unicode data, conformance corpus, compatibility transport, Python production, workflow, or consumer file changes are used to hide the defect.
+
+## Validation
+
+Run strict formatting, Clippy, workspace tests, doctests, release build, the global 1,153-vector corpus, all 883 Python tests, and native Windows CI. Verify the exact Unicode data blob and digest before and after publication.
+
+## Authoritative references
+
+- `docs/contracts/normative-terminology.md`
+- `crates/proto-ring-engine/src/normative_terminology/unicode14.rs`
+- `crates/proto-ring-engine/data/unicode-14.0.0/CaseFolding.txt`
+- `crates/proto-ring-engine/tests/issue121_term_structure.rs` at `7d60b0467d30f4251aa4160b4878a05ce366c44a`
+- #80 — fixed Unicode 14.0.0 authority and byte-integrity requirement
+- #121 — blocked exact-SHA qualification

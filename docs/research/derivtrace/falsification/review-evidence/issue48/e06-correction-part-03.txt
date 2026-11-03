@@ -1,0 +1,29 @@
+  - invariant: TL-INV-035
+    canonical_operational_coverage: full
+    formal_claims:
+      - TL-CLAIM-010
+      - TL-CLAIM-011
+      - TL-CLAIM-020
+      - TL-CLAIM-021
+      - TL-CLAIM-022
+      - TL-CLAIM-023
+      - TL-CLAIM-032
+      - TL-CLAIM-059
+      - TL-CLAIM-060
+      - TL-CLAIM-061
+      - TL-CLAIM-080
+      - TL-CLAIM-084
+    residual_claims: []
+  - invariant: TL-INV-036
+    canonical_operational_coverage: partial
+    formal_claims:
+      - TL-CLAIM-062
+      - TL-CLAIM-063
+      - TL-CLAIM-065
+      - TL-CLAIM-066
+      - TL-CLAIM-067
+    residual_claims:
+      - TL-CLAIM-064
+  - invariant: TL-INV-037
+    canonical_operational_coverage: full
+    formal_claims:

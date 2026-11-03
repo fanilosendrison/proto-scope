@@ -1,0 +1,86 @@
+## Phase 2 successor reconciliation — STOPPED on path-count authority gap
+
+```text
+RESULT=STOPPED
+FAILED_GATE=ISSUE71_RECONCILIATION_AUTHORITY_GAP
+
+ISSUE71_EC52_PHASE1=GO
+PHASE1_GO_RECEIPT=6274321903
+PHASE1_REVIEW_PACKET_SHA256=68fde1b6405b097e5ce68e79bcbcdc64f05b6608c469d67d28d6296ffcdc74e8
+PHASE1_INDEPENDENT_REVIEWS=2 / GO / FINDINGS=NONE
+
+UPSTREAM_CHANGED_PATHS=11
+OVERLAPPING_TRACKED_PATHS=2
+EXCLUDED_UPSTREAM_ADR057_PATHS=1
+DEFINED_UPSTREAM_ONLY_PATHS=8
+REQUIRED_UPSTREAM_ONLY_PATHS_PRESERVED=9/9
+AUTHORITY_CONSISTENT=NO
+
+SOURCE_CANDIDATE_MANIFEST_SHA256=004c5b05eb9e7361df75192c4060d13d363a37c0695ceb5c15a2c16c237b9014
+PRESERVED_SOURCE_STATUS_SHA256=14797cdcb26796ddc95b0bde1d6da9ed639573aa9a9de0c203d13006d9eb649d
+PRESERVED_SOURCE_DIFF_SHA256=f0dd5bb09ba007d1e34de831be95697225278b2c47a636a96c2ba53808e58f59
+PRESERVED_SOURCE_MUTATION=NONE
+
+SUCCESSOR_HEAD=ec52ebc62d4d9584e16c7e6bbb26ccb4f466135d
+SUCCESSOR_HEAD_DETACHED=YES
+EXACT_NONCONFLICTING_TRANSPLANT_PARITY=40/40
+SUCCESSOR_STATUS_SHA256=517e3cf9923a99a950e78a290c3529c99ee06e2911e14abf6168bf1df2d5dc96
+SUCCESSOR_DIFF_SHA256=8bad10a0bbf3ac9ab302443803b6f30bc8c0d25e6e0794ef593b646d6b480186
+SUCCESSOR_PUBLICATION_COMMIT_CREATED=NO
+SUCCESSOR_PUSH_EXECUTED=NO
+ISSUE72_EXECUTED=NO
+```
+
+### Discovery
+
+#### Statement
+
+The reconciliation instruction's required upstream-only path cardinality is inconsistent with its own exact path-set definition.
+
+#### Source and evidence
+
+The authorized baseline delta contains exactly 11 paths. The instruction excludes `docs/adr/README.md`, `docs/adr/index.md`, and the added canonical upstream ADR-057 itself from the set called “upstream-only paths.” The resulting exact set contains eight paths:
+
+```text
+docs/formal/README.md
+docs/formal/gate-a-campaign-runner-construction-plan.md
+docs/formal/gate-a-git-exact-old-local-conformance.sh
+docs/formal/gate-a-git-transport-conformance-note.md
+docs/formal/gate-a-m7-proto-ring-responsibility-audit.md
+docs/formal/nib-m-gate-a-repository-control-materialization-candidate-construction.md
+docs/formal/nib-m-gate-a-repository-control-publication-remote-recovery.md
+docs/formal/nib-s-gate-a-campaign-runner.md
+```
+
+The same instruction nevertheless requires `UPSTREAM_ONLY_PATHS_PRESERVED=9/9`.
+
+#### Existing authority
+
+The execution instruction is the controlling reconciliation and qualification contract. It also forbids guessing through an authority ambiguity.
+
+#### Semantic disposition
+
+`authority-conflict-or-uncertain`
+
+#### Affected layers
+
+- verification-or-qualification-evidence
+- integration-or-conformance
+- repository-governance-or-documentation
+
+#### Related discoveries or consequences
+
+No TURNLOCK product-semantic conflict was discovered. The conflict prevents truthful construction of the required Phase-2 qualification evidence.
+
+#### Required authority
+
+Clarify one exact intended contract:
+
+1. `UPSTREAM_ONLY_PATHS_PRESERVED=8/8` plus separate `UPSTREAM_ADR057_PRESERVED=YES`; or
+2. `UPSTREAM_ONLY_PATHS_PRESERVED=9/9` where the nine-path set includes upstream ADR-057, with its separate integrity proof retained.
+
+#### Next action
+
+Preserve both Phase-2 worktrees without further mutation. Resume only after the exact set/cardinality is adjudicated. Then revalidate successor provenance before continuing qualification.
+
+No commit, push, CI request, postpublication review, closure, Project completion transition, cleanup, or Issue #72 execution occurred.

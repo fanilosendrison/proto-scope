@@ -1,0 +1,33 @@
+## DT-03.E.1 — publication and qualification
+
+DT-03.E.1 is qualified and published through PR #40.
+
+### Published identity
+
+- candidate commit: `d03f7d7636197047751f07f02d90033d2ea1b7b0`
+- merge commit: `0ebbe30ab0122f826e55307379b12cc58e091328`
+- published tree: `f6f54d782f4b29f8204cbe04b3b8c95dd6dd0d4b`
+- path: `docs/research/derivtrace/falsification/dt-03-e-evidence-inventory.md`
+- published blob: `f8e0fffde061581b98c0937d16ff7dda960db07e`
+- published/readback SHA-256: `c1e36818435c4baf0730923407e95523ae687553fbc64cec05830588246808e2`
+- exact remote readback: `PASS`
+- changed repository paths: 1
+- applicable CI checks: none
+
+### Qualification
+
+- evidence families triaged: 8
+- source records classified: 122
+- source classes: 84 historical-only / 28 executable-fixture-only / 5 private holds / 5 postdated-undetermined
+- replay units: 19
+- replay disposition: 0 admitted / 0 deferred / 16 rejected / 1 private hold / 2 postdated
+- controlled replays executed: 0
+- private E05 publication: `NO`
+- postdated evidence promoted: `NO`
+- frozen DT-03 partition changed: `NO` (`0/23/34/0` preserved)
+
+Three substantive STOP reviews were preserved before correction. The final fresh review returned `GO_FOR_RESEARCH_PUBLICATION` with zero blockers and zero majors; review SHA-256: `391c6ffb2e70541962196cf4db6c13b0466e08b73ffb935b749fcc06c28b07bb`.
+
+All six issue #36 acceptance criteria are satisfied. The zero-admission result is the qualified outcome of E.1 for this custody packet; it does not claim that experiments are impossible in principle and does not qualify DT-M0.
+
+Issue #36 may close as completed. Parent #35 and #37–#39 remain open. This completion grants no replay authority to #37, changes no source/model/normative content, and does not begin DT-04.

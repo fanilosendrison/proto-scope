@@ -1,0 +1,46 @@
+## Provider requalification required after #123
+
+```text
+ISSUE123=
+CLOSED / completed
+
+OLD_RUST_PROVIDER_SHA=
+657c950ed63af9597fb594b7e2ddd3a5d36075a2
+
+NEW_RUST_PROVIDER_SHA=
+814a884ccb759b0fdbde48673a74428d6443b847
+
+NEW_RUST_PROVIDER_TREE=
+6ae500b60ce3f1701a66e07f78dcccf3e94e2436
+
+NEW_RUST_PROVIDER_EXACT_SHA_CI=
+39075144698 / SUCCESS
+
+ISSUE123_SEMANTIC_DISPOSITION=
+NO_NORMATIVE_IMPACT
+
+TURNLOCK_CONSUMER_BASELINE=
+031941b501535c8041e191dad1ec57b5e1bb4462
+
+PRIOR_PHASE1_GO_PROVIDER=
+657c950ed63af9597fb594b7e2ddd3a5d36075a2
+
+PRIOR_PHASE1_GO_AUTHORIZES_NEW_PROVIDER=
+NO
+
+RERUN_PHASE1_REQUIRED=
+YES
+
+PHASE2_RESUME_AUTHORIZED=
+NO
+
+PRESERVED_PHASE2_WORKTREE_MUTATION=
+FORBIDDEN
+
+ISSUE72_EXECUTED=
+NO
+```
+
+#123 corrected a Proto-Ring implementation defect without normative, contract, compatibility-transport, dependency, or Turnlock tracked-content change. Because #71 migration evidence is exact-provider-SHA bound, the previous Phase-1 GO remains valid evidence for the old provider only and does not authorize migration to `814a884c...`.
+
+Re-run the complete Phase-1 shadow confrontation against unchanged Turnlock baseline `031941b5...` and exact Rust provider `814a884c...`. Resume the preserved Phase-2 worktree only after a fresh Phase-1 GO explicitly authorizes that provider.

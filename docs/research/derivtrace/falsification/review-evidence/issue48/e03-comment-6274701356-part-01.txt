@@ -1,0 +1,87 @@
+## Reconciliation path-count adjudication — 8/8 + separate ADR-057 integrity
+
+```text
+PHASE_A=
+GO
+
+PHASE_A_RECEIPT=
+6274321903
+
+STOP_RECEIPT=
+6274443154
+
+UPSTREAM_CHANGED_PATHS=
+11
+
+OVERLAPPING_TRACKED_PATHS=
+2
+
+OVERLAPPING_PATHS=
+docs/adr/README.md
+docs/adr/index.md
+
+SEPARATELY_PROVEN_CANONICAL_UPSTREAM_ADR=
+docs/adr/adr-057-define-gate-a-runner-ready-as-observation-bound-publication.md
+
+UPSTREAM_ONLY_PATH_DEFINITION=
+upstream delta
+minus overlapping tracked paths
+minus separately-proven canonical upstream ADR-057
+
+UPSTREAM_ONLY_PATH_COUNT=
+8
+
+UPSTREAM_ONLY_PATHS_PRESERVED_REQUIRED=
+8/8
+
+UPSTREAM_ADR057_PRESERVED_REQUIRED=
+YES
+
+PRIOR_REQUIRED_9_9=
+SUPERSEDED_BY_THIS_ADJUDICATION
+
+SUCCESSOR_RECONCILIATION_RESUME=
+AUTHORIZED
+
+SUCCESSOR_PUBLICATION=
+NOT_YET_AUTHORIZED
+
+ISSUE72_EXECUTED=
+NO
+```
+
+The prior `9/9` requirement was a counting defect in the execution instruction, not a repository-governance or product-semantic ambiguity.
+
+The set called “upstream-only paths” was already defined by excluding exactly:
+
+1. `docs/adr/README.md`;
+2. `docs/adr/index.md`; and
+3. the separately handled canonical upstream ADR-057.
+
+From the exact 11-path upstream delta, that definition yields exactly eight paths. Therefore the truthful qualification contract is:
+
+```text
+UPSTREAM_ONLY_PATHS_PRESERVED=8/8
+AND
+UPSTREAM_ADR057_PRESERVED=YES
+```
+
+Do not redefine the set to include ADR-057 merely to preserve the erroneous cardinality.
+
+Phase A does not need to be rerun. The already-created detached successor at exact `ec52ebc6...` may resume from its preserved STOP state after re-verifying:
+
+```text
+SOURCE_CANDIDATE_MANIFEST_SHA256=
+004c5b05eb9e7361df75192c4060d13d363a37c0695ceb5c15a2c16c237b9014
+
+SUCCESSOR_STATUS_SHA256=
+517e3cf9923a99a950e78a290c3529c99ee06e2911e14abf6168bf1df2d5dc96
+
+SUCCESSOR_DIFF_SHA256=
+8bad10a0bbf3ac9ab302443803b6f30bc8c0d25e6e0794ef593b646d6b480186
+
+EXACT_NONCONFLICTING_TRANSPLANT_PARITY=
+40/40
+```
+
+Resume at upstream-preservation proof and ADR-057 → ADR-058 reconciliation. Do not repeat Phase A or the already-qualified exact non-conflicting transplant unless one of the preserved-state digests no longer matches.

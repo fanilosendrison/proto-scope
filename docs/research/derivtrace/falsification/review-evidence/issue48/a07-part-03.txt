@@ -1,0 +1,37 @@
+## 11. Individual RP08 admission decision
+
+`ADMISSION_DECISION=HOLD`.
+
+The scientific claim is narrow enough to be meaningful, and the source/output identities and three controls are sufficiently precise to support further qualification. The package is nevertheless not admitted because safety is a hard gate and the following prerequisites remain unresolved:
+
+- conflicting host identities;
+- unvalidated local no-hardlink checkout preparation;
+- no tested filesystem-write containment;
+- no tested per-process network denial;
+- no complete symlink/hardlink/path-escape protection;
+- no validated capture driver;
+- no validated temporary-root ownership and noninterference control;
+- no safe cleanup definition;
+- pending independent review and publication.
+
+`HOLD` is not a rejection of the experiment in principle. It grants no authority to run P1, N1, P2, checkout preparation, sandbox tests, or issue #45.
+
+## 12. Residual unknowns and invalidation conditions
+
+Residual unknowns are:
+
+1. Which OS identity is authoritative for the proposed execution.
+2. Whether Python 3.11.9 and its framework are supported and accepted on that exact host.
+3. The identities and behavior of the loaded Python framework, loader, `libSystem`, and `itertools` implementation.
+4. Whether an enforceable sandbox policy can deny network and all non-owned writes on the discovered host.
+5. Whether a separately bounded no-hardlink clone can be created without filters, hooks, network, source mutation, or private-path leakage.
+6. Whether the source/archive path chain can be proven free of symlink, hardlink, and race substitution.
+7. Whether the witness can capture exact argv, cwd, environment, streams, statuses, identities, and effects without loss.
+8. Whether owned-root creation and evidence filenames can be made exclusive.
+9. Whether cleanup can target only the exact owned root without deleting accepted evidence or unrelated data.
+10. Whether any historical v45 execution occurred.
+11. Whether the finite model faithfully represents material Ruu requirements.
+12. Whether behavior would persist across revisions, hosts, Python builds, or runtime states.
+
+The prospective decision is invalidated by any source, archive, commit, executable, cwd, environment, or command change; resolution to a different host without renewed discovery; failure of containment; incomplete evidence capture; any unlisted effect; a comparator status inconsistent with the defined control; or any representation of the result as C5, C6, or C7 evidence.
+

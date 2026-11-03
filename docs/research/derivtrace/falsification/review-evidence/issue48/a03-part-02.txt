@@ -1,0 +1,72 @@
+### D. #55 Phase B final rejected proposal
+
+- Immutable source:
+  [dt-03-e-rp08-actions-admission.md at 8a8e5ea43b69928f986c6e219757694d88397a84](https://github.com/fanilosendrison/proto-scope/blob/8a8e5ea43b69928f986c6e219757694d88397a84/docs/research/derivtrace/falsification/dt-03-e-rp08-actions-admission.md),
+  published through PR #59.
+- Git blob: `ef3cf9ef8e700b8567ca1a9112a89253242b8881`; SHA-256:
+  `0c21fa9990340f6b93f1c349715df12596d5723209b3a7131e9e5848659e2b0d`.
+- Extracts: section 15, `SAFETY_REQUIREMENT_SATISFIED=NO`,
+  `SAFETY_ADMISSION_GATE=FAIL`, `EVIDENCE_GATE=FAIL`,
+  `ADMISSION_DECISION=REJECT`; section 6, “These controls correctly prohibit
+  GitHub reruns of one run. They do not prohibit multiple fresh dispatches.”
+  Section 18 states the rejected package remained inactive without P1/N1/P2
+  execution.
+- Establishes the exact-proposal defeating condition and bounded REJECT, not
+  universal impossibility. Section 18 records final review
+  `GO_FOR_BOUNDED_ADMISSION_PUBLICATION`; that is not ADMIT or a new review of
+  this outcome.
+- Same-commit fixture references:
+  `fixtures/dt-03-e-rp08-replay-workflow.proposal.yml` (blob
+  `4ff12d187b97f3246110e91b6594988616b427a2`) and
+  `fixtures/dt-03-e-rp08-replay-driver.sh` (blob
+  `efdc04ac611956c24be1886561b333e91b7b2156`). Their SHA-256 values are in
+  section 5 above. Static byte verification is not execution-based validation.
+
+### E. Frozen Ruu script
+
+- Immutable source:
+  [state-space-audit-v45.py at 5d04c58170b2ce3f0e47aa0554a97906d2256492](https://github.com/fanilosendrison/ruu/blob/5d04c58170b2ce3f0e47aa0554a97906d2256492/qualification/state-space/v045/state-space-audit-v45.py).
+- Git blob: `515f1067167d3ae331d4562c4dc8d879f2c74967`; SHA-256 and size are in
+  section 2.
+- Extracts: `BASELINE = 16124`, `assert count == 256`,
+  `print(f"v45 total: {BASELINE + count} PASS")`.
+- Establishes exact source text and arithmetic structure. It cannot establish
+  that assertions ran, that any historical execution produced the archive, or
+  that the encoded model is faithful. The external complete blob was read by the
+  author; only these extracts are included in the review candidate.
+
+### F. Frozen Ruu archived output
+
+- Immutable source:
+  [state-space-audit-v45.txt at 5d04c58170b2ce3f0e47aa0554a97906d2256492](https://github.com/fanilosendrison/ruu/blob/5d04c58170b2ce3f0e47aa0554a97906d2256492/qualification/state-space/v045/state-space-audit-v45.txt).
+- Git blob: `1e8d950b67f1d25707142ff62d003f741481fde7`; SHA-256 and size are in
+  section 2.
+- Extracts: `new combinations: 256 PASS`, `retained v44 baseline: 16124`,
+  `v45 total: 16380 PASS`.
+- Establishes immutable archived producer declarations. It cannot independently
+  authenticate producer/process/time, historical occurrence, new stdout parity,
+  or model validity. No historical process witness is supplied by these bytes;
+  reviewer access to the full external object is not presumed.
+
+### G. Preserved #36 inventory
+
+- Immutable source:
+  [dt-03-e-evidence-inventory.md at d03f7d7636197047751f07f02d90033d2ea1b7b0](https://github.com/fanilosendrison/proto-scope/blob/d03f7d7636197047751f07f02d90033d2ea1b7b0/docs/research/derivtrace/falsification/dt-03-e-evidence-inventory.md).
+- Git blob: `f8e0fffde061581b98c0937d16ff7dda960db07e`.
+- Extract: section 16, “E.2 may execute no unit from this inventory.” Appendix A
+  source section 1 also preserves the 19/0/16/1/2/0 partition used in section 10
+  here.
+- Establishes the historical inventory's zero-execution handoff, not a ban on
+  separately qualified successor research or a later ADMIT. No source-record
+  authenticity beyond its published custody is newly established.
+
+### H. Frozen DT-03 partition
+
+- Immutable source:
+  [dt-03-model-falsification-report.md at c7cc255346a5ae9f268ef67f5abced5e47c4f072](https://github.com/fanilosendrison/proto-scope/blob/c7cc255346a5ae9f268ef67f5abced5e47c4f072/docs/research/derivtrace/dt-03-model-falsification-report.md).
+- Git blob: `8a5295286cb4621dd66d878da0ef6710442da97b`.
+- Extract: section 12 fields `FALSIFIED_WITH_BOUNDED_COUNTEREXAMPLE=0`,
+  `SUPPORTED_WITHIN_EXACT_BOUNDS=23`, `UNDETERMINED=34`, `NOT_EXAMINED=0`.
+- Establishes the frozen report's classification, not universal validity of
+  DT-M0. This outcome neither re-tests nor reclassifies its targets; byte
+  identity is distinct from truth of every historical claim.

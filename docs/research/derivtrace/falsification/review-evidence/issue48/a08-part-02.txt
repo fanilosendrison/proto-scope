@@ -1,0 +1,68 @@
+## 5. Independently reviewed inert-probe disposition
+
+The probe author concluded:
+
+```text
+CONFINEMENT_OPTION=NONE
+PROBE_PACKAGE_DECISION=HOLD
+```
+
+It supplied no valid sandbox policy, materialization command, probe launch command, cleanup command, or operational containment driver. Its `.sb` artifacts were explicit invalid fail-closed sentinels, not profiles.
+
+The independent probe review disposition was:
+
+```text
+INERT_PROBE_REVIEW=GO_FOR_NO_PROBE_HOLD
+BLOCKERS=0
+MAJORS=0
+MINORS=0
+PROBE_EXECUTION_AUTHORIZED=NO
+```
+
+That disposition qualifies only the decision to preserve a no-probe `HOLD`. It does not approve any probe, policy, source preparation, RP08 control, RP08 execution, cleanup, or issue #45 action.
+
+## 6. Probe results P-A through P-E
+
+| Probe | Intended discrimination | Actual result |
+|---|---|---|
+| P-A | Permitted write to an exclusively owned allowlisted directory | `NOT_RUN` |
+| P-B | Policy denial of a write to a distinct owned sacrificial target | `NOT_RUN` |
+| P-C | Policy denial of a bounded loopback connection to an owned ready listener | `NOT_RUN` |
+| P-D | Denial of an allowed-path symlink escape to an owned sacrificial target | `NOT_RUN` |
+| P-E | Exact stdout, stderr and exit-status capture under the replay-candidate policy, with no extra effects | `NOT_RUN` |
+
+Also not run were source copying, sandbox parsing, sandbox enforcement, checkout qualification, RP08 P1, a negative comparison control, and a repeated positive control.
+
+There are no positive or negative empirical confinement results. Parser rejection, startup failure, absent paths, ordinary permission failure, connection refusal, or timeout must not later be substituted for a successful denial result.
+
+## 7. Source preparation and capture qualification
+
+The exact acquired source identities are available, but no exact source copy or checkout was materialized.
+
+A possible future copy of the already-acquired bytes was discussed only prospectively. It was not authorized, implemented, or tested. The following remain unqualified:
+
+- exclusive scratch-root creation and ownership;
+- component-by-component no-follow input access;
+- rejection of symlink and path substitution;
+- regular-file and `st_nlink == 1` validation;
+- no-hardlink source materialization;
+- source and archive realpath and digest revalidation;
+- confinement of the materialized files;
+- exact command, cwd, and environment binding;
+- capture-driver behavior;
+- exclusive evidence-file creation;
+- stdout, stderr, exit-status and comparator capture;
+- before/after effect recording;
+- safe evidence retention and cleanup.
+
+Accordingly:
+
+```text
+SOURCE_CHECKOUT_PREPARATION=NOT_QUALIFIED
+SOURCE_COPY_MATERIALIZED=NO
+CAPTURE_IMPLEMENTATION=UNQUALIFIED
+CAPTURE_VALIDATION=NOT_RUN
+```
+
+The acquired exact bytes establish custody of the identified script and archive. They do not establish safe preparation, present execution, or historical production.
+

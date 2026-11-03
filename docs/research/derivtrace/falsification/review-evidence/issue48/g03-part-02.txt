@@ -1,0 +1,4 @@
+## Non-goals
+
+No Product Intent, architecture, contract, prior research artifact, DT-M0 role/relation set, external source repository, current DT-03 (#6) disposition, DT-04 (#7) dependency, mechanism selection, implementation, Proto-Ring extraction or roadmap closure is authorized by creating this issue.
+

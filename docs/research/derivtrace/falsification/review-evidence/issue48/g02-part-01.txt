@@ -1,0 +1,10 @@
+## Acceptance
+1. All eight E families receive explicit executed/deferred/candidate-only dispositions.
+2. At least one controlled two-sided replay is newly executed when an admissible environment exists; otherwise exact unsupported-environment/blocked gate is preserved (no fabricated success).
+3. Real replay evidence is independently inspectable and not confused with executable test source alone.
+4. Positive and negative outcomes use comparable exact subjects and do not overclaim generalization.
+5. Source artifacts outside Proto-Scope are unchanged.
+6. Independent read-only audit challenges the claims of actual execution, empirical controls and custody before publication.
+
+No model modification, normative mutation, or scope change of #6. #35 remains open.
+

@@ -1,0 +1,96 @@
+## Problem
+
+Exact Ruu confrontation of the Python and Rust `RepositoryGovernanceState` values exposes different `ResolvedGovernanceRoute.route` tuples for every Repository Governance Model capability route.
+
+Python projects route tuples relative to the `repository_governance` mapping:
+
+```text
+capabilities / <capability> / routes / <route>
+```
+
+Rust retains an additional leading segment:
+
+```text
+repository_governance / capabilities / <capability> / routes / <route>
+```
+
+Both resolve the same declared path and repository-contained target, but the complete typed values are not equal. This blocks #125's required Ruu gap-closure parity and therefore blocks a fresh #72 Phase-1 confrontation.
+
+## Evidence and provenance
+
+Discovered while resuming #125 from:
+
+```text
+Proto-Ring Rust baseline: 814a884ccb759b0fdbde48673a74428d6443b847
+Python provider: dedb01a3a9b7a18930c9da75afa3773b5ad67f69
+Ruu baseline: 5d04c58170b2ce3f0e47aa0554a97906d2256492
+```
+
+The mismatch affects all eight Ruu RGM routes:
+
+```text
+architecture_decisions/profile
+authoritative_ref_monotonicity/binding
+evidence_requirements/registry
+governance_authority/profile
+governed_objects/profile
+projection_integrity/registry
+repository_integrity/profile
+shared_governance_provider/registry
+```
+
+The #125 compatibility candidate exposes the Rust value directly. Removing the leading segment inside compat would conceal the engine value and violate #125's prohibition on transport reinterpretation.
+
+## Current authoritative boundary
+
+- Canonical Repository Governance Model requires retention of each resolved route's exact route tuple, declared path, and resolved contained target.
+- #125 is compatibility-transport-only and cannot change engine semantics or reinterpret resolved routes.
+- Ruu and Turnlock retain all consumer authority and must not be modified by this finding.
+- GitHub Issues record work; they do not decide which tuple is authoritative.
+
+Semantic disposition:
+
+```text
+authority-conflict-or-uncertain
+```
+
+The accepted route-tuple coordinate basis must be resolved from existing Proto-Ring contracts or by an explicit repository decision before implementation.
+
+## Scope
+
+Included:
+
+- determine the contract-correct route-tuple coordinate basis;
+- align the Python and Rust RGS values without a compatibility-layer workaround;
+- add independent parity regression coverage over multiple capabilities/routes;
+- requalify the affected generic RGS and routing corpus.
+
+Excluded:
+
+- Ruu or Turnlock changes;
+- consumer-specific interpretation;
+- a seventeenth compatibility operation;
+- transport-version change;
+- resuming #72.
+
+## Acceptance criteria
+
+- [ ] One authoritative route-tuple coordinate basis is established from accepted Proto-Ring authority.
+- [ ] Python and Rust project byte-for-byte equal language-neutral route tuples for all eight exact Ruu RGM routes.
+- [ ] Declared paths and portable resolved targets remain unchanged.
+- [ ] Compat projects the already-resolved Rust route without special-case normalization.
+- [ ] Synthetic multi-route regression coverage detects either prefix divergence.
+- [ ] Complete Rust/Python conformance has zero mismatch.
+- [ ] No consumer repository is modified.
+
+## Validation
+
+Run the complete Rust and Python suites, global conformance, exact Ruu complete-RGS parity probe, independent review, and exact published-SHA CI including native Windows.
+
+## Authoritative references
+
+- `docs/contracts/repository-governance-model.md`
+- `docs/contracts/canonical-governance-routing.md`
+- `docs/contracts/repository-governance-state.md`
+- #125
+- #72
