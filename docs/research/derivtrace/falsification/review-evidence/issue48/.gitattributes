@@ -1,0 +1,3 @@
+# Preserve acquired data bytes, including upstream whitespace and chunk boundaries.
+# Authored report/manifest are outside this exception.
+*.txt -whitespace
