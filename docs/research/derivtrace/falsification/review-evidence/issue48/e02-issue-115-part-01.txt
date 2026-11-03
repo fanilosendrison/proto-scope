@@ -1,0 +1,72 @@
+## Problem
+
+A #113 profiling attempt observed that two independently running full Python test
+runners can interfere with the fixed shared-artifact lifecycle: after one runner
+released the shared lock, the other runner acquired it and removed the fixed
+artifacts before the first runner completed its post-run artifact-presence check.
+
+This invalidated that measurement attempt. The attempt was excluded and repeated.
+The concern is a verification/integration race, not a product-semantic finding.
+
+## Evidence and provenance
+
+- Originating profiling record: #113.
+- Profile revision: `d77229fe70fe07243ac912ad7c817fc87580d95d`.
+- Observed configuration: outer workers 4, inner vector workers 2.
+- Disposition recorded by #113: `no-normative-impact`.
+- Affected layers recorded by #113: verification-or-qualification evidence and integration-or-conformance.
+
+## Current authoritative boundary
+
+The current runner uses these fixed paths and an exclusive stateful lock:
+
+```text
+/tmp/proto-ring-61-actual-observations.json
+/tmp/proto-ring-61-execution-metrics.txt
+/tmp/proto-ring-61-shared-artifacts.lock
+```
+
+Issue #114 must preserve that lifecycle unchanged. This Finding does not alter
+corpus semantics, conformance semantics, or the validity of the successful #113
+measurements.
+
+## Scope
+
+Preserve and independently adjudicate the cross-run shared-artifact lifecycle
+concern. Establish reproducible evidence and determine whether a separate runner
+lifecycle correction is required without changing product or corpus semantics.
+
+## Allowed repository surfaces
+
+```text
+none; evidence and adjudication only until a separate correction scope is accepted
+```
+
+## Acceptance criteria
+
+- The concurrent-runner race is reproduced or mechanically ruled out against an exact revision.
+- The intended ownership interval for fixed shared artifacts is identified from current repository authority.
+- Any proposed correction is separated from product/corpus semantics and receives its own exact implementation scope and validation plan.
+- The concern does not block #114 unless a native dependency is later established from new evidence.
+
+## Validation
+
+Use independently concurrent full-runner trials and preserve raw process, lock,
+and artifact-lifecycle evidence. Do not count an invalidated trial in performance
+claims.
+
+## Non-goals
+
+```text
+no change in #114
+no corpus or schema change
+no product-semantic change
+no reinterpretation of successful #113 trials
+no lock or artifact-path change without separate accepted implementation scope
+```
+
+## Authoritative references
+
+- Profiling and incident evidence: #113.
+- Vector-parallel implementation boundary: #114.
+- Repository workflow and authority boundary: `docs/repository-governance/proto-ring-engineering.md`.

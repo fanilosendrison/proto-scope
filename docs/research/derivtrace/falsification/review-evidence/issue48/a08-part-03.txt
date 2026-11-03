@@ -1,0 +1,66 @@
+## 10. Safety and evidence status
+
+```text
+SAFETY_CAPABILITY_EVIDENCE=UNDETERMINED
+SAFETY_REQUIREMENT_SATISFIED=NO
+SAFETY_ADMISSION_GATE=FAIL
+EVIDENCE_GATE=UNDETERMINED
+REPLAY_EXECUTED=NO
+UNSAFE_EFFECT_OBSERVED=NO
+```
+
+The safety capability remains undetermined because neither local sandbox enforcement nor an existing VM was demonstrated. The safety requirement is therefore not satisfied, and the mandatory safety admission gate fails.
+
+The evidence gate remains undetermined because immutable input identities are known, but no exact command, qualified working directory, trusted runtime boundary, materialized source preparation, operational capture path, or executed controls exist for this proposal.
+
+This is failure to demonstrate required capability, not evidence that an unsafe action occurred.
+
+## 11. New RP08 admission decision
+
+```text
+ADMISSION_DECISION=HOLD
+ISSUE45_AUTHORIZED=NO
+```
+
+`ADMIT` is forbidden because the same exact proposal demonstrates neither a passing safety gate nor a passing evidence gate.
+
+`REJECT` is not warranted because the evidence does not establish that a bounded RP08 experiment is impossible in principle. It establishes that no qualifying execution realization presently exists within the supplied authority and evidence.
+
+`HOLD` is therefore the claim-relative disposition. It permits future replacement work only after the stated prerequisites are met. It grants no execution authority.
+
+## 12. Residual unknowns and replacement prerequisites
+
+Residual unknowns include:
+
+1. Exact, authoritative, host-applicable sandbox profile grammar and semantics.
+2. Rule precedence, descendant inheritance, executable transitions, and runtime allowances.
+3. Filesystem-write and read controls after symlink resolution.
+4. Network-denial behavior and reliable denial classification.
+5. Whether the identified Python runtime can operate under a sufficiently narrow valid policy.
+6. Complete driver effects outside any sandboxed child.
+7. Race-aware source materialization and no-hardlink guarantees.
+8. Exclusive scratch-root and evidence-file ownership.
+9. Exact capture fidelity and evidence retention.
+10. Safe cleanup and target revalidation.
+11. The historical cause of the Monterey/High Sierra discrepancy.
+12. Historical RP08 execution and archive production.
+13. Ruu semantic fidelity and any valid generalization domain.
+
+A replacement proposal requires at least:
+
+- authoritative host-applicable sandbox semantics or a separately trusted, byte-identified policy corpus;
+- or an already available qualified disposable VM within separately granted authority;
+- real exact confinement policies and commands;
+- an audited, bounded preparation and capture driver;
+- exclusive owned-root creation with no-follow and no-hardlink checks;
+- exact source/archive materialization and revalidation;
+- removal of inherited credentials and authentication sockets;
+- inert P-A–P-E execution under separate prior approval;
+- preservation of all positive and negative results;
+- exact policies, host, commands, cwd, environment, runtime, effects, evidence, retention, and cleanup identities;
+- a new claim-relative RP08 packet using those results;
+- fresh independent review of that exact packet with zero blocker and major objections;
+- qualified publication and exact-content readback.
+
+Successful inert probes would establish only narrow observed containment behavior. They would not alone establish scientific admissibility or authorize RP08.
+

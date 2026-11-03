@@ -1,0 +1,84 @@
+---
+okf_version: 1.0
+kind: KnowledgeAsset
+title: DT-03-E RP08 GitHub Actions admission
+normative: false
+severity: non-normative
+issue: "Proto-Scope #55 Phase B"
+operation: "proposed future #45 RP08 replay"
+status: rejected-single-use-authorization-defect
+---
+
+## 1. Purpose and authority boundary
+
+This non-normative KnowledgeAsset is the correction author’s final disposition after two preserved independent `STOP_CORRECTIONS_REQUIRED` reviews. It evaluates one frozen RP08 replay package. It does not activate a workflow, execute RP08, amend a requirement, reinterpret historical evidence, clear either independent STOP, or authorize the proposed operation.
+
+The candidate consists of the exact workflow proposal, driver fixture, and report named in section 18. The executable workflow source remains an inactive proposal under `docs/`. It is rejected, held from execution, and must not be activated or copied to `.github/workflows/dt03e2-rp08-replay.yml`.
+
+The intended activation mechanism would require a byte-for-byte copy of the exact frozen proposal, preserving its Git blob and SHA-256. That identity control remains technically valid but cannot cure the demonstrated single-use authorization defect.
+
+Design-decision fields:
+
+```text
+DESIGN_SAFETY_CAPABILITY=BOUNDED_EXECUTION_WITHOUT_DURABLE_SINGLE_USE_AUTHORIZATION
+DESIGN_SAFETY_REQUIREMENT=NOT_SATISFIED
+DESIGN_ADMISSION_GATE=FAIL
+DESIGN_ADMISSION_DECISION=REJECT
+FUTURE_EXECUTION_EVIDENCE=NOT_PRODUCED
+FUTURE_C2_C3_C4_STATUS=NO_AUTHORIZED_EXECUTION_FOR_REJECTED_PROPOSAL
+```
+
+The mission admission rule is applied independently. `HOLD` applies when an essential prerequisite is merely unestablished. `REJECT` applies when the exact proposal is contradicted by a demonstrated material defect. B-02 demonstrates such a defect: the frozen workflow cannot atomically consume a durable single-use authorization identity under its read-only repository and provider constraints. The correct disposition is therefore `REJECT`, not `HOLD` or `ADMIT`.
+
+## 2. Exact Phase A evidence
+
+Phase A is fixed to Proto-Scope commit `1651c7fe952c1e4e466dec788e14862176fd2924` and tree `7b198ac46d84cbced84b6c811b8910c3f1aa87b6`. Its GitHub Actions run was `40234216650`, attempt `1`. The value `f9b53f07a27fb4489314786066951970bff50327` is the Phase A workflow commit, not a workflow SHA-256 digest.
+
+Artifact `12614062299` had ZIP SHA-256 `d4ff14638237601e8d43cbc72283d79f3f9d277ec1a329661ff27ec440e4a54f`, manifest SHA-256 `66b9472f84c24fc54ace7590b1b194faf0f477d564660c743030fe9744c4fb6b`, 159 ZIP members, and 158 manifest rows. Every direct-member hash passed. Each manifest name had exactly one leading `./`, removed only for ZIP lookup.
+
+Five uppercase/lowercase status-name pairs remained distinct. The frozen design uses case-fold-unique retained and publication names and rejects collisions.
+
+Phase A P-A through P-E qualified `PASS` only for one inert run, runner image `20261023.334.3`, Docker `28.0.4`, kernel `6.17.0-1022-azure`, and the controls recorded by that run. Phase A does not establish RP08 execution, activation of the frozen proposal, a durable single-use dispatch authorization, or admission. Mutable version strings are comparison points only; material controls would have to be requalified by any future admissible successor design.
+
+The number 16,380 is the sum `16,124 + 256`; it is not evidence of 16,380 new executions.
+
+## 3. Historical HOLD preservation
+
+Issues #44 and #51 remain unchanged:
+
+```text
+SAFETY_CAPABILITY_EVIDENCE=UNDETERMINED
+SAFETY_REQUIREMENT_SATISFIED=NO
+SAFETY_ADMISSION_GATE=FAIL
+EVIDENCE_GATE=UNDETERMINED
+replay=NO
+```
+
+This disposition does not mutate, supersede, or retroactively satisfy either HOLD. It does not convert either historical HOLD into authorization for #45. The rejection of this prospective package is independent of those preserved historical dispositions.
+
+## 4. Frozen RP08 source identities
+
+The repository coordinate is exactly `fanilosendrison/ruu`, and the frozen revision is `5d04c58170b2ce3f0e47aa0554a97906d2256492`.
+
+The executable source is:
+
+```text
+path=qualification/state-space/v045/state-space-audit-v45.py
+git_blob=515f1067167d3ae331d4562c4dc8d879f2c74967
+sha256=84b9016765a5a8713db40df11888b657f63d309335d4e6890410d423057738ea
+```
+
+The comparison archive is:
+
+```text
+path=qualification/state-space/v045/state-space-audit-v45.txt
+git_blob=1e8d950b67f1d25707142ff62d003f741481fde7
+sha256=76bc0a73f54bbcbe167a4bf985d6aff5bf6d60b0a03fe51e78bdaff9ca4765ae
+```
+
+The workflow and driver reject a wrong repository origin, revision, object type, file mode, path, symlink state, Git blob, SHA-256, or worktree readback. Proto-Scope must be detached at the authorized `main` commit. Ruu inputs are independently copied, renamed, made read-only, required to be non-symlink regular files with link count one, and rehashed.
+
+The frozen image remains `docker.io/library/python@sha256:8a00ecb83ed9d0864dfd102a1bdb2067fda907ceb30bb86d09da9ee558b19590`, with OCI config `sha256:141fe9b385f3bb6d618c07ace1836c0b3c72bf525566ac3eb13cd1f405069877`, platform `linux/amd64`, and Python `3.11.17`.
+
+These exact source controls remain part of the frozen, rejected proposal. Their correctness does not supply the missing durable single-use authorization control and does not permit activation.
+

@@ -1,0 +1,71 @@
+Parent: #45
+
+Depends on: #70
+
+## Outcome
+
+Independently confront the validated Rust proto-ring engine against Turnlock-Rust
+and migrate Turnlock-Rust only after parity is demonstrated.
+
+## Mandatory sequence
+
+Phase 1:
+
+```text
+pin exact Rust proto-ring executable identity
+retain existing Python-backed proto-ring behavior
+shadow both engines on the same Turnlock governance fixtures/state
+compare externally observable governed results
+```
+
+Phase 2 is forbidden until Phase 1 has published successful exact-SHA evidence.
+
+Phase 2:
+
+```text
+switch Turnlock-Rust to the language-independent Rust-engine execution boundary
+remove its production dependency on Python proto-ring
+preserve all Turnlock-owned policy/evaluation/formal semantics
+```
+
+## Authority boundary
+
+Turnlock remains authoritative for:
+
+```text
+product semantics
+formal-assurance semantics
+Repository Integrity membership/order
+qualification policy
+consumer bindings
+workflow/orchestration semantics
+```
+
+Do not make Turnlock consume proto-ring Rust crate internals as its only
+canonical integration path merely because Turnlock itself is written in Rust.
+
+## Required evidence
+
+Require:
+
+```text
+pre-switch differential parity
+full Turnlock validation
+exact published SHA CI
+independent pre-publication review GO
+fresh exact-published-SHA review GO
+```
+
+## Completion condition
+
+Turnlock-Rust consumes the exact Rust reference engine without Python
+proto-ring production execution and without acquiring Rust implementation
+details as governance authority.
+
+## Non-goals
+
+Do not:
+
+- change Turnlock product/formal semantics;
+- infer Ruu compatibility from Turnlock success;
+- retire Python proto-ring globally yet.

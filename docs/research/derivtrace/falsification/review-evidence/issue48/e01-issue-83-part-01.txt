@@ -1,0 +1,314 @@
+Blocks: #67
+
+## Problem
+
+`RepositoryState.capture` can successfully return an identity assembled from individually stable path reads whose combined contents did not coexist at any point during the capture.
+
+This is reproducible on commit:
+
+`7ccde07f4d9801383d6a2410e3d12ce6ee716f34`
+
+Relevant implementation:
+
+`src/proto_ring/repository_state.py`
+
+## Reproduced interleaving
+
+Using two real tracked files:
+
+```text
+Physical states encountered:
+
+A0, B0
+A1, B0
+A1, B1
+
+Contents retained by the successful capture:
+
+A0, B1
+```
+
+`A0, B1` never existed as a repository state during the capture.
+
+The interleaving is introduced after A has completed its local read and stat guard, but before B begins its own local observation:
+
+```text
+initial state
+A0, B0
+
+A captured and locally validated
+A0 retained
+
+real write of A1
+A1, B0
+
+real write of B1
+A1, B1
+
+B captured and locally validated
+B1 retained
+```
+
+HEAD, the Git index, and governed path membership remain unchanged.
+
+The final structural recapture therefore remains equal to the initial structural capture.
+
+## Identity verification
+
+The identity returned by the interleaved capture was compared against stable captures of all four content combinations:
+
+```text
+A0,B0
+A1,B0
+A1,B1
+A0,B1
+```
+
+Only stable `A0,B1` produced the same identity.
+
+This rules out the observation being explained by a digest collision: the returned identity genuinely represents the temporally torn combination `A0,B1`.
+
+## Why the current guards do not reject this
+
+For each regular file, the implementation validates the file locally using:
+
+- `lstat` before the read;
+- the file-content read;
+- `lstat` after the read;
+- comparison of mode, size, `mtime_ns`, and `ctime_ns`.
+
+This detects mutation during the individual file read window.
+
+After all path records are collected, `capture` performs another structural capture and compares:
+
+- symbolic HEAD;
+- HEAD OID;
+- Git index state;
+- governed path discovery.
+
+However, previously-read file contents are not globally re-observed at the end of the capture.
+
+A file can therefore change after its own local guard has completed while a later file is observed after a different mutation.
+
+## Existing guards still work
+
+This finding does not imply that current coherence guards are ineffective in general.
+
+The following remain detectable:
+
+- mutation of a file during its own read window when the before/after stat guard changes;
+- structural drift such as governed path discovery changing before the final structural comparison.
+
+The gap is specifically between per-path local coherence and global cross-path coherence.
+
+## Relationship to RepositoryGovernanceState
+
+`src/proto_ring/repository_governance_state.py` adds a higher-level protection:
+
+1. capture the repository state;
+2. perform authoritative composition;
+3. capture the repository state again;
+4. reject if the two identities differ.
+
+This detects the simple case where the first capture is torn and the second capture is a stable later state.
+
+For example:
+
+```text
+first capture  -> identity representing A0,B1
+second capture -> identity representing A1,B1
+```
+
+The identities differ and construction fails closed.
+
+This issue therefore does **not** establish that `RepositoryGovernanceState.load` returns an incoherent governance state, and it does **not** establish a false Repository Integrity or qualification verdict.
+
+However, two captures can themselves be exposed to equivalent interleavings and return the same torn identity:
+
+```text
+Capture 1:
+A0,B0 -> A1,B0 -> A1,B1
+returns identity representing A0,B1
+
+reset without materializing A0,B1:
+A1,B1 -> A1,B0 -> A0,B0
+
+Capture 2:
+A0,B0 -> A1,B0 -> A1,B1
+returns the same identity representing A0,B1
+```
+
+Therefore, equality of two identities produced by the current primitive is not, by itself, a general proof that either capture was globally coherent.
+
+This still does not demonstrate a false complete `RepositoryGovernanceState` escaping the full composition path.
+
+## Contract question
+
+`docs/contracts/repository-state.md` assigns `RepositoryState` responsibility for:
+
+- capture coherence;
+- fail-closed torn-read handling;
+- exact content-sensitive repository observation.
+
+It also states that:
+
+> One returned RepositoryState must describe one coherent observation.
+
+The current contract clearly requires local torn-read detection for the bytes or symlink target of an individual governed object.
+
+What is not yet formally explicit is whether `coherent observation` requires global atomicity across all observed dimensions.
+
+One possible explicit property would be:
+
+```text
+Every successful RepositoryState capture must correspond to one state of all
+governed observed dimensions that coexisted at a single instant between the
+beginning and the end of the capture.
+```
+
+The issue is therefore both:
+
+1. a demonstrated implementation limit under global-coherence semantics; and
+2. a contract-clarification requirement if global atomicity is not already intended by the existing wording.
+
+## Required resolution
+
+Before changing the implementation, define the normative coherence guarantee.
+
+The resolution must explicitly determine:
+
+1. whether a successful `RepositoryState` capture must correspond to one globally coexisting repository state;
+2. what concurrent-writer or isolation assumptions are admissible;
+3. which mutation classes must cause fail-closed capture;
+4. whether callers may rely on identity equality as evidence of capture coherence;
+5. how `RepositoryGovernanceState` should reason about repository stability across composition independently from the coherence of each individual capture.
+
+Do not select an implementation mechanism before this semantic boundary is decided.
+
+## Non-claims
+
+This issue does **not** claim that:
+
+- every `RepositoryState` capture is incoherent;
+- all repository governance accepts false state;
+- `RepositoryGovernanceState.load` has been shown to return a false complete state;
+- Repository Integrity has been shown to return a false verdict;
+- qualification has been shown to return a false result;
+- the current digest algorithm is colliding;
+- the problem is specific to Python.
+
+The demonstrated fact is narrower:
+
+`RepositoryState.capture`, as implemented at the referenced commit, can successfully construct one identity from path contents that did not coexist during the capture.
+
+## Adopted semantic resolution
+
+### Global coherence
+
+A successful `RepositoryState` is intended to denote one globally coherent
+exact local observation when the caller relies on the result as a globally
+coexisting repository state.
+
+However, a generic portable read-only observer over independently mutable
+Git/worktree state cannot prove a linearizable atomic snapshot against arbitrary
+uncoordinated concurrent writers. In particular, finite repeated reads cannot
+establish absence of adversarial mutation/restore or ABA interleavings merely
+because observed values become equal again. Proto-ring MUST NOT claim such a
+proof.
+
+### Mutation-isolation precondition
+
+The global-coexistence guarantee therefore has an explicit environmental
+precondition: a `mutation-isolation interval`. During a mutation-isolation
+interval, no uncoordinated actor may mutate contract-relevant Git/worktree state
+covered by the observation.
+
+`RepositoryState` itself remains read-only and does not claim to establish an
+operating-system-wide exclusive lock against arbitrary external processes.
+
+### Mandatory drift detection
+
+The isolation precondition does NOT authorize weak observation.
+`RepositoryState.capture` must continue to fail closed on contract-relevant
+drift that it can observe.
+
+In particular, the implementation MUST reject the demonstrated class of
+content-only drift where:
+
+```text
+a governed path is observed
+→ that path changes
+→ the changed value remains changed through a later whole-capture validation
+```
+
+even when:
+
+```text
+HEAD is unchanged
+Git index is unchanged
+governed path membership is unchanged
+```
+
+Per-path local before/read/after guards plus a final Git-structural recapture
+are insufficient because they permit the exact #83 failure.
+
+### Identity equality
+
+RepositoryState identity equality means:
+
+```text
+two successful captures encode equal contract-relevant observed state
+```
+
+It MUST NOT mean:
+
+```text
+proof that no concurrent writer existed
+proof that a mutation-isolation interval existed
+proof against arbitrary ABA scheduling
+```
+
+### RepositoryGovernanceState
+
+`RepositoryGovernanceState` continues to require:
+
+```text
+initial exact RepositoryState
+→ authoritative composition
+→ final exact RepositoryState
+→ identity equality
+```
+
+That equality is mandatory drift detection. It is NOT, by itself, proof that an
+external mutation-isolation interval existed.
+
+The coherent-state guarantee of `RepositoryGovernanceState` therefore inherits
+the same mutation-isolation precondition across the entire authoritative
+construction interval.
+
+### Repository Integrity
+
+Repository Integrity likewise inherits the RepositoryState mutation-isolation
+boundary for uncoordinated external writers.
+
+The validation obligation currently being evaluated is NOT hidden by this
+assumption. Its own mutation remains intentionally observable through pre/post
+RepositoryState comparison and continues to trigger the existing
+purity/coherence semantics.
+
+### No identity redesign
+
+This resolution does NOT authorize:
+
+```text
+a new RepositoryState identity version
+a new digest representation
+new Repository Integrity verdict states
+a second RepositoryState primitive
+a lock manager
+repository mutation
+provider observation
+network access
+```
+
+Stable repository states must retain the existing Python identity values.

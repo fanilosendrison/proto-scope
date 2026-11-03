@@ -1,0 +1,23 @@
+
+WORKTREE_HEAD=
+031941b501535c8041e191dad1ec57b5e1bb4462   (detached, unpublished)
+
+UNCOMMITTED_PATH_COUNT=
+6   (5 modified, 1 new)
+
+COMMIT_CREATED=
+NO
+
+PUSH_EXECUTED=
+NO
+
+PULL_REQUEST_CREATED=
+NO
+```
+
+### Resumption condition
+
+Resume Phase 2 unchanged once an accepted decision removes the gap above; then
+complete the prescribed migration, negative-path regressions, clean-cache proof,
+pre-publication review, publication, exact-SHA CI, post-publication review, and
+receipt.

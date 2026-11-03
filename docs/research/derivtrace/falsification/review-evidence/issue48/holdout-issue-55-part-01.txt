@@ -1,0 +1,187 @@
+
+## Classification
+
+```text
+Kind: Finding
+Area: Formal Verification / Qualification / Repository Governance
+Priority: P1
+Initial disposition: authority-conflict-or-uncertain
+Status: Backlog
+```
+
+Generic governance dependency: fanilosendrison/proto-ring#41
+
+## Problem
+
+Four current Ruu artifacts declare the date 2026-11-03 in material associated with ADR-081 / post-baseline qualification:
+
+```text
+qualification/state-space/post-baseline/v046/state-space-audit-v46.md
+qualification/audits/hostile/hostile-audit-adr081.md
+qualification/package-verification/package-verification-adr081.md
+docs/design/decision-integration-log.md
+```
+
+ADR-081 itself declares:
+
+```text
+date: 2026-09-10
+```
+
+The anomalous artifacts were introduced in repository history before 2026-11-03.
+
+Current Ruu checks authenticate bytes, manifests, registration, replay, lineage, and exact evidence bindings, but do not establish the semantic truth/currentness of these date assertions.
+
+A structurally valid/hash-bound/replayable artifact is therefore currently capable of carrying an ungoverned provenance assertion.
+
+## Critical distinction
+
+Do NOT treat the four occurrences as one semantic fact merely because the literal date is the same.
+
+They currently expose at least two distinct cases.
+
+### A. Decision Integration Log
+
+docs/design/decision-integration-log.md contains:
+
+```text
+## 2026-11-03 — ADR-081 — ...
+```
+
+Determine whether this heading date is intended to represent canonical ADR-081 decision metadata.
+
+If it is a secondary representation of ADR metadata, confront it against the canonical ADR-081 authority and the existing Projection Integrity rules.
+
+Do not infer correctness from Git commit timestamps.
+
+### B. Qualification / audit artifacts
+
+The following artifacts each contain a Date assertion:
+
+```text
+qualification/state-space/post-baseline/v046/state-space-audit-v46.md
+qualification/audits/hostile/hostile-audit-adr081.md
+qualification/package-verification/package-verification-adr081.md
+```
+
+The current post-baseline qualification-metadata.json registration records version, provenance class, baseline, artifact hashes, supporting artifacts, and replay contract, but it does not currently declare a canonical timestamp/date authority for these report fields.
+
+For each occurrence, first determine exactly what the field claims to mean.
+
+Do not assume that the ADR date, Git author date, Git committer date, file introduction date, execution date, report generation date, or any other wall clock is interchangeable.
+
+## Authority rule
+
+Ruu owns the consumer-specific semantics and adjudication.
+
+For every anomalous occurrence determine:
+
+```text
+claimed fact
+authoritative source, if one exists
+admissible binding from source to representation
+current status:
+    ESTABLISHED
+    MISMATCH
+    UNKNOWN / UNDETERMINED
+```
+
+If no currently accepted Ruu authority establishes the claimed date, record the value as unknown/undetermined rather than manufacturing a replacement.
+
+In particular:
+
+```text
+2026-09-10 MUST NOT be substituted merely because ADR-081 has that date.
+Git author/committer timestamps MUST NOT be promoted into semantic authority merely because they exist.
+independent wall clocks MUST NOT be treated as causal proof.
+```
+
+## Historical preservation / correction boundary
+
+Do not silently rewrite accepted or historical evidence in place.
+
+Preserve the anomalous artifacts and their provenance sufficiently for the repository history to show what was previously claimed.
+
+Follow current Ruu qualification policy: a correction to accepted qualification should normally be represented by the next version.
+
+Where an erratum, corrective qualification, maintained projection correction, or another explicit correction form is required, use the form authorized by current Ruu governance.
+
+Do not falsify v46 history to make the old artifact look as though it always carried the corrected provenance.
+
+## Generic governance boundary
+
+Ruu MUST NOT create a new permanent generic provenance/date-validation framework locally.
+
+ADR-085 requires generic/reusable repository-governance machinery to come from proto-ring.
+
+fanilosendrison/proto-ring#41 owns the generic derivation required by this finding and is a concrete child/confrontation input to proto-ring#26.
+
+Ruu may own only:
+
+```text
+the meaning of each Ruu field
+the Ruu canonical source / authority
+Ruu-specific mappings and bindings
+Ruu qualification policy
+Ruu-specific validation membership
+the concrete erratum/corrective qualification
+consumer-local strengthening that does not duplicate the generic mechanism
+```
+
+Final preventive validation must consume the applicable immutably bound proto-ring mechanism produced by that work rather than introducing a competing generic local checker.
+
+## Required investigation
+
+Cover all four occurrences explicitly.
+
+For each one record:
+
+1. exact path and field;
+2. the exact semantic claim made by the date;
+3. whether the claim is current metadata, historical metadata, qualification provenance, report generation metadata, decision metadata, or another accepted Ruu concept;
+4. the authoritative source, if current Ruu governance defines one;
+5. whether the current 2026-11-03 value is established, mismatched, or undetermined;
+6. the permitted correction mechanism under current Ruu governance;
+7. whether the field is mechanically significant enough to become part of a governed projection/evidence binding;
+8. the local mapping required to consume the proto-ring mechanism from #41.
+
+## Immediate safety disposition
+
+Until adjudication:
+
+- no chronological claim may rely on 2026-11-03 as established provenance for these four occurrences;
+- this finding does NOT by itself invalidate the 648 executable v46 results;
+- this finding DOES invalidate any claim that their current human-readable date/provenance assertion has been mechanically established;
+- existing artifact bytes must remain inspectable and must not be silently rewritten as though the anomaly never occurred.
+
+## Acceptance criteria
+
+This Issue is complete only when:
+
+1. all four occurrences have been individually adjudicated;
+2. their semantic meanings have not been conflated;
+3. every date claim has either an accepted Ruu authority/binding or explicit UNKNOWN/UNDETERMINED status;
+4. no date has been inferred solely from Git author/committer time;
+5. no independent wall-clock ordering has been treated as causal proof;
+6. the Decision Integration Log occurrence is corrected/bound according to its actual authority semantics;
+7. the qualification/audit occurrences are corrected by an explicit governance-authorized erratum/next-version/current-maintained mechanism rather than silent historical falsification;
+8. v46 historical evidence remains inspectable;
+9. qualification claims distinguish executable result validity from provenance-date validity;
+10. the generic preventive mechanism comes from the immutably bound proto-ring result of fanilosendrison/proto-ring#41 rather than a competing Ruu-local framework;
+11. Ruu adds only the consumer-specific mappings/obligations needed to consume that mechanism;
+12. Repository Integrity passes after the correction/adoption;
+13. the complete current Ruu qualification/replay sequence passes;
+14. the finding records exactly what was established, corrected, and left UNKNOWN.
+
+## Non-goals
+
+Do not:
+
+- redesign Ruu product semantics;
+- alter ADR-081 decision meaning;
+- rewrite accepted ADR bodies;
+- declare 2026-09-10 universally correct for all four fields;
+- use commit timestamps as a provenance oracle;
+- create a generic provenance framework in Ruu;
+- make proto-ring authoritative over Ruu qualification truth;
+- invalidate executable v46 results solely because a report date is untrusted.

@@ -1,0 +1,102 @@
+## Problem
+
+Qualified subject: [#70](https://github.com/fanilosendrison/turnlock-rust/issues/70), which records a bounded, source-bound `CONFIRMED` semantic-correspondence / coverage weakness (subject to required independent review). `TL-CLAIM-011` currently requires normal completion to return to the exact immediate caller and authorize only the appropriate continuation, but the normative consequence `normal completion of an admitted workflow-declared invocation => the preserved post-call continuation becomes eligible according to enclosing topology` is not independently represented by the required assurance claims. `authorization` must not be assumed equivalent to `eligibility`.
+
+This Issue owns **a later, independently reviewable correction of formal assurance decomposition and declared coverage**; it does not retroactively authorize changes in #70.
+
+## Evidence and provenance
+
+- TURNLOCK authority snapshot for qualification: `5656eb822398e6faef38ac838166b7b20382d10b`. The current `main` sources MUST be revalidated before changing anything.
+- [#70 qualification and original evidence](https://github.com/fanilosendrison/turnlock-rust/issues/70).
+- [Immutable Proto-Scope experiment/report/results](https://github.com/fanilosendrison/proto-scope/tree/2d10de2b75a071f8824991afbbc78dbd6114b5f7/docs/research/specification-methodology/2026-10-15/experiences): 9 SAT/UNSAT checks, one conditional-liveness sanity check, one truth-table check, with explicit bounds and assumptions.
+- [Spec §0.6](https://github.com/fanilosendrison/turnlock-rust/blob/5656eb822398e6faef38ac838166b7b20382d10b/docs/specification/turnlock-spec.md#L308-L326), [TL-INV-019](https://github.com/fanilosendrison/turnlock-rust/blob/5656eb822398e6faef38ac838166b7b20382d10b/docs/specification/turnlock-spec.md#L2878-L2895), [TL-INV-035](https://github.com/fanilosendrison/turnlock-rust/blob/5656eb822398e6faef38ac838166b7b20382d10b/docs/specification/turnlock-spec.md#L3267-L3299), [ADR-023](https://github.com/fanilosendrison/turnlock-rust/blob/5656eb822398e6faef38ac838166b7b20382d10b/docs/adr/adr-023-clarify-caller-context-and-continuation-semantics-across-nested-workflow-invocations.md#L64-L91), [ADR-036](https://github.com/fanilosendrison/turnlock-rust/blob/5656eb822398e6faef38ac838166b7b20382d10b/docs/adr/adr-036-define-occurrence-scoped-conditional-orchestration-progress-without-universal-completion.md#L144-L168).
+- [Current assurance claims and coverage](https://github.com/fanilosendrison/turnlock-rust/blob/5656eb822398e6faef38ac838166b7b20382d10b/formal/verification.yaml), governed by ADR-041.
+
+## Current authoritative boundary
+
+The **product behavior is already accepted**. The returned immediate caller context and its preserved post-call continuation are distinct; declared invocation return positively establishes post-call eligibility when the enclosing topology allows it. Agent-selected invocations instead resume the appropriate **same agent region**, which must not be silently completed or bypassed. The only/appropriate-continuation restriction is **local to that return**, not a rule stopping admissible concurrent siblings. `TL-INV-042` / `TL-CLAIM-083` impose conditional liveness only **after** eligibility.
+
+This is `no-normative-impact` corrective assurance work representing an obligation `derived-from-existing-authority`. No new Product Intent / invariant / product ADR is authorized.
+
+## Scope — precise proposed assurance correction
+
+1. Revalidate the qualification and inspect `formal/verification.yaml` at exact current `main`. Confirm `TL-CLAIM-011` still lacks the positive-eligibility consequence and that no existing claim already establishes it in the declared-call case. If the subject or next stable identifier changed, **STOP, do not silently rebase the semantic patch**.
+2. Preserve `TL-CLAIM-011` and its existing provenance, statement, modality and identity; it continues to own exact return and appropriate authorization.
+3. Add one separate **required assurance claim**, proposed new stable identity `TL-CLAIM-084` (only if unused), to the `claims` sequence in `formal/verification.yaml`, with the exact following semantic statement:
+
+   > For every admitted workflow-declared nested invocation occurrence whose normal completion is recognized, the resulting semantic state makes that exact immediate caller's preserved workflow-declared post-call continuation eligible according to the enclosing declared workflow topology.
+
+   Use these exact fields:
+
+   ```yaml
+   - id: TL-CLAIM-084
+     statement: >-
+       For every admitted workflow-declared nested invocation occurrence whose normal completion is recognized, the resulting semantic state makes that exact immediate caller's preserved workflow-declared post-call continuation eligible according to the enclosing declared workflow topology.
+     normative_sources:
+       - TL-INV-008
+       - TL-INV-019
+       - TL-INV-035
+     assurance_domain: formal-behavioral
+     modality: safety
+     formal_semantic_domain: operational
+   ```
+
+   Place this claim after the current final `TL-CLAIM-083` and before the top-level `normative_coverage:` section. It is a structural consequence of recognized normal completion, **not** eventual progress and **not** universal completion.
+
+4. In `normative_coverage`, append `TL-CLAIM-084` to the existing `formal_claims` arrays of **exactly** `TL-INV-008`, `TL-INV-019`, and `TL-INV-035`. Preserve the other claim bindings, `canonical_operational_coverage` values, and `residual_claims` values. The existing `full` declaration can only be defended after the amended decomposition passes the required independent semantic review; do not confuse declared coverage with evidence of Gate A acceptance.
+5. Synchronize the repository traceability validator's fixed required-claim range from TL-CLAIM-001…083 to TL-CLAIM-001…084, preserving exact cardinality, contiguity and duplicate detection. Synchronize the associated tests, then regenerate the formal invariant mapping. The only authorized repository modifications are `formal/verification.yaml`, `scripts/check-formal-traceability.py`, `scripts/tests/test-formal-traceability.py`, generated `docs/formal/invariant-mapping.md`, `docs/formal/README.md`, and `formal/reviews/README.md`. The validation change is mechanically required by the already authorized TL-CLAIM-084 addition and creates no new product or formal-assurance semantics.
+6. Obtain source-bound independent hostile semantic review of **the exact corrected assurance decomposition** under the accepted review governance before treating the corrected coverage as accepted. Material surviving challenges must be routed, not hidden by passing schema checks.
+
+## Counterexample and negative controls that must survive review
+
+- **CE (must be excluded)**: accepted + normal + workflow-declared + topology permits post-call + exact caller restored + correct continuation authorized + incorrect continuation unauthorized + preserved return relation, but `postcall_eligible=false`. The new claim must exclude it **without** assuming `authorized => eligible`.
+- **Positive ordinary declared return (must remain admitted)**: same as CE except `postcall_eligible=true`.
+- **Main-agent-selected nested return (must remain admitted)**: normal return resumes the same main-agent region, with enclosing workflow post-agent continuation still unavailable until that region completes.
+- **Independent-agent-selected nested return (must remain admitted)**: normal return resumes the same independent agent and lineage, not the parent workflow or session main-agent.
+- **Independent parallel sibling (must remain admitted)**: declaration-local suspension/return and post-call eligibility do not automatically stop a concurrent sibling whose progression is allowed by topology.
+- **Rejected pre-acceptance call (must not fake normal success)**: no callee occurrence exists and no successful post-call continuation is released.
+- **Join / liveness**: post-join eligibility obeys that join's distinct constraints; `TL-CLAIM-083` alone does not establish initial eligibility, and the new safety claim does not promise termination of callees or scheduler-level eventual progress.
+
+## Exclusions
+
+- No modification to `docs/specification/turnlock-spec.md`, stable `TL-INV-*` identity, accepted ADR, other existing `TL-CLAIM-*` statements, schemas, review protocols, Gate A Campaign Runner/NIB/DC/RED, TLA+ model, or runtime implementation.
+- Do not create a new formal readiness gate, mandatory formalization pipeline, global sibling exclusion, or a universal agent-selected post-call eligibility rule.
+- No Gate A campaign evidence may be fabricated. Do not turn Proto-Scope's diagnostic SAT checks into an official Gate A campaign.
+- This Issue does not itself perform #70's read-only qualification nor #71's methodology/protocol audit.
+
+## Acceptance criteria
+
+- [x] The #70 finding has independently reviewed, source-bound qualification and the current controlling authorities/claim set have been revalidated before patching.
+- [x] `TL-CLAIM-011` remains unchanged; `TL-CLAIM-084` has exactly the statement, provenance, domain and safety modality above.
+- [x] Coverage mappings of TL-INV-008/019/035 include TL-CLAIM-084, without altering unrelated mappings or inventing verification evidence.
+- [x] Original countermodel is excluded for the correct **positive eligibility** reason; all valid agent-selected, sibling, rejection, join and liveness controls retain their normative meaning.
+- [x] Required independent hostile review checks semantic weakening/strengthening, occurrence scope, concurrency, vacuity, and modality, and leaves no unresolved material objection for acceptance.
+- [x] The claim-range validator accepts exactly the contiguous TL-CLAIM-001 through TL-CLAIM-084 corpus and rejects missing, duplicate, non-contiguous and out-of-range claims, without weakening existing validations.
+- [x] Maintained formal documentation references the mechanically derived current Gate A assurance subject and claim/coverage collections without retaining stale manually duplicated mutable counts or fingerprints.
+- [x] Generated mapping is fresh and changes follow mechanically from the manifest.
+- [x] Canonical repository integrity validation passes, with output linked or recorded.
+- [x] No Product Intent / ADR / runner / implementation / protocol artifact changed.
+
+## Validation — exact repository entry points
+
+Use the repository's required isolated task worktree, current `origin/main`, and publication/permission rules in `AGENTS.md`. Do not assume the snapshot commit is still HEAD.
+
+```bash
+python3 -m venv .venv
+.venv/bin/python -m pip install --requirement requirements.txt
+.venv/bin/python scripts/render-formal-mapping.py
+.venv/bin/python scripts/check-repository-integrity.py
+```
+
+Review the diff and the source-to-claim correspondence; preservation of the accepted semantics is not established by schema validation or a SAT run alone. Publish only via the repository-prescribed targeted `git-commits-push` path after full validation and remote revalidation.
+
+## Authoritative references
+
+- `AGENTS.md`
+- `docs/specification/turnlock-spec.md`
+- `formal/verification.yaml`
+- `docs/formal/invariant-mapping.md` (generated, not authority)
+- ADR-023, ADR-036, ADR-037, ADR-041
+- `formal/reviews/README.md`
+- `docs/repository-governance/turnlock-rust-discovery-classification.md`
+- `docs/repository-governance/turnlock-rust-engineering.md`

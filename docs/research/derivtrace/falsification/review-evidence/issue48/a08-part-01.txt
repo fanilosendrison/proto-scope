@@ -1,0 +1,92 @@
+---
+okf_version: "1.0"
+kind: "KnowledgeAsset"
+asset_type: "replay-containment-readmission-decision"
+domain: "derivation-observability"
+severity: "non-normative"
+name: "DT-03.E.2 — RP08 containment qualification and renewed admission"
+status: "QUALIFIED_RESEARCH_CANDIDATE"
+decision: "HOLD"
+baseline_sha: "50e797eec046f730e94872659e613ae153ff6ca6"
+source_commit: "5d04c58170b2ce3f0e47aa0554a97906d2256492"
+historical_admission_blob: "dc84c2b1d76a1a25ed26978367c6e83cb12bc277"
+host_discovery_sha256: "e5689c749cb574b6542f72859573de30734045c049dd4fc5e13967cad5c4df50"
+probe_author_sha256: "17dd4cfc4832abfd9c67c555c0ae4e757d6e8dde7cf875b90ffef827adfd85f7"
+probe_review_sha256: "2bafe92b1f1cd0621662c61221464bd33b35ac9cc479620d8ddff37f71dd500f"
+author_packet_sha256: "a01e5a9fc305c9f838c2b46933c1d58b423ba44fd6a01f7de480a53728558dbc"
+independent_author_sha256: "609f7f51bc03118b5f572e56a8b3ca3b8ff89b704076457a45fb639956487097"
+---
+
+# DT-03.E.2 — RP08 containment qualification and renewed admission
+
+```text
+AUTHOR_ROLE=FRESH_INDEPENDENT_RP08_READMISSION_AUTHOR
+AUTHOR_MODEL=gpt-5.6-sol
+REASONING_EFFORT=xhigh
+ACTUAL_HOST_IDENTITY=Mac OS X 10.13.6 build 17G14042; Darwin 17.7.0; x86_64; local journaled HFS
+CONFINEMENT_OPTION=NONE
+INERT_PROBE_REVIEW=GO_FOR_NO_PROBE_HOLD
+ALLOWED_WRITE_PROBE=NOT_RUN
+DENIED_WRITE_PROBE=NOT_RUN
+NETWORK_DENIAL_PROBE=NOT_RUN
+PATH_CONTAINMENT_PROBE=NOT_RUN
+CAPTURE_PROBE=NOT_RUN
+SOURCE_CHECKOUT_PREPARATION=NOT_QUALIFIED
+SAFETY_CAPABILITY_EVIDENCE=UNDETERMINED
+SAFETY_REQUIREMENT_SATISFIED=NO
+SAFETY_ADMISSION_GATE=FAIL
+EVIDENCE_GATE=UNDETERMINED
+ADMISSION_DECISION=HOLD
+REPLAY_EXECUTED=NO
+UNSAFE_EFFECT_OBSERVED=NO
+```
+
+## 1. Purpose and exact authority boundary
+
+This report makes one new, prospective, claim-relative RP08 containment/readmission decision for issue #51.
+
+It does not execute RP08, any RP08 control, a sandbox policy, an inert probe, source preparation, capture validation, cleanup, or issue #45. It authorizes none of those operations.
+
+It does not revise:
+
+- the immutable issue #44 `HOLD`;
+- issue #44’s reviewed report bytes or hashes;
+- the additive issue #44 erratum;
+- issue #36’s historical 19-unit partition;
+- DT-M0, any normative or model source, or any other replay family.
+
+The exact prospective scientific claim is limited to whether one future, newly witnessed invocation of the identified script on one qualified host produces captured stdout byte-identical to the identified archived output. No such invocation has occurred.
+
+## 2. Preserved #44 HOLD and additive erratum
+
+Issue #44 remains an immutable `HOLD`.
+
+```text
+HISTORICAL_DECISION=HOLD
+HISTORICAL_REPORT_BLOB=dc84c2b1d76a1a25ed26978367c6e83cb12bc277
+HISTORICAL_REPORT_SHA256=9135036fbd8f70473c915dc996bf875a76db04ef9ee1fbc7c0c1d98ac4fb1b2a
+```
+
+Its additive interpretive erratum remains at:
+
+```text
+https://github.com/fanilosendrison/proto-scope/issues/44#issuecomment-6400367725
+ERRATUM_BODY_SHA256=09dc4719742d5f8845c009a2a4dd15a4cad1d8102d20f0e2a1b3a5786eb20ab9
+```
+
+The preserved historical disambiguation is:
+
+```text
+SAFETY_CAPABILITY_EVIDENCE=UNDETERMINED
+SAFETY_REQUIREMENT_SATISFIED=NO
+SAFETY_ADMISSION_GATE=FAIL
+EVIDENCE_GATE=UNDETERMINED
+ADMISSION_DECISION=HOLD
+UNSAFE_EFFECT_OBSERVED=NO
+REPLAY_EXECUTED=NO
+```
+
+`UNDETERMINED` describes missing containment-capability evidence. `FAIL` describes the resulting admission safety gate. Neither means that an unsafe effect was witnessed.
+
+This report neither edits history nor converts the issue #44 `HOLD` into an `ADMIT`. Issue #36’s unchanged historical disposition remains 19 replay units, zero admitted and zero executed.
+

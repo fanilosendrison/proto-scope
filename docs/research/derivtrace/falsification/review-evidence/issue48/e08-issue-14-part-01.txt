@@ -1,0 +1,91 @@
+## Problem
+
+GitHub Actions validation is insufficient as a publication guarantee if commits can still reach `main` without passing the required checks.
+
+The repository needs effective server-side enforcement preventing unvalidated publication.
+
+## Evidence and provenance
+
+Origin: Proto-Lithify #6.
+
+The parent Issue requires enforced validation and protection of `main`, subject to the capabilities of the repository and account.
+
+Actual available GitHub enforcement mechanisms and permissions must be inspected at execution time.
+
+## Current authoritative boundary
+
+GitHub repository rulesets and/or branch protection own the publication-enforcement configuration.
+
+The required validation checks are defined by the repository's published CI workflow.
+
+Enforcement must use the actual check identities observed from successful GitHub Actions runs.
+
+The repository's existing governance must not be weakened.
+
+## Scope
+
+After the mandatory validation workflow and standalone qualification are verified:
+
+1. Read the repository's existing branch-protection and ruleset configuration.
+2. Determine the available server-side protection mechanism and current administrative permissions.
+3. Identify the exact verified required CI check names.
+4. Configure effective protection of `main`.
+5. Require Pull Request integration rather than uncontrolled direct publication.
+6. Require successful completion of all designated validation checks before merging.
+7. Prevent ordinary direct pushes that would bypass the validation gate.
+8. Preserve existing stronger protections.
+9. Avoid introducing unapproved bypass actors or exceptions.
+10. Document the exact active enforcement rules and observed limitations.
+11. Verify that the enforcement applies to the actual `main` branch.
+12. Demonstrate that a change with a failing required check is not mergeable under the active server-side rules.
+
+Prefer a repository ruleset where it provides the required enforcement.
+
+If rulesets are unsupported but classic branch protection can satisfy the same requirements, use the supported mechanism.
+
+Do not create overlapping or conflicting protections unnecessarily.
+
+## Exclusions
+
+This Issue does not:
+
+- Implement or redesign the CI workflow.
+- Implement standalone-installation tests.
+- Modify CLI runtime behavior.
+- Remove existing repository protections.
+- Configure unverified check names.
+- Declare publication protected solely because a workflow passed.
+- Close parent Issue #6 without complete independent readback.
+
+## Acceptance criteria
+
+- Actual required check identities are established from successful workflow runs.
+- GitHub has an active enforceable rule covering `main`.
+- The rule requires the designated CI checks.
+- Ordinary unvalidated direct changes to `main` are prevented.
+- An unsuccessful required check blocks merge.
+- A properly validated Pull Request remains mergeable when other applicable rules are satisfied.
+- Effective GitHub settings are independently read back after configuration.
+- Existing stricter rules are preserved.
+- Any GitHub plan or permission limitation is documented without claiming unsupported enforcement.
+- No unauthorized bypass is configured.
+- All applicable repository validation and independent review obligations are satisfied.
+
+## Validation
+
+Read the actual GitHub ruleset or branch-protection configuration.
+
+Inspect its enforcement status, branch target, required check names and bypass configuration.
+
+Use a controlled non-destructive enforcement verification.
+
+A denied settings API request is not evidence that protection is absent.
+
+Do not claim success unless the effective server-side configuration is verified.
+
+## Authoritative references
+
+- Parent objective: https://github.com/fanilosendrison/proto-lithify/issues/6
+- Published GitHub Actions validation workflow
+- `AGENTS.md`
+- GitHub repository governance

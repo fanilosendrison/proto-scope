@@ -1,0 +1,132 @@
+## Problem
+
+TURNLOCK requires normal completion of a workflow-declared nested invocation to restore the exact immediate caller context and make its preserved post-call continuation eligible under the enclosing workflow topology.
+
+The existing assurance claim TL-CLAIM-011 describes correct return and authorization of the appropriate continuation.
+
+A bounded SAT experiment found that a plausible literal formalization of the claim permits correct return and authorization without establishing positive post-call eligibility.
+
+This is a candidate semantic-correspondence weakness, not a confirmed defect in the entire formal-assurance corpus.
+
+## Evidence and provenance
+
+TURNLOCK authority snapshot:
+
+`5656eb822398e6faef38ac838166b7b20382d10b`
+
+Normative sources:
+
+- Product Intent section 0.6.
+- TL-INV-008.
+- TL-INV-018.
+- TL-INV-019.
+- TL-INV-035.
+- TL-INV-042.
+
+Relevant assurance claims:
+
+- TL-CLAIM-010.
+- TL-CLAIM-011.
+- TL-CLAIM-020.
+- TL-CLAIM-023.
+- TL-CLAIM-031.
+- TL-CLAIM-083.
+
+Bounded experiment and report:
+
+https://github.com/fanilosendrison/proto-scope/tree/2d10de2b75a071f8824991afbbc78dbd6114b5f7/docs/research/specification-methodology/2026-10-15/experiences
+
+The experiment is a propositional counter-model under explicit assumptions. It is not a canonical TLA+ verification or proof of the complete set of 83 assurance claims.
+
+## Current authoritative boundary
+
+Accepted TURNLOCK normative semantics already explicitly distinguish:
+
+- workflow-declared invocation return;
+- agent-selected nested invocation return;
+- post-call continuation eligibility;
+- authorization of a continuation;
+- independent concurrent sibling progression;
+- conditional occurrence-scoped liveness.
+
+The formal-assurance manifest is not permitted to weaken or redefine these semantics.
+
+A product change is not authorized by this Issue.
+
+## Scope
+
+Perform a read-only, source-bound semantic correspondence qualification.
+
+Determine whether the present assurance decomposition entails the required positive post-call eligibility consequence for workflow-declared nested invocation, and whether the current coverage classification is supportable.
+
+Examine the exact meanings needed to relate:
+
+- correct caller restoration;
+- continuation authorization;
+- continuation eligibility;
+- suspension and preservation of the caller;
+- invocation occurrence identity;
+- normal completion;
+- conditional liveness.
+
+Test the strongest plausible interpretations supported by existing authority without introducing a hypothetical bridge as an accepted premise.
+
+Distinguish the declared-call case from agent-selected invocations, for which the enclosing workflow must not resume prematurely.
+
+Preserve the independent-progress guarantees of admissible concurrent sibling branches.
+
+Evaluate the intended coverage jointly rather than treating one selected claim in isolation.
+
+## Required outcome
+
+Produce one qualified conclusion:
+
+- `CONFIRMED`: a material coverage or correspondence weakness is established within the stated subject and evidence.
+- `REFUTED`: the candidate weakness is defeated by a justified existing semantic implication or assurance obligation.
+- `UNDETERMINED`: the available evidence does not establish either conclusion.
+
+Record the exact premises, counter-models, limitations, and effect on claimed coverage.
+
+Do not infer a universal corpus defect from one bounded SAT result.
+
+## Exclusions
+
+Do not modify Product Intent, invariants, claims, coverage declarations, ADRs, formal models, review protocols or runner construction artifacts.
+
+Do not convert authorization to eligibility merely by terminology preference.
+
+Do not introduce a universal post-call eligibility rule applying incorrectly to agent-selected invocations.
+
+Do not create Gate A campaign evidence.
+
+Do not prescribe a correction before the defect is qualified.
+
+## Acceptance criteria
+
+- [x] The normative obligation is quoted or referenced against exact source revisions.
+- [x] The existing assurance claims and coverage entries are examined together.
+- [x] The original bounded counter-model is independently reproduced or its inability to reproduce is explicitly reported.
+- [x] Any proposed implication between authorization and eligibility is supported by accepted semantics rather than assumption.
+- [x] Workflow-declared, main-agent-selected and independent-agent-selected return cases are distinguished where applicable.
+- [x] Unrelated parallel sibling progression is not accidentally prohibited.
+- [x] Safety and conditional liveness are not conflated.
+- [x] The conclusion has one of the three defined qualifications.
+- [x] Any confirmed problem is routed to the earliest responsible assurance layer.
+- [x] No unauthorized repository modifications occur.
+
+## Validation
+
+Require an independently inspectable semantic correspondence analysis and reproducible bounded experimental evidence.
+
+Review the candidate counterexample and any refutation adversarially.
+
+Report exactly what the experiment can and cannot establish.
+
+## Authoritative references
+
+- `docs/specification/turnlock-spec.md`
+- `formal/verification.yaml`
+- ADR-023
+- ADR-036
+- ADR-041
+- Proto-Scope archived TL-INV-008 / TL-CLAIM-011 experiments

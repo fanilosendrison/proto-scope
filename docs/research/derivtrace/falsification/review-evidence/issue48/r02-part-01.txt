@@ -1,0 +1,50 @@
+## Issue #41 — bounded investigation published and qualified
+
+The exact independently authored and reviewed report is published through PR #43.
+
+### Published identity
+
+- candidate commit: `6c2d3e572988b111494cbddf71d52a0f664a0bf0`
+- merge commit: `187cc71263526303254a17e4ca75ca643d9a7330`
+- published tree: `b037639eb11dfeab875db9eb4a21b359af6acaf1`
+- path: `docs/research/derivtrace/falsification/dt-03-e-replay-admission-methodology.md`
+- blob: `468c4d1705637bd30d78f509f978ff63f4e7581d`
+- SHA-256: `23e091c01f780e7900b3c019bf21799e458186fde2be1a78aeca5968f4a1ea35`
+- exact remote readback: `PASS`
+- changed tracked paths: 1
+- applicable CI: `NO_APPLICABLE_CI`
+
+### Independent evidence
+
+- author model: `gpt-5.6-sol`, effort `xhigh`
+- author packet SHA-256: `e61aea67e026efed5fc1e6718267c6060d47cb756afe96d24dc152830740926d`
+- author output SHA-256: `1e72faf56c19f9fd09e1d4f4cd99974b22b18cfed7aa2e7df5254103bda10476`
+- reviewer model: separate fresh `gpt-5.6-sol`, effort `xhigh`
+- review verdict: `GO_FOR_BOUNDED_RESEARCH_PUBLICATION`
+- blockers / majors / minors: `0 / 0 / 0`
+- review SHA-256: `4e4a2551eb9f96b7e9e048f2f72bed7ea89fc9898cefa8409e820d436b3465fe`
+
+### Nine acceptance criteria
+
+1. Three substantive #36 STOPs, final GO, and zero-admission history preserved: `PASS`.
+2. Reconstruction limited to available records without invented reviewer motives: `PASS`.
+3. Review demands mapped to claim, obligation, demonstrated risk, or separately stronger assurance: `PASS`.
+4. Safety retained as an independent hard gate: `PASS`.
+5. RP08 and heterogeneous RP02 challenged without execution: `PASS`.
+6. Concrete bounded #37 handoff with zero blanket authority: `PASS`.
+7. Finite reflexive lesson without model/ontology/recursive programme: `PASS`.
+8. Fresh exact-candidate review with zero blockers and zero majors: `PASS`.
+9. Authorized PR publication and exact-content readback with frozen artifacts unchanged: `PASS`.
+
+### Preserved boundaries
+
+- historical #36 partition: unchanged (`0 admitted / 16 rejected / 1 private / 2 postdated`);
+- new replays executed: 0;
+- new replays admitted: 0;
+- DT-M0 and frozen DT-03 `0/23/34/0`: unchanged;
+- #36 remains closed/completed;
+- #35 and #37–#39 remain open;
+- #42 remains open and independent;
+- no normative, implementation, source-repository, provider, or external-repository mutation.
+
+Issue #41 is qualified for closure as completed. This result is a bounded research-method finding, not a replay permit. It does not begin #37 or #42.

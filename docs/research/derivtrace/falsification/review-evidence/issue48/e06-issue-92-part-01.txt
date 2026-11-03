@@ -1,0 +1,114 @@
+<!-- work-id: turnlock-formal-assurance-retirement-20261020 -->
+
+## Purpose
+
+Retire the former TURNLOCK formal-assurance construction lineage from the active
+repository path while preserving the current Product Intent, canonical
+terminology, all 42 stable invariants, later independent product corrections,
+and retained Proto-Ring repository governance.
+
+ADR-059, `Retire formal-assurance architecture and reopen post-invariant
+design`, is the decision this migration must materialize. It is not cited here
+as an already published source.
+
+The examined baseline is
+[`b1b8902cb2be879f3930c2730002a1ea5e4e1f02`](https://github.com/fanilosendrison/turnlock-rust/tree/b1b8902cb2be879f3930c2730002a1ea5e4e1f02).
+
+## Scope
+
+- Preserve a byte-exact archive of the complete examined Git source tree and a
+  bounded public GitHub work-history capture made before retirement mutations.
+- Remove `formal/**`, `docs/formal/**`, the dedicated formal traceability
+  checker, its renderer, and its test module from the active path.
+- Supersede only ADR-041 through ADR-049 and ADR-053 through ADR-057, while
+  preserving every historical ADR body and recording the transition in ADR-059.
+- Amend the active methodology through the two exact specification edits and
+  the bounded repository-governance adaptations required by ADR-059.
+- Preserve Repository Governance Model v2, all eight capabilities, all eleven
+  immutable Governance Binding Registry bindings, the exact native Proto-Ring
+  provider pin, generic governance checks, ADR integrity, terminology
+  governance, reference protection, CI, and canonical publication.
+- Retire the selected GitHub work route without rewriting historical success or
+  treating abandonment as delivery.
+
+## Exclusions
+
+- No replacement assurance architecture, claim layer, Gate sequence, formal
+  language, model topology, campaign runner, workflow runtime, or TURNLOCK
+  implementation is selected or created.
+- No archived source is executed or adopted as active instruction.
+- No formal Gate or product-verification result is claimed.
+- No private Scope content is copied, and Scope does not become TURNLOCK
+  authority.
+- No unrelated product, dependency, provider, protection, or Project taxonomy
+  change is authorized.
+
+## Local acceptance criteria
+
+- [ ] The archive contains every tracked blob from the examined Git tree with
+  exact paths, modes, sizes, object IDs, hashes, and bytes, and every retired
+  path is present in it.
+- [ ] The protected specification prefix matches the baseline after inversion
+  of the one authorized preamble replacement; section 9 is exactly the mandated
+  text; all 42 invariant blocks retain identical IDs, order, and bytes.
+- [ ] All 58 historical ADR bodies remain byte-identical; only the prescribed
+  14 lifecycle statuses change; ADR-059 has the exact accepted body, relations,
+  scope, date, and computed body digest; generated and maintained histories are
+  coherent.
+- [ ] Governance pins, `requirements.txt`, reference protections, and the CI
+  workflow remain unchanged.
+- [ ] Every removal, addition, and modification is authorized by and agrees
+  with the exhaustive `retirement-map.json`.
+- [ ] No active import, command, authority source, projection, validation target,
+  schema route, or generator depends on a retired path; explicit historical
+  references remain inert.
+- [ ] Active discovery and validation never load, extract, import, or execute an
+  archive member.
+- [ ] The complete canonical Repository Integrity profile executes and passes,
+  including all retained generic controls and the new archive negative tests.
+- [ ] No still-applicable validation is removed, skipped, weakened, or replaced
+  by a success stub.
+- [ ] No replacement model, runner, claim graph, formal language, Gate, or
+  runtime is introduced, and no formal or product-verification success is
+  asserted.
+- [ ] Whitespace, untracked additions, module responsibilities, and the
+  400-physical-line limit are verified.
+- [ ] The persistent checkout, other worktrees, neighboring repositories, and
+  unrelated GitHub objects are preserved, with every operational limitation
+  reported exactly.
+
+## Publication and work-tracking criteria
+
+- [ ] A frozen candidate inventory is independently audited for counterexamples
+  to the migration postconditions before publication.
+- [ ] Publication uses only the canonical targeted `git-commits-push` procedure
+  and preserves the examined baseline as an ancestor.
+- [ ] The exact published commit and tree match the finally reviewed candidate,
+  and complete validation is replayed from a separate detached checkout of that
+  published SHA.
+- [ ] The `Repository integrity` workflow succeeds for that exact published SHA
+  with the observed run, attempt, and relevant jobs recorded.
+- [ ] The twelve abandoned open Issues are closed `not_planned` only after
+  verified publication, receive the prescribed retirement comment once, and
+  have their Project items archived without being represented as successful
+  delivery.
+- [ ] The identified already-closed historical Project items are archived
+  without changing their Issue state, closure reason, classification, or
+  historical success.
+- [ ] Issues #35, #37, and #39 remain open with only the prescribed current-scope
+  clarification; unrelated product and governance corrections remain active.
+- [ ] The separately tracked post-invariant investigation remains open and
+  unstarted, with no replacement architecture selected by its creation.
+- [ ] Native relationships, Project fields, archived-item state, Pull Request
+  disposition, and portfolio priorities are read back from GitHub after all
+  mutations.
+- [ ] A distinct read-only context performs the complete published-state audit,
+  including GitHub settlement, and reports against the exact published SHA.
+
+## Validation
+
+Use the repository's canonical Repository Integrity entry point, the permanent
+archive-custody checker, exact source/blob comparisons, independent candidate
+and published audits, exact-SHA CI readback, and direct GitHub Issue/Project
+readback. Repository-integrity or archive-custody success is not TURNLOCK
+product-verification evidence.

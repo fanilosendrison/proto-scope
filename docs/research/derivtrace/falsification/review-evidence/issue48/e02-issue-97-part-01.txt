@@ -1,0 +1,90 @@
+## Problem
+
+The #93 runner correctly isolates atomic test tasks into OS processes, but its two `corpus-stateful` evidence artifacts remain process-global:
+
+```text
+/tmp/proto-ring-61-actual-observations.json
+/tmp/proto-ring-61-execution-metrics.txt
+```
+
+Every runner invocation currently removes those global files before task execution and validates their existence only after all tasks have completed.
+
+Concurrent runner invocations can therefore invalidate one another after a successful `corpus-stateful` task:
+
+```text
+Runner A: corpus-stateful completes and writes artifacts
+Runner B: controller starts and unlinks the same artifacts
+Runner A: remaining tasks finish
+Runner A: postflight checks global artifacts
+Runner A: artifacts missing
+Runner A: RUNNER_FAILURE
+```
+
+The defect was exposed by #96's pre-mutation workers=2 baseline gate. The authoritative sequential suite passed 788/788, all 788 runner tests executed, and methods 08, 09, and 10 passed, but the runner reported `RUNNER_FAILURE` because both fixed artifacts were missing. No #96 repository mutation had occurred.
+
+## Required correction
+
+Protect exactly this lifecycle:
+
+```text
+exclusive artifact lock acquired
+    ↓
+remove stale shared artifacts
+    ↓
+run corpus-stateful child process
+    ↓
+if corpus-stateful succeeded:
+    verify both artifacts exist
+    ↓
+exclusive artifact lock released
+```
+
+The lock covers only `corpus-stateful`.
+
+Other atomic test tasks must remain free to execute concurrently across runner invocations.
+
+Do not serialize the complete runner.
+
+Use a persistent `/tmp` lock-file inode with standard-library `fcntl.flock(LOCK_EX)`. Artifact cleanup, stateful execution, and successful artifact postflight must occur under the same lock. The lock file itself must not be deleted or recreated during normal operation.
+
+## Scope
+
+Only these repository paths may change:
+
+```text
+tools/run_python_tests.py
+tests/test_python_test_runner.py
+```
+
+The correction must preserve child output, test counts, result classification, process isolation, stateful method order, and all non-stateful scheduling behavior.
+
+## Explicit non-goals
+
+No:
+
+- artifact-path renaming;
+- environment-variable path override;
+- modification of `test_conformance_corpus.py`;
+- global runner worker change;
+- CI change;
+- JSON Schema work;
+- RepositoryState work;
+- vector parallelism;
+- test skipping;
+- dependency addition.
+
+## Acceptance criteria
+
+- Only `corpus-stateful` acquires the exclusive artifact lock.
+- Stale artifact removal occurs after lock acquisition.
+- Successful artifact existence checks occur before lock release.
+- Missing successful-state artifacts fail closed as `RUNNER_FAILURE`.
+- Non-stateful atomic tasks bypass the lock.
+- A crashed process cannot permanently retain the kernel lock.
+- The persistent lock file is not deleted by the runner.
+- Existing ten focused runner tests remain unchanged and four exact new focused tests pass.
+- The complete sequential suite passes with 792 tests.
+- Single runners at workers=2 and workers=4 pass with 792/792 and 57 tasks.
+- Two complete workers=2 runner invocations overlap and both pass independently.
+- Rust validation and unchanged sequential CI pass.
+- Exact-SHA CI is green before completion.

@@ -1,0 +1,2809 @@
+{
+  "format_description": "Non-normative acquisition manifest; SHA256 denotes full original representation; each supplied part has its own digest. Byte ranges are zero-based half-open. No new canonical protocol or authority is established.",
+  "version": "0.1.0",
+  "baseline_commit": "374addc871ad21a2d0dc3fa2fe5a314acf8dd442",
+  "historical_public_inventory_acquisition": "2026-10-25T10:48:26.090155Z",
+  "historical_e05_acquisition": "WITHHELD",
+  "new_acquisition_started": "2026-11-03T09:11:05.530352+00:00",
+  "new_acquisition_finished": "2026-11-03T09:14:57.027922+00:00",
+  "historical_inventory_blob": "f8e0fffde061581b98c0937d16ff7dda960db07e",
+  "historical_partition": {
+    "source_records": 122,
+    "historical_only": 84,
+    "fixture_only": 28,
+    "private_hold": 5,
+    "postdated": 5,
+    "replay_units": 19,
+    "admitted": 0,
+    "provenance_rejected": 16,
+    "private_unit": 1,
+    "postdated_units": 2
+  },
+  "records": [
+    {
+      "ID": "a01",
+      "ORIGINAL_SOURCE_IDENTITY": {
+        "repository": "fanilosendrison/proto-scope",
+        "commit": "374addc871ad21a2d0dc3fa2fe5a314acf8dd442",
+        "path": "docs/research/derivtrace/falsification/dt-03-e-evidence-inventory.md",
+        "git_blob": "f8e0fffde061581b98c0937d16ff7dda960db07e"
+      },
+      "SNAPSHOT_BYTES_OR_EXCERPT": [
+        {
+          "path": "docs/research/derivtrace/falsification/review-evidence/issue48/a01-part-01.txt",
+          "original_byte_range_half_open": [
+            0,
+            39481
+          ],
+          "snapshot_bytes": 39481,
+          "sha256": "383147c124faf158da31c21ebff41f7a12e479cbbc1b8bdd82e708a3ad406387",
+          "original_line_start": 1
+        },
+        {
+          "path": "docs/research/derivtrace/falsification/review-evidence/issue48/a01-part-02.txt",
+          "original_byte_range_half_open": [
+            39481,
+            94775
+          ],
+          "snapshot_bytes": 55294,
+          "sha256": "39ed6b8e2c9b849ccd1ea9621ae7276642b53393d5a7625f8210d9da73c440e5",
+          "original_line_start": 381
+        }
+      ],
+      "FULL_SOURCE_OR_PARTIAL_EXCERPT": "FULL_SOURCE",
+      "SHA256": "c1e36818435c4baf0730923407e95523ae687553fbc64cec05830588246808e2",
+      "GIT_BLOB_WHERE_APPLICABLE": "f8e0fffde061581b98c0937d16ff7dda960db07e",
+      "ACQUISITION_TIME": "2026-11-03T09:11:06.211914+00:00",
+      "ACQUISITION_STARTED": "2026-11-03T09:11:05.530352+00:00",
+      "ACQUISITION_METHOD": "official authenticated gh api; contents decoded from base64 and Git blob recomputed",
+      "VERIFICATION_LIMITS": "Exact supplied bytes only; no execution occurrence, independent upstream-origin authentication, acquisition honesty, complete custody, later edits, or semantic truth follows from hashes.",
+      "APPLICABLE_REPORT_CLAIMS": [
+        "historical 122-record / 19-unit partition; family source identities, source limitations and holdout selection"
+      ],
+      "EVIDENCE_CLASS": "IMMUTABLE_SOURCE_BYTES",
+      "FULL_ORIGINAL_BYTES": 94775
+    },
+    {
+      "ID": "a02",
+      "ORIGINAL_SOURCE_IDENTITY": {
+        "repository": "fanilosendrison/proto-scope",
+        "commit": "374addc871ad21a2d0dc3fa2fe5a314acf8dd442",
+        "path": "docs/research/derivtrace/falsification/dt-03-e-replay-admission-methodology.md",
+        "git_blob": "468c4d1705637bd30d78f509f978ff63f4e7581d"
+      },
+      "SNAPSHOT_BYTES_OR_EXCERPT": [
+        {
+          "path": "docs/research/derivtrace/falsification/review-evidence/issue48/a02-part-01.txt",
+          "original_byte_range_half_open": [
+            0,
+            3844
+          ],
+          "snapshot_bytes": 3844,
+          "sha256": "93d976727c7ab0ac0aca62c6604665ec1b0d75c30110080e03af320890b52070",
+          "original_line_start": 1
+        },
+        {
+          "path": "docs/research/derivtrace/falsification/review-evidence/issue48/a02-part-02.txt",
+          "original_byte_range_half_open": [
+            52046,
+            60941
+          ],
+          "snapshot_bytes": 8895,
+          "sha256": "f49983a6ecaa5ec7fbaec5e58ecae3080bb34505b3d7aff3f63b2105fab4a990",
+          "original_line_start": 817
+        }
+      ],
+      "FULL_SOURCE_OR_PARTIAL_EXCERPT": "PARTIAL_EXCERPT",
+      "SHA256": "23e091c01f780e7900b3c019bf21799e458186fde2be1a78aeca5968f4a1ea35",
+      "GIT_BLOB_WHERE_APPLICABLE": "468c4d1705637bd30d78f509f978ff63f4e7581d",
+      "ACQUISITION_TIME": "2026-11-03T09:11:07.238767+00:00",
+      "ACQUISITION_STARTED": "2026-11-03T09:11:06.723584+00:00",
+      "ACQUISITION_METHOD": "official authenticated gh api; contents decoded from base64 and Git blob recomputed",
+      "VERIFICATION_LIMITS": "Exact supplied bytes only; no execution occurrence, independent upstream-origin authentication, acquisition honesty, complete custody, later edits, or semantic truth follows from hashes. Partial source only; omitted bytes are not independently reviewable from this packet. Byte ranges are never silently concatenated as a full source. Local-path lines in some E03 comment bodies are excluded for privacy.",
+      "APPLICABLE_REPORT_CLAIMS": [
+        "bounded #41 handoff; safety and claim-relative evidence are non-substitutable"
+      ],
+      "EVIDENCE_CLASS": "IMMUTABLE_SOURCE_BYTES",
+      "FULL_ORIGINAL_BYTES": 69253
+    },
+    {
+      "ID": "a03",
+      "ORIGINAL_SOURCE_IDENTITY": {
+        "repository": "fanilosendrison/proto-scope",
+        "commit": "374addc871ad21a2d0dc3fa2fe5a314acf8dd442",
+        "path": "docs/research/derivtrace/falsification/dt-03-e-rp08-replay-outcome.md",
+        "git_blob": "76e9d7272d6fb8ebc8cb69d6bc94ddfbed630a48"
+      },
+      "SNAPSHOT_BYTES_OR_EXCERPT": [
+        {
+          "path": "docs/research/derivtrace/falsification/review-evidence/issue48/a03-part-01.txt",
+          "original_byte_range_half_open": [
+            0,
+            19254
+          ],
+          "snapshot_bytes": 19254,
+          "sha256": "4b9e66dea18838506e8ac0798249b6ed2dbdb1fcc6bdcfc588c7d16a66e57776",
+          "original_line_start": 1
+        },
+        {
+          "path": "docs/research/derivtrace/falsification/review-evidence/issue48/a03-part-02.txt",
+          "original_byte_range_half_open": [
+            19254,
+            23658
+          ],
+          "snapshot_bytes": 4404,
+          "sha256": "d444a6d143da669a027daf6e945038811cd011b5dc37bc5132b7af060830f559",
+          "original_line_start": 381
+        }
+      ],
+      "FULL_SOURCE_OR_PARTIAL_EXCERPT": "FULL_SOURCE",
+      "SHA256": "07a691413cb26efa4448ff9c652548ce72cf7392a428f1b65c7981ae8bffc390",
+      "GIT_BLOB_WHERE_APPLICABLE": "76e9d7272d6fb8ebc8cb69d6bc94ddfbed630a48",
+      "ACQUISITION_TIME": "2026-11-03T09:11:08.243016+00:00",
+      "ACQUISITION_STARTED": "2026-11-03T09:11:07.765428+00:00",
+      "ACQUISITION_METHOD": "official authenticated gh api; contents decoded from base64 and Git blob recomputed",
+      "VERIFICATION_LIMITS": "Exact supplied bytes only; no execution occurrence, independent upstream-origin authentication, acquisition honesty, complete custody, later edits, or semantic truth follows from hashes.",
+      "APPLICABLE_REPORT_CLAIMS": [
+        "qualified RP08 documentary non-execution and exclusions"
+      ],
+      "EVIDENCE_CLASS": "IMMUTABLE_SOURCE_BYTES",
+      "FULL_ORIGINAL_BYTES": 23658
+    },
+    {
+      "ID": "a04",
+      "ORIGINAL_SOURCE_IDENTITY": {
+        "repository": "fanilosendrison/proto-scope",
+        "commit": "374addc871ad21a2d0dc3fa2fe5a314acf8dd442",
+        "path": "docs/research/derivtrace/falsification/dt-03-e-rp01-admission.md",
+        "git_blob": "a875778901050d335614b0a8c4f544fc9a9193aa"
+      },
+      "SNAPSHOT_BYTES_OR_EXCERPT": [
+        {
+          "path": "docs/research/derivtrace/falsification/review-evidence/issue48/a04-part-01.txt",
+          "original_byte_range_half_open": [
+            0,
+            16950
+          ],
+          "snapshot_bytes": 16950,
+          "sha256": "06d5334d2bf255b85915ad507966d8471a0d323eb3ae80de0df7c2b20cfbee02",
+          "original_line_start": 1
+        }
+      ],
+      "FULL_SOURCE_OR_PARTIAL_EXCERPT": "FULL_SOURCE",
+      "SHA256": "06d5334d2bf255b85915ad507966d8471a0d323eb3ae80de0df7c2b20cfbee02",
+      "GIT_BLOB_WHERE_APPLICABLE": "a875778901050d335614b0a8c4f544fc9a9193aa",
+      "ACQUISITION_TIME": "2026-11-03T09:11:09.328454+00:00",
+      "ACQUISITION_STARTED": "2026-11-03T09:11:08.774477+00:00",
+      "ACQUISITION_METHOD": "official authenticated gh api; contents decoded from base64 and Git blob recomputed",
+      "VERIFICATION_LIMITS": "Exact supplied bytes only; no execution occurrence, independent upstream-origin authentication, acquisition honesty, complete custody, later edits, or semantic truth follows from hashes.",
+      "APPLICABLE_REPORT_CLAIMS": [
+        "separate later RP01 HOLD"
+      ],
+      "EVIDENCE_CLASS": "IMMUTABLE_SOURCE_BYTES",
+      "FULL_ORIGINAL_BYTES": 16950
+    },
+    {
+      "ID": "a05",
+      "ORIGINAL_SOURCE_IDENTITY": {
+        "repository": "fanilosendrison/proto-scope",
+        "commit": "374addc871ad21a2d0dc3fa2fe5a314acf8dd442",
+        "path": "docs/research/derivtrace/falsification/dt-03-e-rp02-admission.md",
+        "git_blob": "a77cb1c72c5c2b0735e266c2cce5c6531307fc23"
+      },
+      "SNAPSHOT_BYTES_OR_EXCERPT": [
+        {
+          "path": "docs/research/derivtrace/falsification/review-evidence/issue48/a05-part-01.txt",
+          "original_byte_range_half_open": [
+            0,
+            17884
+          ],
+          "snapshot_bytes": 17884,
+          "sha256": "a6b44e6d726e3cb0619d025ae58fac89e406564f87dfdd066d95e7a1b8fbf170",
+          "original_line_start": 1
+        }
+      ],
+      "FULL_SOURCE_OR_PARTIAL_EXCERPT": "FULL_SOURCE",
+      "SHA256": "a6b44e6d726e3cb0619d025ae58fac89e406564f87dfdd066d95e7a1b8fbf170",
+      "GIT_BLOB_WHERE_APPLICABLE": "a77cb1c72c5c2b0735e266c2cce5c6531307fc23",
+      "ACQUISITION_TIME": "2026-11-03T09:11:10.506300+00:00",
+      "ACQUISITION_STARTED": "2026-11-03T09:11:09.878532+00:00",
+      "ACQUISITION_METHOD": "official authenticated gh api; contents decoded from base64 and Git blob recomputed",
+      "VERIFICATION_LIMITS": "Exact supplied bytes only; no execution occurrence, independent upstream-origin authentication, acquisition honesty, complete custody, later edits, or semantic truth follows from hashes.",
+      "APPLICABLE_REPORT_CLAIMS": [
+        "separate later RP02 HOLD"
+      ],
+      "EVIDENCE_CLASS": "IMMUTABLE_SOURCE_BYTES",
+      "FULL_ORIGINAL_BYTES": 17884
+    },
+    {
+      "ID": "a06",
+      "ORIGINAL_SOURCE_IDENTITY": {
+        "repository": "fanilosendrison/proto-scope",
+        "commit": "374addc871ad21a2d0dc3fa2fe5a314acf8dd442",
+        "path": "docs/research/derivtrace/falsification/dt-03-e-rp01-rp02-contrast-outcome.md",
+        "git_blob": "fd5eb351c64a68b28e70fa8fff5084d3e1424394"
+      },
+      "SNAPSHOT_BYTES_OR_EXCERPT": [
+        {
+          "path": "docs/research/derivtrace/falsification/review-evidence/issue48/a06-part-01.txt",
+          "original_byte_range_half_open": [
+            0,
+            20186
+          ],
+          "snapshot_bytes": 20186,
+          "sha256": "72030c106e17785af7f51bb2456d0d925c0cfc0ff75b6f3f619cf1758428c1c9",
+          "original_line_start": 1
+        },
+        {
+          "path": "docs/research/derivtrace/falsification/review-evidence/issue48/a06-part-02.txt",
+          "original_byte_range_half_open": [
+            20186,
+            22890
+          ],
+          "snapshot_bytes": 2704,
+          "sha256": "e027bda2a53eb60ea9b43a73cdf96952e275981edd4e34c7ae05402dbdeb9948",
+          "original_line_start": 381
+        }
+      ],
+      "FULL_SOURCE_OR_PARTIAL_EXCERPT": "FULL_SOURCE",
+      "SHA256": "b6068421bb9a2d079c740046ef6ea1915723be0b32f1f91c432febaf482e76a5",
+      "GIT_BLOB_WHERE_APPLICABLE": "fd5eb351c64a68b28e70fa8fff5084d3e1424394",
+      "ACQUISITION_TIME": "2026-11-03T09:11:11.576205+00:00",
+      "ACQUISITION_STARTED": "2026-11-03T09:11:11.053916+00:00",
+      "ACQUISITION_METHOD": "official authenticated gh api; contents decoded from base64 and Git blob recomputed",
+      "VERIFICATION_LIMITS": "Exact supplied bytes only; no execution occurrence, independent upstream-origin authentication, acquisition honesty, complete custody, later edits, or semantic truth follows from hashes.",
+      "APPLICABLE_REPORT_CLAIMS": [
+        "qualified RP01/RP02 documentary non-execution and custody limits"
+      ],
+      "EVIDENCE_CLASS": "IMMUTABLE_SOURCE_BYTES",
+      "FULL_ORIGINAL_BYTES": 22890
+    },
+    {
+      "ID": "a07",
+      "ORIGINAL_SOURCE_IDENTITY": {
+        "repository": "fanilosendrison/proto-scope",
+        "commit": "374addc871ad21a2d0dc3fa2fe5a314acf8dd442",
+        "path": "docs/research/derivtrace/falsification/dt-03-e-rp08-admission.md",
+        "git_blob": "dc84c2b1d76a1a25ed26978367c6e83cb12bc277"
+      },
+      "SNAPSHOT_BYTES_OR_EXCERPT": [
+        {
+          "path": "docs/research/derivtrace/falsification/review-evidence/issue48/a07-part-01.txt",
+          "original_byte_range_half_open": [
+            0,
+            5014
+          ],
+          "snapshot_bytes": 5014,
+          "sha256": "2042d55726fd6a3251e6ba11e641679238fd62a7d50942c3e9cd507851e8cc2e",
+          "original_line_start": 1
+        },
+        {
+          "path": "docs/research/derivtrace/falsification/review-evidence/issue48/a07-part-02.txt",
+          "original_byte_range_half_open": [
+            18674,
+            22989
+          ],
+          "snapshot_bytes": 4315,
+          "sha256": "8febfd5c50ecda56035638efde0d2167e09ee11da3070fee64cc89442a1f43c8",
+          "original_line_start": 366
+        },
+        {
+          "path": "docs/research/derivtrace/falsification/review-evidence/issue48/a07-part-03.txt",
+          "original_byte_range_half_open": [
+            26541,
+            29064
+          ],
+          "snapshot_bytes": 2523,
+          "sha256": "e9c90a03dca546cac123034a11f7fdd1228d9dc1197c396a6b61378ababa21b1",
+          "original_line_start": 418
+        }
+      ],
+      "FULL_SOURCE_OR_PARTIAL_EXCERPT": "PARTIAL_EXCERPT",
+      "SHA256": "9135036fbd8f70473c915dc996bf875a76db04ef9ee1fbc7c0c1d98ac4fb1b2a",
+      "GIT_BLOB_WHERE_APPLICABLE": "dc84c2b1d76a1a25ed26978367c6e83cb12bc277",
+      "ACQUISITION_TIME": "2026-11-03T09:11:12.620638+00:00",
+      "ACQUISITION_STARTED": "2026-11-03T09:11:12.099469+00:00",
+      "ACQUISITION_METHOD": "official authenticated gh api; contents decoded from base64 and Git blob recomputed",
+      "VERIFICATION_LIMITS": "Exact supplied bytes only; no execution occurrence, independent upstream-origin authentication, acquisition honesty, complete custody, later edits, or semantic truth follows from hashes. Partial source only; omitted bytes are not independently reviewable from this packet. Byte ranges are never silently concatenated as a full source. Local-path lines in some E03 comment bodies are excluded for privacy.",
+      "APPLICABLE_REPORT_CLAIMS": [
+        "initial RP08 HOLD"
+      ],
+      "EVIDENCE_CLASS": "IMMUTABLE_SOURCE_BYTES",
+      "FULL_ORIGINAL_BYTES": 32212
+    },
+    {
+      "ID": "a08",
+      "ORIGINAL_SOURCE_IDENTITY": {
+        "repository": "fanilosendrison/proto-scope",
+        "commit": "374addc871ad21a2d0dc3fa2fe5a314acf8dd442",
+        "path": "docs/research/derivtrace/falsification/dt-03-e-rp08-containment-readmission.md",
+        "git_blob": "395d1bba1b5602e6a930ed098f4e2339a1a1d410"
+      },
+      "SNAPSHOT_BYTES_OR_EXCERPT": [
+        {
+          "path": "docs/research/derivtrace/falsification/review-evidence/issue48/a08-part-01.txt",
+          "original_byte_range_half_open": [
+            0,
+            3616
+          ],
+          "snapshot_bytes": 3616,
+          "sha256": "246b1601eb66a41120625d448981f2c6d022307ee060e2c0d4e1d48300a5a7b0",
+          "original_line_start": 1
+        },
+        {
+          "path": "docs/research/derivtrace/falsification/review-evidence/issue48/a08-part-02.txt",
+          "original_byte_range_half_open": [
+            5767,
+            8698
+          ],
+          "snapshot_bytes": 2931,
+          "sha256": "c1a225937ff0a6f28fbb91450614ca8673616403291c942b32a1444a18cb94e4",
+          "original_line_start": 149
+        },
+        {
+          "path": "docs/research/derivtrace/falsification/review-evidence/issue48/a08-part-03.txt",
+          "original_byte_range_half_open": [
+            17327,
+            20806
+          ],
+          "snapshot_bytes": 3479,
+          "sha256": "c540a969f54f525ba314ab87a75868b13b78b52ca4d4b38a0b875c3f1c0150c8",
+          "original_line_start": 361
+        }
+      ],
+      "FULL_SOURCE_OR_PARTIAL_EXCERPT": "PARTIAL_EXCERPT",
+      "SHA256": "c578ad3fa9d31b3f5dad9ab563bb1adab288e63de91112524b18ff0b8cdf5239",
+      "GIT_BLOB_WHERE_APPLICABLE": "395d1bba1b5602e6a930ed098f4e2339a1a1d410",
+      "ACQUISITION_TIME": "2026-11-03T09:11:13.656547+00:00",
+      "ACQUISITION_STARTED": "2026-11-03T09:11:13.121290+00:00",
+      "ACQUISITION_METHOD": "official authenticated gh api; contents decoded from base64 and Git blob recomputed",
+      "VERIFICATION_LIMITS": "Exact supplied bytes only; no execution occurrence, independent upstream-origin authentication, acquisition honesty, complete custody, later edits, or semantic truth follows from hashes. Partial source only; omitted bytes are not independently reviewable from this packet. Byte ranges are never silently concatenated as a full source. Local-path lines in some E03 comment bodies are excluded for privacy.",
+      "APPLICABLE_REPORT_CLAIMS": [
+        "local RP08 readmission HOLD; preparatory probes not performed here"
+      ],
+      "EVIDENCE_CLASS": "IMMUTABLE_SOURCE_BYTES",
+      "FULL_ORIGINAL_BYTES": 24820
+    },
+    {
+      "ID": "a09",
+      "ORIGINAL_SOURCE_IDENTITY": {
+        "repository": "fanilosendrison/proto-scope",
+        "commit": "374addc871ad21a2d0dc3fa2fe5a314acf8dd442",
+        "path": "docs/research/derivtrace/falsification/dt-03-e-rp08-actions-admission.md",
+        "git_blob": "ef3cf9ef8e700b8567ca1a9112a89253242b8881"
+      },
+      "SNAPSHOT_BYTES_OR_EXCERPT": [
+        {
+          "path": "docs/research/derivtrace/falsification/review-evidence/issue48/a09-part-01.txt",
+          "original_byte_range_half_open": [
+            0,
+            5308
+          ],
+          "snapshot_bytes": 5308,
+          "sha256": "66d64b8e142d5657999339535959c1febe1f2d677585789203d6cdcbbd2104cf",
+          "original_line_start": 1
+        },
+        {
+          "path": "docs/research/derivtrace/falsification/review-evidence/issue48/a09-part-02.txt",
+          "original_byte_range_half_open": [
+            22413,
+            28090
+          ],
+          "snapshot_bytes": 5677,
+          "sha256": "07e8ae7536b15baede3114f3099297488c23a6dae9175c34c1da98cdeac26404",
+          "original_line_start": 340
+        }
+      ],
+      "FULL_SOURCE_OR_PARTIAL_EXCERPT": "PARTIAL_EXCERPT",
+      "SHA256": "0c21fa9990340f6b93f1c349715df12596d5723209b3a7131e9e5848659e2b0d",
+      "GIT_BLOB_WHERE_APPLICABLE": "ef3cf9ef8e700b8567ca1a9112a89253242b8881",
+      "ACQUISITION_TIME": "2026-11-03T09:11:14.680267+00:00",
+      "ACQUISITION_STARTED": "2026-11-03T09:11:14.138635+00:00",
+      "ACQUISITION_METHOD": "official authenticated gh api; contents decoded from base64 and Git blob recomputed",
+      "VERIFICATION_LIMITS": "Exact supplied bytes only; no execution occurrence, independent upstream-origin authentication, acquisition honesty, complete custody, later edits, or semantic truth follows from hashes. Partial source only; omitted bytes are not independently reviewable from this packet. Byte ranges are never silently concatenated as a full source. Local-path lines in some E03 comment bodies are excluded for privacy.",
+      "APPLICABLE_REPORT_CLAIMS": [
+        "RP08 Actions Phase B REJECT; Phase A is separate"
+      ],
+      "EVIDENCE_CLASS": "IMMUTABLE_SOURCE_BYTES",
+      "FULL_ORIGINAL_BYTES": 30066
+    },
+    {
+      "ID": "g01",
+      "ORIGINAL_SOURCE_IDENTITY": {
+        "api_endpoint": "repos/fanilosendrison/proto-scope/issues/48",
+        "representation": "body UTF-8, no added newline",
+        "url": "https://github.com/fanilosendrison/proto-scope/issues/48",
+        "provider_updated_at": "2026-10-25T15:21:26Z"
+      },
+      "SNAPSHOT_BYTES_OR_EXCERPT": [
+        {
+          "path": "docs/research/derivtrace/falsification/review-evidence/issue48/g01-part-01.txt",
+          "original_byte_range_half_open": [
+            0,
+            4381
+          ],
+          "snapshot_bytes": 4381,
+          "sha256": "1062420236d1dcd848aeca4c51fb6b73540257ac0f174f5bf4c368dfd4442a2d",
+          "original_line_start": 1
+        }
+      ],
+      "FULL_SOURCE_OR_PARTIAL_EXCERPT": "FULL_SOURCE",
+      "SHA256": "1062420236d1dcd848aeca4c51fb6b73540257ac0f174f5bf4c368dfd4442a2d",
+      "GIT_BLOB_WHERE_APPLICABLE": null,
+      "ACQUISITION_TIME": "2026-11-03T09:11:15.846849+00:00",
+      "ACQUISITION_STARTED": "2026-11-03T09:11:15.257706+00:00",
+      "ACQUISITION_METHOD": "official authenticated gh api; body UTF-8, no added newline",
+      "VERIFICATION_LIMITS": "Exact supplied bytes only; no execution occurrence, independent upstream-origin authentication, acquisition honesty, complete custody, later edits, or semantic truth follows from hashes.",
+      "APPLICABLE_REPORT_CLAIMS": [
+        "current bounded task authority / parent and future corpus boundaries"
+      ],
+      "EVIDENCE_CLASS": "MUTABLE_ACQUIRED_RECORD",
+      "FULL_ORIGINAL_BYTES": 4381
+    },
+    {
+      "ID": "g02",
+      "ORIGINAL_SOURCE_IDENTITY": {
+        "api_endpoint": "repos/fanilosendrison/proto-scope/issues/37",
+        "representation": "body UTF-8, no added newline",
+        "url": "https://github.com/fanilosendrison/proto-scope/issues/37",
+        "provider_updated_at": "2026-11-02T22:57:02Z"
+      },
+      "SNAPSHOT_BYTES_OR_EXCERPT": [
+        {
+          "path": "docs/research/derivtrace/falsification/review-evidence/issue48/g02-part-01.txt",
+          "original_byte_range_half_open": [
+            2499,
+            3265
+          ],
+          "snapshot_bytes": 766,
+          "sha256": "18c71fffdd06d32f2c3241bed64aee36c24c105884c97daae3fb847c0d957505",
+          "original_line_start": 23
+        },
+        {
+          "path": "docs/research/derivtrace/falsification/review-evidence/issue48/g02-part-02.txt",
+          "original_byte_range_half_open": [
+            6458,
+            6781
+          ],
+          "snapshot_bytes": 323,
+          "sha256": "64bed32b9ac28011d1c0771d5bd99d319f05fa776a21a2c097c7f6d73caee3e4",
+          "original_line_start": 65
+        }
+      ],
+      "FULL_SOURCE_OR_PARTIAL_EXCERPT": "PARTIAL_EXCERPT",
+      "SHA256": "ee8773b8411b1c1882a50bfa4092f204b0581f4d257413fe0869a88490c498b3",
+      "GIT_BLOB_WHERE_APPLICABLE": null,
+      "ACQUISITION_TIME": "2026-11-03T09:11:16.910681+00:00",
+      "ACQUISITION_STARTED": "2026-11-03T09:11:16.327494+00:00",
+      "ACQUISITION_METHOD": "official authenticated gh api; body UTF-8, no added newline",
+      "VERIFICATION_LIMITS": "Exact supplied bytes only; no execution occurrence, independent upstream-origin authentication, acquisition honesty, complete custody, later edits, or semantic truth follows from hashes. Partial source only; omitted bytes are not independently reviewable from this packet. Byte ranges are never silently concatenated as a full source. Local-path lines in some E03 comment bodies are excluded for privacy.",
+      "APPLICABLE_REPORT_CLAIMS": [
+        "current bounded task authority / parent and future corpus boundaries"
+      ],
+      "EVIDENCE_CLASS": "MUTABLE_ACQUIRED_RECORD",
+      "FULL_ORIGINAL_BYTES": 10439
+    },
+    {
+      "ID": "g03",
+      "ORIGINAL_SOURCE_IDENTITY": {
+        "api_endpoint": "repos/fanilosendrison/proto-scope/issues/35",
+        "representation": "body UTF-8, no added newline",
+        "url": "https://github.com/fanilosendrison/proto-scope/issues/35",
+        "provider_updated_at": "2026-10-25T10:27:29Z"
+      },
+      "SNAPSHOT_BYTES_OR_EXCERPT": [
+        {
+          "path": "docs/research/derivtrace/falsification/review-evidence/issue48/g03-part-01.txt",
+          "original_byte_range_half_open": [
+            5814,
+            7345
+          ],
+          "snapshot_bytes": 1531,
+          "sha256": "fb5ca109d355b17d9f56ea81ee629dcf0a67e4f538a0702cf49dc9226b745492",
+          "original_line_start": 52
+        },
+        {
+          "path": "docs/research/derivtrace/falsification/review-evidence/issue48/g03-part-02.txt",
+          "original_byte_range_half_open": [
+            12824,
+            13131
+          ],
+          "snapshot_bytes": 307,
+          "sha256": "ae78bdfe3ef538f2d35a579345fd78911e1d901cd6b201d5d23d546e864b0780",
+          "original_line_start": 143
+        }
+      ],
+      "FULL_SOURCE_OR_PARTIAL_EXCERPT": "PARTIAL_EXCERPT",
+      "SHA256": "2a398cd7592fff3881af4dcf5a7bf307ec3cf265eba68306cec34dc545f8f3ec",
+      "GIT_BLOB_WHERE_APPLICABLE": null,
+      "ACQUISITION_TIME": "2026-11-03T09:11:18.043976+00:00",
+      "ACQUISITION_STARTED": "2026-11-03T09:11:17.507195+00:00",
+      "ACQUISITION_METHOD": "official authenticated gh api; body UTF-8, no added newline",
+      "VERIFICATION_LIMITS": "Exact supplied bytes only; no execution occurrence, independent upstream-origin authentication, acquisition honesty, complete custody, later edits, or semantic truth follows from hashes. Partial source only; omitted bytes are not independently reviewable from this packet. Byte ranges are never silently concatenated as a full source. Local-path lines in some E03 comment bodies are excluded for privacy.",
+      "APPLICABLE_REPORT_CLAIMS": [
+        "current bounded task authority / parent and future corpus boundaries"
+      ],
+      "EVIDENCE_CLASS": "MUTABLE_ACQUIRED_RECORD",
+      "FULL_ORIGINAL_BYTES": 14330
+    },
+    {
+      "ID": "g04",
+      "ORIGINAL_SOURCE_IDENTITY": {
+        "api_endpoint": "repos/fanilosendrison/proto-scope/issues/49",
+        "representation": "body UTF-8, no added newline",
+        "url": "https://github.com/fanilosendrison/proto-scope/issues/49",
+        "provider_updated_at": "2026-10-25T16:55:35Z"
+      },
+      "SNAPSHOT_BYTES_OR_EXCERPT": [
+        {
+          "path": "docs/research/derivtrace/falsification/review-evidence/issue48/g04-part-01.txt",
+          "original_byte_range_half_open": [
+            0,
+            5054
+          ],
+          "snapshot_bytes": 5054,
+          "sha256": "189d66bb5a9a321f63cb118850382b2db89c497dea8b7df90f565ce87a897d56",
+          "original_line_start": 1
+        }
+      ],
+      "FULL_SOURCE_OR_PARTIAL_EXCERPT": "FULL_SOURCE",
+      "SHA256": "189d66bb5a9a321f63cb118850382b2db89c497dea8b7df90f565ce87a897d56",
+      "GIT_BLOB_WHERE_APPLICABLE": null,
+      "ACQUISITION_TIME": "2026-11-03T09:11:19.386169+00:00",
+      "ACQUISITION_STARTED": "2026-11-03T09:11:18.799663+00:00",
+      "ACQUISITION_METHOD": "official authenticated gh api; body UTF-8, no added newline",
+      "VERIFICATION_LIMITS": "Exact supplied bytes only; no execution occurrence, independent upstream-origin authentication, acquisition honesty, complete custody, later edits, or semantic truth follows from hashes.",
+      "APPLICABLE_REPORT_CLAIMS": [
+        "current bounded task authority / parent and future corpus boundaries"
+      ],
+      "EVIDENCE_CLASS": "MUTABLE_ACQUIRED_RECORD",
+      "FULL_ORIGINAL_BYTES": 5054
+    },
+    {
+      "ID": "r01",
+      "ORIGINAL_SOURCE_IDENTITY": {
+        "api_endpoint": "repos/fanilosendrison/proto-scope/issues/comments/6397342354",
+        "representation": "body UTF-8, no added newline",
+        "url": "https://github.com/fanilosendrison/proto-scope/issues/36#issuecomment-6397342354",
+        "provider_updated_at": "2026-10-25T11:58:28Z"
+      },
+      "SNAPSHOT_BYTES_OR_EXCERPT": [
+        {
+          "path": "docs/research/derivtrace/falsification/review-evidence/issue48/r01-part-01.txt",
+          "original_byte_range_half_open": [
+            0,
+            1775
+          ],
+          "snapshot_bytes": 1775,
+          "sha256": "9935299aa549921770b84028a27a6dd1a2d0b26f0f57207c4e79327237ee3f3c",
+          "original_line_start": 1
+        }
+      ],
+      "FULL_SOURCE_OR_PARTIAL_EXCERPT": "FULL_SOURCE",
+      "SHA256": "9935299aa549921770b84028a27a6dd1a2d0b26f0f57207c4e79327237ee3f3c",
+      "GIT_BLOB_WHERE_APPLICABLE": null,
+      "ACQUISITION_TIME": "2026-11-03T09:11:20.642525+00:00",
+      "ACQUISITION_STARTED": "2026-11-03T09:11:19.912256+00:00",
+      "ACQUISITION_METHOD": "official authenticated gh api; body UTF-8, no added newline",
+      "VERIFICATION_LIMITS": "Exact supplied bytes only; no execution occurrence, independent upstream-origin authentication, acquisition honesty, complete custody, later edits, or semantic truth follows from hashes.",
+      "APPLICABLE_REPORT_CLAIMS": [
+        "historical publication and consumer qualification record, not scientific truth or newly witnessed execution"
+      ],
+      "EVIDENCE_CLASS": "MUTABLE_ACQUIRED_RECORD",
+      "FULL_ORIGINAL_BYTES": 1775
+    },
+    {
+      "ID": "r02",
+      "ORIGINAL_SOURCE_IDENTITY": {
+        "api_endpoint": "repos/fanilosendrison/proto-scope/issues/comments/6399073699",
+        "representation": "body UTF-8, no added newline",
+        "url": "https://github.com/fanilosendrison/proto-scope/issues/41#issuecomment-6399073699",
+        "provider_updated_at": "2026-10-25T14:46:59Z"
+      },
+      "SNAPSHOT_BYTES_OR_EXCERPT": [
+        {
+          "path": "docs/research/derivtrace/falsification/review-evidence/issue48/r02-part-01.txt",
+          "original_byte_range_half_open": [
+            0,
+            2503
+          ],
+          "snapshot_bytes": 2503,
+          "sha256": "4d05ed733947b7c8ed7a940f889ed19b6c93b13d0b04b75ba6a3c62dfe570911",
+          "original_line_start": 1
+        }
+      ],
+      "FULL_SOURCE_OR_PARTIAL_EXCERPT": "FULL_SOURCE",
+      "SHA256": "4d05ed733947b7c8ed7a940f889ed19b6c93b13d0b04b75ba6a3c62dfe570911",
+      "GIT_BLOB_WHERE_APPLICABLE": null,
+      "ACQUISITION_TIME": "2026-11-03T09:11:21.714913+00:00",
+      "ACQUISITION_STARTED": "2026-11-03T09:11:21.136421+00:00",
+      "ACQUISITION_METHOD": "official authenticated gh api; body UTF-8, no added newline",
+      "VERIFICATION_LIMITS": "Exact supplied bytes only; no execution occurrence, independent upstream-origin authentication, acquisition honesty, complete custody, later edits, or semantic truth follows from hashes.",
+      "APPLICABLE_REPORT_CLAIMS": [
+        "historical publication and consumer qualification record, not scientific truth or newly witnessed execution"
+      ],
+      "EVIDENCE_CLASS": "MUTABLE_ACQUIRED_RECORD",
+      "FULL_ORIGINAL_BYTES": 2503
+    },
+    {
+      "ID": "r03",
+      "ORIGINAL_SOURCE_IDENTITY": {
+        "api_endpoint": "repos/fanilosendrison/proto-scope/issues/comments/6590579882",
+        "representation": "body UTF-8, no added newline",
+        "url": "https://github.com/fanilosendrison/proto-scope/issues/45#issuecomment-6590579882",
+        "provider_updated_at": "2026-11-02T22:55:55Z"
+      },
+      "SNAPSHOT_BYTES_OR_EXCERPT": [
+        {
+          "path": "docs/research/derivtrace/falsification/review-evidence/issue48/r03-part-01.txt",
+          "original_byte_range_half_open": [
+            0,
+            6981
+          ],
+          "snapshot_bytes": 6981,
+          "sha256": "dedc8ca1131c9155b5f550a16afef9d0a4b1b1621bf032dc298e24f43c7d4cc0",
+          "original_line_start": 1
+        }
+      ],
+      "FULL_SOURCE_OR_PARTIAL_EXCERPT": "FULL_SOURCE",
+      "SHA256": "dedc8ca1131c9155b5f550a16afef9d0a4b1b1621bf032dc298e24f43c7d4cc0",
+      "GIT_BLOB_WHERE_APPLICABLE": null,
+      "ACQUISITION_TIME": "2026-11-03T09:11:22.998649+00:00",
+      "ACQUISITION_STARTED": "2026-11-03T09:11:22.253740+00:00",
+      "ACQUISITION_METHOD": "official authenticated gh api; body UTF-8, no added newline",
+      "VERIFICATION_LIMITS": "Exact supplied bytes only; no execution occurrence, independent upstream-origin authentication, acquisition honesty, complete custody, later edits, or semantic truth follows from hashes.",
+      "APPLICABLE_REPORT_CLAIMS": [
+        "historical publication and consumer qualification record, not scientific truth or newly witnessed execution"
+      ],
+      "EVIDENCE_CLASS": "MUTABLE_ACQUIRED_RECORD",
+      "FULL_ORIGINAL_BYTES": 6981
+    },
+    {
+      "ID": "r04",
+      "ORIGINAL_SOURCE_IDENTITY": {
+        "api_endpoint": "repos/fanilosendrison/proto-scope/issues/comments/6400965002",
+        "representation": "body UTF-8, no added newline",
+        "url": "https://github.com/fanilosendrison/proto-scope/issues/46#issuecomment-6400965002",
+        "provider_updated_at": "2026-10-25T17:41:56Z"
+      },
+      "SNAPSHOT_BYTES_OR_EXCERPT": [
+        {
+          "path": "docs/research/derivtrace/falsification/review-evidence/issue48/r04-part-01.txt",
+          "original_byte_range_half_open": [
+            0,
+            2289
+          ],
+          "snapshot_bytes": 2289,
+          "sha256": "93d68a3b4d9fafec37924a85094525eeacfcf56d85a25ab75df8eb21d5de9781",
+          "original_line_start": 1
+        }
+      ],
+      "FULL_SOURCE_OR_PARTIAL_EXCERPT": "FULL_SOURCE",
+      "SHA256": "93d68a3b4d9fafec37924a85094525eeacfcf56d85a25ab75df8eb21d5de9781",
+      "GIT_BLOB_WHERE_APPLICABLE": null,
+      "ACQUISITION_TIME": "2026-11-03T09:11:24.160702+00:00",
+      "ACQUISITION_STARTED": "2026-11-03T09:11:23.570428+00:00",
+      "ACQUISITION_METHOD": "official authenticated gh api; body UTF-8, no added newline",
+      "VERIFICATION_LIMITS": "Exact supplied bytes only; no execution occurrence, independent upstream-origin authentication, acquisition honesty, complete custody, later edits, or semantic truth follows from hashes.",
+      "APPLICABLE_REPORT_CLAIMS": [
+        "historical publication and consumer qualification record, not scientific truth or newly witnessed execution"
+      ],
+      "EVIDENCE_CLASS": "MUTABLE_ACQUIRED_RECORD",
+      "FULL_ORIGINAL_BYTES": 2289
+    },
+    {
+      "ID": "r05",
+      "ORIGINAL_SOURCE_IDENTITY": {
+        "api_endpoint": "repos/fanilosendrison/proto-scope/issues/comments/6599399334",
+        "representation": "body UTF-8, no added newline",
+        "url": "https://github.com/fanilosendrison/proto-scope/issues/47#issuecomment-6599399334",
+        "provider_updated_at": "2026-11-03T08:56:01Z"
+      },
+      "SNAPSHOT_BYTES_OR_EXCERPT": [
+        {
+          "path": "docs/research/derivtrace/falsification/review-evidence/issue48/r05-part-01.txt",
+          "original_byte_range_half_open": [
+            0,
+            12585
+          ],
+          "snapshot_bytes": 12585,
+          "sha256": "e56ac41ce9760e1687755f7fa91c9ed53a5c42c697076cca6fb6a3d666306681",
+          "original_line_start": 1
+        }
+      ],
+      "FULL_SOURCE_OR_PARTIAL_EXCERPT": "FULL_SOURCE",
+      "SHA256": "e56ac41ce9760e1687755f7fa91c9ed53a5c42c697076cca6fb6a3d666306681",
+      "GIT_BLOB_WHERE_APPLICABLE": null,
+      "ACQUISITION_TIME": "2026-11-03T09:11:25.345690+00:00",
+      "ACQUISITION_STARTED": "2026-11-03T09:11:24.672120+00:00",
+      "ACQUISITION_METHOD": "official authenticated gh api; body UTF-8, no added newline",
+      "VERIFICATION_LIMITS": "Exact supplied bytes only; no execution occurrence, independent upstream-origin authentication, acquisition honesty, complete custody, later edits, or semantic truth follows from hashes.",
+      "APPLICABLE_REPORT_CLAIMS": [
+        "historical publication and consumer qualification record, not scientific truth or newly witnessed execution"
+      ],
+      "EVIDENCE_CLASS": "MUTABLE_ACQUIRED_RECORD",
+      "FULL_ORIGINAL_BYTES": 12585
+    },
+    {
+      "ID": "e01-pre",
+      "ORIGINAL_SOURCE_IDENTITY": {
+        "repository": "fanilosendrison/proto-ring",
+        "commit": "7ccde07f4d9801383d6a2410e3d12ce6ee716f34",
+        "path": "src/proto_ring/repository_state.py",
+        "git_blob": "a9a407d3227f5570bda7fbafac0b2eaf793d9719"
+      },
+      "SNAPSHOT_BYTES_OR_EXCERPT": [
+        {
+          "path": "docs/research/derivtrace/falsification/review-evidence/issue48/e01-pre-part-01.txt",
+          "original_byte_range_half_open": [
+            0,
+            11782
+          ],
+          "snapshot_bytes": 11782,
+          "sha256": "11c6b8f0b1f608547c34171a23038b8c91a546d2b772a723661fa458d2a06bf4",
+          "original_line_start": 1
+        }
+      ],
+      "FULL_SOURCE_OR_PARTIAL_EXCERPT": "FULL_SOURCE",
+      "SHA256": "11c6b8f0b1f608547c34171a23038b8c91a546d2b772a723661fa458d2a06bf4",
+      "GIT_BLOB_WHERE_APPLICABLE": "a9a407d3227f5570bda7fbafac0b2eaf793d9719",
+      "ACQUISITION_TIME": "2026-11-03T09:11:26.501035+00:00",
+      "ACQUISITION_STARTED": "2026-11-03T09:11:26.076196+00:00",
+      "ACQUISITION_METHOD": "official authenticated gh api; contents decoded from base64 and Git blob recomputed",
+      "VERIFICATION_LIMITS": "Exact supplied bytes only; no execution occurrence, independent upstream-origin authentication, acquisition honesty, complete custody, later edits, or semantic truth follows from hashes.",
+      "APPLICABLE_REPORT_CLAIMS": [
+        "e01-pre"
+      ],
+      "EVIDENCE_CLASS": "IMMUTABLE_SOURCE_BYTES",
+      "FULL_ORIGINAL_BYTES": 11782
+    },
+    {
+      "ID": "e01-post",
+      "ORIGINAL_SOURCE_IDENTITY": {
+        "repository": "fanilosendrison/proto-ring",
+        "commit": "0b140d0505878b5283ca271de60fbee79c1bc0a9",
+        "path": "src/proto_ring/repository_state.py",
+        "git_blob": "fdc6a4ea16fd0b90a32ab0d2f4bb11c3471244fe"
+      },
+      "SNAPSHOT_BYTES_OR_EXCERPT": [
+        {
+          "path": "docs/research/derivtrace/falsification/review-evidence/issue48/e01-post-part-01.txt",
+          "original_byte_range_half_open": [
+            0,
+            12171
+          ],
+          "snapshot_bytes": 12171,
+          "sha256": "9a3c929651ceae415bc86acb219142fac9d94145dc72c03ec2e537a889b009c4",
+          "original_line_start": 1
+        }
+      ],
+      "FULL_SOURCE_OR_PARTIAL_EXCERPT": "FULL_SOURCE",
+      "SHA256": "9a3c929651ceae415bc86acb219142fac9d94145dc72c03ec2e537a889b009c4",
+      "GIT_BLOB_WHERE_APPLICABLE": "fdc6a4ea16fd0b90a32ab0d2f4bb11c3471244fe",
+      "ACQUISITION_TIME": "2026-11-03T09:11:27.525680+00:00",
+      "ACQUISITION_STARTED": "2026-11-03T09:11:26.984263+00:00",
+      "ACQUISITION_METHOD": "official authenticated gh api; contents decoded from base64 and Git blob recomputed",
+      "VERIFICATION_LIMITS": "Exact supplied bytes only; no execution occurrence, independent upstream-origin authentication, acquisition honesty, complete custody, later edits, or semantic truth follows from hashes.",
+      "APPLICABLE_REPORT_CLAIMS": [
+        "e01-post"
+      ],
+      "EVIDENCE_CLASS": "IMMUTABLE_SOURCE_BYTES",
+      "FULL_ORIGINAL_BYTES": 12171
+    },
+    {
+      "ID": "e01-contract",
+      "ORIGINAL_SOURCE_IDENTITY": {
+        "repository": "fanilosendrison/proto-ring",
+        "commit": "1f103322d6816effcc102e35cbdd1e14bd33ba84",
+        "path": "docs/contracts/repository-state.md",
+        "git_blob": "1c25d1ee8bdb7dd4d3d1e0e9663c82969ab9a459"
+      },
+      "SNAPSHOT_BYTES_OR_EXCERPT": [
+        {
+          "path": "docs/research/derivtrace/falsification/review-evidence/issue48/e01-contract-part-01.txt",
+          "original_byte_range_half_open": [
+            0,
+            10245
+          ],
+          "snapshot_bytes": 10245,
+          "sha256": "298b1009348bb113a63af4f8085e9df9ae0156ebe9a1d6d6399a17e0cb692186",
+          "original_line_start": 1
+        }
+      ],
+      "FULL_SOURCE_OR_PARTIAL_EXCERPT": "FULL_SOURCE",
+      "SHA256": "298b1009348bb113a63af4f8085e9df9ae0156ebe9a1d6d6399a17e0cb692186",
+      "GIT_BLOB_WHERE_APPLICABLE": "1c25d1ee8bdb7dd4d3d1e0e9663c82969ab9a459",
+      "ACQUISITION_TIME": "2026-11-03T09:11:28.773765+00:00",
+      "ACQUISITION_STARTED": "2026-11-03T09:11:28.263723+00:00",
+      "ACQUISITION_METHOD": "official authenticated gh api; contents decoded from base64 and Git blob recomputed",
+      "VERIFICATION_LIMITS": "Exact supplied bytes only; no execution occurrence, independent upstream-origin authentication, acquisition honesty, complete custody, later edits, or semantic truth follows from hashes.",
+      "APPLICABLE_REPORT_CLAIMS": [
+        "e01-contract"
+      ],
+      "EVIDENCE_CLASS": "IMMUTABLE_SOURCE_BYTES",
+      "FULL_ORIGINAL_BYTES": 10245
+    },
+    {
+      "ID": "e02-lock",
+      "ORIGINAL_SOURCE_IDENTITY": {
+        "repository": "fanilosendrison/proto-ring",
+        "commit": "8f8f823594fa8fe914e097c9fd967197f9fa770f",
+        "path": "tools/run_python_tests.py",
+        "git_blob": "1a56711cfc68c8638ab785b026ac40bf777416ed"
+      },
+      "SNAPSHOT_BYTES_OR_EXCERPT": [
+        {
+          "path": "docs/research/derivtrace/falsification/review-evidence/issue48/e02-lock-part-01.txt",
+          "original_byte_range_half_open": [
+            0,
+            17766
+          ],
+          "snapshot_bytes": 17766,
+          "sha256": "a9aa9484495cb0dfa2792a4bef6e9c60200a283f526d8b99435ea453d0b39451",
+          "original_line_start": 1
+        }
+      ],
+      "FULL_SOURCE_OR_PARTIAL_EXCERPT": "FULL_SOURCE",
+      "SHA256": "a9aa9484495cb0dfa2792a4bef6e9c60200a283f526d8b99435ea453d0b39451",
+      "GIT_BLOB_WHERE_APPLICABLE": "1a56711cfc68c8638ab785b026ac40bf777416ed",
+      "ACQUISITION_TIME": "2026-11-03T09:11:29.735621+00:00",
+      "ACQUISITION_STARTED": "2026-11-03T09:11:29.283448+00:00",
+      "ACQUISITION_METHOD": "official authenticated gh api; contents decoded from base64 and Git blob recomputed",
+      "VERIFICATION_LIMITS": "Exact supplied bytes only; no execution occurrence, independent upstream-origin authentication, acquisition honesty, complete custody, later edits, or semantic truth follows from hashes.",
+      "APPLICABLE_REPORT_CLAIMS": [
+        "e02-lock"
+      ],
+      "EVIDENCE_CLASS": "IMMUTABLE_SOURCE_BYTES",
+      "FULL_ORIGINAL_BYTES": 17766
+    },
+    {
+      "ID": "e02-handoff",
+      "ORIGINAL_SOURCE_IDENTITY": {
+        "repository": "fanilosendrison/proto-ring",
+        "commit": "192fc6dca0e982f53667d6465ac8b46dd2a9864d",
+        "path": "tools/run_python_tests.py",
+        "git_blob": "fb311227d997d28da24a84b197bc6ede98ef2dc6"
+      },
+      "SNAPSHOT_BYTES_OR_EXCERPT": [
+        {
+          "path": "docs/research/derivtrace/falsification/review-evidence/issue48/e02-handoff-part-01.txt",
+          "original_byte_range_half_open": [
+            0,
+            19688
+          ],
+          "snapshot_bytes": 19688,
+          "sha256": "9fc42b355f9d50dbc3656295c4052782d63f93378be93ea107b7755796b620d9",
+          "original_line_start": 1
+        }
+      ],
+      "FULL_SOURCE_OR_PARTIAL_EXCERPT": "FULL_SOURCE",
+      "SHA256": "9fc42b355f9d50dbc3656295c4052782d63f93378be93ea107b7755796b620d9",
+      "GIT_BLOB_WHERE_APPLICABLE": "fb311227d997d28da24a84b197bc6ede98ef2dc6",
+      "ACQUISITION_TIME": "2026-11-03T09:11:30.751777+00:00",
+      "ACQUISITION_STARTED": "2026-11-03T09:11:30.280502+00:00",
+      "ACQUISITION_METHOD": "official authenticated gh api; contents decoded from base64 and Git blob recomputed",
+      "VERIFICATION_LIMITS": "Exact supplied bytes only; no execution occurrence, independent upstream-origin authentication, acquisition honesty, complete custody, later edits, or semantic truth follows from hashes.",
+      "APPLICABLE_REPORT_CLAIMS": [
+        "e02-handoff"
+      ],
+      "EVIDENCE_CLASS": "IMMUTABLE_SOURCE_BYTES",
+      "FULL_ORIGINAL_BYTES": 19688
+    },
+    {
+      "ID": "e04-adr",
+      "ORIGINAL_SOURCE_IDENTITY": {
+        "repository": "fanilosendrison/ruu",
+        "commit": "5d04c58170b2ce3f0e47aa0554a97906d2256492",
+        "path": "docs/adr/adr-080-separate-local-git-causality-remote-git-state-and-provider-workflow-evidence.md",
+        "git_blob": "170663464e65c18daea74cd4274b4ae27294b399"
+      },
+      "SNAPSHOT_BYTES_OR_EXCERPT": [
+        {
+          "path": "docs/research/derivtrace/falsification/review-evidence/issue48/e04-adr-part-01.txt",
+          "original_byte_range_half_open": [
+            0,
+            12816
+          ],
+          "snapshot_bytes": 12816,
+          "sha256": "665805da6215a250e3e358a1c50d3f79bbafe07117c1885c3214f196dd4db915",
+          "original_line_start": 1
+        }
+      ],
+      "FULL_SOURCE_OR_PARTIAL_EXCERPT": "FULL_SOURCE",
+      "SHA256": "665805da6215a250e3e358a1c50d3f79bbafe07117c1885c3214f196dd4db915",
+      "GIT_BLOB_WHERE_APPLICABLE": "170663464e65c18daea74cd4274b4ae27294b399",
+      "ACQUISITION_TIME": "2026-11-03T09:11:31.727254+00:00",
+      "ACQUISITION_STARTED": "2026-11-03T09:11:31.285323+00:00",
+      "ACQUISITION_METHOD": "official authenticated gh api; contents decoded from base64 and Git blob recomputed",
+      "VERIFICATION_LIMITS": "Exact supplied bytes only; no execution occurrence, independent upstream-origin authentication, acquisition honesty, complete custody, later edits, or semantic truth follows from hashes.",
+      "APPLICABLE_REPORT_CLAIMS": [
+        "e04-adr"
+      ],
+      "EVIDENCE_CLASS": "IMMUTABLE_SOURCE_BYTES",
+      "FULL_ORIGINAL_BYTES": 12816
+    },
+    {
+      "ID": "e04-script",
+      "ORIGINAL_SOURCE_IDENTITY": {
+        "repository": "fanilosendrison/ruu",
+        "commit": "5d04c58170b2ce3f0e47aa0554a97906d2256492",
+        "path": "qualification/state-space/v045/state-space-audit-v45.py",
+        "git_blob": "515f1067167d3ae331d4562c4dc8d879f2c74967"
+      },
+      "SNAPSHOT_BYTES_OR_EXCERPT": [
+        {
+          "path": "docs/research/derivtrace/falsification/review-evidence/issue48/e04-script-part-01.txt",
+          "original_byte_range_half_open": [
+            0,
+            6795
+          ],
+          "snapshot_bytes": 6795,
+          "sha256": "84b9016765a5a8713db40df11888b657f63d309335d4e6890410d423057738ea",
+          "original_line_start": 1
+        }
+      ],
+      "FULL_SOURCE_OR_PARTIAL_EXCERPT": "FULL_SOURCE",
+      "SHA256": "84b9016765a5a8713db40df11888b657f63d309335d4e6890410d423057738ea",
+      "GIT_BLOB_WHERE_APPLICABLE": "515f1067167d3ae331d4562c4dc8d879f2c74967",
+      "ACQUISITION_TIME": "2026-11-03T09:11:32.727411+00:00",
+      "ACQUISITION_STARTED": "2026-11-03T09:11:32.245522+00:00",
+      "ACQUISITION_METHOD": "official authenticated gh api; contents decoded from base64 and Git blob recomputed",
+      "VERIFICATION_LIMITS": "Exact supplied bytes only; no execution occurrence, independent upstream-origin authentication, acquisition honesty, complete custody, later edits, or semantic truth follows from hashes.",
+      "APPLICABLE_REPORT_CLAIMS": [
+        "e04-script"
+      ],
+      "EVIDENCE_CLASS": "IMMUTABLE_SOURCE_BYTES",
+      "FULL_ORIGINAL_BYTES": 6795
+    },
+    {
+      "ID": "e04-report",
+      "ORIGINAL_SOURCE_IDENTITY": {
+        "repository": "fanilosendrison/ruu",
+        "commit": "5d04c58170b2ce3f0e47aa0554a97906d2256492",
+        "path": "qualification/state-space/v045/state-space-audit-v45.md",
+        "git_blob": "99ae7676d3dc4f57d4319f2c4ac4a9a42ccfa84b"
+      },
+      "SNAPSHOT_BYTES_OR_EXCERPT": [
+        {
+          "path": "docs/research/derivtrace/falsification/review-evidence/issue48/e04-report-part-01.txt",
+          "original_byte_range_half_open": [
+            0,
+            2758
+          ],
+          "snapshot_bytes": 2758,
+          "sha256": "fcd7e7a05aa14f7cae709ebeadf71ea049ad1fcddcaf9725e2fb70f086bb2ed3",
+          "original_line_start": 1
+        }
+      ],
+      "FULL_SOURCE_OR_PARTIAL_EXCERPT": "FULL_SOURCE",
+      "SHA256": "fcd7e7a05aa14f7cae709ebeadf71ea049ad1fcddcaf9725e2fb70f086bb2ed3",
+      "GIT_BLOB_WHERE_APPLICABLE": "99ae7676d3dc4f57d4319f2c4ac4a9a42ccfa84b",
+      "ACQUISITION_TIME": "2026-11-03T09:11:33.700796+00:00",
+      "ACQUISITION_STARTED": "2026-11-03T09:11:33.265417+00:00",
+      "ACQUISITION_METHOD": "official authenticated gh api; contents decoded from base64 and Git blob recomputed",
+      "VERIFICATION_LIMITS": "Exact supplied bytes only; no execution occurrence, independent upstream-origin authentication, acquisition honesty, complete custody, later edits, or semantic truth follows from hashes.",
+      "APPLICABLE_REPORT_CLAIMS": [
+        "e04-report"
+      ],
+      "EVIDENCE_CLASS": "IMMUTABLE_SOURCE_BYTES",
+      "FULL_ORIGINAL_BYTES": 2758
+    },
+    {
+      "ID": "e04-output",
+      "ORIGINAL_SOURCE_IDENTITY": {
+        "repository": "fanilosendrison/ruu",
+        "commit": "5d04c58170b2ce3f0e47aa0554a97906d2256492",
+        "path": "qualification/state-space/v045/state-space-audit-v45.txt",
+        "git_blob": "1e8d950b67f1d25707142ff62d003f741481fde7"
+      },
+      "SNAPSHOT_BYTES_OR_EXCERPT": [
+        {
+          "path": "docs/research/derivtrace/falsification/review-evidence/issue48/e04-output-part-01.txt",
+          "original_byte_range_half_open": [
+            0,
+            456
+          ],
+          "snapshot_bytes": 456,
+          "sha256": "76bc0a73f54bbcbe167a4bf985d6aff5bf6d60b0a03fe51e78bdaff9ca4765ae",
+          "original_line_start": 1
+        }
+      ],
+      "FULL_SOURCE_OR_PARTIAL_EXCERPT": "FULL_SOURCE",
+      "SHA256": "76bc0a73f54bbcbe167a4bf985d6aff5bf6d60b0a03fe51e78bdaff9ca4765ae",
+      "GIT_BLOB_WHERE_APPLICABLE": "1e8d950b67f1d25707142ff62d003f741481fde7",
+      "ACQUISITION_TIME": "2026-11-03T09:11:34.660941+00:00",
+      "ACQUISITION_STARTED": "2026-11-03T09:11:34.204422+00:00",
+      "ACQUISITION_METHOD": "official authenticated gh api; contents decoded from base64 and Git blob recomputed",
+      "VERIFICATION_LIMITS": "Exact supplied bytes only; no execution occurrence, independent upstream-origin authentication, acquisition honesty, complete custody, later edits, or semantic truth follows from hashes.",
+      "APPLICABLE_REPORT_CLAIMS": [
+        "e04-output"
+      ],
+      "EVIDENCE_CLASS": "IMMUTABLE_SOURCE_BYTES",
+      "FULL_ORIGINAL_BYTES": 456
+    },
+    {
+      "ID": "e04-native",
+      "ORIGINAL_SOURCE_IDENTITY": {
+        "repository": "fanilosendrison/ruu",
+        "commit": "5d04c58170b2ce3f0e47aa0554a97906d2256492",
+        "path": "qualification/git-smoke/native-observation/git-native-observation-smoke-v5.sh",
+        "git_blob": "6fb3f25d5e3e8b51574ec5c4713aaac56d3e9992"
+      },
+      "SNAPSHOT_BYTES_OR_EXCERPT": [
+        {
+          "path": "docs/research/derivtrace/falsification/review-evidence/issue48/e04-native-part-01.txt",
+          "original_byte_range_half_open": [
+            0,
+            4580
+          ],
+          "snapshot_bytes": 4580,
+          "sha256": "c61b89345b85f99dbe8fd349df161b824859ab61e63e8aafd22e9ca3b12eae0e",
+          "original_line_start": 1
+        }
+      ],
+      "FULL_SOURCE_OR_PARTIAL_EXCERPT": "FULL_SOURCE",
+      "SHA256": "c61b89345b85f99dbe8fd349df161b824859ab61e63e8aafd22e9ca3b12eae0e",
+      "GIT_BLOB_WHERE_APPLICABLE": "6fb3f25d5e3e8b51574ec5c4713aaac56d3e9992",
+      "ACQUISITION_TIME": "2026-11-03T09:11:35.558701+00:00",
+      "ACQUISITION_STARTED": "2026-11-03T09:11:35.127646+00:00",
+      "ACQUISITION_METHOD": "official authenticated gh api; contents decoded from base64 and Git blob recomputed",
+      "VERIFICATION_LIMITS": "Exact supplied bytes only; no execution occurrence, independent upstream-origin authentication, acquisition honesty, complete custody, later edits, or semantic truth follows from hashes.",
+      "APPLICABLE_REPORT_CLAIMS": [
+        "e04-native"
+      ],
+      "EVIDENCE_CLASS": "IMMUTABLE_SOURCE_BYTES",
+      "FULL_ORIGINAL_BYTES": 4580
+    },
+    {
+      "ID": "e04-native-output",
+      "ORIGINAL_SOURCE_IDENTITY": {
+        "repository": "fanilosendrison/ruu",
+        "commit": "5d04c58170b2ce3f0e47aa0554a97906d2256492",
+        "path": "qualification/git-smoke/native-observation/git-native-observation-smoke-v5.txt",
+        "git_blob": "b64bbef0627d6afc99aeafb22dd373bdf46394f3"
+      },
+      "SNAPSHOT_BYTES_OR_EXCERPT": [
+        {
+          "path": "docs/research/derivtrace/falsification/review-evidence/issue48/e04-native-output-part-01.txt",
+          "original_byte_range_half_open": [
+            0,
+            217
+          ],
+          "snapshot_bytes": 217,
+          "sha256": "b4356bf172f05943cbcab9d1f22a230a3ee229c85e88644c7608de90d88ea8b6",
+          "original_line_start": 1
+        }
+      ],
+      "FULL_SOURCE_OR_PARTIAL_EXCERPT": "FULL_SOURCE",
+      "SHA256": "b4356bf172f05943cbcab9d1f22a230a3ee229c85e88644c7608de90d88ea8b6",
+      "GIT_BLOB_WHERE_APPLICABLE": "b64bbef0627d6afc99aeafb22dd373bdf46394f3",
+      "ACQUISITION_TIME": "2026-11-03T09:11:36.489812+00:00",
+      "ACQUISITION_STARTED": "2026-11-03T09:11:36.030103+00:00",
+      "ACQUISITION_METHOD": "official authenticated gh api; contents decoded from base64 and Git blob recomputed",
+      "VERIFICATION_LIMITS": "Exact supplied bytes only; no execution occurrence, independent upstream-origin authentication, acquisition honesty, complete custody, later edits, or semantic truth follows from hashes.",
+      "APPLICABLE_REPORT_CLAIMS": [
+        "e04-native-output"
+      ],
+      "EVIDENCE_CLASS": "IMMUTABLE_SOURCE_BYTES",
+      "FULL_ORIGINAL_BYTES": 217
+    },
+    {
+      "ID": "e04-v46",
+      "ORIGINAL_SOURCE_IDENTITY": {
+        "repository": "fanilosendrison/ruu",
+        "commit": "5d04c58170b2ce3f0e47aa0554a97906d2256492",
+        "path": "qualification/state-space/post-baseline/v046/qualification-metadata.json",
+        "git_blob": "6904a478fdc5fe00975d37144283be08af4a04db"
+      },
+      "SNAPSHOT_BYTES_OR_EXCERPT": [
+        {
+          "path": "docs/research/derivtrace/falsification/review-evidence/issue48/e04-v46-part-01.txt",
+          "original_byte_range_half_open": [
+            0,
+            1071
+          ],
+          "snapshot_bytes": 1071,
+          "sha256": "f0aa18852273d05752fa2dc59e844b52b1f0b8e8c58bf72a908ab810257eab38",
+          "original_line_start": 1
+        }
+      ],
+      "FULL_SOURCE_OR_PARTIAL_EXCERPT": "FULL_SOURCE",
+      "SHA256": "f0aa18852273d05752fa2dc59e844b52b1f0b8e8c58bf72a908ab810257eab38",
+      "GIT_BLOB_WHERE_APPLICABLE": "6904a478fdc5fe00975d37144283be08af4a04db",
+      "ACQUISITION_TIME": "2026-11-03T09:11:37.470702+00:00",
+      "ACQUISITION_STARTED": "2026-11-03T09:11:37.028677+00:00",
+      "ACQUISITION_METHOD": "official authenticated gh api; contents decoded from base64 and Git blob recomputed",
+      "VERIFICATION_LIMITS": "Exact supplied bytes only; no execution occurrence, independent upstream-origin authentication, acquisition honesty, complete custody, later edits, or semantic truth follows from hashes. Historical POSTDATED_PROVENANCE_UNDETERMINED is retained despite new acquisition on 2026-11-03.",
+      "APPLICABLE_REPORT_CLAIMS": [
+        "e04-v46"
+      ],
+      "EVIDENCE_CLASS": "IMMUTABLE_SOURCE_BYTES",
+      "FULL_ORIGINAL_BYTES": 1071
+    },
+    {
+      "ID": "e06-retire",
+      "ORIGINAL_SOURCE_IDENTITY": {
+        "repository": "fanilosendrison/turnlock-rust",
+        "commit": "815cea6eacbeb1c252e172b46e0468e7491b613e",
+        "path": "docs/adr/adr-059-retire-formal-assurance-architecture-and-reopen-post-invariant-design.md",
+        "git_blob": "102d2a53fc0be8f6b564473a10177c1af89fa90e"
+      },
+      "SNAPSHOT_BYTES_OR_EXCERPT": [
+        {
+          "path": "docs/research/derivtrace/falsification/review-evidence/issue48/e06-retire-part-01.txt",
+          "original_byte_range_half_open": [
+            0,
+            6530
+          ],
+          "snapshot_bytes": 6530,
+          "sha256": "cb9b8c95d9e41ae760d04a35e4f63f8e97f373157957f4834305e3cbd7b40300",
+          "original_line_start": 1
+        }
+      ],
+      "FULL_SOURCE_OR_PARTIAL_EXCERPT": "FULL_SOURCE",
+      "SHA256": "cb9b8c95d9e41ae760d04a35e4f63f8e97f373157957f4834305e3cbd7b40300",
+      "GIT_BLOB_WHERE_APPLICABLE": "102d2a53fc0be8f6b564473a10177c1af89fa90e",
+      "ACQUISITION_TIME": "2026-11-03T09:11:38.406681+00:00",
+      "ACQUISITION_STARTED": "2026-11-03T09:11:37.962016+00:00",
+      "ACQUISITION_METHOD": "official authenticated gh api; contents decoded from base64 and Git blob recomputed",
+      "VERIFICATION_LIMITS": "Exact supplied bytes only; no execution occurrence, independent upstream-origin authentication, acquisition honesty, complete custody, later edits, or semantic truth follows from hashes.",
+      "APPLICABLE_REPORT_CLAIMS": [
+        "e06-retire"
+      ],
+      "EVIDENCE_CLASS": "IMMUTABLE_SOURCE_BYTES",
+      "FULL_ORIGINAL_BYTES": 6530
+    },
+    {
+      "ID": "e06-archive",
+      "ORIGINAL_SOURCE_IDENTITY": {
+        "repository": "fanilosendrison/turnlock-rust",
+        "commit": "815cea6eacbeb1c252e172b46e0468e7491b613e",
+        "path": "docs/history/formal-assurance-2026-10-20/README.md",
+        "git_blob": "23ccff0b7af4e7cc4d5889a64fc126eaedd4a171"
+      },
+      "SNAPSHOT_BYTES_OR_EXCERPT": [
+        {
+          "path": "docs/research/derivtrace/falsification/review-evidence/issue48/e06-archive-part-01.txt",
+          "original_byte_range_half_open": [
+            0,
+            3088
+          ],
+          "snapshot_bytes": 3088,
+          "sha256": "54472c4b1a9e752027d4ad8b01f0d89e20c5e58b89d590b5a8ea498b147e9dd1",
+          "original_line_start": 1
+        }
+      ],
+      "FULL_SOURCE_OR_PARTIAL_EXCERPT": "FULL_SOURCE",
+      "SHA256": "54472c4b1a9e752027d4ad8b01f0d89e20c5e58b89d590b5a8ea498b147e9dd1",
+      "GIT_BLOB_WHERE_APPLICABLE": "23ccff0b7af4e7cc4d5889a64fc126eaedd4a171",
+      "ACQUISITION_TIME": "2026-11-03T09:11:39.411573+00:00",
+      "ACQUISITION_STARTED": "2026-11-03T09:11:38.977408+00:00",
+      "ACQUISITION_METHOD": "official authenticated gh api; contents decoded from base64 and Git blob recomputed",
+      "VERIFICATION_LIMITS": "Exact supplied bytes only; no execution occurrence, independent upstream-origin authentication, acquisition honesty, complete custody, later edits, or semantic truth follows from hashes.",
+      "APPLICABLE_REPORT_CLAIMS": [
+        "e06-archive"
+      ],
+      "EVIDENCE_CLASS": "IMMUTABLE_SOURCE_BYTES",
+      "FULL_ORIGINAL_BYTES": 3088
+    },
+    {
+      "ID": "e06-correction",
+      "ORIGINAL_SOURCE_IDENTITY": {
+        "repository": "fanilosendrison/turnlock-rust",
+        "commit": "be76128d2007eec3e3906d13c0bf00d861fcaa10",
+        "path": "formal/verification.yaml",
+        "git_blob": "5df0f5ed3b919f6a62a7eb5e6a4bf79caed50c50"
+      },
+      "SNAPSHOT_BYTES_OR_EXCERPT": [
+        {
+          "path": "docs/research/derivtrace/falsification/review-evidence/issue48/e06-correction-part-01.txt",
+          "original_byte_range_half_open": [
+            32483,
+            35179
+          ],
+          "snapshot_bytes": 2696,
+          "sha256": "194ec314a28c55c365fde749ce83be5cd1caf3f977ba4dd9c7588f2af6c0b769",
+          "original_line_start": 715
+        },
+        {
+          "path": "docs/research/derivtrace/falsification/review-evidence/issue48/e06-correction-part-02.txt",
+          "original_byte_range_half_open": [
+            36046,
+            36704
+          ],
+          "snapshot_bytes": 658,
+          "sha256": "2d73ea7504dbd3a1d1600861edbeb8ef1c505a59b1828de59cd6527b4bd6b960",
+          "original_line_start": 835
+        },
+        {
+          "path": "docs/research/derivtrace/falsification/review-evidence/issue48/e06-correction-part-03.txt",
+          "original_byte_range_half_open": [
+            39158,
+            39842
+          ],
+          "snapshot_bytes": 684,
+          "sha256": "a3d8a8b291f0ea45529b7d23cf2ab74634316f2d20f5d979f9389e8d79fb1520",
+          "original_line_start": 962
+        }
+      ],
+      "FULL_SOURCE_OR_PARTIAL_EXCERPT": "PARTIAL_EXCERPT",
+      "SHA256": "ac0fd52d94afdd683365a7d8da10b470b9ed7838cc41c9f808842e40bbe5e8c2",
+      "GIT_BLOB_WHERE_APPLICABLE": "5df0f5ed3b919f6a62a7eb5e6a4bf79caed50c50",
+      "ACQUISITION_TIME": "2026-11-03T09:11:40.428909+00:00",
+      "ACQUISITION_STARTED": "2026-11-03T09:11:39.964091+00:00",
+      "ACQUISITION_METHOD": "official authenticated gh api; contents decoded from base64 and Git blob recomputed",
+      "VERIFICATION_LIMITS": "Exact supplied bytes only; no execution occurrence, independent upstream-origin authentication, acquisition honesty, complete custody, later edits, or semantic truth follows from hashes. Partial source only; omitted bytes are not independently reviewable from this packet. Byte ranges are never silently concatenated as a full source. Local-path lines in some E03 comment bodies are excluded for privacy.",
+      "APPLICABLE_REPORT_CLAIMS": [
+        "e06-correction"
+      ],
+      "EVIDENCE_CLASS": "IMMUTABLE_SOURCE_BYTES",
+      "FULL_ORIGINAL_BYTES": 40923
+    },
+    {
+      "ID": "e07-opaque-pre",
+      "ORIGINAL_SOURCE_IDENTITY": {
+        "repository": "fanilosendrison/proto-ring",
+        "commit": "e7198c200e59ec1b9eb6af0ec2e14e1d379a179f",
+        "path": "crates/proto-ring-engine/src/normative_terminology/registry.rs",
+        "git_blob": "520cf5119312ac8602437f5e62c53d420e11113c"
+      },
+      "SNAPSHOT_BYTES_OR_EXCERPT": [
+        {
+          "path": "docs/research/derivtrace/falsification/review-evidence/issue48/e07-opaque-pre-part-01.txt",
+          "original_byte_range_half_open": [
+            0,
+            9206
+          ],
+          "snapshot_bytes": 9206,
+          "sha256": "476181d8710350d1bfa812fcafdf380a5f742d64e293e6929c81ee9ed5d885e4",
+          "original_line_start": 1
+        }
+      ],
+      "FULL_SOURCE_OR_PARTIAL_EXCERPT": "FULL_SOURCE",
+      "SHA256": "476181d8710350d1bfa812fcafdf380a5f742d64e293e6929c81ee9ed5d885e4",
+      "GIT_BLOB_WHERE_APPLICABLE": "520cf5119312ac8602437f5e62c53d420e11113c",
+      "ACQUISITION_TIME": "2026-11-03T09:11:41.481270+00:00",
+      "ACQUISITION_STARTED": "2026-11-03T09:11:40.952054+00:00",
+      "ACQUISITION_METHOD": "official authenticated gh api; contents decoded from base64 and Git blob recomputed",
+      "VERIFICATION_LIMITS": "Exact supplied bytes only; no execution occurrence, independent upstream-origin authentication, acquisition honesty, complete custody, later edits, or semantic truth follows from hashes.",
+      "APPLICABLE_REPORT_CLAIMS": [
+        "e07-opaque-pre"
+      ],
+      "EVIDENCE_CLASS": "IMMUTABLE_SOURCE_BYTES",
+      "FULL_ORIGINAL_BYTES": 9206
+    },
+    {
+      "ID": "e07-opaque-post",
+      "ORIGINAL_SOURCE_IDENTITY": {
+        "repository": "fanilosendrison/proto-ring",
+        "commit": "7d60b0467d30f4251aa4160b4878a05ce366c44a",
+        "path": "crates/proto-ring-engine/src/normative_terminology/registry.rs",
+        "git_blob": "d71b1cdd2fddd2e0a822bb943bab0778248021ce"
+      },
+      "SNAPSHOT_BYTES_OR_EXCERPT": [
+        {
+          "path": "docs/research/derivtrace/falsification/review-evidence/issue48/e07-opaque-post-part-01.txt",
+          "original_byte_range_half_open": [
+            0,
+            9522
+          ],
+          "snapshot_bytes": 9522,
+          "sha256": "8afbcb7767679983428e581560ba5f7a30064c1aded06322ecc7e9dc53c426eb",
+          "original_line_start": 1
+        }
+      ],
+      "FULL_SOURCE_OR_PARTIAL_EXCERPT": "FULL_SOURCE",
+      "SHA256": "8afbcb7767679983428e581560ba5f7a30064c1aded06322ecc7e9dc53c426eb",
+      "GIT_BLOB_WHERE_APPLICABLE": "d71b1cdd2fddd2e0a822bb943bab0778248021ce",
+      "ACQUISITION_TIME": "2026-11-03T09:11:42.417018+00:00",
+      "ACQUISITION_STARTED": "2026-11-03T09:11:41.947901+00:00",
+      "ACQUISITION_METHOD": "official authenticated gh api; contents decoded from base64 and Git blob recomputed",
+      "VERIFICATION_LIMITS": "Exact supplied bytes only; no execution occurrence, independent upstream-origin authentication, acquisition honesty, complete custody, later edits, or semantic truth follows from hashes.",
+      "APPLICABLE_REPORT_CLAIMS": [
+        "e07-opaque-post"
+      ],
+      "EVIDENCE_CLASS": "IMMUTABLE_SOURCE_BYTES",
+      "FULL_ORIGINAL_BYTES": 9522
+    },
+    {
+      "ID": "e07-opaque-test",
+      "ORIGINAL_SOURCE_IDENTITY": {
+        "repository": "fanilosendrison/proto-ring",
+        "commit": "7d60b0467d30f4251aa4160b4878a05ce366c44a",
+        "path": "crates/proto-ring-engine/tests/issue121_term_structure.rs",
+        "git_blob": "523d035ae0ffcafd50fc55167b80a209ec60a057"
+      },
+      "SNAPSHOT_BYTES_OR_EXCERPT": [
+        {
+          "path": "docs/research/derivtrace/falsification/review-evidence/issue48/e07-opaque-test-part-01.txt",
+          "original_byte_range_half_open": [
+            0,
+            2694
+          ],
+          "snapshot_bytes": 2694,
+          "sha256": "70850a2e19c1ba523ce6ea76804614e6dba642a267f1b02d98651bc149816676",
+          "original_line_start": 1
+        }
+      ],
+      "FULL_SOURCE_OR_PARTIAL_EXCERPT": "FULL_SOURCE",
+      "SHA256": "70850a2e19c1ba523ce6ea76804614e6dba642a267f1b02d98651bc149816676",
+      "GIT_BLOB_WHERE_APPLICABLE": "523d035ae0ffcafd50fc55167b80a209ec60a057",
+      "ACQUISITION_TIME": "2026-11-03T09:11:43.321452+00:00",
+      "ACQUISITION_STARTED": "2026-11-03T09:11:42.900877+00:00",
+      "ACQUISITION_METHOD": "official authenticated gh api; contents decoded from base64 and Git blob recomputed",
+      "VERIFICATION_LIMITS": "Exact supplied bytes only; no execution occurrence, independent upstream-origin authentication, acquisition honesty, complete custody, later edits, or semantic truth follows from hashes.",
+      "APPLICABLE_REPORT_CLAIMS": [
+        "e07-opaque-test"
+      ],
+      "EVIDENCE_CLASS": "IMMUTABLE_SOURCE_BYTES",
+      "FULL_ORIGINAL_BYTES": 2694
+    },
+    {
+      "ID": "e07-windows-test",
+      "ORIGINAL_SOURCE_IDENTITY": {
+        "repository": "fanilosendrison/proto-ring",
+        "commit": "69ea1effb2a92932127953190778fe95a7fc184a",
+        "path": "crates/proto-ring-engine/tests/issue122_unicode_checkout.rs",
+        "git_blob": "4d001c6c201cb3ab0f5de4df36142625ce34fe2e"
+      },
+      "SNAPSHOT_BYTES_OR_EXCERPT": [
+        {
+          "path": "docs/research/derivtrace/falsification/review-evidence/issue48/e07-windows-test-part-01.txt",
+          "original_byte_range_half_open": [
+            0,
+            454
+          ],
+          "snapshot_bytes": 454,
+          "sha256": "fd498419114f517d374b12599b8d8d1431a5dd6fd9d81891ca4e332466d34407",
+          "original_line_start": 1
+        }
+      ],
+      "FULL_SOURCE_OR_PARTIAL_EXCERPT": "FULL_SOURCE",
+      "SHA256": "fd498419114f517d374b12599b8d8d1431a5dd6fd9d81891ca4e332466d34407",
+      "GIT_BLOB_WHERE_APPLICABLE": "4d001c6c201cb3ab0f5de4df36142625ce34fe2e",
+      "ACQUISITION_TIME": "2026-11-03T09:11:44.258079+00:00",
+      "ACQUISITION_STARTED": "2026-11-03T09:11:43.814755+00:00",
+      "ACQUISITION_METHOD": "official authenticated gh api; contents decoded from base64 and Git blob recomputed",
+      "VERIFICATION_LIMITS": "Exact supplied bytes only; no execution occurrence, independent upstream-origin authentication, acquisition honesty, complete custody, later edits, or semantic truth follows from hashes.",
+      "APPLICABLE_REPORT_CLAIMS": [
+        "e07-windows-test"
+      ],
+      "EVIDENCE_CLASS": "IMMUTABLE_SOURCE_BYTES",
+      "FULL_ORIGINAL_BYTES": 454
+    },
+    {
+      "ID": "e07-attributes",
+      "ORIGINAL_SOURCE_IDENTITY": {
+        "repository": "fanilosendrison/proto-ring",
+        "commit": "69ea1effb2a92932127953190778fe95a7fc184a",
+        "path": ".gitattributes",
+        "git_blob": "d2cbe4c31128e44f9142260a465823178d0c9dee"
+      },
+      "SNAPSHOT_BYTES_OR_EXCERPT": [
+        {
+          "path": "docs/research/derivtrace/falsification/review-evidence/issue48/e07-attributes-part-01.txt",
+          "original_byte_range_half_open": [
+            0,
+            124
+          ],
+          "snapshot_bytes": 124,
+          "sha256": "000a9f71bef51a5c4e100097ac5d8e58079ffdef277fe487cdfcd38a1b71986c",
+          "original_line_start": 1
+        }
+      ],
+      "FULL_SOURCE_OR_PARTIAL_EXCERPT": "FULL_SOURCE",
+      "SHA256": "000a9f71bef51a5c4e100097ac5d8e58079ffdef277fe487cdfcd38a1b71986c",
+      "GIT_BLOB_WHERE_APPLICABLE": "d2cbe4c31128e44f9142260a465823178d0c9dee",
+      "ACQUISITION_TIME": "2026-11-03T09:11:45.158461+00:00",
+      "ACQUISITION_STARTED": "2026-11-03T09:11:44.747789+00:00",
+      "ACQUISITION_METHOD": "official authenticated gh api; contents decoded from base64 and Git blob recomputed",
+      "VERIFICATION_LIMITS": "Exact supplied bytes only; no execution occurrence, independent upstream-origin authentication, acquisition honesty, complete custody, later edits, or semantic truth follows from hashes.",
+      "APPLICABLE_REPORT_CLAIMS": [
+        "e07-attributes"
+      ],
+      "EVIDENCE_CLASS": "IMMUTABLE_SOURCE_BYTES",
+      "FULL_ORIGINAL_BYTES": 124
+    },
+    {
+      "ID": "e07-route-pre",
+      "ORIGINAL_SOURCE_IDENTITY": {
+        "repository": "fanilosendrison/proto-ring",
+        "commit": "814a884ccb759b0fdbde48673a74428d6443b847",
+        "path": "crates/proto-ring-engine/src/repository_governance_model.rs",
+        "git_blob": "8174f9ef19193b2b309f7bedcb8197751bab29fc"
+      },
+      "SNAPSHOT_BYTES_OR_EXCERPT": [
+        {
+          "path": "docs/research/derivtrace/falsification/review-evidence/issue48/e07-route-pre-part-01.txt",
+          "original_byte_range_half_open": [
+            0,
+            9828
+          ],
+          "snapshot_bytes": 9828,
+          "sha256": "d43dbbd0f8bf7e86b5896aaa9aba6ae905d50ddc28228856470ebcb8f2536dc3",
+          "original_line_start": 1
+        }
+      ],
+      "FULL_SOURCE_OR_PARTIAL_EXCERPT": "FULL_SOURCE",
+      "SHA256": "d43dbbd0f8bf7e86b5896aaa9aba6ae905d50ddc28228856470ebcb8f2536dc3",
+      "GIT_BLOB_WHERE_APPLICABLE": "8174f9ef19193b2b309f7bedcb8197751bab29fc",
+      "ACQUISITION_TIME": "2026-11-03T09:11:46.125174+00:00",
+      "ACQUISITION_STARTED": "2026-11-03T09:11:45.666873+00:00",
+      "ACQUISITION_METHOD": "official authenticated gh api; contents decoded from base64 and Git blob recomputed",
+      "VERIFICATION_LIMITS": "Exact supplied bytes only; no execution occurrence, independent upstream-origin authentication, acquisition honesty, complete custody, later edits, or semantic truth follows from hashes.",
+      "APPLICABLE_REPORT_CLAIMS": [
+        "e07-route-pre"
+      ],
+      "EVIDENCE_CLASS": "IMMUTABLE_SOURCE_BYTES",
+      "FULL_ORIGINAL_BYTES": 9828
+    },
+    {
+      "ID": "e07-route-post",
+      "ORIGINAL_SOURCE_IDENTITY": {
+        "repository": "fanilosendrison/proto-ring",
+        "commit": "a3f16cad79d95e0abb942d67ab62d7637d778ae3",
+        "path": "crates/proto-ring-engine/src/repository_governance_model.rs",
+        "git_blob": "e1ed03655d687f0f63132e51661955554bad0c19"
+      },
+      "SNAPSHOT_BYTES_OR_EXCERPT": [
+        {
+          "path": "docs/research/derivtrace/falsification/review-evidence/issue48/e07-route-post-part-01.txt",
+          "original_byte_range_half_open": [
+            0,
+            9803
+          ],
+          "snapshot_bytes": 9803,
+          "sha256": "a3086e2b4c04fc750c161fab9c83d60dab246d915a94c03253cec95894d4765c",
+          "original_line_start": 1
+        }
+      ],
+      "FULL_SOURCE_OR_PARTIAL_EXCERPT": "FULL_SOURCE",
+      "SHA256": "a3086e2b4c04fc750c161fab9c83d60dab246d915a94c03253cec95894d4765c",
+      "GIT_BLOB_WHERE_APPLICABLE": "e1ed03655d687f0f63132e51661955554bad0c19",
+      "ACQUISITION_TIME": "2026-11-03T09:11:47.130842+00:00",
+      "ACQUISITION_STARTED": "2026-11-03T09:11:46.672593+00:00",
+      "ACQUISITION_METHOD": "official authenticated gh api; contents decoded from base64 and Git blob recomputed",
+      "VERIFICATION_LIMITS": "Exact supplied bytes only; no execution occurrence, independent upstream-origin authentication, acquisition honesty, complete custody, later edits, or semantic truth follows from hashes.",
+      "APPLICABLE_REPORT_CLAIMS": [
+        "e07-route-post"
+      ],
+      "EVIDENCE_CLASS": "IMMUTABLE_SOURCE_BYTES",
+      "FULL_ORIGINAL_BYTES": 9803
+    },
+    {
+      "ID": "e08-original",
+      "ORIGINAL_SOURCE_IDENTITY": {
+        "repository": "fanilosendrison/proto-lithify",
+        "commit": "9073b89a6eb7c7691be21f0e872f24d72fe69eb3",
+        "path": ".github/workflows/ci.yml",
+        "git_blob": "957ad2321eed2f6083f2a6ef42f7fdafd1d6b940"
+      },
+      "SNAPSHOT_BYTES_OR_EXCERPT": [
+        {
+          "path": "docs/research/derivtrace/falsification/review-evidence/issue48/e08-original-part-01.txt",
+          "original_byte_range_half_open": [
+            0,
+            2162
+          ],
+          "snapshot_bytes": 2162,
+          "sha256": "86395893c2acde52fe9db1abaa71481dca1b7cf49112aa3e9ca43c1b508c7e32",
+          "original_line_start": 1
+        }
+      ],
+      "FULL_SOURCE_OR_PARTIAL_EXCERPT": "FULL_SOURCE",
+      "SHA256": "86395893c2acde52fe9db1abaa71481dca1b7cf49112aa3e9ca43c1b508c7e32",
+      "GIT_BLOB_WHERE_APPLICABLE": "957ad2321eed2f6083f2a6ef42f7fdafd1d6b940",
+      "ACQUISITION_TIME": "2026-11-03T09:11:48.134848+00:00",
+      "ACQUISITION_STARTED": "2026-11-03T09:11:47.706766+00:00",
+      "ACQUISITION_METHOD": "official authenticated gh api; contents decoded from base64 and Git blob recomputed",
+      "VERIFICATION_LIMITS": "Exact supplied bytes only; no execution occurrence, independent upstream-origin authentication, acquisition honesty, complete custody, later edits, or semantic truth follows from hashes.",
+      "APPLICABLE_REPORT_CLAIMS": [
+        "e08-original"
+      ],
+      "EVIDENCE_CLASS": "IMMUTABLE_SOURCE_BYTES",
+      "FULL_ORIGINAL_BYTES": 2162
+    },
+    {
+      "ID": "e08-negative",
+      "ORIGINAL_SOURCE_IDENTITY": {
+        "repository": "fanilosendrison/proto-lithify",
+        "commit": "282ac0d8014878c44b97f06439269323018ebbec",
+        "path": ".github/workflows/ci.yml",
+        "git_blob": "f9e88c9dad0897a10c8302c3b7a6a214de6ca418"
+      },
+      "SNAPSHOT_BYTES_OR_EXCERPT": [
+        {
+          "path": "docs/research/derivtrace/falsification/review-evidence/issue48/e08-negative-part-01.txt",
+          "original_byte_range_half_open": [
+            0,
+            2237
+          ],
+          "snapshot_bytes": 2237,
+          "sha256": "231510d5e90ebf318838c544daf9ee53841a82c8130af619597b1bc84a7bed7b",
+          "original_line_start": 1
+        }
+      ],
+      "FULL_SOURCE_OR_PARTIAL_EXCERPT": "FULL_SOURCE",
+      "SHA256": "231510d5e90ebf318838c544daf9ee53841a82c8130af619597b1bc84a7bed7b",
+      "GIT_BLOB_WHERE_APPLICABLE": "f9e88c9dad0897a10c8302c3b7a6a214de6ca418",
+      "ACQUISITION_TIME": "2026-11-03T09:11:49.275690+00:00",
+      "ACQUISITION_STARTED": "2026-11-03T09:11:48.803241+00:00",
+      "ACQUISITION_METHOD": "official authenticated gh api; contents decoded from base64 and Git blob recomputed",
+      "VERIFICATION_LIMITS": "Exact supplied bytes only; no execution occurrence, independent upstream-origin authentication, acquisition honesty, complete custody, later edits, or semantic truth follows from hashes.",
+      "APPLICABLE_REPORT_CLAIMS": [
+        "e08-negative"
+      ],
+      "EVIDENCE_CLASS": "IMMUTABLE_SOURCE_BYTES",
+      "FULL_ORIGINAL_BYTES": 2237
+    },
+    {
+      "ID": "e08-restored",
+      "ORIGINAL_SOURCE_IDENTITY": {
+        "repository": "fanilosendrison/proto-lithify",
+        "commit": "7bc80a8065fc79a070dd00bca6d07fe67a3a7cdc",
+        "path": ".github/workflows/ci.yml",
+        "git_blob": "957ad2321eed2f6083f2a6ef42f7fdafd1d6b940"
+      },
+      "SNAPSHOT_BYTES_OR_EXCERPT": [
+        {
+          "path": "docs/research/derivtrace/falsification/review-evidence/issue48/e08-restored-part-01.txt",
+          "original_byte_range_half_open": [
+            0,
+            2162
+          ],
+          "snapshot_bytes": 2162,
+          "sha256": "86395893c2acde52fe9db1abaa71481dca1b7cf49112aa3e9ca43c1b508c7e32",
+          "original_line_start": 1
+        }
+      ],
+      "FULL_SOURCE_OR_PARTIAL_EXCERPT": "FULL_SOURCE",
+      "SHA256": "86395893c2acde52fe9db1abaa71481dca1b7cf49112aa3e9ca43c1b508c7e32",
+      "GIT_BLOB_WHERE_APPLICABLE": "957ad2321eed2f6083f2a6ef42f7fdafd1d6b940",
+      "ACQUISITION_TIME": "2026-11-03T09:11:50.249791+00:00",
+      "ACQUISITION_STARTED": "2026-11-03T09:11:49.803935+00:00",
+      "ACQUISITION_METHOD": "official authenticated gh api; contents decoded from base64 and Git blob recomputed",
+      "VERIFICATION_LIMITS": "Exact supplied bytes only; no execution occurrence, independent upstream-origin authentication, acquisition honesty, complete custody, later edits, or semantic truth follows from hashes.",
+      "APPLICABLE_REPORT_CLAIMS": [
+        "e08-restored"
+      ],
+      "EVIDENCE_CLASS": "IMMUTABLE_SOURCE_BYTES",
+      "FULL_ORIGINAL_BYTES": 2162
+    },
+    {
+      "ID": "e01-issue-83",
+      "ORIGINAL_SOURCE_IDENTITY": {
+        "api_endpoint": "repos/fanilosendrison/proto-ring/issues/83",
+        "representation": "body UTF-8, no added newline",
+        "url": "https://github.com/fanilosendrison/proto-ring/issues/83",
+        "provider_updated_at": "2026-10-10T16:30:45Z"
+      },
+      "SNAPSHOT_BYTES_OR_EXCERPT": [
+        {
+          "path": "docs/research/derivtrace/falsification/review-evidence/issue48/e01-issue-83-part-01.txt",
+          "original_byte_range_half_open": [
+            0,
+            9691
+          ],
+          "snapshot_bytes": 9691,
+          "sha256": "1e26332c5f09a22e1124362a5f78ffe1f0c081eeb2d530b05c710cd3e53cc200",
+          "original_line_start": 1
+        }
+      ],
+      "FULL_SOURCE_OR_PARTIAL_EXCERPT": "FULL_SOURCE",
+      "SHA256": "1e26332c5f09a22e1124362a5f78ffe1f0c081eeb2d530b05c710cd3e53cc200",
+      "GIT_BLOB_WHERE_APPLICABLE": null,
+      "ACQUISITION_TIME": "2026-11-03T09:11:51.363502+00:00",
+      "ACQUISITION_STARTED": "2026-11-03T09:11:50.747863+00:00",
+      "ACQUISITION_METHOD": "official authenticated gh api; body UTF-8, no added newline",
+      "VERIFICATION_LIMITS": "Exact supplied bytes only; no execution occurrence, independent upstream-origin authentication, acquisition honesty, complete custody, later edits, or semantic truth follows from hashes.",
+      "APPLICABLE_REPORT_CLAIMS": [
+        "e01-issue-83"
+      ],
+      "EVIDENCE_CLASS": "MUTABLE_ACQUIRED_RECORD",
+      "FULL_ORIGINAL_BYTES": 9691
+    },
+    {
+      "ID": "e01-issue-111",
+      "ORIGINAL_SOURCE_IDENTITY": {
+        "api_endpoint": "repos/fanilosendrison/proto-ring/issues/111",
+        "representation": "body UTF-8, no added newline",
+        "url": "https://github.com/fanilosendrison/proto-ring/issues/111",
+        "provider_updated_at": "2026-10-10T18:10:30Z"
+      },
+      "SNAPSHOT_BYTES_OR_EXCERPT": [
+        {
+          "path": "docs/research/derivtrace/falsification/review-evidence/issue48/e01-issue-111-part-01.txt",
+          "original_byte_range_half_open": [
+            0,
+            5353
+          ],
+          "snapshot_bytes": 5353,
+          "sha256": "cdf2bd94f799b93ca09f06c07965491a57273c27ed0e83b97b90e873a2159b24",
+          "original_line_start": 1
+        }
+      ],
+      "FULL_SOURCE_OR_PARTIAL_EXCERPT": "FULL_SOURCE",
+      "SHA256": "cdf2bd94f799b93ca09f06c07965491a57273c27ed0e83b97b90e873a2159b24",
+      "GIT_BLOB_WHERE_APPLICABLE": null,
+      "ACQUISITION_TIME": "2026-11-03T09:11:52.410236+00:00",
+      "ACQUISITION_STARTED": "2026-11-03T09:11:51.863071+00:00",
+      "ACQUISITION_METHOD": "official authenticated gh api; body UTF-8, no added newline",
+      "VERIFICATION_LIMITS": "Exact supplied bytes only; no execution occurrence, independent upstream-origin authentication, acquisition honesty, complete custody, later edits, or semantic truth follows from hashes.",
+      "APPLICABLE_REPORT_CLAIMS": [
+        "e01-issue-111"
+      ],
+      "EVIDENCE_CLASS": "MUTABLE_ACQUIRED_RECORD",
+      "FULL_ORIGINAL_BYTES": 5353
+    },
+    {
+      "ID": "e02-issue-97",
+      "ORIGINAL_SOURCE_IDENTITY": {
+        "api_endpoint": "repos/fanilosendrison/proto-ring/issues/97",
+        "representation": "body UTF-8, no added newline",
+        "url": "https://github.com/fanilosendrison/proto-ring/issues/97",
+        "provider_updated_at": "2026-10-08T21:42:09Z"
+      },
+      "SNAPSHOT_BYTES_OR_EXCERPT": [
+        {
+          "path": "docs/research/derivtrace/falsification/review-evidence/issue48/e02-issue-97-part-01.txt",
+          "original_byte_range_half_open": [
+            0,
+            3248
+          ],
+          "snapshot_bytes": 3248,
+          "sha256": "b3c1e6443b7b112197ca5b87b539d17281c1e63c892254344b9773401000e27a",
+          "original_line_start": 1
+        }
+      ],
+      "FULL_SOURCE_OR_PARTIAL_EXCERPT": "FULL_SOURCE",
+      "SHA256": "b3c1e6443b7b112197ca5b87b539d17281c1e63c892254344b9773401000e27a",
+      "GIT_BLOB_WHERE_APPLICABLE": null,
+      "ACQUISITION_TIME": "2026-11-03T09:11:53.477925+00:00",
+      "ACQUISITION_STARTED": "2026-11-03T09:11:52.984191+00:00",
+      "ACQUISITION_METHOD": "official authenticated gh api; body UTF-8, no added newline",
+      "VERIFICATION_LIMITS": "Exact supplied bytes only; no execution occurrence, independent upstream-origin authentication, acquisition honesty, complete custody, later edits, or semantic truth follows from hashes.",
+      "APPLICABLE_REPORT_CLAIMS": [
+        "e02-issue-97"
+      ],
+      "EVIDENCE_CLASS": "MUTABLE_ACQUIRED_RECORD",
+      "FULL_ORIGINAL_BYTES": 3248
+    },
+    {
+      "ID": "e02-issue-115",
+      "ORIGINAL_SOURCE_IDENTITY": {
+        "api_endpoint": "repos/fanilosendrison/proto-ring/issues/115",
+        "representation": "body UTF-8, no added newline",
+        "url": "https://github.com/fanilosendrison/proto-ring/issues/115",
+        "provider_updated_at": "2026-10-11T14:45:04Z"
+      },
+      "SNAPSHOT_BYTES_OR_EXCERPT": [
+        {
+          "path": "docs/research/derivtrace/falsification/review-evidence/issue48/e02-issue-115-part-01.txt",
+          "original_byte_range_half_open": [
+            0,
+            2759
+          ],
+          "snapshot_bytes": 2759,
+          "sha256": "38dfbb9bd9bfc0d941ff221af3248a649c7709bb434a423a325cc6bc2ab34e1b",
+          "original_line_start": 1
+        }
+      ],
+      "FULL_SOURCE_OR_PARTIAL_EXCERPT": "FULL_SOURCE",
+      "SHA256": "38dfbb9bd9bfc0d941ff221af3248a649c7709bb434a423a325cc6bc2ab34e1b",
+      "GIT_BLOB_WHERE_APPLICABLE": null,
+      "ACQUISITION_TIME": "2026-11-03T09:11:54.564559+00:00",
+      "ACQUISITION_STARTED": "2026-11-03T09:11:54.030436+00:00",
+      "ACQUISITION_METHOD": "official authenticated gh api; body UTF-8, no added newline",
+      "VERIFICATION_LIMITS": "Exact supplied bytes only; no execution occurrence, independent upstream-origin authentication, acquisition honesty, complete custody, later edits, or semantic truth follows from hashes.",
+      "APPLICABLE_REPORT_CLAIMS": [
+        "e02-issue-115"
+      ],
+      "EVIDENCE_CLASS": "MUTABLE_ACQUIRED_RECORD",
+      "FULL_ORIGINAL_BYTES": 2759
+    },
+    {
+      "ID": "e02-issue-117",
+      "ORIGINAL_SOURCE_IDENTITY": {
+        "api_endpoint": "repos/fanilosendrison/proto-ring/issues/117",
+        "representation": "body UTF-8, no added newline",
+        "url": "https://github.com/fanilosendrison/proto-ring/issues/117",
+        "provider_updated_at": "2026-10-11T16:18:33Z"
+      },
+      "SNAPSHOT_BYTES_OR_EXCERPT": [
+        {
+          "path": "docs/research/derivtrace/falsification/review-evidence/issue48/e02-issue-117-part-01.txt",
+          "original_byte_range_half_open": [
+            0,
+            4558
+          ],
+          "snapshot_bytes": 4558,
+          "sha256": "89524d29fd42977153af25fea45593b942a90fe9c848660118052b05447fbc2e",
+          "original_line_start": 1
+        }
+      ],
+      "FULL_SOURCE_OR_PARTIAL_EXCERPT": "FULL_SOURCE",
+      "SHA256": "89524d29fd42977153af25fea45593b942a90fe9c848660118052b05447fbc2e",
+      "GIT_BLOB_WHERE_APPLICABLE": null,
+      "ACQUISITION_TIME": "2026-11-03T09:11:55.596035+00:00",
+      "ACQUISITION_STARTED": "2026-11-03T09:11:55.064914+00:00",
+      "ACQUISITION_METHOD": "official authenticated gh api; body UTF-8, no added newline",
+      "VERIFICATION_LIMITS": "Exact supplied bytes only; no execution occurrence, independent upstream-origin authentication, acquisition honesty, complete custody, later edits, or semantic truth follows from hashes.",
+      "APPLICABLE_REPORT_CLAIMS": [
+        "e02-issue-117"
+      ],
+      "EVIDENCE_CLASS": "MUTABLE_ACQUIRED_RECORD",
+      "FULL_ORIGINAL_BYTES": 4558
+    },
+    {
+      "ID": "e03-issue-71",
+      "ORIGINAL_SOURCE_IDENTITY": {
+        "api_endpoint": "repos/fanilosendrison/proto-ring/issues/71",
+        "representation": "body UTF-8, no added newline",
+        "url": "https://github.com/fanilosendrison/proto-ring/issues/71",
+        "provider_updated_at": "2026-10-19T21:53:31Z"
+      },
+      "SNAPSHOT_BYTES_OR_EXCERPT": [
+        {
+          "path": "docs/research/derivtrace/falsification/review-evidence/issue48/e03-issue-71-part-01.txt",
+          "original_byte_range_half_open": [
+            0,
+            1680
+          ],
+          "snapshot_bytes": 1680,
+          "sha256": "c03dd65cb8c5e1f1244779561a45dbafb0f7729cd964f863b475ccde6c31da69",
+          "original_line_start": 1
+        }
+      ],
+      "FULL_SOURCE_OR_PARTIAL_EXCERPT": "FULL_SOURCE",
+      "SHA256": "c03dd65cb8c5e1f1244779561a45dbafb0f7729cd964f863b475ccde6c31da69",
+      "GIT_BLOB_WHERE_APPLICABLE": null,
+      "ACQUISITION_TIME": "2026-11-03T09:11:56.576853+00:00",
+      "ACQUISITION_STARTED": "2026-11-03T09:11:56.045086+00:00",
+      "ACQUISITION_METHOD": "official authenticated gh api; body UTF-8, no added newline",
+      "VERIFICATION_LIMITS": "Exact supplied bytes only; no execution occurrence, independent upstream-origin authentication, acquisition honesty, complete custody, later edits, or semantic truth follows from hashes.",
+      "APPLICABLE_REPORT_CLAIMS": [
+        "e03-issue-71"
+      ],
+      "EVIDENCE_CLASS": "MUTABLE_ACQUIRED_RECORD",
+      "FULL_ORIGINAL_BYTES": 1680
+    },
+    {
+      "ID": "e06-issue-70",
+      "ORIGINAL_SOURCE_IDENTITY": {
+        "api_endpoint": "repos/fanilosendrison/turnlock-rust/issues/70",
+        "representation": "body UTF-8, no added newline",
+        "url": "https://github.com/fanilosendrison/turnlock-rust/issues/70",
+        "provider_updated_at": "2026-10-16T09:14:50Z"
+      },
+      "SNAPSHOT_BYTES_OR_EXCERPT": [
+        {
+          "path": "docs/research/derivtrace/falsification/review-evidence/issue48/e06-issue-70-part-01.txt",
+          "original_byte_range_half_open": [
+            0,
+            5207
+          ],
+          "snapshot_bytes": 5207,
+          "sha256": "3e817164f86cc030a7fe4f2c55dcaa9bb0998ec28c8c2de794f0d4d32e517b4c",
+          "original_line_start": 1
+        }
+      ],
+      "FULL_SOURCE_OR_PARTIAL_EXCERPT": "FULL_SOURCE",
+      "SHA256": "3e817164f86cc030a7fe4f2c55dcaa9bb0998ec28c8c2de794f0d4d32e517b4c",
+      "GIT_BLOB_WHERE_APPLICABLE": null,
+      "ACQUISITION_TIME": "2026-11-03T09:11:57.634713+00:00",
+      "ACQUISITION_STARTED": "2026-11-03T09:11:57.160135+00:00",
+      "ACQUISITION_METHOD": "official authenticated gh api; body UTF-8, no added newline",
+      "VERIFICATION_LIMITS": "Exact supplied bytes only; no execution occurrence, independent upstream-origin authentication, acquisition honesty, complete custody, later edits, or semantic truth follows from hashes.",
+      "APPLICABLE_REPORT_CLAIMS": [
+        "e06-issue-70"
+      ],
+      "EVIDENCE_CLASS": "MUTABLE_ACQUIRED_RECORD",
+      "FULL_ORIGINAL_BYTES": 5207
+    },
+    {
+      "ID": "e06-issue-74",
+      "ORIGINAL_SOURCE_IDENTITY": {
+        "api_endpoint": "repos/fanilosendrison/turnlock-rust/issues/74",
+        "representation": "body UTF-8, no added newline",
+        "url": "https://github.com/fanilosendrison/turnlock-rust/issues/74",
+        "provider_updated_at": "2026-10-16T13:58:29Z"
+      },
+      "SNAPSHOT_BYTES_OR_EXCERPT": [
+        {
+          "path": "docs/research/derivtrace/falsification/review-evidence/issue48/e06-issue-74-part-01.txt",
+          "original_byte_range_half_open": [
+            0,
+            11493
+          ],
+          "snapshot_bytes": 11493,
+          "sha256": "3c47b1f65528ebb9ba7663e507753cbd296b32f288b5cb38909fb635c2e5ce0b",
+          "original_line_start": 1
+        }
+      ],
+      "FULL_SOURCE_OR_PARTIAL_EXCERPT": "FULL_SOURCE",
+      "SHA256": "3c47b1f65528ebb9ba7663e507753cbd296b32f288b5cb38909fb635c2e5ce0b",
+      "GIT_BLOB_WHERE_APPLICABLE": null,
+      "ACQUISITION_TIME": "2026-11-03T09:11:58.743580+00:00",
+      "ACQUISITION_STARTED": "2026-11-03T09:11:58.147999+00:00",
+      "ACQUISITION_METHOD": "official authenticated gh api; body UTF-8, no added newline",
+      "VERIFICATION_LIMITS": "Exact supplied bytes only; no execution occurrence, independent upstream-origin authentication, acquisition honesty, complete custody, later edits, or semantic truth follows from hashes.",
+      "APPLICABLE_REPORT_CLAIMS": [
+        "e06-issue-74"
+      ],
+      "EVIDENCE_CLASS": "MUTABLE_ACQUIRED_RECORD",
+      "FULL_ORIGINAL_BYTES": 11493
+    },
+    {
+      "ID": "e06-issue-92",
+      "ORIGINAL_SOURCE_IDENTITY": {
+        "api_endpoint": "repos/fanilosendrison/turnlock-rust/issues/92",
+        "representation": "body UTF-8, no added newline",
+        "url": "https://github.com/fanilosendrison/turnlock-rust/issues/92",
+        "provider_updated_at": "2026-10-22T16:17:18Z"
+      },
+      "SNAPSHOT_BYTES_OR_EXCERPT": [
+        {
+          "path": "docs/research/derivtrace/falsification/review-evidence/issue48/e06-issue-92-part-01.txt",
+          "original_byte_range_half_open": [
+            0,
+            6182
+          ],
+          "snapshot_bytes": 6182,
+          "sha256": "25b616da5365c4e22a1da88632e5af337c9af689e783ca16c04ced2fa4e01800",
+          "original_line_start": 1
+        }
+      ],
+      "FULL_SOURCE_OR_PARTIAL_EXCERPT": "FULL_SOURCE",
+      "SHA256": "25b616da5365c4e22a1da88632e5af337c9af689e783ca16c04ced2fa4e01800",
+      "GIT_BLOB_WHERE_APPLICABLE": null,
+      "ACQUISITION_TIME": "2026-11-03T09:11:59.757309+00:00",
+      "ACQUISITION_STARTED": "2026-11-03T09:11:59.247111+00:00",
+      "ACQUISITION_METHOD": "official authenticated gh api; body UTF-8, no added newline",
+      "VERIFICATION_LIMITS": "Exact supplied bytes only; no execution occurrence, independent upstream-origin authentication, acquisition honesty, complete custody, later edits, or semantic truth follows from hashes.",
+      "APPLICABLE_REPORT_CLAIMS": [
+        "e06-issue-92"
+      ],
+      "EVIDENCE_CLASS": "MUTABLE_ACQUIRED_RECORD",
+      "FULL_ORIGINAL_BYTES": 6182
+    },
+    {
+      "ID": "e07-issue-121",
+      "ORIGINAL_SOURCE_IDENTITY": {
+        "api_endpoint": "repos/fanilosendrison/proto-ring/issues/121",
+        "representation": "body UTF-8, no added newline",
+        "url": "https://github.com/fanilosendrison/proto-ring/issues/121",
+        "provider_updated_at": "2026-10-17T16:06:23Z"
+      },
+      "SNAPSHOT_BYTES_OR_EXCERPT": [
+        {
+          "path": "docs/research/derivtrace/falsification/review-evidence/issue48/e07-issue-121-part-01.txt",
+          "original_byte_range_half_open": [
+            0,
+            4700
+          ],
+          "snapshot_bytes": 4700,
+          "sha256": "65b5d9b584977d6eda867829347ddc6ff35bfa87ed86b909bc3502c9046f07dc",
+          "original_line_start": 1
+        }
+      ],
+      "FULL_SOURCE_OR_PARTIAL_EXCERPT": "FULL_SOURCE",
+      "SHA256": "65b5d9b584977d6eda867829347ddc6ff35bfa87ed86b909bc3502c9046f07dc",
+      "GIT_BLOB_WHERE_APPLICABLE": null,
+      "ACQUISITION_TIME": "2026-11-03T09:12:00.829510+00:00",
+      "ACQUISITION_STARTED": "2026-11-03T09:12:00.267230+00:00",
+      "ACQUISITION_METHOD": "official authenticated gh api; body UTF-8, no added newline",
+      "VERIFICATION_LIMITS": "Exact supplied bytes only; no execution occurrence, independent upstream-origin authentication, acquisition honesty, complete custody, later edits, or semantic truth follows from hashes.",
+      "APPLICABLE_REPORT_CLAIMS": [
+        "e07-issue-121"
+      ],
+      "EVIDENCE_CLASS": "MUTABLE_ACQUIRED_RECORD",
+      "FULL_ORIGINAL_BYTES": 4700
+    },
+    {
+      "ID": "e07-issue-122",
+      "ORIGINAL_SOURCE_IDENTITY": {
+        "api_endpoint": "repos/fanilosendrison/proto-ring/issues/122",
+        "representation": "body UTF-8, no added newline",
+        "url": "https://github.com/fanilosendrison/proto-ring/issues/122",
+        "provider_updated_at": "2026-10-16T22:08:08Z"
+      },
+      "SNAPSHOT_BYTES_OR_EXCERPT": [
+        {
+          "path": "docs/research/derivtrace/falsification/review-evidence/issue48/e07-issue-122-part-01.txt",
+          "original_byte_range_half_open": [
+            0,
+            4602
+          ],
+          "snapshot_bytes": 4602,
+          "sha256": "60eb80a690c665591c4c17a9fab691cd36959358b4eaf431c9791576838820ce",
+          "original_line_start": 1
+        }
+      ],
+      "FULL_SOURCE_OR_PARTIAL_EXCERPT": "FULL_SOURCE",
+      "SHA256": "60eb80a690c665591c4c17a9fab691cd36959358b4eaf431c9791576838820ce",
+      "GIT_BLOB_WHERE_APPLICABLE": null,
+      "ACQUISITION_TIME": "2026-11-03T09:12:02.114858+00:00",
+      "ACQUISITION_STARTED": "2026-11-03T09:12:01.386585+00:00",
+      "ACQUISITION_METHOD": "official authenticated gh api; body UTF-8, no added newline",
+      "VERIFICATION_LIMITS": "Exact supplied bytes only; no execution occurrence, independent upstream-origin authentication, acquisition honesty, complete custody, later edits, or semantic truth follows from hashes.",
+      "APPLICABLE_REPORT_CLAIMS": [
+        "e07-issue-122"
+      ],
+      "EVIDENCE_CLASS": "MUTABLE_ACQUIRED_RECORD",
+      "FULL_ORIGINAL_BYTES": 4602
+    },
+    {
+      "ID": "e07-issue-126",
+      "ORIGINAL_SOURCE_IDENTITY": {
+        "api_endpoint": "repos/fanilosendrison/proto-ring/issues/126",
+        "representation": "body UTF-8, no added newline",
+        "url": "https://github.com/fanilosendrison/proto-ring/issues/126",
+        "provider_updated_at": "2026-10-20T10:42:24Z"
+      },
+      "SNAPSHOT_BYTES_OR_EXCERPT": [
+        {
+          "path": "docs/research/derivtrace/falsification/review-evidence/issue48/e07-issue-126-part-01.txt",
+          "original_byte_range_half_open": [
+            0,
+            3584
+          ],
+          "snapshot_bytes": 3584,
+          "sha256": "c8517b6c1a0d0766baca3fb0aaf815864301b882603a21f2d89de93be8ec8c85",
+          "original_line_start": 1
+        }
+      ],
+      "FULL_SOURCE_OR_PARTIAL_EXCERPT": "FULL_SOURCE",
+      "SHA256": "c8517b6c1a0d0766baca3fb0aaf815864301b882603a21f2d89de93be8ec8c85",
+      "GIT_BLOB_WHERE_APPLICABLE": null,
+      "ACQUISITION_TIME": "2026-11-03T09:12:03.247084+00:00",
+      "ACQUISITION_STARTED": "2026-11-03T09:12:02.634558+00:00",
+      "ACQUISITION_METHOD": "official authenticated gh api; body UTF-8, no added newline",
+      "VERIFICATION_LIMITS": "Exact supplied bytes only; no execution occurrence, independent upstream-origin authentication, acquisition honesty, complete custody, later edits, or semantic truth follows from hashes.",
+      "APPLICABLE_REPORT_CLAIMS": [
+        "e07-issue-126"
+      ],
+      "EVIDENCE_CLASS": "MUTABLE_ACQUIRED_RECORD",
+      "FULL_ORIGINAL_BYTES": 3584
+    },
+    {
+      "ID": "e08-issue-14",
+      "ORIGINAL_SOURCE_IDENTITY": {
+        "api_endpoint": "repos/fanilosendrison/proto-lithify/issues/14",
+        "representation": "body UTF-8, no added newline",
+        "url": "https://github.com/fanilosendrison/proto-lithify/issues/14",
+        "provider_updated_at": "2026-10-24T23:53:00Z"
+      },
+      "SNAPSHOT_BYTES_OR_EXCERPT": [
+        {
+          "path": "docs/research/derivtrace/falsification/review-evidence/issue48/e08-issue-14-part-01.txt",
+          "original_byte_range_half_open": [
+            0,
+            3866
+          ],
+          "snapshot_bytes": 3866,
+          "sha256": "21c644f0e5745e08448d3d24bae6cb867ca0638bf02269ee44a1381498861a45",
+          "original_line_start": 1
+        }
+      ],
+      "FULL_SOURCE_OR_PARTIAL_EXCERPT": "FULL_SOURCE",
+      "SHA256": "21c644f0e5745e08448d3d24bae6cb867ca0638bf02269ee44a1381498861a45",
+      "GIT_BLOB_WHERE_APPLICABLE": null,
+      "ACQUISITION_TIME": "2026-11-03T09:12:04.248603+00:00",
+      "ACQUISITION_STARTED": "2026-11-03T09:12:03.699802+00:00",
+      "ACQUISITION_METHOD": "official authenticated gh api; body UTF-8, no added newline",
+      "VERIFICATION_LIMITS": "Exact supplied bytes only; no execution occurrence, independent upstream-origin authentication, acquisition honesty, complete custody, later edits, or semantic truth follows from hashes.",
+      "APPLICABLE_REPORT_CLAIMS": [
+        "e08-issue-14"
+      ],
+      "EVIDENCE_CLASS": "MUTABLE_ACQUIRED_RECORD",
+      "FULL_ORIGINAL_BYTES": 3866
+    },
+    {
+      "ID": "holdout-issue-47",
+      "ORIGINAL_SOURCE_IDENTITY": {
+        "api_endpoint": "repos/fanilosendrison/ruu/issues/47",
+        "representation": "body UTF-8, no added newline",
+        "url": "https://github.com/fanilosendrison/ruu/issues/47",
+        "provider_updated_at": "2026-09-11T23:50:26Z"
+      },
+      "SNAPSHOT_BYTES_OR_EXCERPT": [
+        {
+          "path": "docs/research/derivtrace/falsification/review-evidence/issue48/holdout-issue-47-part-01.txt",
+          "original_byte_range_half_open": [
+            0,
+            6114
+          ],
+          "snapshot_bytes": 6114,
+          "sha256": "7bc33433ce09b21077d4d05fe3d42129fcd746e545a3abc06984b6e3bef748d9",
+          "original_line_start": 1
+        }
+      ],
+      "FULL_SOURCE_OR_PARTIAL_EXCERPT": "FULL_SOURCE",
+      "SHA256": "7bc33433ce09b21077d4d05fe3d42129fcd746e545a3abc06984b6e3bef748d9",
+      "GIT_BLOB_WHERE_APPLICABLE": null,
+      "ACQUISITION_TIME": "2026-11-03T09:12:05.294788+00:00",
+      "ACQUISITION_STARTED": "2026-11-03T09:12:04.772619+00:00",
+      "ACQUISITION_METHOD": "official authenticated gh api; body UTF-8, no added newline",
+      "VERIFICATION_LIMITS": "Exact supplied bytes only; no execution occurrence, independent upstream-origin authentication, acquisition honesty, complete custody, later edits, or semantic truth follows from hashes.",
+      "APPLICABLE_REPORT_CLAIMS": [
+        "holdout-issue-47"
+      ],
+      "EVIDENCE_CLASS": "MUTABLE_ACQUIRED_RECORD",
+      "FULL_ORIGINAL_BYTES": 6114
+    },
+    {
+      "ID": "holdout-issue-55",
+      "ORIGINAL_SOURCE_IDENTITY": {
+        "api_endpoint": "repos/fanilosendrison/ruu/issues/55",
+        "representation": "body UTF-8, no added newline",
+        "url": "https://github.com/fanilosendrison/ruu/issues/55",
+        "provider_updated_at": "2026-10-03T12:15:24Z"
+      },
+      "SNAPSHOT_BYTES_OR_EXCERPT": [
+        {
+          "path": "docs/research/derivtrace/falsification/review-evidence/issue48/holdout-issue-55-part-01.txt",
+          "original_byte_range_half_open": [
+            0,
+            7756
+          ],
+          "snapshot_bytes": 7756,
+          "sha256": "333eea77c2ac8eb0b1c7c70eb93f8b94bcdda2f076a3a1113549f72a8b500cf6",
+          "original_line_start": 1
+        }
+      ],
+      "FULL_SOURCE_OR_PARTIAL_EXCERPT": "FULL_SOURCE",
+      "SHA256": "333eea77c2ac8eb0b1c7c70eb93f8b94bcdda2f076a3a1113549f72a8b500cf6",
+      "GIT_BLOB_WHERE_APPLICABLE": null,
+      "ACQUISITION_TIME": "2026-11-03T09:12:06.363395+00:00",
+      "ACQUISITION_STARTED": "2026-11-03T09:12:05.827930+00:00",
+      "ACQUISITION_METHOD": "official authenticated gh api; body UTF-8, no added newline",
+      "VERIFICATION_LIMITS": "Exact supplied bytes only; no execution occurrence, independent upstream-origin authentication, acquisition honesty, complete custody, later edits, or semantic truth follows from hashes.",
+      "APPLICABLE_REPORT_CLAIMS": [
+        "holdout-issue-55"
+      ],
+      "EVIDENCE_CLASS": "MUTABLE_ACQUIRED_RECORD",
+      "FULL_ORIGINAL_BYTES": 7756
+    },
+    {
+      "ID": "e06-comments",
+      "ORIGINAL_SOURCE_IDENTITY": {
+        "api_endpoint": "repos/fanilosendrison/turnlock-rust/issues/92/comments?per_page=100",
+        "representation": "gh api JSON response bytes",
+        "url": null,
+        "provider_updated_at": null
+      },
+      "SNAPSHOT_BYTES_OR_EXCERPT": [
+        {
+          "path": "docs/research/derivtrace/falsification/review-evidence/issue48/e06-comments-part-01.txt",
+          "original_byte_range_half_open": [
+            0,
+            9984
+          ],
+          "snapshot_bytes": 9984,
+          "sha256": "83ba25537b888d6752b78204881342750992f8032bad35204873d44a1d7cd863",
+          "original_line_start": 1
+        }
+      ],
+      "FULL_SOURCE_OR_PARTIAL_EXCERPT": "FULL_SOURCE",
+      "SHA256": "83ba25537b888d6752b78204881342750992f8032bad35204873d44a1d7cd863",
+      "GIT_BLOB_WHERE_APPLICABLE": null,
+      "ACQUISITION_TIME": "2026-11-03T09:12:08.436916+00:00",
+      "ACQUISITION_STARTED": "2026-11-03T09:12:07.968253+00:00",
+      "ACQUISITION_METHOD": "official authenticated gh api; gh api JSON response bytes",
+      "VERIFICATION_LIMITS": "Exact supplied bytes only; no execution occurrence, independent upstream-origin authentication, acquisition honesty, complete custody, later edits, or semantic truth follows from hashes.",
+      "APPLICABLE_REPORT_CLAIMS": [
+        "e06-comments"
+      ],
+      "EVIDENCE_CLASS": "MUTABLE_ACQUIRED_RECORD",
+      "FULL_ORIGINAL_BYTES": 9984
+    },
+    {
+      "ID": "e07-comments",
+      "ORIGINAL_SOURCE_IDENTITY": {
+        "api_endpoint": "repos/fanilosendrison/proto-ring/issues/122/comments?per_page=100",
+        "representation": "gh api JSON response bytes",
+        "url": null,
+        "provider_updated_at": null
+      },
+      "SNAPSHOT_BYTES_OR_EXCERPT": [
+        {
+          "path": "docs/research/derivtrace/falsification/review-evidence/issue48/e07-comments-part-01.txt",
+          "original_byte_range_half_open": [
+            0,
+            3335
+          ],
+          "snapshot_bytes": 3335,
+          "sha256": "655b59ecfefed1be52d6b272c9e08e968514c507a92adfd918d10a4976474be5",
+          "original_line_start": 1
+        }
+      ],
+      "FULL_SOURCE_OR_PARTIAL_EXCERPT": "FULL_SOURCE",
+      "SHA256": "655b59ecfefed1be52d6b272c9e08e968514c507a92adfd918d10a4976474be5",
+      "GIT_BLOB_WHERE_APPLICABLE": null,
+      "ACQUISITION_TIME": "2026-11-03T09:12:09.531615+00:00",
+      "ACQUISITION_STARTED": "2026-11-03T09:12:09.052925+00:00",
+      "ACQUISITION_METHOD": "official authenticated gh api; gh api JSON response bytes",
+      "VERIFICATION_LIMITS": "Exact supplied bytes only; no execution occurrence, independent upstream-origin authentication, acquisition honesty, complete custody, later edits, or semantic truth follows from hashes.",
+      "APPLICABLE_REPORT_CLAIMS": [
+        "e07-comments"
+      ],
+      "EVIDENCE_CLASS": "MUTABLE_ACQUIRED_RECORD",
+      "FULL_ORIGINAL_BYTES": 3335
+    },
+    {
+      "ID": "e08-comments",
+      "ORIGINAL_SOURCE_IDENTITY": {
+        "api_endpoint": "repos/fanilosendrison/proto-lithify/issues/14/comments?per_page=100",
+        "representation": "gh api JSON response bytes",
+        "url": null,
+        "provider_updated_at": null
+      },
+      "SNAPSHOT_BYTES_OR_EXCERPT": [
+        {
+          "path": "docs/research/derivtrace/falsification/review-evidence/issue48/e08-comments-part-01.txt",
+          "original_byte_range_half_open": [
+            0,
+            3307
+          ],
+          "snapshot_bytes": 3307,
+          "sha256": "7afd827dc8ef45a128c782c7489290c71648078c270b2c69f5cdbabbbb38870c",
+          "original_line_start": 1
+        }
+      ],
+      "FULL_SOURCE_OR_PARTIAL_EXCERPT": "FULL_SOURCE",
+      "SHA256": "7afd827dc8ef45a128c782c7489290c71648078c270b2c69f5cdbabbbb38870c",
+      "GIT_BLOB_WHERE_APPLICABLE": null,
+      "ACQUISITION_TIME": "2026-11-03T09:12:10.511898+00:00",
+      "ACQUISITION_STARTED": "2026-11-03T09:12:10.025905+00:00",
+      "ACQUISITION_METHOD": "official authenticated gh api; gh api JSON response bytes",
+      "VERIFICATION_LIMITS": "Exact supplied bytes only; no execution occurrence, independent upstream-origin authentication, acquisition honesty, complete custody, later edits, or semantic truth follows from hashes.",
+      "APPLICABLE_REPORT_CLAIMS": [
+        "e08-comments"
+      ],
+      "EVIDENCE_CLASS": "MUTABLE_ACQUIRED_RECORD",
+      "FULL_ORIGINAL_BYTES": 3307
+    },
+    {
+      "ID": "holdout-comments",
+      "ORIGINAL_SOURCE_IDENTITY": {
+        "api_endpoint": "repos/fanilosendrison/ruu/issues/55/comments?per_page=100",
+        "representation": "gh api JSON response bytes",
+        "url": null,
+        "provider_updated_at": null
+      },
+      "SNAPSHOT_BYTES_OR_EXCERPT": [
+        {
+          "path": "docs/research/derivtrace/falsification/review-evidence/issue48/holdout-comments-part-01.txt",
+          "original_byte_range_half_open": [
+            0,
+            2178
+          ],
+          "snapshot_bytes": 2178,
+          "sha256": "b5f6516f7b6f0e0a1aef74f08f49d224b51f29917ce196c210806afc38e72993",
+          "original_line_start": 1
+        }
+      ],
+      "FULL_SOURCE_OR_PARTIAL_EXCERPT": "FULL_SOURCE",
+      "SHA256": "b5f6516f7b6f0e0a1aef74f08f49d224b51f29917ce196c210806afc38e72993",
+      "GIT_BLOB_WHERE_APPLICABLE": null,
+      "ACQUISITION_TIME": "2026-11-03T09:12:11.485303+00:00",
+      "ACQUISITION_STARTED": "2026-11-03T09:12:11.044780+00:00",
+      "ACQUISITION_METHOD": "official authenticated gh api; gh api JSON response bytes",
+      "VERIFICATION_LIMITS": "Exact supplied bytes only; no execution occurrence, independent upstream-origin authentication, acquisition honesty, complete custody, later edits, or semantic truth follows from hashes.",
+      "APPLICABLE_REPORT_CLAIMS": [
+        "holdout-comments"
+      ],
+      "EVIDENCE_CLASS": "MUTABLE_ACQUIRED_RECORD",
+      "FULL_ORIGINAL_BYTES": 2178
+    },
+    {
+      "ID": "e08-pr",
+      "ORIGINAL_SOURCE_IDENTITY": {
+        "api_endpoint": "repos/fanilosendrison/proto-lithify/pulls/17",
+        "representation": "gh api JSON response bytes",
+        "url": "https://github.com/fanilosendrison/proto-lithify/pull/17",
+        "provider_updated_at": "2026-10-24T23:52:14Z"
+      },
+      "SNAPSHOT_BYTES_OR_EXCERPT": [
+        {
+          "path": "docs/research/derivtrace/falsification/review-evidence/issue48/e08-pr-part-01.txt",
+          "original_byte_range_half_open": [
+            0,
+            17648
+          ],
+          "snapshot_bytes": 17648,
+          "sha256": "66b64db7da1d344e458140790d754f24a88fa2315e8789f2bdd01bb53e9ea05c",
+          "original_line_start": 1
+        }
+      ],
+      "FULL_SOURCE_OR_PARTIAL_EXCERPT": "FULL_SOURCE",
+      "SHA256": "66b64db7da1d344e458140790d754f24a88fa2315e8789f2bdd01bb53e9ea05c",
+      "GIT_BLOB_WHERE_APPLICABLE": null,
+      "ACQUISITION_TIME": "2026-11-03T09:12:12.740352+00:00",
+      "ACQUISITION_STARTED": "2026-11-03T09:12:12.024044+00:00",
+      "ACQUISITION_METHOD": "official authenticated gh api; gh api JSON response bytes",
+      "VERIFICATION_LIMITS": "Exact supplied bytes only; no execution occurrence, independent upstream-origin authentication, acquisition honesty, complete custody, later edits, or semantic truth follows from hashes.",
+      "APPLICABLE_REPORT_CLAIMS": [
+        "e08-pr"
+      ],
+      "EVIDENCE_CLASS": "MUTABLE_ACQUIRED_RECORD",
+      "FULL_ORIGINAL_BYTES": 17648
+    },
+    {
+      "ID": "e08-checks",
+      "ORIGINAL_SOURCE_IDENTITY": {
+        "api_endpoint": "repos/fanilosendrison/proto-lithify/commits/7bc80a8065fc79a070dd00bca6d07fe67a3a7cdc/check-runs",
+        "representation": "gh api JSON response bytes",
+        "url": null,
+        "provider_updated_at": null
+      },
+      "SNAPSHOT_BYTES_OR_EXCERPT": [
+        {
+          "path": "docs/research/derivtrace/falsification/review-evidence/issue48/e08-checks-part-01.txt",
+          "original_byte_range_half_open": [
+            0,
+            3143
+          ],
+          "snapshot_bytes": 3143,
+          "sha256": "b21a2a0ba08839ded0b6ee245b6c08a573319456d88bf691507be6563c7ecfb1",
+          "original_line_start": 1
+        }
+      ],
+      "FULL_SOURCE_OR_PARTIAL_EXCERPT": "FULL_SOURCE",
+      "SHA256": "b21a2a0ba08839ded0b6ee245b6c08a573319456d88bf691507be6563c7ecfb1",
+      "GIT_BLOB_WHERE_APPLICABLE": null,
+      "ACQUISITION_TIME": "2026-11-03T09:12:13.917488+00:00",
+      "ACQUISITION_STARTED": "2026-11-03T09:12:13.278068+00:00",
+      "ACQUISITION_METHOD": "official authenticated gh api; gh api JSON response bytes",
+      "VERIFICATION_LIMITS": "Exact supplied bytes only; no execution occurrence, independent upstream-origin authentication, acquisition honesty, complete custody, later edits, or semantic truth follows from hashes.",
+      "APPLICABLE_REPORT_CLAIMS": [
+        "e08-checks"
+      ],
+      "EVIDENCE_CLASS": "MUTABLE_ACQUIRED_RECORD",
+      "FULL_ORIGINAL_BYTES": 3143
+    },
+    {
+      "ID": "e08-run-negative",
+      "ORIGINAL_SOURCE_IDENTITY": {
+        "api_endpoint": "repos/fanilosendrison/proto-lithify/actions/runs/40144240373",
+        "representation": "gh api JSON response bytes",
+        "url": "https://github.com/fanilosendrison/proto-lithify/actions/runs/40144240373",
+        "provider_updated_at": "2026-10-24T23:49:14Z"
+      },
+      "SNAPSHOT_BYTES_OR_EXCERPT": [
+        {
+          "path": "docs/research/derivtrace/falsification/review-evidence/issue48/e08-run-negative-part-01.txt",
+          "original_byte_range_half_open": [
+            0,
+            13609
+          ],
+          "snapshot_bytes": 13609,
+          "sha256": "655d2ac4e8ffb607b7c62850a8b83b5898c902a475ec4dad601f9ab9b7ae31dd",
+          "original_line_start": 1
+        }
+      ],
+      "FULL_SOURCE_OR_PARTIAL_EXCERPT": "FULL_SOURCE",
+      "SHA256": "655d2ac4e8ffb607b7c62850a8b83b5898c902a475ec4dad601f9ab9b7ae31dd",
+      "GIT_BLOB_WHERE_APPLICABLE": null,
+      "ACQUISITION_TIME": "2026-11-03T09:12:14.923992+00:00",
+      "ACQUISITION_STARTED": "2026-11-03T09:12:14.444099+00:00",
+      "ACQUISITION_METHOD": "official authenticated gh api; gh api JSON response bytes",
+      "VERIFICATION_LIMITS": "Exact supplied bytes only; no execution occurrence, independent upstream-origin authentication, acquisition honesty, complete custody, later edits, or semantic truth follows from hashes.",
+      "APPLICABLE_REPORT_CLAIMS": [
+        "e08-run-negative"
+      ],
+      "EVIDENCE_CLASS": "MUTABLE_ACQUIRED_RECORD",
+      "FULL_ORIGINAL_BYTES": 13609
+    },
+    {
+      "ID": "e08-run-positive",
+      "ORIGINAL_SOURCE_IDENTITY": {
+        "api_endpoint": "repos/fanilosendrison/proto-lithify/actions/runs/40144365896",
+        "representation": "gh api JSON response bytes",
+        "url": "https://github.com/fanilosendrison/proto-lithify/actions/runs/40144365896",
+        "provider_updated_at": "2026-10-24T23:51:06Z"
+      },
+      "SNAPSHOT_BYTES_OR_EXCERPT": [
+        {
+          "path": "docs/research/derivtrace/falsification/review-evidence/issue48/e08-run-positive-part-01.txt",
+          "original_byte_range_half_open": [
+            0,
+            13538
+          ],
+          "snapshot_bytes": 13538,
+          "sha256": "74726b5dfa9f56b15c122c00933e5701221c726186a2d4c85bbf2d559fa01d69",
+          "original_line_start": 1
+        }
+      ],
+      "FULL_SOURCE_OR_PARTIAL_EXCERPT": "FULL_SOURCE",
+      "SHA256": "74726b5dfa9f56b15c122c00933e5701221c726186a2d4c85bbf2d559fa01d69",
+      "GIT_BLOB_WHERE_APPLICABLE": null,
+      "ACQUISITION_TIME": "2026-11-03T09:12:15.920737+00:00",
+      "ACQUISITION_STARTED": "2026-11-03T09:12:15.440153+00:00",
+      "ACQUISITION_METHOD": "official authenticated gh api; gh api JSON response bytes",
+      "VERIFICATION_LIMITS": "Exact supplied bytes only; no execution occurrence, independent upstream-origin authentication, acquisition honesty, complete custody, later edits, or semantic truth follows from hashes.",
+      "APPLICABLE_REPORT_CLAIMS": [
+        "e08-run-positive"
+      ],
+      "EVIDENCE_CLASS": "MUTABLE_ACQUIRED_RECORD",
+      "FULL_ORIGINAL_BYTES": 13538
+    },
+    {
+      "ID": "e08-ruleset",
+      "ORIGINAL_SOURCE_IDENTITY": {
+        "api_endpoint": "repos/fanilosendrison/proto-lithify/rulesets/25801378",
+        "representation": "gh api JSON response bytes",
+        "url": null,
+        "provider_updated_at": "2026-10-25T01:46:12.872+02:00"
+      },
+      "SNAPSHOT_BYTES_OR_EXCERPT": [
+        {
+          "path": "docs/research/derivtrace/falsification/review-evidence/issue48/e08-ruleset-part-01.txt",
+          "original_byte_range_half_open": [
+            0,
+            1248
+          ],
+          "snapshot_bytes": 1248,
+          "sha256": "ef4923115dec1ec957008a5c5914b13b70be99d055e34346c969a81b72c670eb",
+          "original_line_start": 1
+        }
+      ],
+      "FULL_SOURCE_OR_PARTIAL_EXCERPT": "FULL_SOURCE",
+      "SHA256": "ef4923115dec1ec957008a5c5914b13b70be99d055e34346c969a81b72c670eb",
+      "GIT_BLOB_WHERE_APPLICABLE": null,
+      "ACQUISITION_TIME": "2026-11-03T09:12:16.918655+00:00",
+      "ACQUISITION_STARTED": "2026-11-03T09:12:16.444203+00:00",
+      "ACQUISITION_METHOD": "official authenticated gh api; gh api JSON response bytes",
+      "VERIFICATION_LIMITS": "Exact supplied bytes only; no execution occurrence, independent upstream-origin authentication, acquisition honesty, complete custody, later edits, or semantic truth follows from hashes.",
+      "APPLICABLE_REPORT_CLAIMS": [
+        "e08-ruleset"
+      ],
+      "EVIDENCE_CLASS": "MUTABLE_ACQUIRED_RECORD",
+      "FULL_ORIGINAL_BYTES": 1248
+    },
+    {
+      "ID": "e03-comment-6236339080",
+      "ORIGINAL_SOURCE_IDENTITY": {
+        "api_endpoint": "repos/fanilosendrison/proto-ring/issues/comments/6236339080",
+        "representation": "body UTF-8, no added newline",
+        "url": "https://github.com/fanilosendrison/proto-ring/issues/71#issuecomment-6236339080",
+        "provider_created_at": "2026-10-17T16:07:49Z",
+        "provider_updated_at": "2026-10-17T16:07:49Z"
+      },
+      "SNAPSHOT_BYTES_OR_EXCERPT": [
+        {
+          "path": "docs/research/derivtrace/falsification/review-evidence/issue48/e03-comment-6236339080-part-01.txt",
+          "original_byte_range_half_open": [
+            0,
+            497
+          ],
+          "snapshot_bytes": 497,
+          "sha256": "a51a45b629616778fb91211c3e19cafcaabed162028ee073e7f0939a38d1ffba",
+          "original_line_start": 1
+        }
+      ],
+      "FULL_SOURCE_OR_PARTIAL_EXCERPT": "FULL_SOURCE",
+      "SHA256": "a51a45b629616778fb91211c3e19cafcaabed162028ee073e7f0939a38d1ffba",
+      "GIT_BLOB_WHERE_APPLICABLE": null,
+      "ACQUISITION_TIME": "2026-11-03T09:14:49.931279+00:00",
+      "ACQUISITION_STARTED": "2026-11-03T09:14:49.331092+00:00",
+      "ACQUISITION_METHOD": "official authenticated gh api; body UTF-8, no added newline",
+      "VERIFICATION_LIMITS": "Exact supplied bytes only; no execution occurrence, independent upstream-origin authentication, acquisition honesty, complete custody, later edits, or semantic truth follows from hashes.",
+      "APPLICABLE_REPORT_CLAIMS": [
+        "E03 recorded revision/STOP/adjudication succession only"
+      ],
+      "EVIDENCE_CLASS": "MUTABLE_ACQUIRED_RECORD",
+      "FULL_ORIGINAL_BYTES": 497
+    },
+    {
+      "ID": "e03-comment-6239365115",
+      "ORIGINAL_SOURCE_IDENTITY": {
+        "api_endpoint": "repos/fanilosendrison/proto-ring/issues/comments/6239365115",
+        "representation": "body UTF-8, no added newline",
+        "url": "https://github.com/fanilosendrison/proto-ring/issues/71#issuecomment-6239365115",
+        "provider_created_at": "2026-10-17T19:16:16Z",
+        "provider_updated_at": "2026-10-17T19:16:16Z"
+      },
+      "SNAPSHOT_BYTES_OR_EXCERPT": [
+        {
+          "path": "docs/research/derivtrace/falsification/review-evidence/issue48/e03-comment-6239365115-part-01.txt",
+          "original_byte_range_half_open": [
+            0,
+            4673
+          ],
+          "snapshot_bytes": 4673,
+          "sha256": "f2b5163e22088beaca9963d1719a6c97784eba95ec62d01d4afc6bf46e3334f5",
+          "original_line_start": 1
+        }
+      ],
+      "FULL_SOURCE_OR_PARTIAL_EXCERPT": "FULL_SOURCE",
+      "SHA256": "f2b5163e22088beaca9963d1719a6c97784eba95ec62d01d4afc6bf46e3334f5",
+      "GIT_BLOB_WHERE_APPLICABLE": null,
+      "ACQUISITION_TIME": "2026-11-03T09:14:50.650329+00:00",
+      "ACQUISITION_STARTED": "2026-11-03T09:14:49.931322+00:00",
+      "ACQUISITION_METHOD": "official authenticated gh api; body UTF-8, no added newline",
+      "VERIFICATION_LIMITS": "Exact supplied bytes only; no execution occurrence, independent upstream-origin authentication, acquisition honesty, complete custody, later edits, or semantic truth follows from hashes.",
+      "APPLICABLE_REPORT_CLAIMS": [
+        "E03 recorded revision/STOP/adjudication succession only"
+      ],
+      "EVIDENCE_CLASS": "MUTABLE_ACQUIRED_RECORD",
+      "FULL_ORIGINAL_BYTES": 4673
+    },
+    {
+      "ID": "e03-comment-6240565495",
+      "ORIGINAL_SOURCE_IDENTITY": {
+        "api_endpoint": "repos/fanilosendrison/proto-ring/issues/comments/6240565495",
+        "representation": "body UTF-8, no added newline",
+        "url": "https://github.com/fanilosendrison/proto-ring/issues/71#issuecomment-6240565495",
+        "provider_created_at": "2026-10-17T20:32:16Z",
+        "provider_updated_at": "2026-10-17T20:32:16Z"
+      },
+      "SNAPSHOT_BYTES_OR_EXCERPT": [
+        {
+          "path": "docs/research/derivtrace/falsification/review-evidence/issue48/e03-comment-6240565495-part-01.txt",
+          "original_byte_range_half_open": [
+            0,
+            4472
+          ],
+          "snapshot_bytes": 4472,
+          "sha256": "c4f6673ca50f184f84efdee8f7a8cb80f2770b56a9fe94c68ed354a8d5decb76",
+          "original_line_start": 1
+        },
+        {
+          "path": "docs/research/derivtrace/falsification/review-evidence/issue48/e03-comment-6240565495-part-02.txt",
+          "original_byte_range_half_open": [
+            4560,
+            5037
+          ],
+          "snapshot_bytes": 477,
+          "sha256": "d7763e2f3cbf24b411d3eaa1715a44ef2e6f28ad3e8d0f9c795709af4a814d6f",
+          "original_line_start": 126
+        }
+      ],
+      "FULL_SOURCE_OR_PARTIAL_EXCERPT": "PARTIAL_EXCERPT",
+      "SHA256": "912a2278bd8ed238a297e2bb079628eff42de1350a2363d57185b0f4c007c062",
+      "GIT_BLOB_WHERE_APPLICABLE": null,
+      "ACQUISITION_TIME": "2026-11-03T09:14:51.222885+00:00",
+      "ACQUISITION_STARTED": "2026-11-03T09:14:50.650384+00:00",
+      "ACQUISITION_METHOD": "official authenticated gh api; body UTF-8, no added newline",
+      "VERIFICATION_LIMITS": "Exact supplied bytes only; no execution occurrence, independent upstream-origin authentication, acquisition honesty, complete custody, later edits, or semantic truth follows from hashes. Partial source only; omitted bytes are not independently reviewable from this packet. Byte ranges are never silently concatenated as a full source. Local-path lines in some E03 comment bodies are excluded for privacy.",
+      "APPLICABLE_REPORT_CLAIMS": [
+        "E03 recorded revision/STOP/adjudication succession only"
+      ],
+      "EVIDENCE_CLASS": "MUTABLE_ACQUIRED_RECORD",
+      "FULL_ORIGINAL_BYTES": 5037
+    },
+    {
+      "ID": "e03-comment-6242838268",
+      "ORIGINAL_SOURCE_IDENTITY": {
+        "api_endpoint": "repos/fanilosendrison/proto-ring/issues/comments/6242838268",
+        "representation": "body UTF-8, no added newline",
+        "url": "https://github.com/fanilosendrison/proto-ring/issues/71#issuecomment-6242838268",
+        "provider_created_at": "2026-10-17T23:06:51Z",
+        "provider_updated_at": "2026-10-17T23:06:51Z"
+      },
+      "SNAPSHOT_BYTES_OR_EXCERPT": [
+        {
+          "path": "docs/research/derivtrace/falsification/review-evidence/issue48/e03-comment-6242838268-part-01.txt",
+          "original_byte_range_half_open": [
+            0,
+            1283
+          ],
+          "snapshot_bytes": 1283,
+          "sha256": "1150f34ed9760d8d83c9b977d24ffae3417bdc16fd08526dba8724c26ebe792e",
+          "original_line_start": 1
+        }
+      ],
+      "FULL_SOURCE_OR_PARTIAL_EXCERPT": "FULL_SOURCE",
+      "SHA256": "1150f34ed9760d8d83c9b977d24ffae3417bdc16fd08526dba8724c26ebe792e",
+      "GIT_BLOB_WHERE_APPLICABLE": null,
+      "ACQUISITION_TIME": "2026-11-03T09:14:51.848489+00:00",
+      "ACQUISITION_STARTED": "2026-11-03T09:14:51.222933+00:00",
+      "ACQUISITION_METHOD": "official authenticated gh api; body UTF-8, no added newline",
+      "VERIFICATION_LIMITS": "Exact supplied bytes only; no execution occurrence, independent upstream-origin authentication, acquisition honesty, complete custody, later edits, or semantic truth follows from hashes.",
+      "APPLICABLE_REPORT_CLAIMS": [
+        "E03 recorded revision/STOP/adjudication succession only"
+      ],
+      "EVIDENCE_CLASS": "MUTABLE_ACQUIRED_RECORD",
+      "FULL_ORIGINAL_BYTES": 1283
+    },
+    {
+      "ID": "e03-comment-6243583925",
+      "ORIGINAL_SOURCE_IDENTITY": {
+        "api_endpoint": "repos/fanilosendrison/proto-ring/issues/comments/6243583925",
+        "representation": "body UTF-8, no added newline",
+        "url": "https://github.com/fanilosendrison/proto-ring/issues/71#issuecomment-6243583925",
+        "provider_created_at": "2026-10-18T00:12:02Z",
+        "provider_updated_at": "2026-10-18T00:12:02Z"
+      },
+      "SNAPSHOT_BYTES_OR_EXCERPT": [
+        {
+          "path": "docs/research/derivtrace/falsification/review-evidence/issue48/e03-comment-6243583925-part-01.txt",
+          "original_byte_range_half_open": [
+            0,
+            3931
+          ],
+          "snapshot_bytes": 3931,
+          "sha256": "bc1df5aeeaf0a3aa478bb45eb327d5591644395b4a5a73b0424918ea86e823d0",
+          "original_line_start": 1
+        }
+      ],
+      "FULL_SOURCE_OR_PARTIAL_EXCERPT": "FULL_SOURCE",
+      "SHA256": "bc1df5aeeaf0a3aa478bb45eb327d5591644395b4a5a73b0424918ea86e823d0",
+      "GIT_BLOB_WHERE_APPLICABLE": null,
+      "ACQUISITION_TIME": "2026-11-03T09:14:52.478908+00:00",
+      "ACQUISITION_STARTED": "2026-11-03T09:14:51.848531+00:00",
+      "ACQUISITION_METHOD": "official authenticated gh api; body UTF-8, no added newline",
+      "VERIFICATION_LIMITS": "Exact supplied bytes only; no execution occurrence, independent upstream-origin authentication, acquisition honesty, complete custody, later edits, or semantic truth follows from hashes.",
+      "APPLICABLE_REPORT_CLAIMS": [
+        "E03 recorded revision/STOP/adjudication succession only"
+      ],
+      "EVIDENCE_CLASS": "MUTABLE_ACQUIRED_RECORD",
+      "FULL_ORIGINAL_BYTES": 3931
+    },
+    {
+      "ID": "e03-comment-6272110960",
+      "ORIGINAL_SOURCE_IDENTITY": {
+        "api_endpoint": "repos/fanilosendrison/proto-ring/issues/comments/6272110960",
+        "representation": "body UTF-8, no added newline",
+        "url": "https://github.com/fanilosendrison/proto-ring/issues/71#issuecomment-6272110960",
+        "provider_created_at": "2026-10-19T16:33:47Z",
+        "provider_updated_at": "2026-10-19T16:33:47Z"
+      },
+      "SNAPSHOT_BYTES_OR_EXCERPT": [
+        {
+          "path": "docs/research/derivtrace/falsification/review-evidence/issue48/e03-comment-6272110960-part-01.txt",
+          "original_byte_range_half_open": [
+            0,
+            2114
+          ],
+          "snapshot_bytes": 2114,
+          "sha256": "ed7f5e6f1262e161ed30a61d37cf1b69e2d20131d92bfdf5c9d6f0ecb5834a9c",
+          "original_line_start": 1
+        }
+      ],
+      "FULL_SOURCE_OR_PARTIAL_EXCERPT": "FULL_SOURCE",
+      "SHA256": "ed7f5e6f1262e161ed30a61d37cf1b69e2d20131d92bfdf5c9d6f0ecb5834a9c",
+      "GIT_BLOB_WHERE_APPLICABLE": null,
+      "ACQUISITION_TIME": "2026-11-03T09:14:53.150675+00:00",
+      "ACQUISITION_STARTED": "2026-11-03T09:14:52.478949+00:00",
+      "ACQUISITION_METHOD": "official authenticated gh api; body UTF-8, no added newline",
+      "VERIFICATION_LIMITS": "Exact supplied bytes only; no execution occurrence, independent upstream-origin authentication, acquisition honesty, complete custody, later edits, or semantic truth follows from hashes.",
+      "APPLICABLE_REPORT_CLAIMS": [
+        "E03 recorded revision/STOP/adjudication succession only"
+      ],
+      "EVIDENCE_CLASS": "MUTABLE_ACQUIRED_RECORD",
+      "FULL_ORIGINAL_BYTES": 2114
+    },
+    {
+      "ID": "e03-comment-6272403006",
+      "ORIGINAL_SOURCE_IDENTITY": {
+        "api_endpoint": "repos/fanilosendrison/proto-ring/issues/comments/6272403006",
+        "representation": "body UTF-8, no added newline",
+        "url": "https://github.com/fanilosendrison/proto-ring/issues/71#issuecomment-6272403006",
+        "provider_created_at": "2026-10-19T16:48:37Z",
+        "provider_updated_at": "2026-10-19T16:48:37Z"
+      },
+      "SNAPSHOT_BYTES_OR_EXCERPT": [
+        {
+          "path": "docs/research/derivtrace/falsification/review-evidence/issue48/e03-comment-6272403006-part-01.txt",
+          "original_byte_range_half_open": [
+            0,
+            1957
+          ],
+          "snapshot_bytes": 1957,
+          "sha256": "c335cde93fd568355ab1def794ea3f1dd3630e862087c20bc20713a0d36a0adc",
+          "original_line_start": 1
+        }
+      ],
+      "FULL_SOURCE_OR_PARTIAL_EXCERPT": "FULL_SOURCE",
+      "SHA256": "c335cde93fd568355ab1def794ea3f1dd3630e862087c20bc20713a0d36a0adc",
+      "GIT_BLOB_WHERE_APPLICABLE": null,
+      "ACQUISITION_TIME": "2026-11-03T09:14:53.947675+00:00",
+      "ACQUISITION_STARTED": "2026-11-03T09:14:53.150718+00:00",
+      "ACQUISITION_METHOD": "official authenticated gh api; body UTF-8, no added newline",
+      "VERIFICATION_LIMITS": "Exact supplied bytes only; no execution occurrence, independent upstream-origin authentication, acquisition honesty, complete custody, later edits, or semantic truth follows from hashes.",
+      "APPLICABLE_REPORT_CLAIMS": [
+        "E03 recorded revision/STOP/adjudication succession only"
+      ],
+      "EVIDENCE_CLASS": "MUTABLE_ACQUIRED_RECORD",
+      "FULL_ORIGINAL_BYTES": 1957
+    },
+    {
+      "ID": "e03-comment-6274321903",
+      "ORIGINAL_SOURCE_IDENTITY": {
+        "api_endpoint": "repos/fanilosendrison/proto-ring/issues/comments/6274321903",
+        "representation": "body UTF-8, no added newline",
+        "url": "https://github.com/fanilosendrison/proto-ring/issues/71#issuecomment-6274321903",
+        "provider_created_at": "2026-10-19T18:28:27Z",
+        "provider_updated_at": "2026-10-19T18:28:27Z"
+      },
+      "SNAPSHOT_BYTES_OR_EXCERPT": [
+        {
+          "path": "docs/research/derivtrace/falsification/review-evidence/issue48/e03-comment-6274321903-part-01.txt",
+          "original_byte_range_half_open": [
+            0,
+            3521
+          ],
+          "snapshot_bytes": 3521,
+          "sha256": "e4e3cc87b08e418b4e8c229faa8c864c357b906b73e9b08b86870fedc3be127e",
+          "original_line_start": 1
+        }
+      ],
+      "FULL_SOURCE_OR_PARTIAL_EXCERPT": "FULL_SOURCE",
+      "SHA256": "e4e3cc87b08e418b4e8c229faa8c864c357b906b73e9b08b86870fedc3be127e",
+      "GIT_BLOB_WHERE_APPLICABLE": null,
+      "ACQUISITION_TIME": "2026-11-03T09:14:54.658718+00:00",
+      "ACQUISITION_STARTED": "2026-11-03T09:14:53.947729+00:00",
+      "ACQUISITION_METHOD": "official authenticated gh api; body UTF-8, no added newline",
+      "VERIFICATION_LIMITS": "Exact supplied bytes only; no execution occurrence, independent upstream-origin authentication, acquisition honesty, complete custody, later edits, or semantic truth follows from hashes.",
+      "APPLICABLE_REPORT_CLAIMS": [
+        "E03 recorded revision/STOP/adjudication succession only"
+      ],
+      "EVIDENCE_CLASS": "MUTABLE_ACQUIRED_RECORD",
+      "FULL_ORIGINAL_BYTES": 3521
+    },
+    {
+      "ID": "e03-comment-6274443154",
+      "ORIGINAL_SOURCE_IDENTITY": {
+        "api_endpoint": "repos/fanilosendrison/proto-ring/issues/comments/6274443154",
+        "representation": "body UTF-8, no added newline",
+        "url": "https://github.com/fanilosendrison/proto-ring/issues/71#issuecomment-6274443154",
+        "provider_created_at": "2026-10-19T18:34:45Z",
+        "provider_updated_at": "2026-10-19T18:34:45Z"
+      },
+      "SNAPSHOT_BYTES_OR_EXCERPT": [
+        {
+          "path": "docs/research/derivtrace/falsification/review-evidence/issue48/e03-comment-6274443154-part-01.txt",
+          "original_byte_range_half_open": [
+            0,
+            3428
+          ],
+          "snapshot_bytes": 3428,
+          "sha256": "ead160ea5e80a495f27c35183e0191ebbfa5969cef677a0ca3065100e0327b78",
+          "original_line_start": 1
+        }
+      ],
+      "FULL_SOURCE_OR_PARTIAL_EXCERPT": "FULL_SOURCE",
+      "SHA256": "ead160ea5e80a495f27c35183e0191ebbfa5969cef677a0ca3065100e0327b78",
+      "GIT_BLOB_WHERE_APPLICABLE": null,
+      "ACQUISITION_TIME": "2026-11-03T09:14:55.291410+00:00",
+      "ACQUISITION_STARTED": "2026-11-03T09:14:54.658762+00:00",
+      "ACQUISITION_METHOD": "official authenticated gh api; body UTF-8, no added newline",
+      "VERIFICATION_LIMITS": "Exact supplied bytes only; no execution occurrence, independent upstream-origin authentication, acquisition honesty, complete custody, later edits, or semantic truth follows from hashes.",
+      "APPLICABLE_REPORT_CLAIMS": [
+        "E03 recorded revision/STOP/adjudication succession only"
+      ],
+      "EVIDENCE_CLASS": "MUTABLE_ACQUIRED_RECORD",
+      "FULL_ORIGINAL_BYTES": 3428
+    },
+    {
+      "ID": "e03-comment-6274701356",
+      "ORIGINAL_SOURCE_IDENTITY": {
+        "api_endpoint": "repos/fanilosendrison/proto-ring/issues/comments/6274701356",
+        "representation": "body UTF-8, no added newline",
+        "url": "https://github.com/fanilosendrison/proto-ring/issues/71#issuecomment-6274701356",
+        "provider_created_at": "2026-10-19T18:47:50Z",
+        "provider_updated_at": "2026-10-19T18:47:50Z"
+      },
+      "SNAPSHOT_BYTES_OR_EXCERPT": [
+        {
+          "path": "docs/research/derivtrace/falsification/review-evidence/issue48/e03-comment-6274701356-part-01.txt",
+          "original_byte_range_half_open": [
+            0,
+            2159
+          ],
+          "snapshot_bytes": 2159,
+          "sha256": "e6eb666600cdc4f1887a245f9ed485ac91aacef8e8544a94546794f92e91a613",
+          "original_line_start": 1
+        }
+      ],
+      "FULL_SOURCE_OR_PARTIAL_EXCERPT": "FULL_SOURCE",
+      "SHA256": "e6eb666600cdc4f1887a245f9ed485ac91aacef8e8544a94546794f92e91a613",
+      "GIT_BLOB_WHERE_APPLICABLE": null,
+      "ACQUISITION_TIME": "2026-11-03T09:14:55.895195+00:00",
+      "ACQUISITION_STARTED": "2026-11-03T09:14:55.291473+00:00",
+      "ACQUISITION_METHOD": "official authenticated gh api; body UTF-8, no added newline",
+      "VERIFICATION_LIMITS": "Exact supplied bytes only; no execution occurrence, independent upstream-origin authentication, acquisition honesty, complete custody, later edits, or semantic truth follows from hashes.",
+      "APPLICABLE_REPORT_CLAIMS": [
+        "E03 recorded revision/STOP/adjudication succession only"
+      ],
+      "EVIDENCE_CLASS": "MUTABLE_ACQUIRED_RECORD",
+      "FULL_ORIGINAL_BYTES": 2159
+    },
+    {
+      "ID": "e03-comment-6278217842",
+      "ORIGINAL_SOURCE_IDENTITY": {
+        "api_endpoint": "repos/fanilosendrison/proto-ring/issues/comments/6278217842",
+        "representation": "body UTF-8, no added newline",
+        "url": "https://github.com/fanilosendrison/proto-ring/issues/71#issuecomment-6278217842",
+        "provider_created_at": "2026-10-19T21:53:20Z",
+        "provider_updated_at": "2026-10-19T21:53:20Z"
+      },
+      "SNAPSHOT_BYTES_OR_EXCERPT": [
+        {
+          "path": "docs/research/derivtrace/falsification/review-evidence/issue48/e03-comment-6278217842-part-01.txt",
+          "original_byte_range_half_open": [
+            0,
+            3167
+          ],
+          "snapshot_bytes": 3167,
+          "sha256": "b9d7e21cfd4c240bcfd847eb1515d0cc18eec35da252e7a42fbb27d4bee2fb64",
+          "original_line_start": 1
+        }
+      ],
+      "FULL_SOURCE_OR_PARTIAL_EXCERPT": "FULL_SOURCE",
+      "SHA256": "b9d7e21cfd4c240bcfd847eb1515d0cc18eec35da252e7a42fbb27d4bee2fb64",
+      "GIT_BLOB_WHERE_APPLICABLE": null,
+      "ACQUISITION_TIME": "2026-11-03T09:14:56.609734+00:00",
+      "ACQUISITION_STARTED": "2026-11-03T09:14:55.895245+00:00",
+      "ACQUISITION_METHOD": "official authenticated gh api; body UTF-8, no added newline",
+      "VERIFICATION_LIMITS": "Exact supplied bytes only; no execution occurrence, independent upstream-origin authentication, acquisition honesty, complete custody, later edits, or semantic truth follows from hashes.",
+      "APPLICABLE_REPORT_CLAIMS": [
+        "E03 recorded revision/STOP/adjudication succession only"
+      ],
+      "EVIDENCE_CLASS": "MUTABLE_ACQUIRED_RECORD",
+      "FULL_ORIGINAL_BYTES": 3167
+    },
+    {
+      "ID": "e04-v46-report",
+      "ORIGINAL_SOURCE_IDENTITY": {
+        "repository": "fanilosendrison/ruu",
+        "commit": "5d04c58170b2ce3f0e47aa0554a97906d2256492",
+        "path": "qualification/state-space/post-baseline/v046/state-space-audit-v46.md",
+        "git_blob": "e60fe00030d36f3785c5e9612ae182276de1cf86"
+      },
+      "SNAPSHOT_BYTES_OR_EXCERPT": [
+        {
+          "path": "docs/research/derivtrace/falsification/review-evidence/issue48/e04-v46-report-part-01.txt",
+          "original_byte_range_half_open": [
+            0,
+            1859
+          ],
+          "snapshot_bytes": 1859,
+          "sha256": "7e33722eab3122b4e870deaa2a5fc3acc8d6d6dd812b826dc1666beff97cdbd7",
+          "original_line_start": 1
+        }
+      ],
+      "FULL_SOURCE_OR_PARTIAL_EXCERPT": "PARTIAL_EXCERPT",
+      "SHA256": "d7c305b5adf6a56e579222e64562a9086585487557f4b036aa36ce4309546f53",
+      "GIT_BLOB_WHERE_APPLICABLE": "e60fe00030d36f3785c5e9612ae182276de1cf86",
+      "ACQUISITION_TIME": "2026-11-03T09:14:57.027922+00:00",
+      "ACQUISITION_STARTED": "2026-11-03T09:14:56.609858+00:00",
+      "ACQUISITION_METHOD": "official authenticated gh api; contents base64 decoded and Git blob recomputed",
+      "VERIFICATION_LIMITS": "Exact supplied bytes only; no execution occurrence, independent upstream-origin authentication, acquisition honesty, complete custody, later edits, or semantic truth follows from hashes. Historical POSTDATED_PROVENANCE_UNDETERMINED is retained despite new acquisition on 2026-11-03. Partial source only; omitted bytes are not independently reviewable from this packet. Byte ranges are never silently concatenated as a full source. Local-path lines in some E03 comment bodies are excluded for privacy.",
+      "APPLICABLE_REPORT_CLAIMS": [
+        "E04 v46 report date is unresolved historical provenance"
+      ],
+      "EVIDENCE_CLASS": "IMMUTABLE_SOURCE_BYTES",
+      "FULL_ORIGINAL_BYTES": 6297
+    }
+  ],
+  "explicit_unsupported_or_omitted": [
+    {
+      "class": "PRIVATE_EVIDENCE_HOLD",
+      "records": 5,
+      "identities": "WITHHELD",
+      "action": "NOT_QUERIED; no additional metadata or substitute published"
+    },
+    {
+      "class": "OMITTED_FROM_REVIEW_PACKET",
+      "scope": "All original 122-record sources not represented by these selected originals remain known only through supplied inventory assertions; original historical API serializations and their full timelines are not reacquired identically. No exhaustive later-ADMIT, historic execution or normative-currentness search."
+    },
+    {
+      "class": "UNDETERMINED",
+      "scope": "Actual historic execution/authorship and custody; source semantic fidelity; original reviewer execution; omitted import/runtime/test/build closure; original frozen research model bodies; four #55 anomaly artifacts not all individually acquired; independent process/effect history; complete repository and provider history."
+    },
+    {
+      "class": "OUT_OF_SCOPE",
+      "scope": "Every RP01-RP19 execution, control or new admission; private E05 source; archived assurance execution; live provider negative probe; #38 falsification and #49 corpus completion."
+    }
+  ],
+  "packet_metadata_files": [
+    {
+      "path": "docs/research/derivtrace/falsification/review-evidence/issue48/.gitattributes",
+      "sha256": "b60dfb62dad626cc6c8239025e43c264e790f952a0a580ee01c0415c8cda3b96",
+      "purpose": "Git data-only whitespace classification; not observational evidence; does not exempt authored report/manifest"
+    }
+  ]
+}

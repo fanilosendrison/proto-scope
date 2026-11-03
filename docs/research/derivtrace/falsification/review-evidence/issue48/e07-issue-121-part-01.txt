@@ -1,0 +1,83 @@
+## Problem
+
+The Rust Normative Terminology registry parser rejects contract-valid, non-empty `term_structure` cells containing internal Markdown backticks. The current Turnlock-Rust terminology registry uses these opaque classifications, so Rust returns no entries with `registry_structure` while the existing consumer wrapper returns all entries without errors.
+
+This blocks exact language-independent registry parity for Proto-Ring Issue #70 Phase B5. Changing compatibility transport, preprocessing consumer Markdown, or rewriting consumer evidence would bypass the established semantic engine boundary rather than correct the defect.
+
+## Evidence and provenance
+
+Reproduced against:
+
+- Proto-Ring engine source: `e7198c200e59ec1b9eb6af0ec2e14e1d379a179f`
+- Turnlock-Rust source: `be76128d2007eec3e3906d13c0bf00d861fcaa10`
+- Turnlock-Rust document: `docs/specification/turnlock-spec.md`
+- Turnlock-Rust wrapper: `scripts/check-normative-terminology.py`
+
+The Python wrapper produces 26 ordered registry entries and no errors. Direct compatibility delegation to Rust `normative_terminology::parse_registry` produces zero entries and `registry_structure`.
+
+The failure is isolated to four registry rows whose opaque `term_structure` values contain internal backticks:
+
+```text
+compound; overloaded modifier: `bounded`
+compound of `raw-llm-inference`
+compound; overloaded modifier: `bounded`
+compound of `independent-agent`
+```
+
+Each row passes independently through the current Python provider and fails independently through the Rust parser. The unchanged Rust Normative Terminology corpus remains `79/79`, demonstrating that the current corpus does not cover this consumer-valid representation.
+
+## Current authoritative boundary
+
+`docs/contracts/normative-terminology.md` requires one non-empty term-structure classification and states that the parser does not interpret term-structure classifications. Its restricted backtick rules apply explicitly to concept keys, canonical terms, aliases, and deprecated expressions; they do not prohibit internal backticks in the opaque term-structure classification.
+
+Turnlock-Rust retains authority over its classification values. Compatibility transport must delegate to the Rust engine and must not repair, reinterpret, or normalize consumer Markdown.
+
+Semantic disposition: `derived-from-existing-authority`.
+
+Affected layers:
+
+- `normative-contract`
+- `verification-or-qualification-evidence`
+- `architecture-or-implementation`
+- `integration-or-conformance`
+
+No new product-semantic decision is required. The Rust realization and its regression evidence must be corrected to satisfy existing authority.
+
+## Scope
+
+Included:
+
+- Correct Rust registry parsing for opaque non-empty term-structure classifications containing internal backticks.
+- Add an independent regression test using the real Rust parser.
+- Requalify Normative Terminology and global Rust parity.
+- Reproduce exact Turnlock-Rust registry parity after the correction.
+
+Excluded:
+
+- Consumer-document or inventory changes.
+- Compatibility-layer Markdown preprocessing or fallback parsing.
+- Native regex, Python production changes, transport changes, or new operations.
+- Any change to consumer-owned classification meaning.
+
+## Acceptance criteria
+
+- [ ] The exact pinned Turnlock-Rust registry parses to 26 ordered Rust entries with zero diagnostics.
+- [ ] All four affected `term_structure` values are preserved byte-for-byte in UTF-8 text.
+- [ ] Existing strict registry behavior for keys, canonical terms, aliases, deprecated expressions, table shape, and empty term structures is unchanged.
+- [ ] A real Rust parser regression test fails before the correction and passes afterward.
+- [ ] Normative Terminology remains `79/79` for the published corpus.
+- [ ] Global Rust conformance remains fully matching with no mismatch or unavailable result.
+- [ ] Python tests remain fully passing without Python production mutation.
+- [ ] Exact Turnlock-Rust registry entry and diagnostic parity passes.
+
+## Validation
+
+Run the repository's strict formatting, Clippy, workspace test, doctest, release-build, global corpus, Python, and patch-whitespace gates. Repeat the exact Turnlock-Rust registry parity probe through the Rust engine boundary.
+
+## Authoritative references
+
+- `docs/contracts/normative-terminology.md` — Registry model and consumer authority
+- `crates/proto-ring-engine/src/normative_terminology/registry.rs`
+- `crates/proto-ring-engine/src/normative_terminology/mod.rs`
+- Turnlock-Rust `docs/specification/turnlock-spec.md` at `be76128d2007eec3e3906d13c0bf00d861fcaa10`
+- Turnlock-Rust `scripts/check-normative-terminology.py` at `be76128d2007eec3e3906d13c0bf00d861fcaa10`

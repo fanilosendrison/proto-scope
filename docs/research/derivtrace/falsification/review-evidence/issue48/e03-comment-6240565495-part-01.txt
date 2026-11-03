@@ -1,0 +1,124 @@
+## Phase 2 — STOPPED on provider-state capability gap (no publication)
+
+```text
+RESULT=
+STOPPED
+
+FAILED_GATE=
+ISSUE71_PHASE2_AUTHORITY_GAP
+
+TURNLOCK_BASELINE_SHA=
+031941b501535c8041e191dad1ec57b5e1bb4462
+
+PROTO_RING_PROVIDER_SHA=
+657c950ed63af9597fb594b7e2ddd3a5d36075a2
+
+PROTO_RING_TRANSPORT_VERSION=
+1
+
+NATIVE_PROVIDER_IDENTITY=
+EXACT
+
+NATIVE_PROVIDER_BINARY_SHA256=
+4e901c77fa36c00e8c2160d6967da303f0b9e14ff36eba11a0f12b6c73c04fa5
+
+CLEAN_NATIVE_PROVIDER_REALIZATION=
+PASS
+
+CLEAN_NATIVE_REPOSITORY_INTEGRITY=
+BLOCKED
+
+TURNLOCK_REPOSITORY_INTEGRITY=
+BLOCKED
+
+ISSUE71_PHASE2_PREPUBLICATION_REVIEW=
+NOT_REACHED
+
+ISSUE72_EXECUTED=
+NO
+
+PROTO_RING_CONTENT_MUTATION=
+NONE
+```
+
+### Discovery (atomic statement)
+
+The bound provider's repository-governance-state load deadlocks whenever the
+governed repository root contains an ignored tree large enough to fill the
+`git check-ignore` pipe pair. `repository_state::git::run_git_with_optional_input`
+writes the entire untracked-path query to the child's stdin before reading the
+child's stdout (`wait_with_output`), while both stdout and stderr are piped.
+`git check-ignore --no-index --verbose -z --stdin` echoes four fields per
+matching path, so a real Python virtual environment under the repository root
+saturates the 64 KiB stdout pipe; the child then stops draining stdin and the
+parent blocks forever in `write(2)`.
+
+### Evidence (realized provider, exact commit)
+
+```text
+compose on root WITHOUT .venv          -> rc=0   2.4s   (result)
+compose on root WITH .venv (1995 files)-> no exit >=180s  (deadlock)
+compose, single symlink .venv          -> rc=0   8.2s   (traversal cost only)
+repository-integrity.evaluate with .venv -> no exit >=25s (same load path)
+
+sample(1) of the blocked process, 2884/2884 samples:
+  ...repository_governance_state::orchestrate::load
+  -> repository_state::capture::capture
+  -> repository_state::git::capture_structure
+  -> repository_state::git::classify_ignored_paths
+  -> repository_state::git::run_git_with_optional_input
+  -> std::process::ChildStdin::write_all
+  -> write()  [blocked]
+
+live child while blocked, state S:
+  git -C <root> check-ignore --no-index --verbose -z --stdin
+```
+
+### Content independence
+
+The same deadlock reproduces on the **unmodified persistent checkout** at the
+exact baseline `031941b5…` (2075 ignored files under its `.venv`). It is not
+caused by the candidate migration changes and is not repository-content
+selective.
+
+### Why this is not an ordinary implementation defect
+
+* The defective code is in Proto-Ring (`crates/proto-ring-engine/src/repository_state/git.rs`).
+  Task constraints forbid any Proto-Ring modification.
+* The Python provider at the previous pin `dedb01a3…` contains **no**
+  `check-ignore` call at all (0 files matched at that commit), so the Rust port
+  introduces this capability and its failure mode; there is no preserved
+  behaviour to fall back to inside the authorized boundary.
+* Turnlock's canonical validation environment places `.venv` inside the
+  repository root (`AGENTS.md`; Issue #71 Phase-2 §27 explicitly fixes
+  `python3 -m venv .venv` and `.venv/bin/python scripts/check-repository-integrity.py`).
+  §28 additionally mandates a fresh task-local venv plus full Repository
+  Integrity, and §32 the canonical run.
+
+### Consequence
+
+Every operation that loads repository governance state blocks: 
+`repository-governance-state.compose`, `evidence-requirements.registry`, and
+`repository-integrity.evaluate`. The affected validator surface is the
+compose-based checks (governance authority, governed objects, structured
+governance, binding-registry currentness), the Evidence Requirements loading in
+formal traceability, and the canonical integrity entry point itself.
+
+Therefore `CLEAN_NATIVE_REPOSITORY_INTEGRITY`, `TURNLOCK_REPOSITORY_INTEGRITY`,
+and the §31/§32 qualification cannot be satisfied in the mandated environment.
+
+### Resolving this requires authority I do not hold
+
+Exactly one of the following, none of which is mine to choose:
+
+1. a Proto-Ring fix to `run_git_with_optional_input`
+   (concurrent stdin writing / stdout draining, or non-piped capture);
+2. a Turnlock governance decision changing the canonical validation
+   environment so no large ignored tree exists under the governed root;
+3. an explicit acceptance that canonical local validation cannot complete and a
+   restatement of the qualification environment.
+
+### Preserved state (nothing published)
+
+```text
+TASK_WORKTREE=

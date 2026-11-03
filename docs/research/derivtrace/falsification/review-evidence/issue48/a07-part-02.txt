@@ -1,0 +1,21 @@
+## 8. Execution safety assessment
+
+| Material risk | Operation | Proposed control | Actual support evidence | Consequence of unavailable control |
+|---|---|---|---|---|
+| Source-repository mutation | Checkout preparation | Separately bounded local no-hardlink clone; source origin read-only; no source-side operations | A clean local repository reportedly contains the commit; creation was not tested | Cannot establish source nonmutation; admission remains held |
+| Proto-Scope mutation | Preparation and evidence capture | All paths under the owned temporary root; no Proto-Scope path in P1/N1/P2 | Candidate paths are outside Proto-Scope | No enforced write boundary exists; hidden or erroneous writes remain possible |
+| Unauthorized writes | P1, N1, P2 | `-B`; named evidence allowlist; checkout read-only; owned `HOME` and `TMPDIR`; filesystem-deny policy | Script has no explicit file operations; `-B` prevents `.pyc` writes | Per-process write denial and source-tree immutability were not validated |
+| Network | Preparation, runtime, hidden components | Local-only source; empty environment; enforce per-process network denial | Script has no explicit network operations; GitHub tokens are absent in discovery | No network-denial control was tested; absence of explicit source calls is not enforcement |
+| Credentials | All operations | `env -i`; do not pass `SSH_AUTH_SOCK`; owned `HOME`; no provider command | Relevant tokens were reported absent; `SSH_AUTH_SOCK` would be removed | Filesystem permissions could still expose credentials by absolute path without sandbox enforcement |
+| Process execution | Preflight and P1/N1/P2 | Exact executable allowlist and hashes; script has no explicit subprocess calls | Tool identities and static script structure are supplied | No process-execution allowlist is enforced; hidden runtime behavior remains unknown |
+| Symlink/path escape | Preparation and all operations | Physical cwd; absolute paths; reject symlink components; no-hardlink clone; exclusive root | Proposed absolute paths are public-safe; root was absent at discovery | Symlink, hardlink, race, and path-containment checks were not validated |
+| Provider actions | All operations | No provider command, network credential, or provider target | Defined operations are local | Without network denial, runtime-level provider access is not mechanically impossible |
+| Protected refs | Preparation and all operations | Detached exact commit; no push, fetch, branch update, or credential | P1/N1/P2 contain no ref-changing command | Checkout preparation is still unspecified; no enforced prohibition has been demonstrated |
+| Private data | Preparation and publication | Withhold local origin; publish only whitelisted evidence; empty environment | This record exposes no user-identifying source path, mounted-volume name, or credential value | Checkout metadata or raw logs could reveal private origin details unless inspected before publication |
+| Temporary ownership | Preparation | Exclusive creation of the exact owned root, restrictive permissions, initially absent evidence names | Root was absent only at discovery time | Exclusive creation, owner verification, and later noninterference are untested |
+| Cleanup | After evidence qualification only | No cleanup during P1/N1/P2; later cleanup must validate the exact target and preserve accepted evidence first | No destructive cleanup command is presently defined | Retention and cleanup safety are unresolved; broad deletion must not be improvised |
+| Host identity | All runtime operations | Resolve the 10.13.6 versus 12.7.6 conflict before execution | Both conflicting descriptions are preserved | The accepted runtime boundary cannot presently be named truthfully |
+| Capture integrity | P1/N1/P2 | Exact witness binds cwd, argv, environment, streams, statuses, hashes, and operation IDs | Required evidence names and semantics are defined | No capture driver has been validated, so C2–C4 custody remains prospective |
+
+The script appears low-effect under source inspection, but source inspection is not an enforceable containment mechanism. The lack of validated write denial, network denial, checkout preparation, path containment, capture implementation, cleanup, and resolved host identity prevents the safety gate from passing.
+

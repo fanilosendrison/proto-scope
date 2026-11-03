@@ -1,0 +1,369 @@
+5. `sources/E01/issue-111-comments.json.source` — record=`issue-111-comments.json`; bytes=2767; sha256=`1eaa2f565aab3b4adb3bdb2364fecc73fd9eef9fdacc7faeb94c2dea61e40975`; commit/blob=`null/null`; mutability=`MUTABLE_SNAPSHOT_AT_A`; `H/HI`.
+6. `sources/E01/issue-111-timeline.json.source` — record=`issue-111-timeline.json`; bytes=121060; sha256=`adad99c476db90307177757f9b07df248939f789e659f97c5825c9690197656b`; commit/blob=`null/null`; mutability=`MUTABLE_SNAPSHOT_AT_A`; `H/HI`.
+7. `sources/E01/7ccde07f4d9801383d6a2410e3d12ce6ee716f34-src__proto_ring__repository_state.py.source` — record=`src/proto_ring/repository_state.py`; bytes=11782; sha256=`11c6b8f0b1f608547c34171a23038b8c91a546d2b772a723661fa458d2a06bf4`; commit=`7ccde07f4d9801383d6a2410e3d12ce6ee716f34`; blob=`a9a407d3227f5570bda7fbafac0b2eaf793d9719`; mutability=`IMMUTABLE_GIT_OBJECT`; `F/FP`.
+8. `sources/E01/0b140d0505878b5283ca271de60fbee79c1bc0a9-src__proto_ring__repository_state.py.source` — record=`src/proto_ring/repository_state.py`; bytes=12171; sha256=`9a3c929651ceae415bc86acb219142fac9d94145dc72c03ec2e537a889b009c4`; commit=`0b140d0505878b5283ca271de60fbee79c1bc0a9`; blob=`fdc6a4ea16fd0b90a32ab0d2f4bb11c3471244fe`; `IMMUTABLE_GIT_OBJECT`; `F/FP`.
+9. `sources/E01/0b140d0505878b5283ca271de60fbee79c1bc0a9-tests__test_repository_state.py.source` — record=`tests/test_repository_state.py`; bytes=17637; sha256=`6b1efa90ac4f7989f50cd7ebcd8f450a2d992d1e2a08750a94cdc4799695cea6`; commit=`0b140d0505878b5283ca271de60fbee79c1bc0a9`; blob=`21213539fc3c5e215d5283d3e280982d99338d1f`; `IMMUTABLE_GIT_OBJECT`; `F/FP`.
+10. `sources/E01/0b140d0505878b5283ca271de60fbee79c1bc0a9-docs__contracts__repository-state.md.source` — record=`docs/contracts/repository-state.md`; bytes=9094; sha256=`31488cec60a2cc854a8b547bd8240f415feab43b9faa44f3a87a595ac40268a5`; commit=`0b140d0505878b5283ca271de60fbee79c1bc0a9`; blob=`2f8e49ff8f7701fbe31be0cb0f4657d075d0dc46`; `IMMUTABLE_GIT_OBJECT`; `H/HD`.
+11. `sources/E01/0b140d0505878b5283ca271de60fbee79c1bc0a9-docs__contracts__repository-governance-state.md.source` — record=`docs/contracts/repository-governance-state.md`; bytes=8897; sha256=`03bfda8e5c19b148559e8a40880d917a469446099e2c86a2af4609501dee34c6`; commit=`0b140d0505878b5283ca271de60fbee79c1bc0a9`; blob=`2f0eba24774fef669d1147c71402f671f614d200`; `IMMUTABLE_GIT_OBJECT`; `H/HD`.
+12. `sources/E01/0b140d0505878b5283ca271de60fbee79c1bc0a9-docs__contracts__repository-integrity.md.source` — record=`docs/contracts/repository-integrity.md`; bytes=24075; sha256=`253a8dd318fbafaf9b762baebe15d5fe648764a2812ea17567d3eaaaa6b8839c`; commit=`0b140d0505878b5283ca271de60fbee79c1bc0a9`; blob=`387a4569c1b01effcec807b556120bfa8c48417a`; `IMMUTABLE_GIT_OBJECT`; `H/HD`.
+13. `sources/E01/1f103322d6816effcc102e35cbdd1e14bd33ba84-docs__contracts__repository-state.md.source` — record=`docs/contracts/repository-state.md`; bytes=10245; sha256=`298b1009348bb113a63af4f8085e9df9ae0156ebe9a1d6d6399a17e0cb692186`; commit=`1f103322d6816effcc102e35cbdd1e14bd33ba84`; blob=`1c25d1ee8bdb7dd4d3d1e0e9663c82969ab9a459`; `IMMUTABLE_GIT_OBJECT`; `H/HD`.
+14. `sources/E01/1f103322d6816effcc102e35cbdd1e14bd33ba84-docs__contracts__repository-governance-state.md.source` — record=`docs/contracts/repository-governance-state.md`; bytes=9341; sha256=`236ed22ee373cf9507a0a6f4495a4ea3752fcf2714a5fa3fc767bc9a220a32dc`; commit=`1f103322d6816effcc102e35cbdd1e14bd33ba84`; blob=`de472d312545d978254fb9325697c76b903b0cb0`; `IMMUTABLE_GIT_OBJECT`; `H/HD`.
+15. `sources/E01/1f103322d6816effcc102e35cbdd1e14bd33ba84-docs__contracts__repository-integrity.md.source` — record=`docs/contracts/repository-integrity.md`; bytes=24360; sha256=`40499d93f8fa810ad78862be9b3671860c20377fee3ca5b20010047752f2f6ec`; commit=`1f103322d6816effcc102e35cbdd1e14bd33ba84`; blob=`d5960584e2277510e4073358022c8089dfa99d03`; `IMMUTABLE_GIT_OBJECT`; `H/HD`.
+
+### E02
+
+16. `sources/E02/https-____github.com__fanilosendrison__proto-ring__issues__97.source` — record=`https://github.com/fanilosendrison/proto-ring/issues/97`; bytes=7107; sha256=`0dcbcd7f1ed9bc08f9e06bf9624c314b5b570b9ace0db5ee96b3eb6f9d0e9ff5`; commit/blob=`null/null`; mutability=`MUTABLE_SNAPSHOT_AT_2026-10-08T21:42:09Z`; `H/HI`.
+17. `sources/E02/issue-97-comments.json.source` — record=`issue-97-comments.json`; bytes=6763; sha256=`e6214f41a41b7e54dcfcefdbce4e9de1159145010dcdf10a2c054544d26edf69`; commit/blob=`null/null`; mutability=`MUTABLE_SNAPSHOT_AT_A`; `H/HI`.
+18. `sources/E02/issue-97-timeline.json.source` — record=`issue-97-timeline.json`; bytes=105315; sha256=`375761334c64f2f3a1f9f885d98464a28313d1d8f509511af67ec3e6c5d61159`; commit/blob=`null/null`; mutability=`MUTABLE_SNAPSHOT_AT_A`; `H/HI`.
+19. `sources/E02/https-____github.com__fanilosendrison__proto-ring__issues__115.source` — record=`https://github.com/fanilosendrison/proto-ring/issues/115`; bytes=6330; sha256=`3c444e34556031103915c50c3ae21e3865b28a7e9274164004eaea8e306ea3c7`; commit/blob=`null/null`; mutability=`MUTABLE_SNAPSHOT_AT_2026-10-11T14:45:04Z`; `H/HI`.
+20. `sources/E02/issue-115-comments.json.source` — record=`issue-115-comments.json`; bytes=12949; sha256=`b04b38e1a7d6ed323033fd1bc82bf4c68e0a3bb2543d46940898e0a05efe909a`; commit/blob=`null/null`; mutability=`MUTABLE_SNAPSHOT_AT_A`; `H/HI`.
+21. `sources/E02/issue-115-timeline.json.source` — record=`issue-115-timeline.json`; bytes=73510; sha256=`a77929c295a3387161c1f5e55a5bd4c4610bfae7ccb230f8b61c823a74a7809f`; commit/blob=`null/null`; mutability=`MUTABLE_SNAPSHOT_AT_A`; `H/HI`.
+22. `sources/E02/https-____github.com__fanilosendrison__proto-ring__issues__117.source` — record=`https://github.com/fanilosendrison/proto-ring/issues/117`; bytes=8222; sha256=`2366836200c4d68ba1500f49d80d3d7c98a9067621d37b2a505acde7087ffb76`; commit/blob=`null/null`; mutability=`MUTABLE_SNAPSHOT_AT_2026-10-11T16:18:33Z`; `H/HI`.
+23. `sources/E02/issue-117-comments.json.source` — record=`issue-117-comments.json`; bytes=6649; sha256=`033d705cad5d413a5e5480593951a43c756748ca5760479225b11dbdb07372e4`; commit/blob=`null/null`; mutability=`MUTABLE_SNAPSHOT_AT_A`; `H/HI`.
+24. `sources/E02/issue-117-timeline.json.source` — record=`issue-117-timeline.json`; bytes=92654; sha256=`f0282b924854b700e7ae8f53e2424afda4cde487ca472e38093d6ff0ee2194ce`; commit/blob=`null/null`; mutability=`MUTABLE_SNAPSHOT_AT_A`; `H/HI`.
+25. `sources/E02/55f8a78da2431504883ffea03a2cd56a776c3d7f-tools__run_python_tests.py.source` — record=`tools/run_python_tests.py`; bytes=17306; sha256=`849c8384b2807242a70a8be1ba417e3af3ed5470e68930e9f18e484b5a6b3485`; commit=`55f8a78da2431504883ffea03a2cd56a776c3d7f`; blob=`7482091b42054d4e6f1ff3eaf7e5123a5acd069b`; `IMMUTABLE_GIT_OBJECT`; `F/FP`.
+26. `sources/E02/55f8a78da2431504883ffea03a2cd56a776c3d7f-tests__test_python_test_runner.py.source` — record=`tests/test_python_test_runner.py`; bytes=6068; sha256=`a196736a91ca0bdcdc7414a07c804518b37b765b7391cd253fd14ffb04db6d88`; commit=`55f8a78da2431504883ffea03a2cd56a776c3d7f`; blob=`55280ce6e73d308f8503a4e1a279bc007cbd33f6`; `IMMUTABLE_GIT_OBJECT`; `F/FP`.
+27. `sources/E02/8f8f823594fa8fe914e097c9fd967197f9fa770f-tools__run_python_tests.py.source` — record=`tools/run_python_tests.py`; bytes=17766; sha256=`a9aa9484495cb0dfa2792a4bef6e9c60200a283f526d8b99435ea453d0b39451`; commit=`8f8f823594fa8fe914e097c9fd967197f9fa770f`; blob=`1a56711cfc68c8638ab785b026ac40bf777416ed`; `IMMUTABLE_GIT_OBJECT`; `F/FP`.
+28. `sources/E02/8f8f823594fa8fe914e097c9fd967197f9fa770f-tests__test_python_test_runner.py.source` — record=`tests/test_python_test_runner.py`; bytes=11330; sha256=`85e6210ea9b9d5647a26601a1c99248bc71a07973474aa3672ab3dcf638c96d0`; commit=`8f8f823594fa8fe914e097c9fd967197f9fa770f`; blob=`833532178f64ca878051dc00f1a57f2bce2ca384`; `IMMUTABLE_GIT_OBJECT`; `F/FP`.
+29. `sources/E02/8da0db5bfd94711db2f91cc8753872565a6bd540-tools__run_python_tests.py.source` — record=`tools/run_python_tests.py`; bytes=17766; sha256=`a9aa9484495cb0dfa2792a4bef6e9c60200a283f526d8b99435ea453d0b39451`; commit=`8da0db5bfd94711db2f91cc8753872565a6bd540`; blob=`1a56711cfc68c8638ab785b026ac40bf777416ed`; `IMMUTABLE_GIT_OBJECT`; `F/FP`.
+30. `sources/E02/8da0db5bfd94711db2f91cc8753872565a6bd540-tests__test_python_test_runner.py.source` — record=`tests/test_python_test_runner.py`; bytes=11330; sha256=`85e6210ea9b9d5647a26601a1c99248bc71a07973474aa3672ab3dcf638c96d0`; commit=`8da0db5bfd94711db2f91cc8753872565a6bd540`; blob=`833532178f64ca878051dc00f1a57f2bce2ca384`; `IMMUTABLE_GIT_OBJECT`; `F/FP`.
+31. `sources/E02/8da0db5bfd94711db2f91cc8753872565a6bd540-tests__test_conformance_corpus.py.source` — record=`tests/test_conformance_corpus.py`; bytes=23689; sha256=`c735f8acf72b48bb9a9ce574ac0c680fea665f739af624697c4dcbdbb5bbcced`; commit=`8da0db5bfd94711db2f91cc8753872565a6bd540`; blob=`ee63383ba029b3566bb8700cd279c93f411b4b6a`; `IMMUTABLE_GIT_OBJECT`; `F/FP`.
+32. `sources/E02/192fc6dca0e982f53667d6465ac8b46dd2a9864d-tools__run_python_tests.py.source` — record=`tools/run_python_tests.py`; bytes=19688; sha256=`9fc42b355f9d50dbc3656295c4052782d63f93378be93ea107b7755796b620d9`; commit=`192fc6dca0e982f53667d6465ac8b46dd2a9864d`; blob=`fb311227d997d28da24a84b197bc6ede98ef2dc6`; `IMMUTABLE_GIT_OBJECT`; `F/FP`.
+33. `sources/E02/192fc6dca0e982f53667d6465ac8b46dd2a9864d-tests__test_python_test_runner.py.source` — record=`tests/test_python_test_runner.py`; bytes=19241; sha256=`334292147c5420089297f6f196287dc7feaaabd3f9ce63316262326fa57ad83b`; commit=`192fc6dca0e982f53667d6465ac8b46dd2a9864d`; blob=`ad04634cb4240b49ff9e16b83e6214d8b2e181a5`; `IMMUTABLE_GIT_OBJECT`; `F/FP`.
+34. `sources/E02/192fc6dca0e982f53667d6465ac8b46dd2a9864d-tests__test_python_test_runner_evidence.py.source` — record=`tests/test_python_test_runner_evidence.py`; bytes=11812; sha256=`a752a8d1360c52ce4576589970b97dc750f777bf686d66d4d04f41f7246d2934`; commit=`192fc6dca0e982f53667d6465ac8b46dd2a9864d`; blob=`aea497f0fa6c1f839c19ead28b6cdc540e731021`; `IMMUTABLE_GIT_OBJECT`; `F/FP`.
+
+### E03
+
+35. `sources/E03/https-____github.com__fanilosendrison__proto-ring__issues__71.source` — record=`https://github.com/fanilosendrison/proto-ring/issues/71`; bytes=5347; sha256=`525c678aac9b8451ffa534c43c518caef7464af5121461e5a02304c5529a407a`; commit/blob=`null/null`; mutability=`MUTABLE_SNAPSHOT_AT_2026-10-19T21:53:31Z`; `H/HI`.
+36. `sources/E03/issue-71-comments.json.source` — record=`issue-71-comments.json`; bytes=56885; sha256=`16ab0859f57fd2477ad4a94f0249a4696b624c789e1235334441c15b1837cfcd`; commit/blob=`null/null`; mutability=`MUTABLE_SNAPSHOT_AT_A`; `H/HI`.
+37. `sources/E03/issue-71-timeline.json.source` — record=`issue-71-timeline.json`; bytes=213992; sha256=`223c49fc9392394ad4d3205c2e188034970813bfcbe9a548fa6b756e4b12d6e7`; commit/blob=`null/null`; mutability=`MUTABLE_SNAPSHOT_AT_A`; `H/HI`.
+
+### E04
+
+38. `sources/E04/5d04c58170b2ce3f0e47aa0554a97906d2256492-docs__adr__adr-080-separate-local-git-causality-remote-git-state-and-provider-workflow-evidence.md.source` — bytes=12816; sha256=`665805da6215a250e3e358a1c50d3f79bbafe07117c1885c3214f196dd4db915`; commit=`5d04c58170b2ce3f0e47aa0554a97906d2256492`; record=`docs/adr/adr-080-separate-local-git-causality-remote-git-state-and-provider-workflow-evidence.md`; blob=`170663464e65c18daea74cd4274b4ae27294b399`; `IMMUTABLE_GIT_OBJECT`; `H/HD`.
+39. `sources/E04/5d04c58170b2ce3f0e47aa0554a97906d2256492-qualification__state-space__v045__state-space-audit-v45.md.source` — bytes=2758; sha256=`fcd7e7a05aa14f7cae709ebeadf71ea049ad1fcddcaf9725e2fb70f086bb2ed3`; record=`qualification/state-space/v045/state-space-audit-v45.md`; blob=`99ae7676d3dc4f57d4319f2c4ac4a9a42ccfa84b`; same commit; `IMMUTABLE_GIT_OBJECT`; `H/HD`.
+40. `sources/E04/5d04c58170b2ce3f0e47aa0554a97906d2256492-qualification__state-space__v045__state-space-audit-v45.py.source` — bytes=6795; sha256=`84b9016765a5a8713db40df11888b657f63d309335d4e6890410d423057738ea`; record=`qualification/state-space/v045/state-space-audit-v45.py`; blob=`515f1067167d3ae331d4562c4dc8d879f2c74967`; same commit; `IMMUTABLE_GIT_OBJECT`; `F/FP`.
+41. `sources/E04/5d04c58170b2ce3f0e47aa0554a97906d2256492-qualification__state-space__v045__state-space-audit-v45.txt.source` — bytes=456; sha256=`76bc0a73f54bbcbe167a4bf985d6aff5bf6d60b0a03fe51e78bdaff9ca4765ae`; record=`qualification/state-space/v045/state-space-audit-v45.txt`; blob=`1e8d950b67f1d25707142ff62d003f741481fde7`; same commit; `IMMUTABLE_GIT_OBJECT`; `H/HD`.
+42. `sources/E04/5d04c58170b2ce3f0e47aa0554a97906d2256492-qualification__git-smoke__native-observation__git-native-observation-smoke-v5.sh.source` — bytes=4580; sha256=`c61b89345b85f99dbe8fd349df161b824859ab61e63e8aafd22e9ca3b12eae0e`; record=`qualification/git-smoke/native-observation/git-native-observation-smoke-v5.sh`; blob=`6fb3f25d5e3e8b51574ec5c4713aaac56d3e9992`; same commit; `IMMUTABLE_GIT_OBJECT`; `F/FS`.
+43. `sources/E04/5d04c58170b2ce3f0e47aa0554a97906d2256492-qualification__git-smoke__native-observation__git-native-observation-smoke-v5.txt.source` — bytes=217; sha256=`b4356bf172f05943cbcab9d1f22a230a3ee229c85e88644c7608de90d88ea8b6`; record=`qualification/git-smoke/native-observation/git-native-observation-smoke-v5.txt`; blob=`b64bbef0627d6afc99aeafb22dd373bdf46394f3`; same commit; `IMMUTABLE_GIT_OBJECT`; `H/HD`.
+44. `sources/E04/5d04c58170b2ce3f0e47aa0554a97906d2256492-qualification__state-space__post-baseline__v046__qualification-metadata.json.source` — bytes=1071; sha256=`f0aa18852273d05752fa2dc59e844b52b1f0b8e8c58bf72a908ab810257eab38`; record=`qualification/state-space/post-baseline/v046/qualification-metadata.json`; blob=`6904a478fdc5fe00975d37144283be08af4a04db`; same commit; `IMMUTABLE_GIT_OBJECT`; `D/PD`.
+45. `sources/E04/5d04c58170b2ce3f0e47aa0554a97906d2256492-qualification__state-space__post-baseline__v046__state-space-audit-v46.md.source` — bytes=6297; sha256=`d7c305b5adf6a56e579222e64562a9086585487557f4b036aa36ce4309546f53`; record=`qualification/state-space/post-baseline/v046/state-space-audit-v46.md`; blob=`e60fe00030d36f3785c5e9612ae182276de1cf86`; same commit; `IMMUTABLE_GIT_OBJECT`; `D/PD`.
+46. `sources/E04/5d04c58170b2ce3f0e47aa0554a97906d2256492-qualification__state-space__post-baseline__v046__state-space-audit-v46.py.source` — bytes=12348; sha256=`661d9487a1b8dba91d45deeb837b3c635b1cedd3f97123a631ecec8e4aae2326`; record=`qualification/state-space/post-baseline/v046/state-space-audit-v46.py`; blob=`91d74c7ccea716c598c2121c2143b1f92ed51266`; same commit; `IMMUTABLE_GIT_OBJECT`; `D/PD`.
+47. `sources/E04/5d04c58170b2ce3f0e47aa0554a97906d2256492-qualification__state-space__post-baseline__v046__state-space-audit-v46.txt.source` — bytes=793; sha256=`5853b0779896ccf0265fcf7d0b37c388188f3667445e013054a6b666dc586bbe`; record=`qualification/state-space/post-baseline/v046/state-space-audit-v46.txt`; blob=`f1a97c3e460a59e56903edd5c066ebabba6f209e`; same commit; `IMMUTABLE_GIT_OBJECT`; `D/PD`.
+48. `sources/E04/5d04c58170b2ce3f0e47aa0554a97906d2256492-qualification__state-space__post-baseline__v046__git-authoring-dependency-retention-smoke-v1.sh.source` — bytes=2253; sha256=`b6127f3fe77910fd66859a219db91476fea2077a60498f10c13bf6f6d275d852`; record=`qualification/state-space/post-baseline/v046/git-authoring-dependency-retention-smoke-v1.sh`; blob=`acc621a289d7618eab501b0a9fd5db91e8f43424`; same commit; `IMMUTABLE_GIT_OBJECT`; `D/PD`.
+
+### E05
+
+49. `[PRIVATE E05 RECORD 1 OF 5 — IDENTITY AND METADATA WITHHELD]` — class/profile=`P/PH`.
+50. `[PRIVATE E05 RECORD 2 OF 5 — IDENTITY AND METADATA WITHHELD]` — class/profile=`P/PH`.
+51. `[PRIVATE E05 RECORD 3 OF 5 — IDENTITY AND METADATA WITHHELD]` — class/profile=`P/PH`.
+52. `[PRIVATE E05 RECORD 4 OF 5 — IDENTITY AND METADATA WITHHELD]` — class/profile=`P/PH`.
+53. `[PRIVATE E05 RECORD 5 OF 5 — IDENTITY AND METADATA WITHHELD]` — class/profile=`P/PH`.
+
+E05 exists and uses private Turnlock source. At the already-public issue #35 boundary, its candidate concerns logical run/process identity, SQLite authority, state/event/artifact isolation, and cleanup. It makes no external business-effect claim.
+
+### E06
+
+54. `sources/E06/https-____github.com__fanilosendrison__turnlock-rust__issues__70.source` — record=`https://github.com/fanilosendrison/turnlock-rust/issues/70`; bytes=8966; sha256=`807d0dec5472968f2a19299451d620abcf2df397ebc956a2c6b6e42cf0f506eb`; commit/blob=`null/null`; mutability=`MUTABLE_SNAPSHOT_AT_2026-10-16T09:14:50Z`; `H/HI`.
+55. `sources/E06/issue-70-comments.json.source` — record=`issue-70-comments.json`; bytes=47118; sha256=`a8b4820ea76dca598f21f47c628e9b32f4cffb43e6561921e5b2e46fe50d6b14`; commit/blob=`null/null`; mutability=`MUTABLE_SNAPSHOT_AT_A`; `H/HI`.
+56. `sources/E06/issue-70-timeline.json.source` — record=`issue-70-timeline.json`; bytes=240176; sha256=`146262da7edfb7cc36a089fd8c1d476b946eced87134f89728cee2611c0fae90`; commit/blob=`null/null`; mutability=`MUTABLE_SNAPSHOT_AT_A`; `H/HI`.
+57. `sources/E06/https-____github.com__fanilosendrison__turnlock-rust__issues__74.source` — record=`https://github.com/fanilosendrison/turnlock-rust/issues/74`; bytes=16851; sha256=`917e13fb39292506c67f55edca4bf70adb557de558bd8c594237a7859f696b53`; commit/blob=`null/null`; mutability=`MUTABLE_SNAPSHOT_AT_2026-10-16T13:58:29Z`; `H/HI`.
+58. `sources/E06/issue-74-comments.json.source` — record=`issue-74-comments.json`; bytes=26651; sha256=`2336527cfd077153ebbf2dbf7cc20d0e4258fc6f32e09ccfeab400cc7b204759`; commit/blob=`null/null`; mutability=`MUTABLE_SNAPSHOT_AT_A`; `H/HI`.
+59. `sources/E06/issue-74-timeline.json.source` — record=`issue-74-timeline.json`; bytes=185143; sha256=`96295fadd252334237233d82bdf636b29eeb361fd659046b056be4025b3ed40b`; commit/blob=`null/null`; mutability=`MUTABLE_SNAPSHOT_AT_A`; `H/HI`.
+60. `sources/E06/https-____github.com__fanilosendrison__turnlock-rust__issues__92.source` — record=`https://github.com/fanilosendrison/turnlock-rust/issues/92`; bytes=9835; sha256=`8a26a2b91ea40c948028b07732c1f9f66a36181641741f63bee23e5479f8c6fc`; commit/blob=`null/null`; mutability=`MUTABLE_SNAPSHOT_AT_2026-10-22T16:17:18Z`; `H/HI`.
+61. `sources/E06/issue-92-comments.json.source` — record=`issue-92-comments.json`; bytes=9984; sha256=`83ba25537b888d6752b78204881342750992f8032bad35204873d44a1d7cd863`; commit/blob=`null/null`; mutability=`MUTABLE_SNAPSHOT_AT_A`; `H/HI`.
+62. `sources/E06/issue-92-timeline.json.source` — record=`issue-92-timeline.json`; bytes=76999; sha256=`8ccdced39ea08f1f1e0947545e01528c284cf0fddc381b8d588c0989d987da9b`; commit/blob=`null/null`; mutability=`MUTABLE_SNAPSHOT_AT_A`; `H/HI`.
+63. `sources/E06/5656eb822398e6faef38ac838166b7b20382d10b-docs__specification__turnlock-spec.md.source` — record=`docs/specification/turnlock-spec.md`; bytes=222398; sha256=`49775a0a73702448505e083b03a544ab2dc715e11f4439834c0d816db6e611f0`; commit=`5656eb822398e6faef38ac838166b7b20382d10b`; blob=`6af726a5effa2d461dc8c2bdc86b11fa295d458d`; `IMMUTABLE_GIT_OBJECT`; `H/HD`.
+64. `sources/E06/5656eb822398e6faef38ac838166b7b20382d10b-formal__verification.yaml.source` — record=`formal/verification.yaml`; bytes=40349; sha256=`da1df882ef09257125e874ee9c358bdf8ffdec2e6d175a04eb0b057750fcf99a`; same commit; blob=`0984a504f9b3de05a38fe7aa9de04f4512fad985`; `IMMUTABLE_GIT_OBJECT`; `H/HD`.
+65. `sources/E06/5656eb822398e6faef38ac838166b7b20382d10b-docs__adr__adr-023-clarify-caller-context-and-continuation-semantics-across-nested-workflow-invocations.md.source` — bytes=7704; sha256=`1c82db54f484d89a2f644114870fa8cf56331c6d19382f57c31f745560169885`; record=`docs/adr/adr-023-clarify-caller-context-and-continuation-semantics-across-nested-workflow-invocations.md`; blob=`16839365ebe538cadd46a8969497459d2e46a89f`; same commit; `IMMUTABLE_GIT_OBJECT`; `H/HD`.
+66. `sources/E06/5656eb822398e6faef38ac838166b7b20382d10b-docs__adr__adr-036-define-occurrence-scoped-conditional-orchestration-progress-without-universal-completion.md.source` — bytes=10373; sha256=`1fbfb6088e13091232d5b91d236280c48c4e4f3bd8d6c9ab88c99af1632677fe`; record=`docs/adr/adr-036-define-occurrence-scoped-conditional-orchestration-progress-without-universal-completion.md`; blob=`8fb3b4c3c94f3953af2ba4a8005b904767df20bb`; same commit; `IMMUTABLE_GIT_OBJECT`; `H/HD`.
+67. `sources/E06/5656eb822398e6faef38ac838166b7b20382d10b-docs__adr__adr-041-establish-turnlock-formal-assurance-architecture.md.source` — bytes=19884; sha256=`2319492c39d340358fd28c51b85fe181cd08504034f9dd2c8a013f3d052d5042`; record=`docs/adr/adr-041-establish-turnlock-formal-assurance-architecture.md`; blob=`e67a76c1b2acfd75e24c97a4bfc019c4a6da1e54`; same commit; `IMMUTABLE_GIT_OBJECT`; `H/HD`.
+68. `sources/E06/be76128d2007eec3e3906d13c0bf00d861fcaa10-formal__verification.yaml.source` — record=`formal/verification.yaml`; bytes=40923; sha256=`ac0fd52d94afdd683365a7d8da10b470b9ed7838cc41c9f808842e40bbe5e8c2`; commit=`be76128d2007eec3e3906d13c0bf00d861fcaa10`; blob=`5df0f5ed3b919f6a62a7eb5e6a4bf79caed50c50`; `IMMUTABLE_GIT_OBJECT`; `H/HD`.
+69. `sources/E06/be76128d2007eec3e3906d13c0bf00d861fcaa10-docs__formal__invariant-mapping.md.source` — record=`docs/formal/invariant-mapping.md`; bytes=32384; sha256=`4d6493d68fefec00412eed150386aadb19ed29cbbbd8a99826161dbbf7004dfa`; same commit; blob=`2df10e98c111b99f2e6d065054ce7f20a18bfd30`; `IMMUTABLE_GIT_OBJECT`; `H/HD`.
+70. `sources/E06/be76128d2007eec3e3906d13c0bf00d861fcaa10-formal__reviews__README.md.source` — record=`formal/reviews/README.md`; bytes=26830; sha256=`2bfede3f84d7dd23926ccd5174edf35077e5f31f8b5a2f14daad2b9066de85d0`; same commit; blob=`7ff39186ff49d5b18154ea08efec3dbffcb23e43`; `IMMUTABLE_GIT_OBJECT`; `H/HD`.
+71. `sources/E06/815cea6eacbeb1c252e172b46e0468e7491b613e-docs__adr__adr-059-retire-formal-assurance-architecture-and-reopen-post-invariant-design.md.source` — bytes=6530; sha256=`cb9b8c95d9e41ae760d04a35e4f63f8e97f373157957f4834305e3cbd7b40300`; commit=`815cea6eacbeb1c252e172b46e0468e7491b613e`; record=`docs/adr/adr-059-retire-formal-assurance-architecture-and-reopen-post-invariant-design.md`; blob=`102d2a53fc0be8f6b564473a10177c1af89fa90e`; `IMMUTABLE_GIT_OBJECT`; `H/HD`.
+72. `sources/E06/815cea6eacbeb1c252e172b46e0468e7491b613e-docs__history__formal-assurance-2026-10-20__README.md.source` — bytes=3088; sha256=`54472c4b1a9e752027d4ad8b01f0d89e20c5e58b89d590b5a8ea498b147e9dd1`; record=`docs/history/formal-assurance-2026-10-20/README.md`; blob=`23ccff0b7af4e7cc4d5889a64fc126eaedd4a171`; same commit; `IMMUTABLE_GIT_OBJECT`; `H/HD`.
+73. `sources/E06/815cea6eacbeb1c252e172b46e0468e7491b613e-docs__history__formal-assurance-2026-10-20__retirement-map.json.source` — bytes=52192; sha256=`f273caeb73cec6006821ab223a25fa528e3a0ab8add4308d4384ed12f6835144`; record=`docs/history/formal-assurance-2026-10-20/retirement-map.json`; blob=`805e7e0d179fe023f619843539f81d8e1d522521`; same commit; `IMMUTABLE_GIT_OBJECT`; `H/HD`.
+74. `sources/E06/815cea6eacbeb1c252e172b46e0468e7491b613e-docs__history__formal-assurance-2026-10-20__source-manifest.json.source` — bytes=63336; sha256=`4734fa1a4b3f6faca5bb5a355fa4da1cfadcdfb9d713f7ccb778980a5eec43f4`; record=`docs/history/formal-assurance-2026-10-20/source-manifest.json`; blob=`2b838ac3b7c408684b764838f9e2024b48150349`; same commit; `IMMUTABLE_GIT_OBJECT`; `H/HD`.
+
+### E07
+
+75. `sources/E07/https-____github.com__fanilosendrison__proto-ring__issues__121.source` — record=`https://github.com/fanilosendrison/proto-ring/issues/121`; bytes=8291; sha256=`f91a10f9a4520e75dde99ad76bac714e62be382c007f26cf15dc780e55b049a7`; commit/blob=`null/null`; mutability=`MUTABLE_SNAPSHOT_AT_2026-10-17T16:06:23Z`; `H/HI`.
+76. `sources/E07/issue-121-comments.json.source` — record=`issue-121-comments.json`; bytes=9748; sha256=`73cbe486f3632d3d4f40822cc61f50bdc1111a4d0ef32660839d71a551f1f2f4`; commit/blob=`null/null`; mutability=`MUTABLE_SNAPSHOT_AT_A`; `H/HI`.
+77. `sources/E07/issue-121-timeline.json.source` — record=`issue-121-timeline.json`; bytes=84340; sha256=`e6d7a3c492783364434d534548ae0a4ff7a4ea14d79bd3c7f40a1ccd7c216cdd`; commit/blob=`null/null`; mutability=`MUTABLE_SNAPSHOT_AT_A`; `H/HI`.
+78. `sources/E07/https-____github.com__fanilosendrison__proto-ring__issues__122.source` — record=`https://github.com/fanilosendrison/proto-ring/issues/122`; bytes=8202; sha256=`bae295f22f5518af3dd4a3ee5890f4b30f6ecc5c9ed3a988d90e72b450b5ab9c`; commit/blob=`null/null`; mutability=`MUTABLE_SNAPSHOT_AT_2026-10-16T22:08:08Z`; `H/HI`.
+79. `sources/E07/issue-122-comments.json.source` — record=`issue-122-comments.json`; bytes=3335; sha256=`655b59ecfefed1be52d6b272c9e08e968514c507a92adfd918d10a4976474be5`; commit/blob=`null/null`; mutability=`MUTABLE_SNAPSHOT_AT_A`; `H/HI`.
+80. `sources/E07/issue-122-timeline.json.source` — record=`issue-122-timeline.json`; bytes=67471; sha256=`c8b5d93580f032f2467f3c3b0ca89c49a3ee135f757b99b3ab5e6441c7725bac`; commit/blob=`null/null`; mutability=`MUTABLE_SNAPSHOT_AT_A`; `H/HI`.
+81. `sources/E07/https-____github.com__fanilosendrison__proto-ring__issues__126.source` — record=`https://github.com/fanilosendrison/proto-ring/issues/126`; bytes=7176; sha256=`786a90cf02b844fd752e06a855ef561fb24f0d3da3fa2a0e9375d49bbbc4aecd`; commit/blob=`null/null`; mutability=`MUTABLE_SNAPSHOT_AT_2026-10-20T10:42:24Z`; `H/HI`.
+82. `sources/E07/issue-126-comments.json.source` — record=`issue-126-comments.json`; bytes=30169; sha256=`e0f43927f21bba271fbb97db24406747a05f77f1f2a3122e56ff6ecb9030d468`; commit/blob=`null/null`; mutability=`MUTABLE_SNAPSHOT_AT_A`; `H/HI`.
+83. `sources/E07/issue-126-timeline.json.source` — record=`issue-126-timeline.json`; bytes=108009; sha256=`368e50cb621dfa5c74c609497b30e2008054a70c6e202ad25d6b0f3ee3091fcb`; commit/blob=`null/null`; mutability=`MUTABLE_SNAPSHOT_AT_A`; `H/HI`.
+84. `sources/E07/e7198c200e59ec1b9eb6af0ec2e14e1d379a179f-crates__proto-ring-engine__src__normative_terminology__registry.rs.source` — record=`crates/proto-ring-engine/src/normative_terminology/registry.rs`; bytes=9206; sha256=`476181d8710350d1bfa812fcafdf380a5f742d64e293e6929c81ee9ed5d885e4`; commit=`e7198c200e59ec1b9eb6af0ec2e14e1d379a179f`; blob=`520cf5119312ac8602437f5e62c53d420e11113c`; `IMMUTABLE_GIT_OBJECT`; `F/FR`.
+85. `sources/E07/7d60b0467d30f4251aa4160b4878a05ce366c44a-crates__proto-ring-engine__src__normative_terminology__registry.rs.source` — record=`crates/proto-ring-engine/src/normative_terminology/registry.rs`; bytes=9522; sha256=`8afbcb7767679983428e581560ba5f7a30064c1aded06322ecc7e9dc53c426eb`; commit=`7d60b0467d30f4251aa4160b4878a05ce366c44a`; blob=`d71b1cdd2fddd2e0a822bb943bab0778248021ce`; `IMMUTABLE_GIT_OBJECT`; `F/FR`.
+86. `sources/E07/7d60b0467d30f4251aa4160b4878a05ce366c44a-crates__proto-ring-engine__tests__issue121_term_structure.rs.source` — record=`crates/proto-ring-engine/tests/issue121_term_structure.rs`; bytes=2694; sha256=`70850a2e19c1ba523ce6ea76804614e6dba642a267f1b02d98651bc149816676`; same commit; blob=`523d035ae0ffcafd50fc55167b80a209ec60a057`; `IMMUTABLE_GIT_OBJECT`; `F/FR`.
+87. `sources/E07/69ea1effb2a92932127953190778fe95a7fc184a-crates__proto-ring-engine__tests__issue121_term_structure.rs.source` — record=`crates/proto-ring-engine/tests/issue121_term_structure.rs`; bytes=2694; sha256=`70850a2e19c1ba523ce6ea76804614e6dba642a267f1b02d98651bc149816676`; commit=`69ea1effb2a92932127953190778fe95a7fc184a`; blob=`523d035ae0ffcafd50fc55167b80a209ec60a057`; `IMMUTABLE_GIT_OBJECT`; `F/FR`.
+88. `sources/E07/69ea1effb2a92932127953190778fe95a7fc184a-crates__proto-ring-engine__tests__issue122_unicode_checkout.rs.source` — record=`crates/proto-ring-engine/tests/issue122_unicode_checkout.rs`; bytes=454; sha256=`fd498419114f517d374b12599b8d8d1431a5dd6fd9d81891ca4e332466d34407`; same commit; blob=`4d001c6c201cb3ab0f5de4df36142625ce34fe2e`; `IMMUTABLE_GIT_OBJECT`; `F/FR`.
+89. `sources/E07/69ea1effb2a92932127953190778fe95a7fc184a-.gitattributes.source` — record=`.gitattributes`; bytes=124; sha256=`000a9f71bef51a5c4e100097ac5d8e58079ffdef277fe487cdfcd38a1b71986c`; same commit; blob=`d2cbe4c31128e44f9142260a465823178d0c9dee`; `IMMUTABLE_GIT_OBJECT`; `H/HD`.
+90. `sources/E07/814a884ccb759b0fdbde48673a74428d6443b847-crates__proto-ring-engine__src__repository_governance_model.rs.source` — record=`crates/proto-ring-engine/src/repository_governance_model.rs`; bytes=9828; sha256=`d43dbbd0f8bf7e86b5896aaa9aba6ae905d50ddc28228856470ebcb8f2536dc3`; commit=`814a884ccb759b0fdbde48673a74428d6443b847`; blob=`8174f9ef19193b2b309f7bedcb8197751bab29fc`; `IMMUTABLE_GIT_OBJECT`; `F/FR`.
+91. `sources/E07/814a884ccb759b0fdbde48673a74428d6443b847-conformance__v1__cases__repository-governance-model.load.matrix.json.source` — record=`conformance/v1/cases/repository-governance-model.load.matrix.json`; bytes=63258; sha256=`5af6ac4798f5c558505a25f0bad77ee8e374cf135831b29c7817ce88af6e700f`; same commit; blob=`58fa0ac940c5a4e925cef1d571f7f703d0064787`; `IMMUTABLE_GIT_OBJECT`; `F/FR`.
+92. `sources/E07/a3f16cad79d95e0abb942d67ab62d7637d778ae3-crates__proto-ring-engine__src__repository_governance_model.rs.source` — record=`crates/proto-ring-engine/src/repository_governance_model.rs`; bytes=9803; sha256=`a3086e2b4c04fc750c161fab9c83d60dab246d915a94c03253cec95894d4765c`; commit=`a3f16cad79d95e0abb942d67ab62d7637d778ae3`; blob=`e1ed03655d687f0f63132e51661955554bad0c19`; `IMMUTABLE_GIT_OBJECT`; `F/FR`.
+93. `sources/E07/a3f16cad79d95e0abb942d67ab62d7637d778ae3-conformance__v1__cases__repository-governance-model.load.matrix.json.source` — record=`conformance/v1/cases/repository-governance-model.load.matrix.json`; bytes=88324; sha256=`3fb4512440c4cbd5bab6fef2564d453091842e93257754bf0bb8f41fe89927a9`; same commit; blob=`0f1014c6063bda0e8a93bad2769493ef4058ed48`; `IMMUTABLE_GIT_OBJECT`; `F/FR`.
+94. `sources/E07/a3f16cad79d95e0abb942d67ab62d7637d778ae3-tests__conformance_python_adapter_63_64.py.source` — record=`tests/conformance_python_adapter_63_64.py`; bytes=19772; sha256=`2582bded75dfebd2d2822c7e2d4d131e60e5e331c13934ed22ac18ef86245b77`; same commit; blob=`920964ad5ce8f2ca3e641fe1a1fa3941b6e8c1e1`; `IMMUTABLE_GIT_OBJECT`; `F/FP`.
+
+### E08
+
+95. `sources/E08/https-____github.com__fanilosendrison__proto-lithify__issues__14.source` — record=`https://github.com/fanilosendrison/proto-lithify/issues/14`; bytes=7560; sha256=`86740dd1ec5e210c7d45a4ce8f815c1ffff198371015a46101f6a6e9d1fe401f`; commit/blob=`null/null`; mutability=`MUTABLE_SNAPSHOT_AT_2026-10-24T23:53:00Z`; `H/HI`.
+96. `sources/E08/issue-14-comments.json.source` — record=`issue-14-comments.json`; bytes=3307; sha256=`7afd827dc8ef45a128c782c7489290c71648078c270b2c69f5cdbabbbb38870c`; commit/blob=`null/null`; mutability=`MUTABLE_SNAPSHOT_AT_A`; `H/HI`.
+97. `sources/E08/issue-14-timeline.json.source` — record=`issue-14-timeline.json`; bytes=122276; sha256=`78d14252e3e1e90fa5b898c34aa9fe92c2142e892eed4c9d6b61eb56f3a09602`; commit/blob=`null/null`; mutability=`MUTABLE_SNAPSHOT_AT_A`; `H/HI`.
+98. `sources/E08/https-____github.com__fanilosendrison__proto-lithify__pull__17.source` — record=`https://github.com/fanilosendrison/proto-lithify/pull/17`; bytes=17644; sha256=`b3f4e6becaf53fa2d2823aef58d17eb1e06df1d204ce9556f1b10fbf8d89fcf4`; commit/blob=`null/null`; mutability=`MUTABLE_SNAPSHOT_AT_2026-10-24T23:52:14Z`; `H/HI`.
+99. `sources/E08/pr-17-comments.json.source` — record=`pr-17-comments.json`; bytes=1851; sha256=`cf8df8f65198438b2f513a3491d248918a03d2f069f00c17178ea3daa7d02f62`; commit/blob=`null/null`; mutability=`MUTABLE_SNAPSHOT_AT_A`; `H/HI`.
+100. `sources/E08/pr-17-files.json.source` — record=`pr-17-files.json`; bytes=722; sha256=`fce8c04b74e5e7198fc0a058ce955630785bcd5d855c281e1999298a08a7b8bf`; commit/blob=`null/null`; mutability=`MUTABLE_SNAPSHOT_AT_A`; `H/HI`.
+101. `sources/E08/pr-17-check-runs.json.source` — record=`pr-17-check-runs.json`; bytes=3143; sha256=`b21a2a0ba08839ded0b6ee245b6c08a573319456d88bf691507be6563c7ecfb1`; commit/blob=`null/null`; mutability=`MUTABLE_SNAPSHOT_AT_A`; `H/HI`.
+102. `sources/E08/actions-run-40144240373.source` — record=`actions-run:40144240373`; bytes=13609; sha256=`655d2ac4e8ffb607b7c62850a8b83b5898c902a475ec4dad601f9ab9b7ae31dd`; commit/blob=`null/null`; mutability=`MUTABLE_SNAPSHOT_AT_A`; `H/HI`.
+103. `sources/E08/actions-jobs-40144240373.source` — record=`actions-jobs:40144240373`; bytes=3677; sha256=`3347edc5ac3d65938af32a85441feeb402e5f089534dc186e7f584d519020b22`; commit/blob=`null/null`; mutability=`MUTABLE_SNAPSHOT_AT_A`; `H/HI`.
+104. `sources/E08/actions-run-40144365896.source` — record=`actions-run:40144365896`; bytes=13538; sha256=`74726b5dfa9f56b15c122c00933e5701221c726186a2d4c85bbf2d559fa01d69`; commit/blob=`null/null`; mutability=`MUTABLE_SNAPSHOT_AT_A`; `H/HI`.
+105. `sources/E08/actions-jobs-40144365896.source` — record=`actions-jobs:40144365896`; bytes=3496; sha256=`6b45213640676cef72bd34aaed732ea99a85d66f6fb5fa18439f50bf00178b70`; commit/blob=`null/null`; mutability=`MUTABLE_SNAPSHOT_AT_A`; `H/HI`.
+106. `sources/E08/ruleset-25801378.source` — record=`ruleset:25801378`; bytes=1248; sha256=`ef4923115dec1ec957008a5c5914b13b70be99d055e34346c969a81b72c670eb`; commit/blob=`null/null`; mutability=`MUTABLE_SNAPSHOT_AT_A`; `H/HI`.
+107. `sources/E08/9073b89a6eb7c7691be21f0e872f24d72fe69eb3-.github__workflows__ci.yml.source` — record=`.github/workflows/ci.yml`; bytes=2162; sha256=`86395893c2acde52fe9db1abaa71481dca1b7cf49112aa3e9ca43c1b508c7e32`; commit=`9073b89a6eb7c7691be21f0e872f24d72fe69eb3`; blob=`957ad2321eed2f6083f2a6ef42f7fdafd1d6b940`; `IMMUTABLE_GIT_OBJECT`; `F/FW`.
+108. `sources/E08/282ac0d8014878c44b97f06439269323018ebbec-.github__workflows__ci.yml.source` — record=`.github/workflows/ci.yml`; bytes=2237; sha256=`231510d5e90ebf318838c544daf9ee53841a82c8130af619597b1bc84a7bed7b`; commit=`282ac0d8014878c44b97f06439269323018ebbec`; blob=`f9e88c9dad0897a10c8302c3b7a6a214de6ca418`; `IMMUTABLE_GIT_OBJECT`; `F/FW`.
+109. `sources/E08/7bc80a8065fc79a070dd00bca6d07fe67a3a7cdc-.github__workflows__ci.yml.source` — record=`.github/workflows/ci.yml`; bytes=2162; sha256=`86395893c2acde52fe9db1abaa71481dca1b7cf49112aa3e9ca43c1b508c7e32`; commit=`7bc80a8065fc79a070dd00bca6d07fe67a3a7cdc`; blob=`957ad2321eed2f6083f2a6ef42f7fdafd1d6b940`; `IMMUTABLE_GIT_OBJECT`; `F/FW`.
+
+### Authority
+
+110. `sources/AUTHORITY/c7cc255346a5ae9f268ef67f5abced5e47c4f072-docs__research__derivtrace__dt-02-conceptual-model-v0-candidate.md.source` — bytes=58620; sha256=`e7dc04857cbe263a5e3872f3bbfa22484c6df5b4b31fc09803559005d99992e6`; commit=`c7cc255346a5ae9f268ef67f5abced5e47c4f072`; record=`docs/research/derivtrace/dt-02-conceptual-model-v0-candidate.md`; blob=`ceabee510f500049b6b3e4dee69df77dbad8bc11`; `IMMUTABLE_GIT_OBJECT`; `H/HD`.
+111. `sources/AUTHORITY/c7cc255346a5ae9f268ef67f5abced5e47c4f072-docs__research__derivtrace__dt-03-model-falsification-report.md.source` — bytes=37188; sha256=`61ebc0edd854ec2301098b0b6225b9797d760979a323699866345004f28eb563`; same commit; record=`docs/research/derivtrace/dt-03-model-falsification-report.md`; blob=`8a5295286cb4621dd66d878da0ef6710442da97b`; `IMMUTABLE_GIT_OBJECT`; `H/HD`.
+112. `sources/AUTHORITY/c7cc255346a5ae9f268ef67f5abced5e47c4f072-docs__research__derivtrace__falsification__dt-03-bounded-case-corpus.md.source` — bytes=101008; sha256=`91096ce34d5a5080cf0bbcf16be326eb7f0c904dae32b4ece8723a97cd86e6e4`; same commit; record=`docs/research/derivtrace/falsification/dt-03-bounded-case-corpus.md`; blob=`bb3536b5a9c2710f7dca9572da6e3f33c63148fd`; `IMMUTABLE_GIT_OBJECT`; `H/HD`.
+113. `sources/AUTHORITY/c7cc255346a5ae9f268ef67f5abced5e47c4f072-docs__research__derivtrace__dt-01-c-consolidated-observability-questions.md.source` — bytes=92521; sha256=`d3d82324316ab9b40213ea9482980c7fc1d2179bc14a6b95e515aec0c7703fc2`; same commit; record=`docs/research/derivtrace/dt-01-c-consolidated-observability-questions.md`; blob=`18c46dc3b41492b6d407eb7432e88ab1bbad56af`; `IMMUTABLE_GIT_OBJECT`; `H/HD`.
+114. `sources/AUTHORITY/c7cc255346a5ae9f268ef67f5abced5e47c4f072-docs__research__derivtrace__falsification__README.md.source` — bytes=2565; sha256=`14691390b2cab29d0b244a61c8c37385f46df7a9cd6a86926dd30898933d482a`; same commit; record=`docs/research/derivtrace/falsification/README.md`; blob=`491d2fc5495059c26e59192f3d99660d40ae0a35`; `IMMUTABLE_GIT_OBJECT`; `H/HD`.
+115. `sources/AUTHORITY/issue-35.source` — record=`issue:35`; bytes=18782; sha256=`645c19509eb61af8d02b9dc3d9cff707edbaa3a771d5566a98fc3195ef5a0f64`; commit/blob=`null/null`; mutability=`MUTABLE_SNAPSHOT_AT_A`; `H/HI`.
+116. `sources/AUTHORITY/issue-36.source` — record=`issue:36`; bytes=6758; sha256=`cf2354678a66512c58b98cfc196c310307ab788dfd2ea33dedccaced9cb519b1`; commit/blob=`null/null`; mutability=`MUTABLE_SNAPSHOT_AT_A`; `H/HI`.
+
+### Holdouts
+
+117. `sources/HOLDOUT/ruu-issue-47.source` — record=`issue:47`; bytes=8596; sha256=`66db93bbc8303a79a62d0b3d461b4d469f7174cafe70885d2a25412868f21ea1`; commit/blob=`null/null`; mutability=`MUTABLE_SNAPSHOT_AT_A`; `H/HL`.
+118. `sources/HOLDOUT/ruu-issue-47-comments.source` — record=`issue:47-comments`; bytes=2; sha256=`4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945`; commit/blob=`null/null`; mutability=`MUTABLE_SNAPSHOT_AT_A`; `H/HL`.
+119. `sources/HOLDOUT/ruu-issue-47-timeline.source` — record=`issue:47-timeline`; bytes=71518; sha256=`2dd8ffcb49102c62ccdcec99fa103183603d9d7a29b570479769e92e23fbcf17`; commit/blob=`null/null`; mutability=`MUTABLE_SNAPSHOT_AT_A`; `H/HL`.
+120. `sources/HOLDOUT/ruu-issue-55.source` — record=`issue:55`; bytes=12060; sha256=`c22adcf8765b2781486dd184133c10ab8d9cea3bef461f37d130466aba91a314`; commit/blob=`null/null`; mutability=`MUTABLE_SNAPSHOT_AT_A`; `H/HL`.
+121. `sources/HOLDOUT/ruu-issue-55-comments.source` — record=`issue:55-comments`; bytes=2178; sha256=`b5f6516f7b6f0e0a1aef74f08f49d224b51f29917ce196c210806afc38e72993`; commit/blob=`null/null`; mutability=`MUTABLE_SNAPSHOT_AT_A`; `H/HL`.
+122. `sources/HOLDOUT/ruu-issue-55-timeline.source` — record=`issue:55-timeline`; bytes=20112; sha256=`a8357d4fbb6a3d16f39f297511372252c876f3921a8cd000fe00fde805df8b08`; commit/blob=`null/null`; mutability=`MUTABLE_SNAPSHOT_AT_A`; `H/HL`.
+
+## 9. Case independence and selection-bias analysis
+
+The families are not independent samples:
+
+- E01, E02, E03, and E07 share Proto-Ring source, governance, test, and review practices.
+- E03 depends on Proto-Ring provider revisions also implicated by E07.
+- E04 and holdout #55 share the same Ruu v46 provenance anomaly.
+- E05 cannot be characterized publicly for cross-family independence beyond the already-public issue #35 boundary because its Turnlock source remains private.
+- E08 combines workflow fixtures and provider records from one controlled probe sequence; its negative and positive records are paired, not independent confirmations.
+- Issue, comment, timeline, PR, action, and ruleset records frequently derive from the same upstream operation.
+
+Selection bias includes:
+
+- oversampling issues with unusually detailed completion reports;
+- survival bias toward committed fixtures and published corrections;
+- post-fix bias where failing historical harnesses are missing but corrected tests survive;
+- repository-owner reporting bias;
+- platform bias toward Unix-local fixtures;
+- private-evidence exclusion;
+- provider-observability bias;
+- execution-substrate visibility bias, under which apparently self-contained fixture source is easier to select even when its interpreter, standard library, loader, dynamic dependencies, build tools, provider substrate, or transitive runtime bytes are outside authenticated custody;
+- issue-centered search rather than systematic repository-wide sampling.
+
+The selected corpus is a bounded adversarial set, not an exhaustive inventory or a statistical estimate of DT-M0 adequacy.
+
+## 10. Independent holdout-candidate search
+
+### Selected future holdout: Ruu #47
+
+Ruu #47 is materially distinct from E01–E08 because it targets end-to-end causal reconstruction, responsibility separation, tamper detection, requested recovery with descendants, independent verification, replacement-runtime continuity, and degraded native-Git operation.
+
+It is selected as a future corpus-expansion candidate because these targets add causal DAG, recovery, public-interface, verifier-independence, and runtime-continuity pressures not jointly covered by E01–E08.
+
+It is not admitted for current replay because:
+
+- the controlling issues/ADRs were not supplied as accepted immutable authority;
+- no executable source or expected output is present;
+- issue text expressly forbids inventing qualification semantics before those decisions;
+- a command cannot be derived without adding unauthorized semantics.
+
+Thus #47 is selected as materially distinct research pressure but its present replay disposition is `REJECTED_INSUFFICIENT_PROVENANCE`.
+
+### Rejected as an independent family: Ruu #55
+
+Ruu #55 is important evidence, but it is not selected as an independent ninth family because it is strongly correlated with E04’s v46 future-date anomaly. It supplies a useful governance decomposition—decision-log date versus qualification/report dates—but the exact four anomalous artifacts are not all separately present, and it does not add independent execution evidence.
+
+Its records remain admitted historically. Its replay remains `POSTDATED_PROVENANCE_UNDETERMINED`.
+
+No exhaustive holdout-selection claim is made.
+
+## 11. Non-authorizing closure requirements
+
+No positive control, negative control, command, effect, or E.2 execution plan is admitted for any replay unit.
+
+The following requirements are preserved only as prospective closure requirements. They grant no authority to execute:
+
+| Unit | Missing closure required before reconsideration |
+|---|---|
+| RP08 | Authenticate the exact detached checkout and both named v45 records; immutably identify and close over the Python interpreter executable, loader, every loaded standard-library file or module, dynamic runtime, native library, subprocess runtime, and every transitive executed byte; bind the wrapper’s exact working directory to the verified detached-checkout root so each relative path resolves to the authenticated object; enumerate all inputs and possible effects; prohibit network, credentials, and source-tree writes. |
+| RP15 | Authenticate the exact implementation, test, package, build-script, dependency, offline-cache, Cargo, Rust toolchain, Git, native Windows runtime, and every transitive executed byte before considering whether a qualifying native Windows environment exists. |
+| RP17 | Supply an exact safe command, immutable isolated provider fixture, authenticated provider and runtime closure, and an exact non-live negative probe. Live provider actions, protected-branch probes, credentialed mutations, and production-repository actions remain forbidden. |
+
+The formerly described RP08 byte-equality comparison and deliberately wrong expected-output comparison are not admitted controls under this inventory. They may be reconsidered only after the complete runtime closure and exact working-directory binding are established.
+
+Requirements stated elsewhere for RP01–RP07, RP09, and RP12–RP18 likewise remain non-authorizing. No prospective requirement becomes an executable control until a separate new admissibility decision extends custody over the exact execution substrate and itself passes review.
+
+## 12. DT-M0 properties each case could genuinely challenge
+
+| Family | Genuine surviving-core challenge |
+|---|---|
+| E01 | Could challenge C0 or local referent/context attachment only if a bounded construction shows that DT-M0’s own claimed local subject cannot remain coherently identified under its stated context. Demonstrating missing coherence semantics alone is task-relative inadequacy because DT-M0 leaves those domain relations external. |
+| E02 | Could challenge `C-STANDING` or `C-NONPROMOTION` if the fixed vocabulary forced path identity, byte equality, producing-run attribution, and evidential support to collapse. Current evidence instead reinforces their separation. |
+| E03 | Could challenge REL-08’s bounded applicability attachment if an examination could not be kept revision-bound. The records presently show why revision identity must remain explicit; they do not falsify that organizational claim. |
+| E04 | Could challenge REL-07/non-promotion if source, execution, recorded output, retained evidence, and cumulative arithmetic could not be kept separate. The fixture supports separation but does not authenticate execution. |
+| E05 | No public surviving-core challenge is stated beyond the issue #35 boundary. The private Turnlock candidate concerns logical run/process identity, SQLite authority, state/event/artifact isolation, and cleanup, with no external business-effect claim. |
+| E06 | Could challenge the surviving scope only if historical correction, later supersession, and current authority could not be attached separately. DT-M0 already leaves operative withdrawal/supersession semantics external, so their absence is not by itself a core falsification. |
+| E07 | Could challenge C0 only if the claimed local organizational vocabulary forced opaque term meaning, checkout-byte identity, and route-coordinate identity to collapse. Current cases mainly expose missing application semantics, not contradiction. |
+| E08 | Could challenge C-NONPROMOTION or REL-10 if a provider authority claim were automatically enacted as actual current enforcement. DT-M0 explicitly denies that promotion. |
+
+None of E01–E08 presently supplies an authenticated bounded counterexample to an exact surviving claim. The DT-03 partition therefore remains `0/23/34/0`.
+
+## 13. Separate empirical task-relative adequacy targets
+
+The empirical targets are stronger and domain-specific:
+
+| Family | `EMPIRICAL_TASK_RELATIVE_SEMANTIC_ADEQUACY` target |
+|---|---|
+| E01 | Represent a coherence basis, globally coexisting repository cut, observable drift, torn state, and ABA limitation without equating equal identities with coherence |
+| E02 | Represent protected ownership interval, producing invocation identity, post-release handoff, deletion, replacement, and substitution resistance |
+| E03 | Represent review applicability to exact candidate/provider revisions, upstream drift, STOP, requalification, and adjudicated instruction changes |
+| E04 | Represent fixture source, execution occurrence, recorded output, retained baseline, new-case count, cumulative arithmetic, and provenance date separately |
+| E05 | Candidate concerns logical run/process identity, SQLite authority, state/event/artifact isolation, and cleanup; no external business-effect claim |
+| E06 | Represent historical qualification, correction, retirement, inert archive status, current authority, and workspace-preservation limitation |
+| E07 | Represent opaque-field semantics, checkout byte identity, route-coordinate basis, synthetic conformance, and real-consumer parity as different targets |
+| E08 | Represent workflow identity, check identity, action result, PR mergeability, active ruleset, enforcement time, administrative mutability, and future configuration separately |
+
+DT-M0 can name these targets and organize evidence around them. Naming is not operative semantics. A future empirical model that claims adequacy for these tasks would need explicit domain relations or external profiles for the listed distinctions.
+
+## 14. Confidentiality and redaction limitations
+
+E05 exists and uses private Turnlock source. All five associated records remain `PRIVATE_EVIDENCE_HOLD`.
+
+Public disclosure is limited to the already-public issue #35 boundary: the candidate concerns logical run/process identity, SQLite authority, state/event/artifact isolation, and cleanup, and it makes no external business-effect claim.
+
+Individual E05 record identities and all private-source metadata are withheld. No E05 material may enter a public E.2 packet without explicit authorization and a new confidentiality review. Redaction cannot be represented as full evidence availability.
+
+## 15. Future-dated/provenance-uncertain material
+
+Five v46 records are classified `POSTDATED_PROVENANCE_UNDETERMINED`:
+
+- `qualification-metadata.json`;
+- `state-space-audit-v46.md`;
+- `state-space-audit-v46.py`;
+- `state-space-audit-v46.txt`;
+- `git-authoring-dependency-retention-smoke-v1.sh`.
+
+The report date 2026-11-03 lies after the 2026-10-25 acquisition date. Exact Git bytes do not explain the date or establish that an execution occurred in the future.
+
+The following claims are therefore prohibited:
+
+- that v46 historically executed before acquisition;
+- that the committed `.txt` is authenticated execution output;
+- that 648 cases were historically executed as of acquisition;
+- that 17,028 is an authenticated cumulative execution count;
+- that ADR date, Git author date, Git committer date, report-generation date, and execution date are interchangeable.
+
+A fresh later replay could produce new evidence in principle, but this inventory authorizes no such replay, and any future execution would require a separate new admissibility decision that extends custody and itself passes review. Such an execution would not authenticate the unexplained historical date. No postdated evidence is promoted here.
+
+## 16. Zero-execution E.2 handoff
+
+DT-03.E.1 authorizes zero replay. The E.2 execution set is empty.
+
+E.2 may execute no unit from this inventory. This prohibition covers RP01–RP19, including RP08, RP15, and RP17. No candidate command, positive control, negative control, owned effect, provider action, build action, or runtime invocation is handed off.
+
+The 122 source records remain available only within their existing source-record custody classes:
+
+- 84 `ADMITTED_AS_HISTORICAL_RECORD_ONLY`;
+- 28 `ADMITTED_AS_EXECUTABLE_FIXTURE_ONLY`;
+- 5 `PRIVATE_EVIDENCE_HOLD`;
+- 5 `POSTDATED_PROVENANCE_UNDETERMINED`.
+
+Executable-fixture classification does not grant execution authority.
+
+Any future execution proposal requires a separate new admissibility decision that:
+
+1. identifies the exact replay unit and command;
+2. extends immutable custody over every executable, source, dependency, build script, toolchain, loader, standard-library component, dynamic runtime, provider fixture, and transitive runtime byte the command can execute or load;
+3. binds the exact checkout, working directory, input objects, environment, effects, and isolation boundary;
+4. defines safe controls without relying on live provider actions, private execution, postdated promotion, source mutation, credentials, production mounts, or network dependency resolution;
+5. preserves the E05 private hold and redaction boundary;
+6. preserves the five postdated records without promotion;
+7. itself passes a fresh independent review before execution.
+
+For RP08, reconsideration additionally requires the complete authenticated Python runtime closure and an exact working-directory binding to the verified detached-checkout root. For RP15, executable/build/dependency/runtime closure must be established before the Windows environment question. For RP17, reconsideration requires an exact safe command, immutable provider fixture, authenticated provider/runtime closure, and a non-live negative probe; live provider actions remain forbidden.
+
+Criterion 5 remains a separate external publication gate pending a later fresh independent adversarial review of the exact corrected candidate. Neither this zero-execution handoff nor any future admissibility review substitutes for that publication gate.
+
+This handoff does not update DT-M0, DT-03, product authority, issues, projects, branches, providers, or production state. It carries forward an inventory and its non-authorizing closure requirements only.
+
+## 17. Residual unknowns and explicit non-decisions
+
+Residual unknowns include:
+
+- authentication of every described historical execution;
+- complete issue/comment/timeline custody before and after acquisition;
+- actual pre-fix E01 reproduction;
+- arbitrary ABA behavior and historical coherence bases;
+- exact #115 monitoring implementation;
+- actual review execution and reviewer independence in E03/E06;
+- historical v45/v5 environments;
+- RP08’s exact interpreter, standard-library, loader, dynamic-runtime, native-library, subprocess-runtime, and transitive-runtime closure;
+- the exact working-directory binding required to make RP08’s repository-relative paths resolve to the authenticated detached-checkout objects;
+- all private E05 details;
+- historical and current authority of retired E06 assurance artifacts beyond supplied bytes;
+- RP15’s exact executable, implementation, build, dependency, offline-cache, toolchain, native-Windows-runtime, and transitive-runtime closure;
+- native Windows reproduction;
+- complete Ruu consumer parity;
+- an immutable RP17 provider fixture, authenticated provider/runtime closure, exact safe command, and non-live negative probe;
+- provider ruleset state before and after acquisition;
+- v46 date semantics and execution provenance;
+- completeness of the selected corpus and holdout search.
+
+Explicit non-decisions:
+
+- zero admission is a qualified source-selection result for the present custody packet, not evidence that the experiments are impossible in principle;
+- zero admission is not a claim about DT-M0;
+- no DT-M0 revision or DT-M1;
+- no change to the frozen `0/23/34/0` partition;
+- no model selection, validation, or normative adoption;
+- no claim that any relation family is a necessary primitive;
+- no claim that E01–E08 are exhaustive or independent;
+- no decision on accepted product semantics;
+- no source, model, corpus, provider, issue, project, branch, or production mutation;
+- no replay of any RP01–RP19 inventory unit under DT-03.E.1 or its E.2 handoff;
+- no promotion of private or postdated evidence;
+- no issue #37–#39 or DT-04 work.
+
+## 18. Source references
+
+Primary frozen authority:
+
+- `sources/AUTHORITY/c7cc255346a5ae9f268ef67f5abced5e47c4f072-docs__research__derivtrace__dt-02-conceptual-model-v0-candidate.md.source`
+- `sources/AUTHORITY/c7cc255346a5ae9f268ef67f5abced5e47c4f072-docs__research__derivtrace__dt-03-model-falsification-report.md.source`
+- `sources/AUTHORITY/c7cc255346a5ae9f268ef67f5abced5e47c4f072-docs__research__derivtrace__falsification__dt-03-bounded-case-corpus.md.source`
+- `sources/AUTHORITY/c7cc255346a5ae9f268ef67f5abced5e47c4f072-docs__research__derivtrace__dt-01-c-consolidated-observability-questions.md.source`
+- `sources/AUTHORITY/c7cc255346a5ae9f268ef67f5abced5e47c4f072-docs__research__derivtrace__falsification__README.md.source`
+- `sources/AUTHORITY/issue-35.source`
+- `sources/AUTHORITY/issue-36.source`
+
+Public family references for E01–E04 and E06–E08 are the packet paths enumerated individually in Section 8. E05 comprises five `PRIVATE_EVIDENCE_HOLD` records whose individual identities and source metadata are withheld.
+
+Holdout references are:
+
+- `sources/HOLDOUT/ruu-issue-47.source`
+- `sources/HOLDOUT/ruu-issue-47-comments.source`
+- `sources/HOLDOUT/ruu-issue-47-timeline.source`
+- `sources/HOLDOUT/ruu-issue-55.source`
+- `sources/HOLDOUT/ruu-issue-55-comments.source`
+- `sources/HOLDOUT/ruu-issue-55-timeline.source`
+
+All references remain subject to their recorded acquisition, mutability, confidentiality, execution-authentication, and provenance limits.

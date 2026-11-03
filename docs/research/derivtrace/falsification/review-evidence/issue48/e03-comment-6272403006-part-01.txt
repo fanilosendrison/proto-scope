@@ -1,0 +1,59 @@
+## Baseline-drift adjudication — successor reconciliation authorized conditionally
+
+```text
+OLD_AUTHORIZED_TURNLOCK_SHA=
+031941b501535c8041e191dad1ec57b5e1bb4462
+
+NEW_CANDIDATE_TURNLOCK_BASELINE=
+ec52ebc62d4d9584e16c7e6bbb26ccb4f466135d
+
+BASELINE_RELATION=
+FAST_FORWARD
+
+UPSTREAM_COMMIT_COUNT=
+4
+
+UPSTREAM_CHANGED_PATH_COUNT=
+11
+
+UPSTREAM_GOVERNANCE_EXECUTION_SURFACE_CHANGE=
+NONE
+
+UPSTREAM_PROTO_RING_CONSUMER_WRAPPER_CHANGE=
+NONE
+
+UPSTREAM_REPOSITORY_INTEGRITY_PROFILE_CHANGE=
+NONE
+
+UPSTREAM_PROVIDER_BINDING_CHANGE=
+NONE
+
+UPSTREAM_VALIDATION_CI_CHANGE=
+NONE
+
+UPSTREAM_ADR_ALLOCATION=
+ADR-057
+
+CUTOVER_ADR_NEW_ID=
+ADR-058
+
+PRESERVED_PHASE2_SOURCE_WORKTREE_MUTATION=
+FORBIDDEN
+
+SUCCESSOR_RECONCILIATION=
+AUTHORIZED_ONLY_AFTER_FRESH_PHASE1_GO_ON_EC52EBC6
+
+PHASE2_PUBLICATION_AUTHORIZED=
+NO
+
+ISSUE72_EXECUTED=
+NO
+```
+
+The four upstream commits are orthogonal to the Proto-Ring execution-boundary cutover: they modify Gate A formal/construction documentation, add bounded Git conformance material, and add accepted product ADR-057 plus its ADR projections. They do not modify the active Proto-Ring consumer wrappers, provider binding, requirements, repository-governance profiles, Repository Integrity membership/order, AGENTS directives, or validation CI.
+
+Because #71 Phase-1 evidence is exact consumer-SHA bound, `ec52ebc6...` must first pass a fresh complete Phase-1 shadow confrontation against exact provider `814a884c...`. Only after that GO may Phase 2 be reconciled.
+
+Reconciliation must preserve the stopped qualified worktree as immutable source evidence, create a new detached successor worktree at exact `ec52ebc6...`, transplant the cutover changes mechanically, allocate the cutover ADR as ADR-058 (leaving upstream ADR-057 unchanged), regenerate ADR projections from canonical records, and repeat complete Phase-2 qualification and fresh reviews before publication.
+
+No direct mutation/rebase of the preserved stopped worktree is authorized.

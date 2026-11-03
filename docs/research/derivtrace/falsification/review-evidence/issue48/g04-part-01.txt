@@ -1,0 +1,49 @@
+## Objective
+
+Publish the exact bounded DT-03.E.2 **empirical observation corpus** and qualify all parent #37 acceptance criteria without fabricating replay, missing source custody, model validity or universality.
+
+## Shared evidence and authority boundary
+
+Parent: [DT-03.E.2 #37](https://github.com/fanilosendrison/proto-scope/issues/37). Research campaign: [DT-03.E #35](https://github.com/fanilosendrison/proto-scope/issues/35).
+Prerequisites: [#36 qualified evidence inventory](https://github.com/fanilosendrison/proto-scope/issues/36) and [#41 bounded methodological findings](https://github.com/fanilosendrison/proto-scope/issues/41).
+
+The historical #36 inventory remains **0/19 replay admissions**. These child issues do not change that result. Only a new, individual, explicitly reviewed and accepted admission on an exact proposed command/environment/effect boundary can permit one replay. Review GO does not prove evidence truth. A narrower scientific claim never waives safety controls.
+
+All work is non-normative. No modification of Product Intent, DT-M0, original DT-03 partition 0/23/34/0, historic #36 inventory, Proto-Ring, Ruu, Turnlock, live GitHub protections or external source repositories. Private E05 remains private; Ruu v46's postdated provenance remains uncertain. Proto-Ring adoption #42 is not a dependency.
+
+## Stop/unknown discipline
+
+Preserve STOP, rejected, unexecutable, unavailable and unknown results exactly. Do not relabel an unperformed action as an execution. No inferred universal model adequacy.
+
+## Inputs and readiness
+
+Consume the independently qualified outcomes (including any STOP/HOLD/non-execution) of:
+- RP08 admission and experimental-result work (DT-03.E.2.1–.2).
+- Distinct RP01 (pre-fix) and RP02 (post-fix) individual admissions and any genuinely paired comparative outcome (DT-03.E.2.3–.4); preserve separate unit gates and any missing execution.
+- Eight-family historical/replay reconciliation (DT-03.E.2.5).
+- Previously completed #36 source inventory and #41 claim-relative method.
+
+A **failed or unadmitted replay does not need to become successful**. A truthful bounded parent disposition may report no safe/available replay. However, the parent #37 condition "at least one two-sided controlled replay when an admissible supported environment exists" must be assessed substantively; it must not be marked satisfied merely because source files or review GO exist.
+
+## Required output
+
+Publish one principal non-normative research file at:
+
+`docs/research/derivtrace/falsification/dt-03-e-empirical-corpus.md`
+
+Include: exact frozen model/source and report identities; a case/family register for E01–E08; a new-vs-archived evidence table; safe positive/negative controls actually performed; exact command/toolchain/current-environment/owned-effect/replay witness where any; exact non-execution/invalidated trial histories; independent holdout selection and exclusions; privacy/redaction and postdated provenance; cross-source dependence; claim-by-claim conclusions and exclusions; remaining unknowns; per-stage independence checks; explicit six-point parent #37 acceptance-criteria assessment.
+
+Preserve a clear boundary between **record/manifest representability**, *witnessed capture*, **execution occurrence**, qualification, source-domain authority, claim truth and model expressivity. Do not do #38's independent DT-M0 falsification or suggest that a passing output comparison is substantive model validation.
+
+## Publication gates
+
+Independent read-only adversarial review of exact final candidate with zero blockers/majors, no review shopping, exact changed-path inventory, authorized PR publication, exact published-SHA readback, applicable CI stated honestly. Reviewers must specifically attack inflated experiment counts, controls declared but not run, unsafe or unproven source environments, private E05 leakage, Ruu postdated-v46 promotion, false historic-producer attribution, correlation/selection bias and missing eight-family dispositions.
+
+Close parent #37 **only after** all its criteria are explicitly qualified against the exact published state, including truthful stopped/unexecuted outcomes where applicable. Do not automatically begin or close #38/#39, select DT-M0, update Product Intent, or mutate sources.
+## Exact work-package inputs
+
+- [#45 — RP08 replay outcome](https://github.com/fanilosendrison/proto-scope/issues/45): must be qualified or explicitly stopped/deferred; not automatically PASS.
+- [#47 — RP01/RP02 temporal-coherence comparative replay outcome](https://github.com/fanilosendrison/proto-scope/issues/47): consume both exact admission decisions and their execution/non-execution evidence, qualify or explicitly stop/defer; not automatically PASS.
+- [#48 — all-family reconciliation](https://github.com/fanilosendrison/proto-scope/issues/48): must be independently qualified.
+
+These are substantive readiness conditions. Native blocked-by wiring is a separate GitHub operation, and no closed issue alone establishes experimental success.

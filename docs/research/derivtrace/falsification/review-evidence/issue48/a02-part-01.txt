@@ -1,0 +1,58 @@
+---
+okf_version: "1.0"
+kind: "KnowledgeAsset"
+asset_type: "bounded-research-investigation"
+domain: "derivation-observability"
+severity: "non-normative"
+name: "DT-03.E — Bounded replay-admission investigation"
+status: "QUALIFIED_RESEARCH_CANDIDATE"
+baseline_sha: "0ebbe30ab0122f826e55307379b12cc58e091328"
+baseline_tree: "f6f54d782f4b29f8204cbe04b3b8c95dd6dd0d4b"
+historical_inventory_blob: "f8e0fffde061581b98c0937d16ff7dda960db07e"
+historical_inventory_sha256: "c1e36818435c4baf0730923407e95523ae687553fbc64cec05830588246808e2"
+source_manifest_sha256: "2a5b9619d4bc8104ea3f05a9037237c7aaa8dff1f4a9c53c9c74b2ede1f54a83"
+author_packet_sha256: "e61aea67e026efed5fc1e6718267c6060d47cb756afe96d24dc152830740926d"
+independent_author_sha256: "1e72faf56c19f9fd09e1d4f4cd99974b22b18cfed7aa2e7df5254103bda10476"
+---
+
+# DT-03.E — Bounded review escalation and replay admission investigation
+
+```text
+AUTHOR_ROLE=FRESH_INDEPENDENT_SUBSTANTIVE_RESEARCH
+AUTHOR_MODEL=gpt-5.6-sol
+REASONING_EFFORT=xhigh
+HYPOTHESES_CHALLENGED=5
+HISTORICAL_STOP_REVIEWS_EXAMINED=3
+RP08_ANALYZED=YES
+RP02_ANALYZED=YES
+NEW_REPLAYS_EXECUTED=0
+NEW_REPLAYS_ADMITTED=0
+HISTORICAL_PARTITION_CHANGED=NO
+UNRESOLVED_RESEARCH_QUESTIONS=12
+```
+
+## 1. Purpose and bounded authority
+
+This report investigates one historical incident: the escalation of replay-admission requirements during issue #36, followed by publication of a zero-admission inventory. It compares two materially different proposed mechanisms, RP08 and RP02, to determine which objections affected an exact proposed conclusion, which identified execution-safety or experimental-integrity defects, and which sought stronger assurance whose necessity requires a separate justification.
+
+This is a bounded, non-normative study under issue #41. It is not a universal scientific method, evidence ontology, schema, model, engine, protocol, review constitution, or recursively self-validating methodology. The classifications used below are local analytical labels, not additions to DT-M0 or a global enum.
+
+The governing constraints are:
+
+- Issue #36 remains complete and is not reopened.
+- Its fixed result remains 122 source records, 19 replay units, 0 admitted, 16 provenance-rejected, 1 private hold, 2 postdated, and zero executions.
+- Issue #37 receives no replay authority from this report.
+- Issue #42 remains independent and is neither executed nor made a prerequisite.
+- DT-M0 is unchanged.
+- The frozen DT-03 partition remains `0/23/34/0`.
+- No external repository, source, provider, protected ref, Product Intent, architecture, contract, or normative content is changed.
+- No reviewer cognition or intention is inferred. The report distinguishes recorded objections, public summaries, later interpretation, and unknowns.
+
+The five challenged hypotheses are not assumed as conclusions:
+
+- **H-01:** A STOP must rest on an applicable obligation, a real counterexample, a missing essential premise, or an execution-safety defect. A stronger desirable guarantee does not automatically become necessary for a weaker claim.
+- **H-02:** Safety and evidential admissibility are separate decision dimensions, although the same missing fact can affect both. A narrower conclusion cannot excuse unsafe execution.
+- **H-03:** Trust assumptions must be explicit, relevant, and bounded. A trusted runtime may support a modest present-execution claim without authenticating every byte, but declaring trust proves neither execution occurrence nor correctness.
+- **H-04:** Full executable-byte closure does not by itself establish historical occurrence, scientific correctness, product correspondence, reported-result truth, or universal generalization.
+- **H-05:** A sound investigation may terminate with unresolved questions. It must neither manufacture favorable admission nor treat all reachable conclusions as unknowable.
+

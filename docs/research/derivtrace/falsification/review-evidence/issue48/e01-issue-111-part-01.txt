@@ -1,0 +1,134 @@
+Parent: #45
+
+Depends on: #83
+
+Blocks: #109
+Blocks: #67
+
+## Problem
+
+#83 correctly established that:
+
+- local/per-path guards are insufficient for global capture coherence;
+- detectable contract-relevant drift must fail closed;
+- identity equality does not prove absence of arbitrary ABA mutation.
+
+However, the published resolution encoded one particular realization mechanism as a universal normative prerequisite:
+
+```text
+mutation-isolation interval
+```
+
+That is unnecessarily restrictive. A coherent RepositoryState can also be established by mechanisms such as:
+
+```text
+atomic snapshot
+copy-on-write snapshot
+immutable workspace generation
+transaction/version primitive
+or another mechanism that establishes one coherent repository version/cut
+```
+
+The normative invariant must describe the required coherence property rather than select mutation isolation as the universal realization mechanism.
+
+## Evidence and provenance
+
+Execution of #109 against authority SHA `0b140d0505878b5283ca271de60fbee79c1bc0a9` exposed that the contract's universal mutation-isolation wording is stronger than the coherence property it protects. The preserved #109 candidate is evidence only and is not authoritative for this correction.
+
+## Current authoritative boundary
+
+The current RepositoryState, RepositoryGovernanceState, and Repository Integrity contracts own the affected Proto-Ring semantics. #83's fail-closed drift and torn-read correction remains mandatory. This Issue changes the realization-neutrality of the global coherence prerequisite; it does not weaken observed-drift detection or make identity equality evidence of coherence or arbitrary ABA absence.
+
+## Required semantic correction
+
+Introduce the conceptual term:
+
+```text
+coherence basis
+```
+
+A coherence basis is not a new serialized RepositoryState field or API primitive. It means:
+
+```text
+a mechanism, internal to capture or supplied by its execution environment,
+sufficient to establish that the contract-relevant dimensions relied upon as
+one coherent RepositoryState belong to one coherent repository version/cut.
+```
+
+Mutation isolation is one sufficient coherence basis. It is not the only admissible one. The contracts must remain mechanism-neutral.
+
+## Scope
+
+Allowed repository surfaces:
+
+```text
+docs/contracts/repository-state.md
+docs/contracts/repository-governance-state.md
+docs/contracts/repository-integrity.md
+tests/test_repository_state_contract.py
+tests/test_repository_governance_state_contract.py
+tests/test_repository_integrity_contract.py
+```
+
+The correction must:
+
+- preserve #83's content-only, structural/path-membership, and local torn-read fail-closed requirements;
+- preserve RepositoryGovernanceState's initial-state, authoritative-composition, final-state, and drift-comparison sequence;
+- require a coherence basis for reliance on one globally coherent RepositoryState or RepositoryGovernanceState;
+- require unambiguous state/verdict binding for Repository Integrity without requiring total repository immobility;
+- preserve validator-caused mutation as observable state change under existing verdict/status semantics;
+- preserve all identity representation and component-composition semantics;
+- avoid product-specific realization requirements.
+
+## Architectural non-ownership
+
+Proto-Ring owns the generic coherence requirement. An execution environment may provide a coherence basis. The normative contracts must not require Turnlock, Turnlock Cloud, Proto-Go, Ruu, VMs, containers, or any other named product or substrate.
+
+## Non-goals
+
+```text
+no production-code changes
+no Rust changes
+no conformance-corpus changes
+no identity redesign
+no new verdict/status states
+no #109 continuation or publication
+no #67 implementation
+no product-specific realization architecture
+```
+
+## Acceptance criteria
+
+- `coherence basis` is the generic prerequisite for global coherent-cut reliance.
+- Mutation isolation is documented as sufficient but not universally required.
+- Successful ordinary capture is not represented as proof that a coherent cut was established.
+- Identity equality is not represented as proof that a coherence basis existed or arbitrary ABA scheduling was absent.
+- #83 fail-closed observed-drift and torn-read requirements remain intact.
+- RepositoryGovernanceState requires a coherence basis across its authoritative construction boundary for a global-coherence claim.
+- Repository Integrity requires unambiguous state/verdict binding rather than absolute immobility.
+- Validator-caused mutation remains observable.
+- Focused and complete Python tests, Rust formatting/lint/tests/docs, and `git diff --check` pass.
+- Independent candidate and exact-published-SHA reviews return GO on every required semantic gate.
+- Exact-published-SHA Rust and Python 3.11/3.12 CI succeeds.
+
+## Validation
+
+```text
+focused contract tests
+python tools/run_python_tests.py
+cargo fmt --all -- --check
+cargo clippy --workspace --all-targets -- -D warnings
+cargo test --workspace
+cargo test --workspace --doc
+git diff --check
+independent candidate semantic review
+exact-SHA CI
+independent published-SHA semantic review
+```
+
+## Authoritative references
+
+- `docs/contracts/repository-state.md`
+- `docs/contracts/repository-governance-state.md`
+- `docs/contracts/repository-integrity.md`
+- Published #83 authority SHA `0b140d0505878b5283ca271de60fbee79c1bc0a9`

@@ -1,0 +1,16 @@
+## Evidence and execution classes
+
+Assign every source and experimental result to a precise class:
+
+- `IMMUTABLE_SOURCE_BYTES` — exact commit/blob and source-text integrity; no inherent truth of described events.
+- `MUTABLE_ACQUIRED_RECORD` — issue/comment/API record, acquisition time/content fingerprint, and history limitations.
+- `PRODUCER_DECLARATION` — reported action, outcome or qualification; independent execution unproven.
+- `REPORTED_PRIOR_EXECUTION` — recorded command and output, still subject to execution-custody limitations.
+- `PRESENT_CONTROLLED_REPLAY` — actual newly executed command in isolated fixtures with revision, environment, input, stdout/stderr, exit status, and owned effects.
+- `CONSTRUCTED_COUNTEREXAMPLE` — bounded stipulated worlds; not a historical occurrence.
+- `INDEPENDENT_QUALIFICATION` — independent analysis of an exact claim and evidence, not automatic authentication of all sources.
+
+A recorded `PASS` or CI result must not be called an independently rerun test. Prefer genuine controlled replay where source and environment are available. Log `UNSUPPORTED_ENVIRONMENT` or `UNREPRODUCIBLE_WITH_AVAILABLE_EVIDENCE` rather than simulate execution and call it reproduced.
+
+**Temporal caution:** Ruu post-baseline v46 reports a date of 2026-11-03; as of 2026-10-25 it cannot be counted as an established already-performed historical run without resolving that provenance/date discrepancy. The v45 source/recorded results may be examined within their exact historical boundary.
+

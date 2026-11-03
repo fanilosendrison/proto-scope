@@ -1,0 +1,2 @@
+Research work may finish with an explicitly justified HOLD/REJECT/STOP, but **issue completion never converts such a disposition into an ADMIT or a successful execution**. Any missing replay remains missing evidence; #49 must use the actual evidence and the parent acceptance criteria, not a fabricated successful result.
+

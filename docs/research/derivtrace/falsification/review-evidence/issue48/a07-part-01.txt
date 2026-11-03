@@ -1,0 +1,98 @@
+---
+okf_version: "1.0"
+kind: "KnowledgeAsset"
+asset_type: "replay-admission-decision"
+domain: "derivation-observability"
+severity: "non-normative"
+name: "DT-03.E.2.1 — RP08 replay admission"
+status: "QUALIFIED_RESEARCH_CANDIDATE"
+decision: "HOLD"
+baseline_sha: "187cc71263526303254a17e4ca75ca643d9a7330"
+source_commit: "5d04c58170b2ce3f0e47aa0554a97906d2256492"
+source_manifest_sha256: "dbf5a9f054bcfa332472e1cdc2b738295e6eb4a294b0427d8522388b59b7fb72"
+environment_discovery_sha256: "b0f12998ccabc6c4e61a900cd301f1ada8de4dd7f56dcad689be733a678d7b16"
+author_packet_sha256: "247a7c84b01919dbe54acaceb45459bd21e67c39fa64c3a3d280f6cef25d88d7"
+independent_author_sha256: "7ee89a1a71efd01403fe196bb29ceb1c7c13f02738119c750a1cd495319df9b1"
+---
+
+# DT-03.E.2.1 — RP08 bounded replay admission decision
+
+```text
+AUTHOR_ROLE=FRESH_INDEPENDENT_RP08_ADMISSION_AUTHOR
+AUTHOR_MODEL=gpt-5.6-sol
+REASONING_EFFORT=xhigh
+SCRIPT_IDENTITY=PASS
+ARCHIVED_OUTPUT_IDENTITY=PASS
+SAFETY_GATE=UNDETERMINED
+EVIDENCE_GATE=UNDETERMINED
+ADMISSION_DECISION=HOLD
+EXECUTION_COMMANDS_DEFINED=YES
+POSITIVE_CONTROL_DEFINED=YES
+NEGATIVE_CONTROL_DEFINED=YES
+REPEAT_CONTROL_DEFINED=YES
+REPLAY_EXECUTED=NO
+NEWLY_AUTHENTICATED_HISTORICAL_EXECUTION=NO
+RUU_MODEL_VALIDATED=NO
+```
+
+## 1. Purpose and exact authority boundary
+
+This record makes one new prospective decision for RP08 under issue #44. It does not revise the historical issue #36 result:
+
+```text
+19 replay units
+0 admitted
+16 provenance-rejected
+1 private hold
+2 postdated
+0 executions
+```
+
+It does not correct or reverse #36, execute issue #45, authorize another replay, or alter the frozen DT-03 `0/23/34/0` partition.
+
+No RP08 command or control was run during this authorship. The operations below are exact, non-authorized candidate definitions. They become executable only after the unresolved checkout, host, containment, capture, and cleanup prerequisites pass a new exact review and the resulting admission record is published.
+
+No authority is granted to mutate Ruu, Proto-Scope, a provider, a protected ref, Product Intent, DT-M0, or any normative artifact.
+
+## 2. Frozen source identities
+
+| Artifact | Frozen identity |
+|---|---|
+| Repository revision | Ruu commit `5d04c58170b2ce3f0e47aa0554a97906d2256492` |
+| Script path | `qualification/state-space/v045/state-space-audit-v45.py` |
+| Script Git blob | `515f1067167d3ae331d4562c4dc8d879f2c74967` |
+| Script SHA-256 | `84b9016765a5a8713db40df11888b657f63d309335d4e6890410d423057738ea` |
+| Script size | 6,795 bytes |
+| Archived-output path | `qualification/state-space/v045/state-space-audit-v45.txt` |
+| Archived-output Git blob | `1e8d950b67f1d25707142ff62d003f741481fde7` |
+| Archived-output SHA-256 | `76bc0a73f54bbcbe167a4bf985d6aff5bf6d60b0a03fe51e78bdaff9ca4765ae` |
+| Archived-output size | 456 bytes |
+
+The supplied immutable custody establishes the exact script and archived-output bytes. It does not establish that the script historically ran or produced that output.
+
+Static inspection of the exact script identifies:
+
+- one import: `from itertools import product`;
+- eight `product` loops;
+- sixteen assertions;
+- eleven stdout prints;
+- no explicit subprocess, file operation, environment read, network operation, dynamic execution, or external process.
+
+This inspection does not establish hidden interpreter, loader, imported-runtime, operating-system, or instrumentation behavior.
+
+The script enumerates 256 program-defined combinations. The printed `16,380` value is the arithmetic total `16,124 + 256`; it is not evidence of 16,380 newly executed experiments.
+
+## 3. C1–C7 claim boundaries
+
+| Claim | Present status | Exact boundary |
+|---|---|---|
+| C1 — exact immutable source/output custody | `VERIFIED` | The identified commit, paths, blobs, SHA-256 values, sizes, script bytes, and archived-output bytes are supplied. |
+| C2 — one future witnessed invocation executes the identified script in an accepted environment | `NOT_ESTABLISHED` | No invocation occurred. The discovered host is not yet an accepted environment because its OS identity conflicts with the harness operational text. |
+| C3 — that invocation produces captured stdout Y | `NOT_ESTABLISHED` | P1 defines the capture, but no Y exists. |
+| C4 — Y is byte-identical to archived Z | `NOT_ESTABLISHED` | P1 defines `/usr/bin/cmp` comparison, but no comparison occurred. |
+| C5 — historical v45 occurrence or production of Z | `EXCLUDED` | Immutable Z and a future match cannot authenticate its historical producer. |
+| C6 — finite-model fidelity to every material Ruu requirement | `EXCLUDED` | Successful assertions would establish only behavior of the encoded finite program under the admitted runtime assumptions. |
+| C7 — generalization across revisions or environments | `EXCLUDED` | Neither one match nor two matches establishes determinism, portability, completeness, or generalization. |
+
+A future successful P1 could support C2–C4 only within the then-accepted execution boundary. It could not establish C5–C7.
+
