@@ -1,0 +1,79 @@
+## Objective and scope
+
+Independently qualify **two distinct, historical E01 replay units**, within one deliberately bounded comparison of Proto-Ring #83:
+
+- **RP01 — pre-fix torn capture:** possible newly witnessed successful `RepositoryState.capture` whose returned identity represents `A0,B1` although that combination did not physically coexist **during that capture**.
+- **RP02 — post-fix fail-closed:** possible newly witnessed rejection of the materially equivalent forced schedule by the corrected `RepositoryState.capture`, with the rejection attributed to the whole-capture content-drift check.
+
+**This issue prepares/qualifies admissions only. It must not execute either RP01 or RP02, run their controls, or claim an observed regression.** A single research issue does not merge the two replay units or their authorities.
+
+## Authority and historical invariants
+
+Parent [#37](https://github.com/fanilosendrison/proto-scope/issues/37), campaign [#35](https://github.com/fanilosendrison/proto-scope/issues/35); prerequisites [#36](https://github.com/fanilosendrison/proto-scope/issues/36) and [#41](https://github.com/fanilosendrison/proto-scope/issues/41). Apply #41's **ten bounded, claim-relative admission questions individually** to RP01 and RP02.
+
+Keep the historical #36 result intact: 122 source records, 19 proposed RP units, **0 admissions (16 provenance-rejected, 1 private, 2 postdated), 0 executions**. In #36, **RP01 denotes the pre-fix torn-capture candidate and RP02 denotes the post-fix fail-closed candidate**. Newly acquired/reviewed source bytes can support *new prospective admissions* but must not retroactively change #36 or create a twentieth unit.
+
+All work remains non-normative. Do not change Product Intent, DT-M0, frozen DT-03 `0/23/34/0`, source repositories, Proto-Ring, Ruu, Turnlock, current GitHub protections, provider state, or private E05; Ruu postdated-v46 provenance remains uncertain. Proto-Ring adoption #42 and RP08 safety work #51 are **not** prerequisites or substitute admissions. A weaker scientific claim never permits unsafe execution.
+
+Preserve exact `STOP`, `HOLD`, `REJECT`, unavailable, nonexecution, uncertainty and review objections. A review GO for publishing a HOLD is not an execution permit.
+
+## Immutable scientific subjects (independently reverify)
+
+| Subject | Commit | Path / Git blob |
+|---|---|---|
+| RP01 pre-fix | `7ccde07f4d9801383d6a2410e3d12ce6ee716f34` | `src/proto_ring/repository_state.py` / `a9a407d3227f5570bda7fbafac0b2eaf793d9719` |
+| RP02 post-fix | `0b140d0505878b5283ca271de60fbee79c1bc0a9` | `src/proto_ring/repository_state.py` / `fdc6a4ea16fd0b90a32ab0d2f4bb11c3471244fe` |
+| Post-fix reference test | `0b140d0505878b5283ca271de60fbee79c1bc0a9` | `tests/test_repository_state.py` / `21213539fc3c5e215d5283d3e280982d99338d1f` |
+| Source package initializer, **both** revisions | respective pinned revision | `src/proto_ring/__init__.py` / empty Git blob `e69de29bb2d1d6434b8b29ae775ad8c2e48c5391` |
+| Later mechanism-neutral contract (interpretation only, **not** an executed replay) | `1f103322d6816effcc102e35cbdd1e14bd33ba84` | `docs/contracts/repository-state.md` / `1c25d1ee8bdb7dd4d3d1e0e9663c82969ab9a459` |
+
+Reference [Proto-Ring #83](https://github.com/fanilosendrison/proto-ring/issues/83) and its recorded counterexample. Immutable blob identity establishes file bytes, not historical execution, current execution, complete import closure, model truth or global coherence.
+
+### Distinguishing implementation fact
+
+- RP01's `capture` reads each path once with a local stat guard, then recaptures **Git structure only**. It can preserve A0 and later B1.
+- RP02's `capture` adds a **second full path-record observation**; unequal records cause `StateCaptureError("governed path state changed during state capture")`.
+- RP02's retained `test_cross_path_nonexistent_combination_fails_closed` uses a patched `os.lstat` to induce real file writes. An arbitrary `StateCaptureError` is **not** proof that the new drift check fired.
+- The later contract requires a separately established **coherence basis** for a global-cut claim. This experiment aims at a specific injected-drift detection contrast, **not** universal atomicity, ABA prevention, historic producer authentication, global-cut proof or DT-M0 adequacy.
+
+## Shared experimental protocol to DEFINE, not execute
+
+Design the exact preauthorized future operations, source-external where necessary, such that both revisions use **materially equivalent inputs, path ordering, filesystem actions and intervention points**. Specify a concrete single external research harness or equally inspectable exact commands; do **not** change historic Proto-Ring implementation/tests. If a source-external harness is needed for RP01, preserve its exact frozen source bytes as one reviewable **non-normative research fixture** (suggested path `docs/research/derivtrace/falsification/fixtures/dt-03-e-rp01-rp02-contrast.py`). **Do not run the harness here.** If its exact behavior and effects cannot be qualified, preserve HOLD, not a fictitious command.
+
+For **each** admitted execution unit the proposed operations must include all of the following:
+
+1. **Independent disposable real Git fixture**, initialized with exactly two governed tracked regular files `a.txt=A0` and `b.txt=B0`. Record initial Git HEAD, index, path membership, paths, mode and bytes; verify deterministic A-before-B observation and that source code/harness cannot accidentally enter governed fixture discovery.
+2. **Stable positive control**, capturing the unchanged state (e.g. A0,B0), and a stable later state (A1,B1) on the appropriate owned fixture. A stable-control failure invalidates the corresponding proposed contrast.
+3. **One controlled intervention**: after A was actually captured and locally validated, but before B's first observation, make **real sequential** writes `A0,B0 -> A1,B0 -> A1,B1`. Preserve contemporaneous fixture readbacks and hook/timing evidence for those physical states; HEAD, index and path membership remain fixed. A scripted claim without actual readbacks is insufficient. The intervention is induced by known test instrumentation, not asserted to be naturally scheduled concurrency.
+4. **RP01 expected negative/torn witness**: the pinned pre-fix implementation **returns successfully**; its identity corresponds to `A0,B1` although no `A0,B1` existed during this single capture. Define exact verification against an independently stable `A0,B1` reference constructed **only after the relevant capture interval**; clearly disclose that this reference materializes `A0,B1` later and does not retroactively put it in the earlier interval. Compare the same identity/observation scope, Git structure and path semantics. Capture a mismatch or unexpected exception as a nonqualifying result, not a retry target.
+5. **RP02 expected negative/fail-closed witness**: replay the *same relevant forced intervention* in a fresh equivalent fixture against the pinned post-fix source. Require the **specific whole-path-record comparison failure**, not just any exception/test PASS. Confirm that the test did not fail earlier due to Git, import, stat, path, setup or sandbox errors.
+6. **Comparability and falsifiers**: record post-fix extra pass, pre/post `_stat_guard` differences, helper interception effects, filesystem/inode/timestamp assumptions, fixture genesis and observation scope. If these differences defeat material equivalence, preserve that finding rather than claim a valid pair. Do not infer an arbitrary-schedule or global-cut guarantee from the result.
+7. **Contemporaneous evidence**: exact argv, actual physical cwd, fresh process/invocation IDs, pinned source/fixture/harness digests, initial/final Git identities, host/OS/filesystem/toolchain identities, mutation sequence and timestamps where relevant, stdout/stderr/exit/exception and **exact causal rejection**, permitted side effects, all attempts, hashes, positive/negative controls and invalidators.
+
+A complete per-unit operation sequence must be fully specified and source-identifiable **before** admission. A future executer may not improvise missing operations to obtain PASS.
+
+## Exact source, environment and safety qualification
+
+- Acquire/inspect the **whole relevant actual execution/import/helper closure** for each pinned revision, including empty `__init__.py`, `pyproject.toml`, necessary Python standard-library imports, target module, test/harness and actual Git calls. The once-missing initializer is available at the cited blob but **must be included and reverified**, not merely presumed sufficient for the entire closure.
+- Name the precise trusted premises material to the bounded claim (Python, loader, standard library, Git, filesystem, scheduling/interception and capture witness). Review substitution risks and independently justify any demand for stronger assurance; do **not** promote universal transitive runtime-byte authentication into an automatic requirement when #41 does not establish its necessity for this narrow claim.
+- Bind **exact** source checkout identity, non-hardlinked source materialization, physical cwd, executable selection, `PATH`, Git environment/config, Python import isolation, startup flags, fixtures, capture destinations and controlled process tree. Neither ambient `PYTHONPATH` nor user/global Git config/hooks or credentials may silently change the subject.
+- Independently discover the **actual intended host**, not inherit #44's disputed macOS identity or assume a particular sandbox/VM is present. The retained test uses `git init -q -b main`, which is unsupported by the Git 2.17.2 previously discovered for #44. Qualify a compatible Git (2.28+ for `init -b`), **or** an explicitly specified source-external equivalent fixture-setup sequence with individually justified subject equivalence; do not silently edit original test bytes or assume the historic test runs unchanged.
+- Define exclusive owned temporary roots, no symlink/hardlink or path traversal escape, read-only immutable source material, no attached private/production state, no network/provider/credential access, a valid write/command/process confinement mechanism, evidence preservation, and safe non-destructive cleanup. Merely declaring `env -i`, Python `-I -S -B`, a sandbox binary, or a container is **not** demonstrated enforcement.
+- **Preparatory versus experimental execution**: #46 may perform bounded read-only discovery and source inspection. Any inert sacrificial **containment probes** must first have their own exact side-effect plan and separate applicable approval; they may target only owned disposable material (including a sacrificial outside-allowlist sentinel inside the owned parent) and must never invoke target `capture`, either replay unit, its positive/negative controls or actual external network/provider. Do not invent probe PASS or a containment guarantee. If safe probe authority/capability is missing, record HOLD with the missing evidence.
+
+Independently qualify **separate** safety and scientific-evidence admission gates for RP01 and RP02. A weakened claim cannot waive a safety gate. Both may share a qualified environment/fixture design only with separately established applicability and per-unit provenance.
+
+## Independent decisions, artifacts and stopping rule
+
+Produce **two individually decidable**, exact-content publication artifacts (even when either decision is HOLD/REJECT):
+
+- `docs/research/derivtrace/falsification/dt-03-e-rp01-admission.md`
+- `docs/research/derivtrace/falsification/dt-03-e-rp02-admission.md`
+
+Each document MUST answer #41's ten questions on its **own** unit, record its specific source/command/environment/effect/control identities, trust assumptions, independent safety/evidence gate assessments, invalidators, exclusions, and an explicit `ADMIT`, `HOLD` or `REJECT`. Do not collapse two decisions into one aggregate verdict. Record status such that unestablished safety capabilities are not falsely reported as observed unsafe effects. Include the exact cross-comparison compatibility conditions and identify the other unit's separate authority.
+
+An independent **fresh read-only adversarial review** must evaluate each decision and any shared harness/protocol against the exact candidate bytes; no unresolved blocker/major for qualification/publication, no review shopping. Preserve a legitimate HOLD/REJECT if gates cannot be met. Publish only permitted nonprivate evidence through the authorized Proto-Scope PR process with exact source, changed-path, review and published-SHA readback. Neither independently reviewed GO nor issue closure converts a HOLD/REJECT to ADMIT.
+
+**Successor #47 may execute the two-sided comparison only if BOTH individually reviewed, exact-published decisions are `ADMIT` for the same materially compatible experiment and remain applicable on the actual host at execution time.** Otherwise #47 must record nonexecution; do not run only one unit under the other unit's authority or manufacture a paired result.
+
+Stop after publication of the two admission dispositions. **No RP01/RP02 run or post-fix test replay in #46; no #47, #48, #49, #38 or Product Intent work.**

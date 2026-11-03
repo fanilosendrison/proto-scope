@@ -1,0 +1,118 @@
+## #47 publication blocked — single independent review is UNDETERMINED
+
+PR https://github.com/fanilosendrison/proto-scope/pull/61 remains OPEN and unmerged. Issue #47 remains OPEN. Parent #37 and programme #35 remain OPEN. No #48/#49 work is started.
+
+Disposition candidate: NOT_EXECUTED_NO_ADMISSION. RP01 admission HOLD; RP02 admission HOLD; dual admission NOT_SATISFIED. Both units, stable controls, interventions, later references and shared harness remain NOT_RUN in the operator record. No replay, target import, harness, control or containment probe was performed by this task. These are operator assertions, not independently authenticated absence witnesses.
+
+### Exact preserved candidate
+
+- Baseline: cf631a6b86501ffd484954572263f07d1feb2cd0; tree c205f37e9592b07f8ef84af261198c97798ee2e4.
+- Candidate: 13118bf358d58f958da629b7e8841e1e578c5972.
+- Candidate tree: 5c96ffe4afc4c11924881d572546b86446997b11.
+- Added report: docs/research/derivtrace/falsification/dt-03-e-rp01-rp02-contrast-outcome.md.
+- Blob: fa3ad2abce13e41c6b5f014eed475d7e4d67f275.
+- SHA-256: e0983a20d8ac525a0ea070e654a36af067da57095f77e6e6bf2254e72f02be66.
+- Exact public PR-candidate byte readback: PASS. Qualified final-main publication/readback: NOT_RUN.
+- Exactly one research file added; no existing tracked files changed. Parsed KnowledgeAsset metadata, source references/hashes, privacy screen, changed-document Markdownlint 0.41.1 and git diff --check passed. One new MD018 formatting warning was fixed before publication and the complete changed-document lint rerun passed; prose line length 120, code-block lengths exempt.
+- No automatic PR CI applies; no replay or CI execution is represented as passing. The unrelated manual inert workflow was not dispatched.
+- The publisher initially stopped on its missing-destination precondition. Baseline research-branch bootstrap then allowed the governed commit/publication to succeed, including an internal commit-message validation repair. These were not independent-review retries.
+
+### Authenticated independent result
+
+- Broker: fanilosendrison/review-broker at a3526c1a7620a8bc437e43511f354fdae2130ce5.
+- Request: request:sha256:341b801795a972ded788c21fcc531f6b100fa141971ee5a538041337e931b571.
+- Request issue: https://github.com/fanilosendrison/review-broker/issues/79.
+- Review Intent: review-intent:sha256:da79f5b8574282befdfe31f99a79999ab3f88cb043df3197dea443e54b4924ce.
+- Attempt: attempt:sha256:8b3d3b6ab1f7ea5746a518af80d330959c667f3ee7cdfc167a1614c88a300c92.
+- Packet: packet:sha256:2574b4e5e5a02b4659b4051cc08da58041a4d7bd7e3252c04bbd7c7ebeb8fa2b.
+- Workflow: https://github.com/fanilosendrison/review-broker/actions/runs/41601477345, attempt 1, success. Workflow success is not a review GO.
+- Result: result:sha256:4b07ee759a82a2bd0e233ca18f9bbbe8f5f4fece484c63eba94cf3e73119930e.
+- Publication: publication:sha256:a693f41883889717aecc535dcd3527c8958f41e46f637f6b8a3942c64cb39cc6.
+- Authenticated receipt: https://github.com/fanilosendrison/review-broker/issues/79#issuecomment-6598693627.
+- Dimensions: COMPLETED / VALID / UNDETERMINED / CURRENT, exact reviewed HEAD 13118bf358d58f958da629b7e8841e1e578c5972.
+- Findings: F001–F005, all unresolved. No severity is invented or inferred from the schema. Validation reasons are empty; evidence validity does not establish substantive acceptance.
+- Requested reviewer: codex-cli / gpt-5.6-sol / xhigh, scientific/v1, initial. Effective model/effort remain unverified, not provider-attested.
+- Journal STOPPED; invocation_count=1; one request, no inference retry or repeat_same_head.
+- Terminal artifact: 13214358885; digest sha256:9fe10bc3cf7544b82d7c29980e07c1c011ff030da4194ed9c7bbe8da2bc5abc1; recorded expiry 2027-02-01T08:11:45Z. No indefinite availability is claimed.
+
+### Atomic discovery routing
+
+Each discovery is routed to this existing #47 research/publication item, not a duplicate issue or normative contract. Common existing authority: owner mandate phases 6–8, current #47 independent-audit/dual-admission requirements, and Review Broker request/result contracts. Common semantic disposition: no-normative-impact. Affected layers: verification-or-qualification-evidence and repository-governance-or-documentation. The reviewer examined only S001, the candidate report. The complete line-anchored findings and all remaining uncertainties are retained in the authenticated result above.
+
+#### F001 — evidence-gap: admission chronology and absent dual ADMIT
+
+Statement challenged: HOLD/HOLD governs because no later separately published, independently reviewed, applicable RP01/RP02 ADMIT existed in the examined campaign records.
+
+Source/evidence: S001 lines 124, 131, 191–192, 273 and 275. Admission decisions, inventory, comments and publication receipt were not available as independent packet sources. The premise therefore remained undetermined to the reviewer.
+
+Existing authority: common authority above. Semantic disposition: no-normative-impact. Affected layers: qualification evidence and research documentation. Related discoveries: F003/F004 share packet-coverage limitations but concern different claims.
+
+Required authority and impact: owner-authorized remediation and separately authorized review; publication/closure blocked without changing either admission or product semantics.
+
+Next action: resolve independent chronology and bounded-record coverage without treating author readback or publication GO as an ADMIT. This handoff authorizes no further review or experiment.
+
+#### F002 — evidence-gap: independent custody of non-execution assertions
+
+Statement challenged: neither unit, harness, controls, interventions nor containment probes ran, and there was no experimental attempt in the campaign.
+
+Source/evidence: S001 lines 46, 50, 52 and 219. The packet identifies an operator record but supplies no independently examined invocation, host, process, effect or custody record authenticating campaign absence.
+
+Existing authority: common authority above. Semantic disposition: no-normative-impact. Affected layers: qualification evidence and research documentation. Related discovery: F005 concerns repository mutation rather than experiment occurrence.
+
+Required authority and impact: owner-authorized evidence-scope remediation and separately authorized review; no universal absence-proof requirement is adopted and no execution is inferred.
+
+Next action: retain the operator-assertion boundary and determine what proportionate independent campaign-custody evidence is actually available. Do not invent evidence or run the prohibited experiment.
+
+#### F003 — evidence-gap: external immutable source identity and semantics
+
+Statement challenged: the declared commits, trees, blobs, paths and digests correctly identify RP01/RP02 and the shared harness.
+
+Source/evidence: S001 lines 63, 87, 157 and 262–265. The underlying external objects and bytes were absent, so identity, source contents, unit assignment and representability could not be independently checked. Report hashes and author readbacks are not independent external-byte authentication.
+
+Existing authority: common authority above. Semantic disposition: no-normative-impact. Affected layers: qualification evidence and research documentation. Related discoveries: F001/F004 concern decisions and acceptance text.
+
+Required authority and impact: owner-authorized reviewable-material remediation and separately authorized review; no source implementation, admission or normative change is selected.
+
+Next action: make material source/admission/harness bytes genuinely available for an authorized exact-content audit through an accepted supported mechanism. No automatic broker v3 adoption is authorized.
+
+#### F004 — evidence-gap: governing acceptance text and handoff completeness
+
+Statement challenged: current #47 permits the proposed documentary completion, and its pending acceptance assessment and #49 handoff are complete and accurate.
+
+Source/evidence: S001 lines 295, 314, 316–317 and 334–335. Governing Issues #47/#37/#49 and future #48 reconciliation were not independently supplied. Acceptance rules and handoff completeness could not be compared with governing text. Candidate qualification, publication and readback are explicitly pending.
+
+Existing authority: common authority above. Semantic disposition: no-normative-impact. Affected layers: qualification evidence and research documentation. Related discoveries: F001/F003 concern other missing material.
+
+Required authority and impact: owner-authorized governing-text remediation and separately authorized review; #47 remains open and neither parent is complete.
+
+Next action: supply relevant governing acceptance text for independent audit. The absence of future #48 reconciliation does not authorize beginning #48 under this mission.
+
+#### F005 — unsupported-claim: independently authenticated no-mutation custody
+
+Statement challenged: external source repositories remained unchanged and no external source mutation was performed by this outcome operation.
+
+Source/evidence: S001 lines 266–267, 313 and 341. No independently examined repository state, effect log or custody record supports the negative-mutation claim; it remains an operator assertion rather than authenticated custody evidence.
+
+Existing authority: common authority above. Semantic disposition: no-normative-impact. Affected layers: qualification evidence and research documentation. Related discovery: F002 concerns campaign execution rather than repository state.
+
+Required authority and impact: owner-authorized claim/evidence remediation and separately authorized review; no source mutation or product change is authorized.
+
+Next action: keep no-mutation statements at their actual operator-assertion evidence level unless independent custody evidence supports more.
+
+These five findings are not proof of a replay, a contrary ADMIT, an unsafe effect, or falsity of the author readbacks. They are preserved evidence gaps/claim limits and an unmet qualification gate. No finding is silently waived or reclassified as fixed.
+
+### Remaining uncertainty
+
+The reviewer could not independently establish the stated admission bytes/applicability/HOLD decisions; completeness of later-ADMIT searches; campaign non-execution and absence of retries/discarded attempts; underlying source/harness hypotheses; governing acceptance/handoff completeness; mutable-record history or external repository preservation. Activity outside the bounded campaign remains unknown. All seven exact uncertainty statements remain in the authenticated result.
+
+### Operational restoration and safe stop
+
+The seven prior journal claim refs were unchanged; one new authorized claim was observed. Current production operational-admission, credential-backed startup/transfer, wheel/profile/runtime/packet and bounded pre-arm controls passed before one invocation. Historical Actions qualification 41539371601 and PR #60 review remained historical evidence; no full qualification ceremony was repeated. Comprehensive/private admission was not enabled and exhaustive isolation is not claimed.
+
+All four temporary variables were restored to their prior ABSENT states and read back. The complete variable set equals the pre-activation snapshot. Codespace Shutdown was independently observed. Workflow/journal audit found zero unintended model-capable requests/dispatches and zero extra invocations. No unresolved infrastructure or ambiguous-execution incident was observed. The substantive UNDETERMINED result remains unresolved.
+
+Consumer decision: NOT_ADMITTED_FOR_MERGE. The required explicit GO is absent and cannot be replaced by author readbacks, empty validation reasons, earlier PR #60 success or successful cleanup. No replacement reviewer, repeat_same_head, new request or inference retry is performed.
+
+Objective resumption condition: a new explicit owner mandate addressing these exact evidence/custody findings and independently reviewable packet coverage through accepted supported mechanisms, with fresh exact-subject review authorization and all live gates revalidated. No broker/source/contract modification is accepted or authorized by this handoff.
+
+The detached candidate worktree and private operational receipts are preserved for inspection. The tracked report remains byte-identical to the reviewed PR HEAD. This is a blocked handoff, not a completion receipt. Neither #47 nor its parent/programme is complete.

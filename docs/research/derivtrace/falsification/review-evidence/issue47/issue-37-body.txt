@@ -1,0 +1,86 @@
+Parent research programme: #35 (DT-03.E). Depends on DT-03.E.1's independently qualified source/replay inventory, not merely its issue status.
+
+## Purpose
+Where source and environment permit, execute controlled, **newly witnessed** reproductions from distinct mechanisms and preserve positive and negative controls; classify inaccessible, unsupported and historically declared cases without misreporting replay.
+
+## Priority replay candidates
+- E01 Proto-Ring #83: interleaved real-file capture vs coherent snapshots, comparing pre-fix and fail-closed post-fix exact revisions when available.
+- E02 Proto-Ring #97/#115/#117: concurrent producer-run evidence ownership, artifact lifecycle, and exact per-invocation binding.
+- E04 Ruu v45: replay model program with exact recorded-output comparison; separate 256 v45 cases from 16,124 retained earlier combinations. Run Git-native v5 fixture in a supported disposable Git environment where safe.
+- E05 old Turnlock #8: multiprocess controlled E2E in supported detached fixture; distinguish test source presence from actual execution evidence.
+- E07 Proto-Ring #121/#122/#126: consumer-versus-provider positive/negative parity probes on historical exact revisions, if toolchains permit.
+- E08 Proto-Lithify #14: use documented historic failed/successful GitHub-enforcement probes as historical records; **never** reproduce by mutating live protected `main` or current GitHub rulesets.
+- E03 and E06: reconstruct exact historical revisions/qualifications/retirements; do not call retrospective records present execution.
+
+## Experimental boundary
+Read-only source repositories; disposable isolated checkout/working directory; no real credential, user data, current worktree, live external provider mutation, live protected ref, real cloud production resource, secrets, or unsafe executing of unchecked third-party code.
+
+For each attempt, record frozen source SHA, environment/toolchain versions, exact replay command, preconditions, permissions, input fixtures, stdout/stderr, exit status, local side-effects, witness digest, negative control, invalidation condition, and any disagreement with archived output. Differentiate actual observation vs reported earlier execution and constructed world.
+
+## Deliverable
+`docs/research/derivtrace/falsification/dt-03-e-empirical-corpus.md` plus admissible public evidence appendices/fixtures only when required and separately qualified; immutable provenance required. Never publish unredacted private inputs.
+
+## Acceptance
+1. All eight E families receive explicit executed/deferred/candidate-only dispositions.
+2. At least one controlled two-sided replay is newly executed when an admissible environment exists; otherwise exact unsupported-environment/blocked gate is preserved (no fabricated success).
+3. Real replay evidence is independently inspectable and not confused with executable test source alone.
+4. Positive and negative outcomes use comparable exact subjects and do not overclaim generalization.
+5. Source artifacts outside Proto-Scope are unchanged.
+6. Independent read-only audit challenges the claims of actual execution, empirical controls and custody before publication.
+
+No model modification, normative mutation, or scope change of #6. #35 remains open.
+
+## Additional DT-03.E methodological qualification gate
+
+[Issue #41](https://github.com/fanilosendrison/proto-scope/issues/41) separately examines the justification and authority of claim-relative replay-admissibility criteria before any controlled replay in this issue. The completed [#36](https://github.com/fanilosendrison/proto-scope/issues/36) inventory admits **zero** RP01–RP19 executions, despite satisfying the historical GitHub blocked-by dependency.
+
+**No replay is authorized solely by closure of #36 or creation/closure of #41.** Execution requires a newly independently qualified, exact, published, per-replay admissibility decision consistent with #41's outcome and a separate safe execution boundary. This is a research gate, not an automatic change of the frozen DT-03 record or Proto-Scope Product Intent. The native blocked-by relationship to #41 is not asserted established by this textual cross-reference.
+
+
+## E.2 work decomposition (created 2026-10-25)
+
+All six work items below are research/engineering records, **not** executable permissions or successful observations:
+
+- [#44 — E.2.1: qualify RP08 bounded admission](https://github.com/fanilosendrison/proto-scope/issues/44) — exact science claim, safety/trust boundary, controls, independent decision; no execution.
+- [#45 — E.2.2: execute and audit RP08](https://github.com/fanilosendrison/proto-scope/issues/45) — after independently reviewed and published RP08 **ADMIT** only; positive/negative/positive observations; any failure retained.
+- [#46 — E.2.3: qualify separately RP01 and RP02 admissions](https://github.com/fanilosendrison/proto-scope/issues/46) — independent pre-fix torn-capture and post-fix fail-closed admission decisions in one research stage; no experimental execution; may proceed independently of RP08.
+- [#47 — E.2.4: execute and audit the RP01/RP02 pair](https://github.com/fanilosendrison/proto-scope/issues/47) — **both** exact independently reviewed and published RP01 **ADMIT** and RP02 **ADMIT** required; material pre/post equivalence, controls, execution custody and explicit holds.
+- [#48 — E.2.5: reconcile E01–E08 and holdouts](https://github.com/fanilosendrison/proto-scope/issues/48) — **planning order: start only after #45 closes**, then reconcile qualified or expressly absent replay evidence, separate historical records, private holds, provenance and correlation. This sequencing preference is not a new scientific admission gate.
+- [#49 — E.2.6: consolidate and independently qualify](https://github.com/fanilosendrison/proto-scope/issues/49) — consumes #45, #47, #48 qualified or explicitly stopped/deferred findings, publishes the bounded parent corpus and independently examines all six #37 acceptance criteria.
+
+### Work ordering and evidence gates
+
+```text
+#36 + #41 DONE
+  |
+  +-- #44 RP08 HOLD --> #51 NEW RP08 QUALIFICATION --(new ADMIT only)--> #45 RP08 EXPERIMENT
+  |
+  +-- #46 RP01 and RP02 SEPARATE ADMISSION DECISIONS --(BOTH ADMIT)--> #47 E01 PAIRED EXPERIMENT
+  |
+  +-- #48 E01–E08 RECONCILIATION (PLANNED AFTER #45 CLOSURE)
+
+#45 + #47 + #48 qualified outcomes (including HOLD/STOP/no execution) --> #49 EMPIRICAL CORPUS
+```
+
+Research work may finish with an explicitly justified HOLD/REJECT/STOP, but **issue completion never converts such a disposition into an ADMIT or a successful execution**. Any missing replay remains missing evidence; #49 must use the actual evidence and the parent acceptance criteria, not a fabricated successful result.
+
+**Native hierarchy/dependency tracking:** six issues are created and linked textually. Native GitHub sub-issue relations `#37 → #44–#49`, native blocked-by links `#45 ← #44`, `#47 ← #46`, and `#49 ← #45,#47,#48`, and the correct existing Proto-Scope Project memberships must be established and freshly read back by a separately supported authorized GitHub action. These relations must not be claimed present merely from issue text. Do not change #7's or #42's dependencies.
+
+#41's qualified bounded method governs the prospective admission questions, not the authenticity of execution. #42 (Proto-Ring governance adoption) is deferred and is **not** a prerequisite. No DT-M0 or source-repository mutation is authorized by this decomposition.
+
+
+## RP08 HOLD resolution follow-up
+
+The published [#44 RP08 admission](https://github.com/fanilosendrison/proto-scope/issues/44) is `HOLD` with insufficient demonstrated safety containment, despite satisfying #45's original completed-issue GitHub blocker. A new prospective [#51](https://github.com/fanilosendrison/proto-scope/issues/51) is created to characterize a real sandbox/ephemeral-VM environment, perform **only independently permitted inert sacrificial probes**, and seek a fresh exact RP08 admission decision. A separately published [status-field clarification on #44](https://github.com/fanilosendrison/proto-scope/issues/44#issuecomment-6400367725) preserves the historical `UNDETERMINED` evidence versus `FAIL` admission-gate distinction. #51 does not run P1/N1/P2 and **must be a native child of #37 and native blocker of #45**, to be wired and verified by supported GitHub actions. No experimental execution is authorized merely because #44/#51 is completed. #42 remains deferred and non-blocking.
+
+
+## E01 RP01/RP02 experimental-unit clarification (2026-10-25)
+
+Historical #36 already treated **RP01 = pre-fix torn capture** and **RP02 = post-fix fail-closed test** as distinct replay units. #46 now prepares two separate individually qualified prospective admission decisions (potential ADMIT/HOLD/REJECT) and may freeze one shared research-only harness; #47 is restricted to the genuinely comparable two-sided experiment after **both** individually exact-published ADMIT decisions remain applicable. The current #36 19-unit inventory and zero admissions are not rewritten, and a generic review GO or closed #46 is not sufficient execution authority. See #46/#47 for the exact evidence, safety and stopping gates. **#48 is intentionally queued until #45 closure** by planning choice; this does not manufacture or waive an empirical dependency or change native GitHub blocked-by links.
+
+
+## GitHub Actions alternative after local RP08 HOLD
+
+The completed [#44](https://github.com/fanilosendrison/proto-scope/issues/44) and [#51](https://github.com/fanilosendrison/proto-scope/issues/51) admissions remain `HOLD` and authorize no RP08 run. The new [#55](https://github.com/fanilosendrison/proto-scope/issues/55) evaluates a **different GitHub-hosted Ubuntu 24.04 VM plus container isolation**. It may execute only independently reviewed **inert and disposable confinement probes**; it may **not** execute RP08 P1/N1/P2, which remain #45-only after a separate exact `ADMIT`.
+
+A new #55 admission, if one is established, must bind its own Linux host/runner, container image digest, exact source, command, safety, evidence and trust context. No automatic inheritance of #44/#51 High Sierra assumptions or authorization. #42 remains deferred and unrelated. Native relationship #55 → #37 and blocker #55 → #45 require separate verified wiring; textual reference is not proof of that state.
